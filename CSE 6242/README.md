@@ -1,4 +1,4 @@
-![Georgia Tech Logo](/cse6242-logo.png)
+![CSE 6242](https://github.com/Jadams29/Georgia-Tech/blob/master/CSE%206242/cse6242-logo.png)
 
 
 
