@@ -7,7 +7,7 @@
 
 ### Assignments
 * [Group Project](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Group%20Project)
-* [Homework 1](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Homework%201)
-* [Homework 2](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Homework%202)
-* [Homework 3](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Homework%203)
-* [Homework 4](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Homework%204)
+* [Homework 1](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Homework%201) Analyzing The MovieDB data, SQLite, D3 Warmup, Gephi, OpenRefine.
+* [Homework 2](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Homework%202) D3 Graphs and Visualization
+* [Homework 3](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Homework%203) Hadoop, Spark, Pig, and Azure
+* [Homework 4](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Homework%204) Scalable single-machine PageRank via Virtual Memory (MMap), Random Forest, SciKit Learn
