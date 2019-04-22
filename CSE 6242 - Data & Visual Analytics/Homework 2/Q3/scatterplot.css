@@ -1,0 +1,56 @@
+body{
+	margin: 0px;
+	overflow: hidden;
+	shape-rendering: geometricPrecision;
+}
+circle{
+	fill: steelblue;
+	opacity: 0.5;
+	shape-rendering: geometricPrecision;
+}
+rect{
+	fill: transparent;
+	stroke: black;
+	stroke-width: 1;
+	shape-rendering: geometricPrecision;
+}
+text {
+	font-size: 0.5em;
+	font-weight: bold;
+	font-family: sans-serif;
+	shape-rendering: geometricPrecision;
+}
+.tick text{
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: sans-serif;
+	shape-rendering: geometricPrecision;
+}
+
+.tick line{
+	opacity: 0.5;
+	stroke: #C0C0BB;
+	shape-rendering: geometricPrecision;
+}
+
+.axis-label{
+	font-size: 1.51em;
+	fill: #8E8883;
+	font-family: sans-serif;
+	font-weight: bold;
+	shape-rendering: geometricPrecision;
+}
+
+.title {
+	font-size: 1.05em;
+	font-weight: bolder;
+	font-family: sans-serif;
+	shape-rendering: geometricPrecision;
+}
+.point{
+	fill: transparent;
+	opacity: 0.8;
+	stroke-width: 0.60;
+	shape-rendering: geometricPrecision;
+}
+

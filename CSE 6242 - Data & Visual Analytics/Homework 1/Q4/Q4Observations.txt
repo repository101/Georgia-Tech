@@ -1,0 +1,6 @@
+i)	(a) 47
+	(b) 5 are create (not including the original)
+ii) Cluster Size: 127
+iii) if(or(cells["brand_name"].value.length == 0, cells["brand_name"].value == null), "Unbranded", value)
+iv) if(value.toNumber() > 100, 1, 0)
+v) if(or(value.contains("discount"),value.contains("offer"),value.contains("sale")),1,0)

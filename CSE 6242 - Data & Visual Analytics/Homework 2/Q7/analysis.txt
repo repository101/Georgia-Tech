@@ -1,0 +1,21 @@
+1. Ease to develop
+	- D3 is not very user friendly, coupled with no dedicated IDE, makes usage agonizing
+	- Tableau works extremely well and is intuitive to use
+	- Python is easily developed and has hundreds of user-friendly libraries
+2. Ease to maintain the visualization
+	- D3 is difficult to maintain the visualization due to the convoluted ways it generates displays
+	- Tableau is one of the easiest tools to maintain because of its polished UI
+	- Python is very forgiving when it comes to maintaining visualizations
+3. Usability of visualization developed for end users
+	- D3 the usability of the visualization is widespread and can be very usable
+	- Tableau is very end user friendly and the visualization can be dynamic 
+	- Python has a library for everything and as such you can allow the visualization to be tailored to the end user
+4. Scalability of visualization to large datasets
+	- D3 scales well with large data sets but I do not believe we have received a large enough dataset to adequately test these tools
+	- Tableau seemed to work well with the data we worked with but like D3, we did not have large enough datasets to stress the application
+	- Python works flawlessly with larger dataset but is dependent on the programmer to code 
+5. System requirements to run visualization
+	- D3 a browser is necessary for a visualization to run
+	- Tableau is a stand-alone program that displays the visualization
+	- Python can be ran as a standalone visualization or through a browser, it would be dependent on the programmer
+

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<head>
+    <meta charset="utf-8">
+    <meta course="CSE-6242" content="Homework 2: Question 3">
+	<meta school="Georgia Tech">
+	<meta name="Josh Adams">
+	<title>jadams334</title>
+
+
+    <script src="../lib/d3.v5.min.js"></script>
+    <link rel='stylesheet' href='scatterplot.css'>
+
+    <style>
+	shape-rendering: geometricPrecision;
+    </style>
+    <div id="area1"></div>
+    <div id="area2"></div>
+    <div id="area3"></div>
+    <div id="area4"></div>
+    <div id="legend"></div>
+    <div id="chart" align="center"></div>
+</head>
+
+<body>
+<script>
+
+    function renderGraph(Height, Width, xAxisValue, xAxisName, yAxisValue, yAxisName, Title, data, paddingValue, scaleShape, scaleAxisY, scaleType, showGridLines){
+        //Id	Title	Year	Runtime	Country	Rating	Votes	Budget	Gross	WinsNoms	IsGoodRating
+        // //console.log("Passed into the function" +
+        //     "\nHeight: " + Height +
+        //     "\nWidth: " + Width +
+        //     "\nxAxisValue: " + xAxisValue +
+        //     "\nxAxisName: " + xAxisName +
+        //     "\nyAxisValue: " + yAxisValue +
+        //     "\nyAxisName: " + yAxisName +
+        //     "\nTitle: " + Title +
+        //     "\nLocation: " + Location);
+
+
+
+        if (xAxisValue === 0){
+            xValue = d => d.Id;}
+        else if (xAxisValue === 1){
+            xValue = d => d.Title;}
+        else if (xAxisValue === 2){
+            xValue = d => d.Year;}
+        else if (xAxisValue === 3){
+            xValue = d => d.Runtime;}
+        else if (xAxisValue === 4){
+            xValue = d => d.Country;}
+        else if (xAxisValue === 5){
+            xValue = d => d.Rating;}
+        else if (xAxisValue === 6){
+            xValue = d => d.Votes;}
+        else if( xAxisValue === 7){
+            xValue = d => d.Budget;}
+        else if (xAxisValue === 8){
+            xValue = d => d.Gross;}
+        else if (xAxisValue === 9){
+            xValue = d => d.WinsNoms;}
+        else {
+            xValue = d => d.IsGoodRating;}
+
+
+        if (yAxisValue === 0){
+            yValue = d => d.Id;}
+        else if (yAxisValue === 1){
+            yValue = d => d.Title;}
+        else if (yAxisValue === 2){
+            yValue = d => d.Year;}
+        else if (yAxisValue === 3){
+            yValue = d => d.Runtime;}
+        else if (yAxisValue === 4){
+            yValue = d => d.Country;}
+        else if (yAxisValue === 5){
+            yValue = d => d.Rating;}
+        else if (yAxisValue === 6){
+            yValue = d => d.Votes;}
+        else if (yAxisValue === 7){
+            yValue = d => d.Budget;}
+        else if (yAxisValue === 8){
+            yValue = d => d.Gross;}
+        else if (yAxisValue === 9){
+            yValue = d => d.WinsNoms;}
+        else {
+            yValue = d => d.IsGoodRating;}
+
+
+        const margin = {top: 60, right: 100, bottom: 40, left: 100 };
+        const innerWidth = Width - margin.left - margin.right;
+        const innerHeight = Height - margin.top - margin.bottom;
+        const xAxisLabel = xAxisName;
+        const yAxisLabel = yAxisName;
+
+        var gridXLineLength = 0;
+        var gridYLineLength = 0;
+
+        if(showGridLines){
+            gridXLineLength = -innerHeight;
+            gridYLineLength = -innerWidth;
+        };
+
+
+        var svg = d3.select("body")
+            .append("svg")
+            .attr("width", Width)
+            .attr("height", Height);
+
+        const xScale = d3.scaleLinear()
+            .domain(d3.extent(data, xValue))
+            .range([0, innerWidth]);
+
+        if (scaleAxisY === true){
+            if (scaleType === 'LOG' || scaleType === 'log'){
+                var yScale = d3.scaleLog()
+                    .domain([(d3.extent(data, yValue))[1], ((d3.extent(data, yValue))[0]+1)])
+                    .range([0, innerHeight])
+                    .nice(); // Add a 0.1 space between the bars
+                yScale.clamp(true);
+            }
+            else{
+                var yScale = d3.scaleSqrt()
+                    .domain([(d3.extent(data, yValue))[1], ((d3.extent(data, yValue))[0])])
+                    .range([0, innerHeight])
+                    .nice(); // Add a 0.1 space between the bars
+                yScale.clamp(true);
+            }
+        }
+        else{
+            var yScale = d3.scaleLinear()
+                .domain([(d3.extent(data, yValue))[1], ((d3.extent(data, yValue))[0])])
+                .range([0, innerHeight])
+                .nice(); // Add a 0.1 space between the bars
+        }
+
+        const g = svg.append("g")
+            .attr("transform", 'translate(' + margin.left + ',' + margin.top + ')' );
+
+        const yAxisG = g.append("g")
+            .call(d3.axisLeft(yScale).tickSize(gridYLineLength));
+
+        yAxisG.append('text')
+            .attr('class', 'axis-label')
+            .attr('y', 20)
+            .attr('x', -5)
+            .attr('fill', 'black')
+            .attr('transform', 'rotate(-90)')
+            .attr('text-anchor', 'center')
+            .text(yAxisLabel);
+
+        // Move the xAxis from the top of the screen to the bottom
+        const xAxisG =  g.append("g")
+            .call(d3.axisBottom(xScale).tickSize(gridXLineLength))
+            .attr("transform", 'translate(' + 0 + ',' + innerHeight + ')' );
+        //
+        // xAxisG.select('.domain');
+        //
+        // yAxisG.select('.domain')
+        //     .remove();
+
+        // X-AXIS
+        //      Adding the X Axis
+        xAxisG.append('text')
+            .attr('class', 'axis-label')
+            .attr('fill', 'black')
+            .attr('y', -5)
+            .attr('x', (innerWidth+35))
+            .attr('text-anchor', 'left')
+            .text(xAxisLabel);
+
+        // WinsNoms EXTENT
+        //     I needed to break out the entent because I was not
+        //     successful in applying in within SCALE SYMBOLS
+        var getExtentOfWinsNoms = d3.extent(data, function(d) {
+            return d.WinsNoms;
+        });
+
+        // SCALE SYMBOLS
+        //    Scale the symbols based on WinsNoms
+        var scaleSizeForWinsNoms = d3.scaleLinear()
+            .domain(getExtentOfWinsNoms)
+            .range([20, 150]);
+
+
+        // SYMBOL TYPES
+        // Define the two symbols being used
+        //     Did this because I was not able to resize properly
+        var symbolTypes = {
+            "cross" : d3.symbol().type(d3.symbolCross).size(function(d){
+                if(scaleShape === true){
+                    return scaleSizeForWinsNoms(d.WinsNoms);}
+                else{
+                    return 25;
+                }}),
+            "circle" : d3.symbol().type(d3.symbolCircle).size(function(d){
+                if(scaleShape === true){
+                    return scaleSizeForWinsNoms(d.WinsNoms);}
+                else{
+                    return 25;
+                }})
+        };
+
+        // ADD SYMBOLS
+        //      Add the symbols to the plot
+        g.selectAll("path")
+            .data(data)
+            .enter()
+            .append("path")
+            .attr("class", "point")
+            .attr('transform', function(d){
+                return 'translate(' + xScale(xValue(d)) + ',' + yScale(yValue(d))+ ')';})
+            .attr("d", function(d,i){
+                if(d.IsGoodRating === 0){
+                    return symbolTypes.circle(d);
+                }
+                else{
+                    return symbolTypes.cross(d);
+                }
+            })
+            .attr("stroke", function(d) {
+                if (d.IsGoodRating === 1){
+                    return "blue"}
+                else{
+                    return "red";
+                }});
+
+        // Add the title and anchor it so it is center aligned
+        g.append('text')
+            .attr('class', 'title')
+            .attr('y', -15)
+            .attr('x', (innerWidth/2))
+            .attr('text-anchor', 'middle')
+            .text(Title);
+
+
+        function addLegend(){
+
+            var tempG = g.append("g");
+
+            // Set scaleShape to false so the symbols do not resize
+            scaleShape = false;
+            tempG.selectAll("path")
+                .data(data)
+                .enter()
+                .append("path")
+                .attr("class", "point")
+                .attr('transform', function(d, i){
+                    if(i === 0){
+                        return 'translate(425,8)';
+                    }
+                    else if(i === 1){
+                        return 'translate(425,18)';
+                    }})
+
+                .attr("d", function(d, i){
+                    if(i === 0){
+                        return symbolTypes.circle(d);
+                    }
+                    else if(i === 1){
+                        return symbolTypes.cross(d);
+                    }
+                })
+                .attr("stroke", function(d, i) {
+                    if (i === 1){
+                        return "blue";}
+                    else if(i === 0){
+                        return "red";}
+                });
+
+
+            // Add a rectangle to be the border for the Legend
+            tempG.append("rect")
+                .attr("width", 70)
+                .attr("height", 25)
+                .attr("x", 415)
+                .attr("y", 0);
+
+            // Add the text to the Legend
+            tempG.append('text')
+                .attr("x", 435)
+                .attr("y", 20)
+                .text("Good Rating")
+                .attr('fill', 'blue');
+
+            // Add the text to the Legend
+            tempG.append("text")
+                .attr("x", 435)
+                .attr("y", 10)
+                .text("Bad Rating")
+                .attr('fill', 'red');
+
+        };
+
+        // Add the Legend
+        addLegend();
+        d3.select()
+    };
+
+
+    d3.csv("movies.csv").then(data => {
+        data.forEach(d => {
+            d.Id = +d.Id;
+            d.Title = d.Title;
+            d.Year = +d.Year;
+            d.Runtime = +d.Runtime;
+            d.Country = d.Country;
+            d.Rating = +d.Rating;
+            d.Votes = +d.Votes;
+            d.Budget = +d.Budget;
+            d.Gross = +d.Gross;
+            d.WinsNoms = +d.WinsNoms;
+            d.IsGoodRating = +d.IsGoodRating;
+        });
+
+
+        // Id  Title  Year  Runtime  Country  Rating  Votes  Budget  Gross  WinsNoms  IsGoodRating
+        //  0	 1	    2	   3	    4	     5	    6	   7	   8	   9	      10
+
+
+        // Feature 10 (Wins and nominations) vs. Feature 6 ( Rating)
+        //      Figure title: Wins+Nominations vs. Rating
+        //      X axis (horizontal) label: Rating
+        //      Y axis (vertical) label: Wins+Noms
+
+        renderGraph(Height=400, Width=600, xAxisValue=5,
+            xAxisName="Rating", yAxisValue=9,
+            yAxisName="Wins+Noms", Title="Wins+Nominations vs. Rating",
+            data=data, paddingValue=0, scaleShape=false, scaleAxisY=false, scaleType=false, showGridLines = true);
+
+        // Feature 8 (Budget) vs. Features 6 ( Rating)
+        //      Figure title: Budget vs. Rating
+        //      X axis (horizontal) label: Rating
+        //      Y axis (vertical) label: Budget
+        renderGraph(Height=400, Width=600, xAxisValue=5,
+            xAxisName="Rating", yAxisValue=7,
+            yAxisName="Budget", Title="Budget vs. Rating",
+            data=data, paddingValue=48, scaleShape=false, scaleAxisY=false, scaleType=false, showGridLines = true);
+
+        // Feature 7 (Votes) vs. Feature 6 (Rating) sized by Feature 10 (Wins+Nominations)
+        //      Figure title: Votes vs. Rating sized by Wins+Nominations
+        //      X axis (horizontal) label: Rating
+        //      Y axis (vertical) label: Votes
+        renderGraph(Height=400, Width=600, xAxisValue=5,
+            xAxisName="Rating", yAxisValue=6,
+            yAxisName="Votes", Title="Votes vs. Rating sized by Wins+Nominations",
+            data=data, paddingValue=25, scaleShape=true, scaleAxisY=false, scaleType=false, showGridLines = true);
+
+        // First Figure: uses the square root scale for its y-axis (only)
+        //
+        //      Figure title: Wins+Nominations (square-root-scaled) vs. Rating
+        //          X axis (horizontal) label: Rating
+        //          Y axis (vertical)  label: Wins+Noms
+        renderGraph(Height=400, Width=600, xAxisValue=5,
+            xAxisName="Rating", yAxisValue=9,
+            yAxisName="Wins+Noms", Title="Wins+Nominations (square-root-scaled) vs. Rating",
+            data=data, paddingValue=25, scaleShape=false, scaleAxisY=true, scaleType='sqrt', showGridLines = false);
+
+
+        // Second Figure: uses the log scale for its y-axis (only)
+        //      Figure title: Wins+Nominations (log-scaled) vs. Rating
+        //          X axis (horizontal) label: Rating
+        //          Y axis (vertical)  label: Wins+Noms
+        renderGraph(Height=400, Width=600, xAxisValue=5,
+            xAxisName="Rating", yAxisValue=9,
+            yAxisName="Wins+Noms", Title="Wins+Nominations (log-scaled) vs. Rating",
+            data=data, paddingValue=25, scaleShape=false, scaleAxisY=true, scaleType='log', showGridLines = false);
+
+
+    });
+
+</script>
+</body>
+</html>

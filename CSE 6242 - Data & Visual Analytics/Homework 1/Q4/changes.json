@@ -1,0 +1,87 @@
+[
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "category_name",
+          "expression": "isBlank(value).toString()",
+          "columnName": "category_name",
+          "invert": false,
+          "selection": [
+            {
+              "v": {
+                "v": "true",
+                "l": "true"
+              }
+            }
+          ],
+          "selectNumber": false,
+          "selectDateTime": false,
+          "selectBoolean": false,
+          "omitBlank": false,
+          "selectBlank": false,
+          "omitError": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column category_name by separator",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "category_name",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": "/",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column brand_name using expression grel:if(or(cells[\"brand_name\"].value.length == 0, cells[\"brand_name\"].value == null), \"Unbranded\", value)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "brand_name",
+    "expression": "grel:if(or(cells[\"brand_name\"].value.length == 0, cells[\"brand_name\"].value == null), \"Unbranded\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column high_priced at index 11 based on column price using expression grel:if(value.toNumber() > 100, 1, 0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "high_priced",
+    "columnInsertIndex": 11,
+    "baseColumnName": "price",
+    "expression": "grel:if(value.toNumber() > 100, 1, 0)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column has_offer at index 14 based on column item_description using expression grel:if(or(value.contains(\"discount\"),value.contains(\"offer\"),value.contains(\"sale\")),1,0)",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "has_offer",
+    "columnInsertIndex": 14,
+    "baseColumnName": "item_description",
+    "expression": "grel:if(or(value.contains(\"discount\"),value.contains(\"offer\"),value.contains(\"sale\")),1,0)",
+    "onError": "set-to-blank"
+  }
+]

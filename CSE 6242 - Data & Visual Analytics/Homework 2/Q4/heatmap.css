@@ -1,0 +1,9 @@
+.tick text{
+	font-size: 2em;
+	fill: #635FSD;
+}
+
+.tick line{
+	opacity: 0.6;
+	stroke-width: 0.35em;
+	stroke: #000000;}

@@ -1,0 +1,66 @@
+###############################################################################
+##                                                                           ##
+##  IMPORTANT NOTE: All accuracies must be reported with two decimal places  ##
+##  in the range of [0.00, 1.00], e.g. 0.78 and not 78, 78.00, 78%, etc.     ##
+##                                                                           ##
+###############################################################################
+
+**********************************************
+Q 3.1
+
+Linear Regression - Training Accuracy: 
+Linear Regression - Testing Accuracy: 
+
+Random Forest - Training Accuracy: 
+Random Forest - Testing Accuracy: 
+
+SVM - Training Accuracy: 
+SVM - Testing Accuracy: 
+
+**********************************************
+
+Q 3.2 Hyperparameter Tuning
+
+Random Forest - n_estimators values tested (at least 3): 
+Random Forest - max_depth values tested (at least 3): 
+
+Random Forest - Best combination of parameter values - n_estimators: 
+Random Forest - Best combination of parameter values - max_depth: 
+
+Random Forest - Testing Accuracy before tuning (default parameters):
+Random Forest - Testing Accuracy after tuning:
+
+SVM - Kernel Values tested: 
+SVM - C values tested (at Least 3): 
+SVM - Best combination of parameter values - Kernel: 
+SVM - Best combination of parameter values - C: 
+
+*********************************************
+
+Q 3.3
+
+SVM - Highest mean testing/cross-validated accuracy (best score): 
+SVM - Mean train score: 
+SVM Mean fit time: 
+
+*********************************************
+
+Q 3.4 Feature Importance - WITH THE MODEL TRAINED IN Q 3.1
+
+Random Forest  - Most important feature (e.g. X5): 
+Random Forest  - Least important feature (e.g. X1): 
+
+*********************************************
+
+Q 3.5
+
+Best Classifier and why (in at most 50 words): 
+
+*********************************************
+
+Q 3.6 Principal Component Analysis
+
+"PCA - Percentage of variance explained by each of the selected components (enter the entire array as [0.12, …, 0.012])": 
+"PCA - Singular values corresponding to each of the selected components (enter the entire array as [0.09, …, 0.037])": 
+
+*********************************************

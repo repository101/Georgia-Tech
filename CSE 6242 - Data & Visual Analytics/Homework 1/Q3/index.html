@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jadams334</title>
+        <script type="text/javascript" src="d3/d3.v3.min.js"></script>
+		<style type="text/css">	
+			.axis path,
+			.axis line {
+				fill: none;
+				stroke: black;
+				shape-rendering: crispEdges;
+			}
+			
+			.axis text {
+				font-family: sans-serif;
+				font-size: 11px;
+			}
+			
+		</style>
+    </head>
+<body>
+		<script type="text/javascript">
+
+			//Width and height
+			var width = 500;
+			var height = 300;
+			var padding = 30;
+
+			var dataset = [];
+			var x_dataset = [];
+			var y_dataset = [];
+			
+			var numDataPoints = 100;				
+			var minNumber = 10;
+			var x_Range = 240;	
+			var y_Range = 240;	
+
+			for (var i = 0; i < numDataPoints; i++) {
+				var newNumber1 = Math.round((Math.random() * x_Range)+ minNumber);	
+				var newNumber2 = Math.round((Math.random() * y_Range) + minNumber);	
+				dataset.push([newNumber1, newNumber2]);	
+				x_dataset.push(newNumber1);
+				y_dataset.push(newNumber2);
+			}
+			max_distance = Math.sqrt((5*5)+(5*5));
+
+			//Create scale functions
+			var x_Scale = d3.scale.linear()
+								 .domain([0, d3.max(dataset, function(d) { return d[0]; })])
+								 .range([padding, width - padding * 2]);
+
+			var y_Scale = d3.scale.linear()
+								 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
+								 .range([height - padding, padding]);
+
+			var y_Radius_Scale = d3.scale.linear()
+								 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
+								 .range([1, 5]);
+								 
+			var x_Radius_Scale = d3.scale.linear()
+								 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
+								 .range([1, 5]);
+
+			var r_Scale = d3.scale.linear()
+								 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
+								 .range([1, 5]);
+		
+			for(i=0; i < 5; i++){
+				var x = dataset[i][0] - 0;
+				var y = dataset[i][1] - 0;
+
+				var distance = Math.sqrt(Math.abs(x*x + y*y));
+				if ((x*x - y*y) == 0){
+					distance = 0;
+				};
+				var scaled_distance = Math.sqrt(Math.abs(x_Radius_Scale(x)*x_Radius_Scale(x) + y_Radius_Scale(y)*y_Radius_Scale(y)));
+			};
+			
+			var avg_x = d3.mean(x_dataset, function(d) { return d;});
+			var x_tick = Math.floor(d3.max(x_dataset)/15);
+			var y_tick = Math.floor(d3.max(y_dataset)/15);
+			
+			var x_Axis = d3.svg.axis()
+							  .scale(x_Scale)
+							  .orient("bottom")
+							  .ticks(10);
+
+			var y_Axis = d3.svg.axis()
+							  .scale(y_Scale)
+							  .orient("left")
+							  .ticks(10);
+
+			var svg = d3.select("body")
+						.append("svg")
+						.attr("width", width)
+						.attr("height", height);
+
+			svg.selectAll("circle")
+			   .data(dataset)
+			   .enter()
+			   .append("circle")
+			   .attr("cx", function(d) {
+			   		return x_Scale(d[0]);
+			   })
+			   .attr("cy", function(d) {
+			   		return y_Scale(d[1]);
+			   })
+
+			   .attr("r", function(d) {
+					var x = x_Radius_Scale(d[0]);
+					var y = y_Radius_Scale(d[1]);
+					var temp = (((Math.sqrt(Math.abs(x*x + y*y))/max_distance)*4)+1);
+			   		return temp;})
+			   
+			   .attr("fill", "rgba(255, 255, 255, 0.1)")
+			   .attr("stroke", function(d){if(d[0] > avg_x){return "blue"} else {return "green"};})
+			   .attr("stroke-width", 1);
+			  
+
+			svg.append("g")
+				.attr("class", "axis")
+				.attr("transform", "translate(0," + (height - padding) + ")")
+				.call(x_Axis);
+			
+			svg.append("g")
+				.attr("class", "axis")
+				.attr("transform", "translate(" + padding + ",0)")
+				.call(y_Axis);
+				
+			svg.append("text")
+				.attr("x", width - 250)     
+				.attr("y", height - 280)
+				.attr("text-anchor", "middle")
+				.style("font-size", "24px")
+				.text("jadams334");
+			var x_cord_min_label = 0;
+			
+			for (var r = 0; r < numDataPoints; r++){
+				if (dataset[r][1] == d3.min(y_dataset)){
+					x_cord_min_label = dataset[r][0];
+				};			
+			};
+			
+			svg.append("text")
+				.attr("x", x_Scale(x_cord_min_label))
+				.attr("y", y_Scale(d3.min(y_dataset)))
+				.attr("text-anchor", "middle")
+				.style("font-size", "24px")
+				.text(function(d){return "Y Min :" + d3.min(y_dataset);});
+							
+		</script>
+</body>
+</html> 
+

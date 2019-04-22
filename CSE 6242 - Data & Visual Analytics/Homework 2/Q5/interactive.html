@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta course="CSE-6242" content="Homework 2: Question 5">
+	<meta school="Georgia Tech">
+	<meta name="Josh Adams">
+	<title>jadams334</title>
+
+    <script type ="text/javascript" src="../lib/d3.v5.min.js"></script>
+    <script type ="text/javascript" src="../lib/d3-scale-chromatic.v1.min.js"></script>
+	<script type ="text/javascript" src="../lib/d3-tip.min.js"></script>
+	<script type ="text/javascript" src="../lib/topojson.v2.min.js"></script>
+    <link rel='stylesheet' href='interactive.css'>
+    <style>
+
+        body {
+            margin-top: 30px;
+            font-size: 1.8rem;
+            font-family: sans-serif;
+            fill: #696969;
+            text-align: center;
+            shape-rendering: geometricPrecision;
+        }
+        .yAxis{
+          font-family: sans-serif;
+          font-weight: bold;
+          font-size: 0.8em;
+          shape-rendering: geometricPrecision;
+        }
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+            shape-rendering: geometricPrecision;
+        }
+
+        .bar {
+            fill: orange;
+            shape-rendering: geometricPrecision;
+        }
+
+        .bar:hover {
+            fill: orangered ;
+            shape-rendering: geometricPrecision;
+        }
+
+        .x.axis path {
+            display: none;
+            shape-rendering: geometricPrecision;
+        }
+
+        .d3-tip {
+            line-height: 1;
+            padding: 6px;
+            background: wheat;
+            border-radius: 4px solid black;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+<script type='module' src='interactive.js'>
+
+
+</script>
+<div id="tipDiv"></div>
+</body>

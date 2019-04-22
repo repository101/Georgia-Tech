@@ -1,0 +1,7 @@
+trigrams = LOAD 's3://cse6242-2019spring-trigrams-big/*' AS (trigram:chararray, year:int, occurrences:float, books:float);
+trigrams_filtered = FILTER trigrams BY (occurrences >= 400.0 AND books >= 15);
+grouped = GROUP trigrams_filtered BY trigram;
+trigram_grouped = FOREACH grouped GENERATE group, SUM(trigrams_filtered.occurrences)/SUM(trigrams_filtered.books) AS average;
+sorted_trigram = ORDER trigram_grouped BY average DESC, group ASC;
+limit_results = LIMIT sorted_trigram 20;
+STORE limit_results INTO 's3://cse6242oan-2019spring-jadams334/LARGE_OUTPUT.txt' USING PigStorage('\t');

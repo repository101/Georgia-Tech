@@ -1,0 +1,3 @@
+I calculated the Modularity which allows for communities to be found in the data. I used the
+ForceAtlas 2 layout to try and expand the data and segregate them into their respective communities.
+I changed the size of the nodes with respect to their degree on a 1:50 ranking scale.

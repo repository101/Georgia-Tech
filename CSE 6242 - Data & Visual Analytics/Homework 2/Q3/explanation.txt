@@ -1,0 +1,10 @@
+Q3.a.2)	
+	Budget vs Rating is better at separating the two classes.
+	Both classes are more spread out which allows the two classes to be distinguished better.
+	When you compare the two graphs, the first one seems to condense the data rather than separate.
+	The reason is the y axis.
+	
+Q3.c)
+	The log and Sqrt scales are used to express different types of data.
+	Log would be best used when the data is exponential such as growth rates of bacteria.
+	Using a square root scale can allow for the data to closer align with expected results.

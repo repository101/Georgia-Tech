@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+    <meta course="CSE-6242" content="Homework 2: Question 6">
+	<meta school="Georgia Tech">
+	<meta name="Josh Adams">
+	<title>jadams334</title>
+	
+<style>
+
+    .counties :hover {
+        fill: red;
+    }
+    .text{
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 0.85em;
+    }
+    .LegendTitle{
+        font-size: 1.25em;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+
+    .county-borders {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 0.5px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        pointer-events: none;
+    }
+    .d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(110, 89, 138, 0.8);
+        color: #000000;
+        border-radius: 25px;
+        border: 4px;
+        text-align: left;
+    }
+
+
+</style>
+<svg width="1180" height="700"></svg>
+<script type ="text/javascript" src="../lib/d3.v5.min.js"></script>
+<script type ="text/javascript" src="../lib/topojson.v2.min.js"></script>
+<script type ="text/javascript" src="../lib/d3-tip.min.js"></script>
+<script>
+
+    var county_poverty = d3.map();
+    var county_detail = d3.map();
+
+    var path = d3.geoPath();
+    var margin = {top:30, right:50, bottom:50, left:50};
+
+    // Establish the promises
+    var promises = [
+        d3.json("us.json"),
+        d3.csv('county_detail.csv', function(d) { county_detail.set(d.CensusId, [d.CensusId, d.TotalPop, d.IncomePerCap]); }),
+        d3.csv("county_poverty.csv", function(d) { county_poverty.set(d.CensusId, [d.CensusId, d.State, d.County, +d.Poverty]); })
+    ];
+
+    Promise.all(promises).then(ready);
+    // Main Function
+    function ready([us]){
+        var County_Poverty = county_poverty;
+        var County_Detail = county_detail;
+        var AllData = {};
+        var justPovertyRates = [];
+
+        // Combining the data into a dictionary of dictionaries
+        for(var key in County_Poverty){
+            if(County_Poverty.hasOwnProperty(key) && County_Detail.hasOwnProperty(key)) {
+                justPovertyRates.push(+County_Poverty[key][3]);
+                AllData[key] ={
+                    'CensusId': +County_Poverty[key][0],
+                    'State': County_Poverty[key][1],
+                    'County': County_Poverty[key][2],
+                    'Poverty': +County_Poverty[key][3],
+                    'TotalPop': +County_Detail[key][1],
+                    'IncomePerCap': +County_Detail[key][2]}
+            }
+        };
+        // Create an array with values from 2:20 in increments of 2
+        var legendValues = d3.range(2,20,2);
+
+        var svg = d3.select("svg"),
+            width = +svg.attr("width") + margin.top + margin.bottom,
+            height = +svg.attr("height") +margin.left + margin.right;
+
+        var svg = d3.select("svg");
+
+        var x = d3.scaleLinear()
+            .domain([1, 11])
+            .range([0, 250])
+            .clamp(true);
+
+        var color = d3.scaleQuantize()
+            .domain([1, 10])
+            .range(d3.schemeBlues[9]);
+
+        // "PuOr" looks nice
+        // "YlOrRd" Looks nice
+        // "Inferno" Looks nice
+        // "PRGn" looks cool
+        var testColorScale = d3.scaleSequential(d3["interpolate" + "YlOrRd"])
+            .domain([0,18])
+            .clamp(true);
+
+        var g = svg.append("g")
+            .attr("class", "legend")
+            .attr("transform", "translate(0,35)");
+
+        // Add the rectangles that will be used as the color scale
+        g.selectAll("rect")
+            .data(legendValues)
+            .enter().append("rect")
+            .attr("height", 30)
+            .attr("x", width-175)
+            .attr('y', function(d, i){
+                return (i*30)+15;
+            })
+            .attr("width", 35)
+            .attr('rx', 5)
+            .attr('ry', 5)
+            .attr('opacity', 0.8)
+            .attr("fill", function(d,i){
+                var test = testColorScale(legendValues[i]);
+                return testColorScale(legendValues[i]); });
+
+
+        // Adding the numbers for the legend
+        g.selectAll('text')
+            .data(legendValues)
+            .enter().append('text')
+            .attr('x', width - 132.5)
+            .attr('font-size', '0.85em')
+            .attr('font-weight', 'bold')
+            .attr('y', function(d,i){return ((3*i)*10.5)+30;})
+            .html(function(d,i){
+                if(legendValues[i] === 2){
+                    return "&le; " + legendValues[i] + '%';
+                }
+                else if(legendValues[i] === 18){
+                    return "&ge; " + legendValues[i] + '%';
+                }
+                else{
+                    return legendValues[i] + '%';}});
+
+        // Add the title for the legend
+        g.append("text")
+            .attr("class", "LegendTitle")
+            .attr("x", width - 210)
+            .attr("y", 5)
+            .attr("text-anchor", "right")
+            .text("Poverty Rate");
+
+        // Establishing what the tooltip will include
+        var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+                var toolTip = AllData["$"+d.id.toString()];
+                return "<span style='color:#ffffff'>"  + "<span style='color:black; font-size: 16pt'><strong>State: </strong></span>" + toolTip.State + "<br />" +
+                    "\n<span style='color:black; font-size: 16pt'><strong>County: </strong></span>" + toolTip.County + "<br />" +
+                    "\n<span style='color:black; font-size: 16pt'><strong>Poverty: </strong></span>" + toolTip.Poverty + "%" + "<br />" +
+                    "\n<span style='color:black; font-size: 16pt'><strong>Total Population: </strong></span>" + toolTip.TotalPop + "<br />" +
+                    "\n<span style='color:black; font-size: 16pt'><strong> Income Per Capita: </strong></span>" + toolTip.IncomePerCap + "</span>";
+            });
+        svg.call(tip);
+
+        // Adding the counties to the map of the United States
+        svg.append("g")
+            .attr("class", "counties")
+            .attr("transform", "translate(100,0)")
+            .selectAll("path")
+            .data(topojson.feature(us, us.objects.counties).features)
+            .enter().append("path")
+            .attr("d", path)
+            .attr("id", function(d){return d.id})
+            .attr("CensusId", function(d){
+                var CensusID = AllData["$"+d.id.toString()].CensusId;
+                return CensusID;
+            })
+            .attr("State", function(d){
+                var State = AllData["$"+d.id.toString()].State;
+                return State;
+            })
+            .attr("County", function(d){
+                var County = AllData["$"+d.id.toString()].County;
+                return County;
+            })
+            .attr("Poverty", function(d){
+                var Poverty = AllData["$"+d.id.toString()].Poverty;
+                return Poverty;
+            })
+            .attr("TotalPop", function(d){
+                var TotalPop = AllData["$"+d.id.toString()].TotalPop;
+                return TotalPop;
+            })
+            .attr("IncomePerCap", function(d){
+                var IncomePerCap = AllData["$"+d.id.toString()].IncomePerCap;
+                return IncomePerCap;
+            })
+            .attr('fill', function(d){
+                return testColorScale(AllData["$"+d.id.toString()].Poverty);})
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
+
+        // Adding the county borders to the map
+        svg.append("path")
+            .attr("transform", "translate(100,0)")
+            .attr("class", "county-borders")
+            .attr("d", path(topojson.mesh(us, us.objects.counties, function(a, b) { return a !== b; })));
+
+        // Adding the title to the chart
+        svg.append("text")
+            .attr('class', 'Title')
+            .attr("x", (width/2))
+            .attr("y",30 )
+            .attr("text-anchor", "middle")
+            .attr("font-size", "2em")
+            .attr("font-weight", "bold")
+            .text("Choropleth Map of County Data");
+    };
+
+</script>

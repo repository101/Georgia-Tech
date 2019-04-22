@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta course="CSE-6242" content="Homework 2: Question 4">
+	<meta school="Georgia Tech">
+	<meta name="Josh Adams">
+	<title>jadams334</title>
+
+    <script src="../lib/d3.v5.min.js"></script>
+    <script src="../lib/d3-scale-chromatic.v1.min.js"></script>
+    <link rel='stylesheet' href='heatmap.css'>
+    <style>
+        html {
+            font-size: 62.5%;
+            font-family: sans-serif;
+            font-weight: bold;
+            shape-rendering: geometricPrecision;
+        }
+
+        body {
+            margin-top: 30px;
+            font-size: 1.8rem;
+            font-family: sans-serif;
+            font-weight: bold;
+            fill: #696969;
+            text-align: center;
+            shape-rendering: geometricPrecision;
+        }
+
+        .crimeLabel, .boroughLabel, .Crimes{
+            font-size: 1.8em;
+            fill: rgba(46, 46, 46, 0.93);
+            font-weight: bold;
+            shape-rendering: geometricPrecision;
+        }
+        .Title{
+            font-size: 2.8em;
+            font-weight: bold;
+            fill: #000000;
+            shape-rendering: geometricPrecision;
+        }
+        .yearDropdown{
+            font-weight: bold;
+            font-family: sans-serif;
+            shape-rendering: geometricPrecision;
+        }
+        .caption{
+            font-size: 1.8em;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        #nav-container {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: bold;
+            shape-rendering: geometricPrecision;
+        }
+        #yearDropdown{
+            font-weight: bold;
+            font-family: sans-serif;
+            shape-rendering: geometricPrecision;
+        }
+
+        #nav-container .prev {
+            margin-right: 20px;
+            font-weight: bold;
+            font-size: 1.4em;
+            shape-rendering: geometricPrecision;
+        }
+
+        #nav-container .next {
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 1.4em;
+            shape-rendering: geometricPrecision;
+        }
+    </style>
+</head>
+
+<body>
+<div id="nav-container">
+    <div class="nav prev">prev</div>
+    <div id="yearDropdown"></div>
+    <div class="nav next">next</div>
+</div>
+<div id="heatmap">
+    <div class="legend"></div>
+</div>
+<script type='module' src='heatmap.js'></script>
+</body>
