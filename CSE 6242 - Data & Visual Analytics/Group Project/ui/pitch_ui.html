@@ -1,0 +1,474 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <style>
+      caption {
+        font-weight: bold;
+      }
+      figcaption {
+        font-weight: bolder;
+      }
+      body {
+        background-color: aliceblue;
+      }
+      .axis path, .axis line {
+        fill: none;
+        stroke: #fff;
+      }
+      .axis text {
+        font-size: 12px;
+      }
+      .bar {
+        fill: #002D72;
+      }
+      .avgbar {
+        fill: #D50032;
+        /* opacity: .4; */
+      }
+      svg text.label {
+        fill:grey;
+        font-size: small;
+        font-weight: bolder;
+        text-anchor: middle;
+      }
+      .line {
+        fill: none;
+        stroke: black;
+        stroke-width: 2px;
+      }
+      .line.pitch-FF {
+        stroke: purple;
+      }
+      .line.pitch-CH {
+        stroke: pink;
+      }
+      .line.pitch-KC {
+        stroke: orange;
+      }
+      .line.pitch-SL {
+        stroke: green;
+      }
+      .predbar {
+        fill: #29bb19;
+      }
+      dt,dd {
+        font-size: small;
+      }
+
+      #prediction-accuracy {
+        margin-left: 0.25em;
+        font-size: small;
+      }
+
+      #best_prediction {
+        margin-left: 20px;
+      }
+      </style>
+      <script src="d3.v5.min.js"></script>
+      <script>
+        //maps pitch types to pitch friendly names
+        const pitchTypes = {"CH":"Changeup","CU":"Curveball","FC":"Cutter","FF":"Four-Seam Fastball","FS":"Splitter","FT":"Two-Seam Fastball","KC":"Knuckle-curve","KN":"Knuckleball","SI":"Sinker","SL":"Slider"};
+        //avgs for all pitch data
+        const pitchAvgs = [
+          {"pitch":"CH","usage":0.107},
+          {"pitch":"CU","usage":0.08},
+          {"pitch":"FC", "usage":0.052},
+          {"pitch":"FF","usage":0.362},
+          {"pitch":"FS","usage":0.012},
+          {"pitch":"FT","usage":0.125},
+          {"pitch":"KC","usage":0.026},
+          {"pitch":"KN","usage":0.001},
+          {"pitch":"SI","usage":0.087},
+          {"pitch":"SL","usage":0.148}];
+          const pitchers = {
+          "434378":"Justin Verlander",
+          "452657":"Jon Lester",
+          "425844":"Zack Greinke",
+          "453286":"Max Scherzer",
+          "433587":"Felix Hernandez",
+          "430935":"Cole Hamels",
+          "282332":"CC Sabathia",
+          "477132":"Clayton Kershaw",
+          "456034":"David Price",
+          "519144":"Rick Porcello",
+          "457918":"J.A. Happ",
+          "518516":"Madison Bumgarner",
+          "519242":"Chris Sale",
+          "500779":"Jose Quintana",
+          "453562":"Jake Arrieta",
+          "544931":"Stephen Strasburg",
+          "446372":"Corey Kluber",
+          "450203":"Charlie Morton",
+          "502042":"Chris Archer",
+          "572971":"Dallas Keuchel",
+          "471911":"Carlos Carrasco",
+          "543037":"Gerrit Cole",
+          "545333":"Trevor Bauer",
+          "451584":"Wade Davis",
+          "571578":"Patrick Corbin",
+          "594798":"Jacob deGrom",
+          "506433":"Yu Darvish",
+          "593372":"Carlos Martinez",
+          "547888":"Masahiro Tanaka",
+          "453192":"Andrew Miller",
+          "572020":"James Paxton",
+          "547943":"Hyun-Jin-Ryu",
+          "518886":"Craig Kimbrel",
+          "605400":"Aaron Nola",
+          "622663":"Luis Severino",
+          "547973":"Aroldis Chapman",
+          "592789":"Noah Syndergaard",
+          "605483":"Blake Snell",
+          "476454":"Dellin Betances",
+          "453214":"Steven Wright"};
+        const pitchData = {
+"282332":{"CH": 4719, "CU": 597, "FC": 1805, "FF": 10175, "SI": 6915, "SL": 7492},
+"425844":{"CH": 4472, "CU": 4016, "FC": 771, "FF": 13563, "FT": 5255, "SL": 6004},
+"430935":{"CH": 8074, "CU": 3505, "FC": 3611, "FF": 15091, "FT": 2237, "SL": 149},
+"433587":{"CH": 6580, "CU": 5010, "FC": 750, "FF": 7767, "SI": 9681, "SL": 3274},
+"434378":{"CH": 4590, "CU": 6354, "FC": 34, "FF": 22431, "FT": 237, "SL": 4709},
+"446372":{"CH": 1213, "CU": 3585, "FC": 1563, "FF": 2195, "SI": 7199, "SL": 3461},
+"450203":{"CH": 586, "CU": 4311, "FC": 624, "FF": 3989, "FS": 1026, "FT": 8384, "SL": 309},
+"451584":{"CH": 263, "FC": 2285, "FF": 7779, "FT": 1313, "KC": 2740, "SL": 605},
+"452657":{"CH": 2833, "CU": 5422, "FC": 7794, "FF": 15742, "SI": 4197},
+"453192":{"CH": 625, "FF": 5689, "FT": 555, "SI": 1, "SL": 3887},
+"453214":{"CU": 703, "FF": 644, "FT": 35, "KN": 4087},
+"453286":{"CH": 5794, "CU": 1725, "FC": 725, "FF": 19401, "FT": 467, "SL": 5910},
+"453562":{"CH": 1516, "CU": 3104, "FC": 17, "FF": 4401, "SI": 8036, "SL": 4372},
+"456034":{"CH": 4666, "CU": 8, "FC": 4511, "FF": 7291, "FT": 10661, "KC": 2678, "SL": 28},
+"457918":{"CH": 2913, "CU": 1951, "FF": 14340, "FT": 3478, "SL": 3337},
+"471911":{"CH": 3024, "CU": 1971, "FF": 6079, "FT": 2669, "SL": 2831},
+"476454":{"CH": 9, "FC": 219, "FF": 2864, "KC": 2925, "SL": 369},
+"477132":{"CH": 713, "CU": 4227, "FF": 18364, "FT": 153, "SL": 7598},
+"500779":{"CH": 2065, "CU": 5283, "FC": 1, "FF": 10234, "FT": 1917, "SI": 1319, "SL": 608},
+"502042":{"CH": 1473, "CU": 36, "FF": 8908, "FT": 1009, "SL": 6987},
+"506433":{"CH": 99, "CU": 696, "FC": 2055, "FF": 4362, "FS": 361, "FT": 2103, "SL": 3485},
+"518516":{"CH": 1581, "CU": 3565, "FC": 1167, "FF": 8102, "FT": 3686, "SL": 6754},
+"518886":{"FF": 6040, "FT": 82, "KC": 2686},
+"519144":{"CH": 3499, "CU": 3226, "FF": 6976, "FT": 11536, "SI": 4, "SL": 4139},
+"519242":{"CH": 4692, "FF": 2375, "FS": 1, "FT": 9618, "SL": 6198},
+"543037":{"CH": 964, "CU": 49, "FF": 7819, "FT": 626, "KC": 1864, "SI": 1382, "SL": 2903},
+"544931":{"CH": 3240, "CU": 3780, "FF": 8993, "FT": 2543, "SL": 815},
+"545333":{"CH": 1599, "CU": 1479, "FC": 1986, "FF": 5634, "FT": 1821, "KC": 1722, "SL": 955},
+"547888":{"CU": 692, "FC": 767, "FF": 2022, "FS": 3421, "SI": 2021, "SL": 3394},
+"547943":{"CH": 1874, "CU": 1168, "FC": 675, "FF": 2937, "FT": 1190, "SL": 902},
+"547973":{"CH": 234, "FF": 6447, "SI": 73, "SL": 1466},
+"571578":{"CH": 1169, "CU": 296, "FF": 3278, "FT": 5480, "SL": 4455},
+"572020":{"CH": 456, "FC": 1023, "FF": 5924, "FT": 62, "KC": 1698},
+"572971":{"CH": 2404, "CU": 324, "FC": 1566, "FF": 2519, "FT": 7914, "SI": 195, "SL": 3499},
+"592789":{"CH": 1119, "CU": 1047, "FF": 2478, "FT": 2, "SI": 2184, "SL": 1243},
+"593372":{"CH": 2035, "CU": 1979, "FC": 315, "FF": 3801, "FT": 3387, "SL": 1252},
+"594798":{"CH": 1756, "CU": 1329, "FF": 5966, "FT": 2059, "SL": 2735},
+"605400":{"CH": 1321, "CU": 2669, "FF": 2550, "FT": 976, "SI": 1200},
+"605483":{"CH": 1347, "CU": 1035, "FF": 3737, "SL": 786},
+"622663":{"CH": 1104, "FC": 58, "FF": 4390, "FT": 5, "SL": 2963}
+}
+        function drawPitchUsage(data, g) {
+          drawBarChar(data, pitchTypes, pitchAvgs, g);
+        }
+        const margin = {top: 10, right: 20, bottom: 5, left: 50},
+            width = 450 - margin.left - margin.right,
+            height = 150 - margin.top - margin.bottom;
+        //
+        // const svg = d3.select("#pitchusagesvg")
+        //             .attr("width", width + margin.left + margin.right)
+        //             .attr("height", height + margin.top + margin.bottom + 100);
+        const xscale = d3.scaleBand()
+            .domain(d3.keys(pitchTypes))
+            .paddingInner(0.1)
+            .range([0, width]);
+        const yscale = d3.scaleLinear()
+                        .domain([0,1])
+                        .range([height,margin.top]);
+        const xaxis = d3.axisBottom().scale(xscale);
+        function drawBarChart(domain, avgs, g) {
+          const avgbars = g.select(".avgbarsg").selectAll(".avgbar")
+            .data(avgs)
+            .enter()
+            .append("g")
+            .classed("avgbar", true)
+            .append("rect")
+            .attr("width", xscale.bandwidth())
+            .attr("x", d => xscale(d.pitch)+margin.left)
+            .attr("y", d => yscale(d.usage) - margin.bottom - 5)
+            .attr("height", 5);
+          const xaxis_g = g.append("g")
+            .attr("class","x axis")
+            .attr("transform", `translate(${margin.left},${height-margin.bottom})`)
+            .call(xaxis)
+            .selectAll("text");
+                      // 4. Call the y axis in a group tag
+          const yaxis_g = g.append("g")
+              .attr("class", "y axis")
+              .attr("transform", `translate(${margin.left},0)`)
+              .call(d3.axisLeft(yscale).ticks(5).tickFormat(d => `${d*100}%`)); // Create an axis component with d3.axisLeft
+        }
+        function updateBars(data, g) {
+          // const tmp = d3.values(data).flat().reduce(function(a,i){ a[i.pitch] = (a[i.pitch] || 0) + i.usage; return a}, {})
+          // const d2u = d3.keys(tmp).map(d => ({"pitch":d, "usage":tmp[d]}));
+          const d2u = d3.keys(pitchTypes).map(d => ({"pitch": d, "usage": data[d] || 0}))
+          const localy = yscale.copy().domain([0,d3.values(data).reduce((a,i) => a+i, 0)]);
+          const bars = g.select(".usagebarsg").selectAll(".bar").data(d2u);
+          bars.enter()
+            .append("rect")
+            .classed("bar", true)
+            .attr("width", xscale.bandwidth())
+            .attr("x", d => xscale(d.pitch) + margin.left)
+            .attr("y", d => localy(d.usage) - margin.bottom)
+            .attr("height", d => height - localy(d.usage));
+          bars.transition().duration(250)
+            .attr("y", d => localy(d.usage) - margin.bottom)
+            .attr("height", d => height - localy(d.usage));
+          bars.exit().remove();
+        }
+        function drawPredictionBars(prediction, g) {
+          const predbars = g.select(".predbars").selectAll(".predbar")
+            .data(prediction)
+          predbars.enter()
+            .append("rect")
+            .classed("predbar", true)
+            .attr("width", xscale.bandwidth())
+            .attr("x", d => xscale(d.pitch)+margin.left)
+            .attr("y", d => yscale(d.usage) - margin.bottom)
+            .attr("height", d => height - yscale(d.usage));
+          predbars.transition().duration(250)
+            .attr("y", d => yscale(d.usage) - margin.bottom)
+            .attr("height", d => height - yscale(d.usage));
+          predbars.exit().remove();
+        }
+        function drawPredictionGraph(g) {
+          const xaxis_g = g.append("g")
+            .attr("class","x axis")
+            .attr("transform", `translate(${margin.left},${height-margin.bottom})`)
+            .call(xaxis)
+            .selectAll("text");
+                      // 4. Call the y axis in a group tag
+          const yaxis_g = g.append("g")
+              .attr("class", "y axis")
+              .attr("transform", `translate(${margin.left},0)`)
+              .call(d3.axisLeft(yscale).ticks(5).tickFormat(d => `${d*100}%`)); // Create an axis component with d3.axisLeft
+        }
+        function drawTSeries(data, canvas) {
+          const xscale = d3.scaleBand()
+              .domain(d3.keys(data))
+              .paddingInner(0.1)
+              .range([0, width * .75]);
+          const yscale = d3.scaleLinear()
+                          .domain(d3.extent(d3.values(data).flat().map(d => d.usage)))
+                          .range([height,0]);// 3. Call the x axis in a group tag
+          canvas.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(d3.axisBottom(xscale).tickValues(d3.values(pitchTypes))); // Create an axis component with d3.axisBottom
+          // 4. Call the y axis in a group tag
+          canvas.append("g")
+              .attr("class", "y axis")
+              .call(d3.axisLeft(yscale)); // Create an axis component with d3.axisLeft
+          const d2u = d3.keys(pitchTypes)
+            .map(pitch => (
+              {'pitch': pitch,
+              'timeusage': d3.keys(data)
+                              .map(year => data[year]
+                                            .filter(rec => rec.pitch == pitch)
+                                            .map(rec => ({"year": year, "usage" : rec.usage}))
+                                  ).flat()}))
+            .forEach(function(trec){
+              const valueline = d3.line()
+                  .x(d => xscale(d.year))
+                  .y(d => yscale(d.usage));
+              canvas.append("path")
+                .datum(trec.timeusage)
+                .attr("class", `line pitch-${trec.pitch}`)
+                .attr("d", valueline);
+            });
+        }
+
+        function displayPitchPrediction(prediction) {
+          console.log("I will display",prediction);
+          d3.select("#best_prediction").text(prediction)
+        }
+
+        function handleSubmit(form) {
+          event.preventDefault();
+          const params = new URLSearchParams(new FormData(form));
+          fetch("/predict", {
+            body: params,
+            method: "post"
+          })
+          .then(resp => {
+            return resp.json();
+          })
+          .then(data => {
+            // console.log(data);
+            return data;
+          })
+          .then(data => {
+            document.getElementById("prediction-accuracy").innerText = `(Avg. model accuracy for selected pitcher: ${data.accuracy}%)`;
+            return data.prediction;
+          })
+          .then(data => d3.keys(pitchTypes).map(d => ({"pitch": d, "usage": data[d] || 0})))
+          .then(data => {
+            displayPitchPrediction(pitchTypes[data.reduce((a, e) => a.usage > e.usage ? a : e, {"usage":0}).pitch]);
+            drawPredictionBars(data, d3.select("#predictions"));
+          })
+        }
+      </script>
+  </head>
+  <body>
+    <h1 class="text-center">Predict the Pitch! ⚾️</h1>
+    <div class="container">
+    Select a pitcher and the current game scenario and predict which pitch-type the pitcher will throw.
+    </div>
+    <div class="container">
+      <form onsubmit="handleSubmit(this);">
+        <h2>scenario</h2>
+      <div class="row">
+        <div class="col">
+          <div id="pitcher" class="form-group">
+            <!-- <label class="col-sm-2 col-form-label" for="selectedpitcher">Pitcher</label> -->
+            <div class="col-sm-10">
+              <select id="selectedpitcher" name="pitcher" class="form-control" onchange='updateBars(pitchData[this.value], d3.select("#pitchusagesvg"));'>
+                <option selected hidden>Choose pitcher</option>
+
+              </select>
+              <script>
+              d3.select("#selectedpitcher")
+                .selectAll("option")
+                .data(d3.entries(pitchers).sort((a,b) => (a.value.toUpperCase() < b.value.toUpperCase() ? -1 : 1)))
+                .enter()
+                .append("option")
+                .attr("value", d=> d.key)
+                .text(d => d.value);
+              </script>
+              <input id="batterSelect" class="form-control" name="batter" list="batter" placeholder="Enter Batter" autocomplete="off">
+              <datalist id="batter">
+              </datalist>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <div class="form-group row">
+              <label for="balls" class="col-sm-2 col-form-label">Balls</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="balls" name="balls" value="0" min="0" max="3">
+              </div>
+              <label for="strikes" class="col-sm-2 col-form-label">Strikes</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="strikes" name="strikes" value="0" min="0" max="2">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inning" class="col-sm-2 col-form-label">Inning</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="inning" name="inning" value="1" min="1" max="30">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="outs" class="col-sm-2 col-form-label">Outs</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="outs" name="outs" value="0" min="0" max="2">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="pitchnumpa" class="col-sm-2 col-form-label">Pitch # PA</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="pitchnumpa" name="pitchnumpa" value="0" min="0">
+              </div>
+              <label for="pitchnumgame" class="col-sm-2 col-form-label">Pitch # Game</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="pitchnumgame" name="pitchnumgame" value="0" min="0">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="scorebatter" class="col-sm-2 col-form-label">Score Batter</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="scorebatter" name="scorebatter" value="0" min="0">
+              </div>
+              <label for="scorepitcher" class="col-sm-2 col-form-label">Score Pitcher</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="scorepitcher" name="scorepitcher" value="0" min="0">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="scorebatter" class="col-sm-2 col-form-label">Runner on First Base?</label>
+              <div class="col-sm-2">
+                <input type="radio" class="form-control" name="runneron1" value="1">Yes</input>
+                <input type="radio" class="form-control" name="runneron1" value="0" checked>No</input>
+              </div>
+              <label for="scorebatter" class="col-sm-2 col-form-label">Runner on Second Base?</label>
+              <div class="col-sm-2">
+                <input type="radio" class="form-control" name="runneron2" value="1">Yes</input>
+                <input type="radio" class="form-control" name="runneron2" value="0" checked>No</input>
+              </div>
+              <label for="scorebatter" class="col-sm-2 col-form-label">Runner on Third Base?</label>
+              <div class="col-sm-2">
+                <input type="radio" class="form-control" name="runneron3" value="1">Yes</input>
+                <input type="radio" class="form-control" name="runneron3" value="0" checked>No</input>
+              </div>
+            </div>
+            <input type="submit" value="Predict!" class="form-control">
+        </div>
+        <div class="col">
+          <div class="row">
+            <figcaption>Pitch Usage Aggregate</figcaption>
+            <svg id="pitchusagesvg" width="450" height="150">
+              <g class="usagebarsg"></g>
+              <g class="avgbarsg"></g>
+            </svg>
+          </div>
+          <div class="row" style="margin-top:30px">
+            <div>
+            <figcaption>Pitch Prediction</figcaption>
+            </div>
+            <svg id="predictions" width="450" height="150">
+              <g class="predbars"></g>
+            </svg>
+            <div><span id="best_prediction"></span> <span id="prediction-accuracy"></span></div>
+          </div>
+      </form>
+      </div>
+    </div>
+    <div class="container" style="margin-top:30px">
+      <h4>Pitch Types</h4>
+      <dl id="pitchTypesDisplay" class="row">
+
+      </dl>
+      <script>
+        const dl = d3.select("#pitchTypesDisplay")
+          .html("<div><dt/><dd/></div>".repeat(d3.entries(pitchTypes).length));
+        dl.selectAll("div").data(d3.entries(pitchTypes))
+          .classed("col-sm-2", true);
+        dl.selectAll("dt").data(d3.entries(pitchTypes))
+          .html(d => d.key);
+        dl.selectAll("dd").data(d3.entries(pitchTypes))
+          .html(d => d.value);
+
+        d3.csv("2018players.csv")
+        // .then(function(d){console.log(d);return d})
+        // .then(d => d.map(dd => dd.MLBNAME))
+        .then(d => d.sort())
+        .then(function(data){
+
+          d3.select("#batter")
+            .selectAll("option")
+            .data(data)
+            .enter()
+            .append("option")
+            .attr("value", d=> d.MLBNAME);
+        })
+      </script>
+    </div>
+    <script src="jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script>
+      drawBarChart(pitchTypes, pitchAvgs, d3.select("#pitchusagesvg"));
+      drawPredictionGraph(d3.select("#predictions"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+scikit-learn
+tensorflow
+keras
+pandas
+requests
+python-dateutil
+numpy
+bs4
+flask
+flask_cors
+xgboost
+inflect
+jsonify

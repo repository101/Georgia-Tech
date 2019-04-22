@@ -1,0 +1,13 @@
+Flask==1.0.2
+gunicorn==19.9.0
+pandas==0.24.2
+numpy==1.16.2
+inflect==2.1.0
+xgboost==0.82
+scikit-learn
+tensorflow
+keras
+requests
+python-dateutil
+bs4
+jsonify
