@@ -1,4 +1,4 @@
-![CSE 6242](cse6242-logo_resized.png)
+![CSE_6242](cse6242-logo_resized.png)
 
 
 
