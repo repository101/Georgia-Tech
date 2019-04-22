@@ -25,6 +25,7 @@ Do NOT change the signature of the given functions.
 Do NOT change any part of the main function APART from the forest_size parameter.  
 """
 
+
 class RandomForest(object):
     num_trees = 0
     decision_trees = []
@@ -43,19 +44,24 @@ class RandomForest(object):
         self.num_trees = num_trees
         self.decision_trees = [DecisionTree() for i in range(num_trees)]
 
-
     def _bootstrapping(self, XX, n):
         # Reference: https://en.wikipedia.org/wiki/Bootstrapping_(statistics)
         #
         # TODO: Create a sample dataset of size n by sampling with replacement
         #       from the original dataset XX.
         # Note that you would also need to record the corresponding class labels
-        # for the sampled records for training purposes. 
+        # for the sampled records for training purposes.
 
-        samples = [] # sampled dataset
-        labels = []  # class labels for the sampled records
-        return (samples, labels)
+        if isinstance(XX, np.ndarray):
+            pass
+        else:
+            XX = np.asarray(XX)
+        idx = np.random.choice(n - 1, np.random.random_integers(1000, n - 1), replace=True)
+        boot_set = XX[idx]
+        samples = boot_set[:, :-1]
+        labels = boot_set[:, -1]
 
+        return samples, labels
 
     def bootstrapping(self, XX):
         # Initializing the bootstap datasets for each tree
@@ -64,12 +70,13 @@ class RandomForest(object):
             self.bootstraps_datasets.append(data_sample)
             self.bootstraps_labels.append(data_label)
 
-
     def fitting(self):
         # TODO: Train `num_trees` decision trees using the bootstraps datasets
         # and labels by calling the learn function from your DecisionTree class.
-        pass      
-
+        test = []
+        for val in range(len(self.decision_trees)):
+            test.append(self.decision_trees[val].learn(np.asarray(self.bootstraps_datasets[val]),
+                                                       np.asarray(self.bootstraps_labels[val])))
 
     def voting(self, X):
         y = []
@@ -88,25 +95,37 @@ class RandomForest(object):
                     effective_vote = OOB_tree.classify(record)
                     votes.append(effective_vote)
 
-
             counts = np.bincount(votes)
-            
+
             if len(counts) == 0:
                 # TODO: Special case 
                 #  Handle the case where the record is not an out-of-bag sample
-                #  for any of the trees. 
-                pass
+                #  for any of the trees.
+
+                # Special case where record is not in the out-of-bag sample
+                #    In this situation I take that record and get
+                #    the majority vote for the record.
+                special_case_record = record
+                special_case_votes = []
+
+                for i in range(len(self.bootstraps_datasets)):
+                    OOB_tree = self.decision_trees[i]
+                    effective_vote = OOB_tree.classify(special_case_record)
+                    special_case_votes.append(effective_vote)
+                special_case_counts = np.bincount(special_case_votes)
+                y = np.append(y, np.argmax(special_case_counts))
             else:
                 y = np.append(y, np.argmax(counts))
 
         return y
+
 
 # DO NOT change the main function apart from the forest_size parameter!
 def main():
     X = list()
     y = list()
     XX = list()  # Contains data features and data labels
-    numerical_cols = numerical_cols=set([i for i in range(0,43)]) # indices of numeric attributes (columns)
+    numerical_cols = numerical_cols = set([i for i in range(0, 43)])  # indices of numeric attributes (columns)
 
     # Loading data set
     print("reading hw4-data")
@@ -125,8 +144,8 @@ def main():
 
     # TODO: Initialize according to your implementation
     # VERY IMPORTANT: Minimum forest_size should be 10
-    forest_size = 10
-    
+    forest_size = 20
+
     # Initializing a random forest.
     randomForest = RandomForest(forest_size)
 
@@ -149,8 +168,9 @@ def main():
     accuracy = float(results.count(True)) / float(len(results))
 
     print("accuracy: %.4f" % accuracy)
-    print("OOB estimate: %.4f" % (1-accuracy))
+    print("OOB estimate: %.4f" % (1 - accuracy))
 
 
 if __name__ == "__main__":
+
     main()

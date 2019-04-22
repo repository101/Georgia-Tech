@@ -30,12 +30,12 @@ as popular graph analysis libraries like NetworkX.
 def pagerank(index_file, edge_file, max_node_id, edge_count, damping_factor=0.85, iterations=10):
     index_map = mmap.mmap(
         index_file.fileno(),
-        length=99999,  # ~~~ MODIFY THIS LINE (i) ~~~
+        length=(max_node_id+1) * 8,  # ~~~ MODIFY THIS LINE (i) ~~~
         access=mmap.ACCESS_READ)
 
     edge_map = mmap.mmap(
         edge_file.fileno(),
-        length=99999,  # ~~~ MODIFY THIS LINE (ii) ~~~
+        length=edge_count * 8,  # ~~~ MODIFY THIS LINE (ii) ~~~
         access=mmap.ACCESS_READ)
 
     scores = [1.0 / (max_node_id + 1)] * (max_node_id + 1)
@@ -47,12 +47,12 @@ def pagerank(index_file, edge_file, max_node_id, edge_count, damping_factor=0.85
 
         for i in range(edge_count):
             source, target = unpack(
-                '??',  # ~~~ MODIFY THIS LINE (iii) ~~~
-                edge_map[i * 99999: i * 99999 + 99999])  # ~~~ MODIFY THIS LINE (iv) ~~~
+                '>ii',  # ~~~ MODIFY THIS LINE (iii) ~~~
+                edge_map[i * 8: i * 8 + 8])  # ~~~ MODIFY THIS LINE (iv) ~~~
 
             source_degree = unpack(
-                '??',  # ~~~ MODIFY THIS LINE (v) ~~~
-                index_map[source * 99999: source * 99999 + 99999])[1]  # ~~~ MODIFY THIS LINE (vi) ~~~
+                '<ii',  # ~~~ MODIFY THIS LINE (v) ~~~
+                index_map[source * 8: source * 8 + 8])[1]  # ~~~ MODIFY THIS LINE (vi) ~~~
 
             new_scores[target] += damping_factor * scores[source] / source_degree
 
