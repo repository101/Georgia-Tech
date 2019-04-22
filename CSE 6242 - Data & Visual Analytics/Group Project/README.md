@@ -79,6 +79,10 @@ data = pd.read_csv("Modeling_data.csv")
 
 id, balls, strikes, inning, outs, pitch_PA, pitch_game, score_batter, score_pitcher
 
+| [Josh Adams](https://github.com/Jadams29) |
+[Christian Rivera](https://github.gatech.edu/orgs/cse6242-philly/people/crivera43) |   [Craig Skinfill](https://github.gatech.edu/orgs/cse6242-philly/people/cskinfill3)  |   [Dami](https://github.gatech.edu/orgs/cse6242-philly/people/oalebiosu6)  |
+[Stephen Baillio](https://github.gatech.edu/orgs/cse6242-philly/people/sbaillio3)  | [Jacob Alley](https://github.gatech.edu/orgs/cse6242-philly/people/jalley7)  |
+
 
 ## **License**
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Microsoft/BosqueLanguage/blob/master/LICENSE.txt)
