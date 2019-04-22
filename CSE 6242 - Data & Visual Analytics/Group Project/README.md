@@ -1,5 +1,5 @@
 # Baseball_Pitch_Prediction
-[Baseball Pitch Prediction](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics/Group%20Project/ui_image.png)
+[Baseball Pitch Prediction](ui_image.png)
 
 Baseball Pitch Prediction is an app used to predict the type of pitch that will be thrown based on variables that the user can specify.
 
