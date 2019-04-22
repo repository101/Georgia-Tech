@@ -1,8 +1,3 @@
-# CSE-6242 Data and Visual Analytics
-# Dr. Duen Horng(Polo) Chau
-# Group Project - Baseball Pitch Prediction using Recurrent Neural Networks
-# Josh Adams
-
 import argparse
 import csv
 import glob
@@ -464,7 +459,7 @@ def into_function():
 
     temp_schedule = ''
     while (len(temp_schedule) == 0) or (temp_schedule.lower() not in ['yes', 'y', 'no', 'n']):
-        get_game_schedule = input("Do you want to get the game schedules? (eg. Yes No)\n")
+        get_game_schedule = input("Do you want to get the game schedules? (eg. Yes or No)\n")
         temp_schedule = get_game_schedule
     if get_game_schedule.lower() in ['y', 'yes']:
         get_game_schedule = True

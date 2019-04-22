@@ -1,8 +1,3 @@
-# CSE-6242 Data and Visual Analytics
-# Dr. Duen Horng(Polo) Chau
-# Group Project - Baseball Pitch Prediction using Recurrent Neural Networks
-# Josh Adams
-
 import sys
 
 from scripts import *
@@ -16,7 +11,6 @@ if __name__ == "__main__":
               "September": 9, "October": 10, "November": 11, "December": 12}
     pitcher_list_filename = get_list_of_pitchers()
 
-    # Combined_data will hold all the data
     cleaned_schedule_data = get_schedules_csv(int(start), int(end), 1, months,)
     schedule_filename = "{}/{}_Baseball_Games".format(game_schedule_dir, (str(start) + "-" + str(int(end) - 1)))
 
