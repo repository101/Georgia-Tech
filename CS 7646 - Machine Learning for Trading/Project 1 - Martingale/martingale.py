@@ -91,6 +91,7 @@ def test_code(target_winnings):
     winnings[0, count:] = target_winnings
     return winnings
 
+
 if __name__ == "__main__":
     # Sim1 is with 10 iterations
     Experiment_1 = pd.DataFrame()
@@ -99,6 +100,6 @@ if __name__ == "__main__":
     
     # Sim2 is with 1000 iterations
     Experiment_2 = pd.DataFrame()
-    
-    
+
     test_code()
+
