@@ -75,7 +75,7 @@ def test_code(target_winnings):
             bet_amount = winnings[0, count]
         while not won:
             while count < 1000:
-                # TODO: 
+                # TODO: Wager bet_amount on black ??
                 won = get_spin_result(win_prob)
                 count += 1
                 if won:
@@ -95,6 +95,9 @@ def test_code(target_winnings):
 if __name__ == "__main__":
     # Sim1 is with 10 iterations
     Experiment_1 = pd.DataFrame()
+    array_of_values = np.full((1, 10), 80)
+    test = np.vectorize(test_code)
+    test_1 = test(array_of_values)
     tmp = [test_code(80) for i in range(10)]
     print "HEY"
     
