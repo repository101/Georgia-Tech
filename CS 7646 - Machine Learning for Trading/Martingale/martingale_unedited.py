@@ -45,15 +45,76 @@ def get_spin_result(win_prob):
 	return result
 
 
+def get_figure_1(total_df, episode_df, bets, win_prob):
+	plt.figure(1)
+	for i in range(10):
+		# Experiment 1
+		# Figure 1: 10 iterations, plot on chart X[0:300], y[-256:100]
+		total, episode, count = roulette_simulation(episode_win=80, win_chance=win_prob)
+		total_df = pd.concat([total_df, pd.DataFrame(total)], ignore_index=True)
+		episode_df = pd.concat([episode_df, pd.DataFrame(episode)], ignore_index=True)
+		bets.append(count)
+	axes = plt.gca()
+	axes.set_xlim([0, 300])
+	axes.set_ylim([-256, 100])
+	for n in range(10):
+		plt.plot(episode_df.iloc[n, 0:300])
+	plt.title("Figure 1")
+	plt.savefig('Figure_1.png')
+	return total_df, episode_df, bets
+
+
+def get_figure_2(win_prob, iterations=10):
+	plt.figure(2)
+	total_df = pd.DataFrame(columns=[range(0, 1000)])
+	episode_df = pd.DataFrame(columns=[range(0, 1000)])
+	bets = []
+	for i in range(iterations):
+		# Experiment 1
+		# Figure 2: 1000 iterations, plot on chart X[0:300], y[-256:100]
+		total, episode, count = roulette_simulation(episode_win=80, win_chance=win_prob)
+		total_df = pd.concat([total_df, pd.DataFrame(total)], ignore_index=True)
+		episode_df = pd.concat([episode_df, pd.DataFrame(episode)], ignore_index=True)
+		bets.append(count)
+	mean_line = np.mean(episode_df.values, axis=0)     # This is the mean based on the rows
+	std_per_spin = np.std(episode_df.values, axis=0)       # Standard Deviation based on the rows
+	line_std_below_mean = mean_line - std_per_spin
+	line_std_above_mean = mean_line + std_per_spin
+	axes = plt.gca()
+	axes.set_xlim([0, 300])
+	axes.set_ylim([-256, 100])
+	plt.plot(mean_line)
+	plt.plot(line_std_above_mean)
+	plt.plot(line_std_below_mean)
+	plt.legend(("Mean", "STD_Above", "STD_Below"))
+	plt.title("Figure 2")
+	plt.savefig('Figure_2.png')
+	get_figure_3(total_df=total_df, episode_df=episode_df, bets=bets)
+	return
+
+
+def get_figure_3(total_df, episode_df, bets):
+	plt.figure(3)
+	median_line = np.median(episode_df.values, axis=0)     # This is the mean based on the rows
+	std_per_spin = np.std(episode_df.values, axis=0)       # Standard Deviation based on the rows
+	line_std_below_mean = median_line - std_per_spin
+	line_std_above_mean = median_line + std_per_spin
+	axes = plt.gca()
+	axes.set_xlim([0, 300])
+	axes.set_ylim([-256, 100])
+	plt.plot(median_line)
+	plt.plot(line_std_above_mean)
+	plt.plot(line_std_below_mean)
+	plt.legend(("Median", "STD_Above", "STD_Below"))
+	plt.title("Figure 3")
+	plt.savefig('Figure_3.png')
+	return
+
+
 def test_code():
-	win_prob = 0.60  # set appropriately to the probability of a win
-	np.random.seed(gtid())  # do this only once
-	print get_spin_result(win_prob)  # test the roulette spin
-
-
-# add your code here to implement the experiments
-
-def roulette_simulation(iterations=None, bankroll=None, episode_win=None):
+	Experiment_total_winnings = pd.DataFrame(columns=[range(0, 1000)])  # Dataframe to hold the total winnings from each iteration
+	Experiment_episode_winnings = pd.DataFrame(columns=[range(0, 1000)])  # Dataframe to hold the winnings per episode
+	Experiment_bets = []  # A list to keep track of the number of bets that occurred per iteration
 	# american_casino, n = 2 because it uses 0(zero) and 00(double-zero)
 	american_casino = True
 	if american_casino:
@@ -62,16 +123,57 @@ def roulette_simulation(iterations=None, bankroll=None, episode_win=None):
 		n_green = 1.0
 	num_black = 18.0
 	# win_prob = 0.60  # set appropriately to the probability of a win
-	win_prob = (num_black / (36.0 + n_green))		# Formula from https://en.wikipedia.org/wiki/Roulette
-	num_of_bets = 1000		# The max number of bets determined by Project 1 - Martingale
-	episode_winnings = 0		# Winnings of an episode, where 1 episodes is 1 spin
-	total_winnings = np.zeros([1, num_of_bets])		# Used to store a total after each episode
-	episode_winnings_array = np.zeros([1, num_of_bets])		# Used to store the winnings for each episode
-	count = 0		# Used to limit iterations, as a secondary failsafe
+	win_prob = (num_black / (36.0 + n_green))  # Formula from https://en.wikipedia.org/wiki/Roulette
+	np.random.seed(gtid())  # do this only once
+	print get_spin_result(win_prob)  # test the roulette spin
+	Experiment_total_winnings, \
+	Experiment_episode_winnings, \
+	Experiment_bets = get_figure_1(
+		total_df=Experiment_total_winnings,
+		episode_df=Experiment_episode_winnings,
+		bets=Experiment_bets,
+		win_prob=win_prob)
+
+	get_figure_2(win_prob=win_prob,
+	             iterations=1000)
+
+	print ""
+
+
+# add your code here to implement the experiments
+
+def roulette_simulation(bankroll=None, episode_win=None, win_chance=0.6):
+	num_of_bets = 1000  # The max number of bets determined by Project 1 - Martingale
+	episode_winnings = 0  # Winnings of an episode, where 1 episodes is 1 spin
+	total_winnings = np.zeros([1, num_of_bets])  # Used to store a total after each episode
+	episode_winnings_array = np.zeros([1, num_of_bets])  # Used to store the winnings for each episode
+	count = 0  # Used to limit iterations, as a secondary failsafe
 	Experiment_total_winnings = pd.DataFrame()
 	Experiment_episode_winnings = pd.DataFrame()
 	Experiment_bets = []
-	return
+	if bankroll is not None:
+		print "here Experiment 2"
+	else:
+		while episode_winnings < episode_win:
+			won = False
+			bet_amount = 1
+			while not won:
+				# wager bet_amount on black
+				won = get_spin_result(win_prob=win_chance)
+				if won:
+					count += 1
+					episode_winnings += bet_amount
+					episode_winnings_array[0, count] = episode_winnings
+					total_winnings[0, count] = total_winnings[0, count - 1] + episode_winnings
+				else:
+					count += 1
+					episode_winnings -= bet_amount
+					bet_amount *= 2
+					episode_winnings_array[0, count] = episode_winnings
+					total_winnings[0, count] = total_winnings[0, count - 1] + episode_winnings
+		episode_winnings_array[0, count:] = episode_win
+		total_winnings[0, count:] = total_winnings[0, count - 1]
+	return total_winnings, episode_winnings_array, count
 
 
 if __name__ == "__main__":
