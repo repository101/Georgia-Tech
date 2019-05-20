@@ -8,8 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/CS 7646 - Machine Learning for Trading.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS 7646 - Machine Learning for Trading.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Martingale/.cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/Martingale/.cache/v/cache/lastfailed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Martingale/martingale.py" beforeDir="false" afterPath="$PROJECT_DIR$/Martingale/martingale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Martingale/Figure_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Martingale/Figure_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Martingale/Figure_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Martingale/Figure_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Martingale/Figure_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Martingale/Figure_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Martingale/martingale_unedited.py" beforeDir="false" afterPath="$PROJECT_DIR$/Martingale/martingale_unedited.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +20,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_martingale_unedited_py.coverage" NAME="pytest in martingale_unedited.py Coverage Results" MODIFIED="1558351530259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_martingale_py.coverage" NAME="pytest in martingale.py Coverage Results" MODIFIED="1558112022483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 1 - Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_for_martingale_test_code.coverage" NAME="pytest for martingale.test_code Coverage Results" MODIFIED="1558113600247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 1 - Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$martingale.coverage" NAME="martingale Coverage Results" MODIFIED="1558114977251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project 1 - Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$martingale_unedited.coverage" NAME="martingale_unedited Coverage Results" MODIFIED="1558382467250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Martingale/martingale_unedited.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="234" column="35" lean-forward="true" selection-start-line="234" selection-start-column="35" selection-end-line="234" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -33,13 +47,14 @@
       <list>
         <option value="$PROJECT_DIR$/Project 1 - Martingale/martingale.py" />
         <option value="$PROJECT_DIR$/Martingale/martingale.py" />
+        <option value="$PROJECT_DIR$/Martingale/martingale_unedited.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1934" />
-    <option name="height" value="527" />
+    <option name="x" value="-1927" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -47,7 +62,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -64,12 +78,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/ProgramData/Anaconda3/envs/ml4t" />
+    <property name="last_opened_file_path" value="C:/ProgramData/Anaconda3" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -111,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="martingale" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="martingale_unedited" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CS 7646 - Machine Learning for Trading" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -124,7 +139,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Martingale/martingale.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Martingale/martingale_unedited.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,13 +170,17 @@
       <workItem from="1558299901305" duration="1997000" />
       <workItem from="1558302999384" duration="17000" />
       <workItem from="1558303040314" duration="117000" />
+      <workItem from="1558351417609" duration="715000" />
+      <workItem from="1558352382070" duration="138000" />
+      <workItem from="1558352854668" duration="79000" />
+      <workItem from="1558353331154" duration="745000" />
+      <workItem from="1558354656916" duration="827000" />
+      <workItem from="1558361943171" duration="3820000" />
+      <workItem from="1558380140507" duration="3156000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_martingale_py - 2019.05.17 at 10h 59m 21s.xml">
-      <configuration name="pytest in martingale.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_martingale_py - 2019.05.17 at 11h 00m 27s.xml">
       <configuration name="pytest in martingale.py" configurationId="tests" />
     </history-entry>
@@ -189,20 +208,23 @@
     <history-entry file="pytest_for_martingale_test_code - 2019.05.19 at 12h 54m 13s.xml">
       <configuration name="pytest for martingale.test_code" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_martingale_unedited_py - 2019.05.20 at 07h 25m 35s.xml">
+      <configuration name="pytest in martingale_unedited.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16214000" />
+    <option name="totallyTimeSpent" value="25694000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2578125" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1673774" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.4084656" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.4084507" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -210,14 +232,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.3997833" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.2979415" />
       <window_info anchor="bottom" id="Inspection Results" order="13" visible="true" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.584127" visible="true" weight="0.30572918" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" sideWeight="0.41587302" side_tool="true" visible="true" weight="0.30572918" />
+      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.57529795" visible="true" weight="0.41417912" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" sideWeight="0.42470205" side_tool="true" visible="true" weight="0.41417912" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" />
     </layout>
@@ -293,6 +315,61 @@
           <line>116</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>198</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>152</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>166</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>153</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>155</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>156</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>147</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>136</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
+          <line>236</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -366,6 +443,27 @@
           <folding>
             <element signature="e#2004#2022#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="696" selection-start-line="696" selection-end-line="696" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/figure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="1575" selection-start-line="1575" selection-end-line="1575" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Martingale/martingale_unedited.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="234" column="35" lean-forward="true" selection-start-line="234" selection-start-column="35" selection-end-line="234" selection-end-column="35" />
         </state>
       </provider>
     </entry>
