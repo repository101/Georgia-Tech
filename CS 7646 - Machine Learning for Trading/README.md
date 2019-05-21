@@ -11,3 +11,19 @@
 * [Project 6 - Manual Strategy](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Manual%20Strategy)
 * [Project 7 - Qlearning Robot](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Qlearning%20Robot)
 * [Project 8 - Strategy Learner](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Strategy%20Learner)
+
+
+
+#### FileZilla
+Host: buffetX.cc.gatech.edu
+Username: gt Username
+Password: gt Password
+Port: 22
+
+#### SSH using Powershell
+ssh -X gtUsername@buffetX.cc.gatech.edu
+The 'x' after buffet needs to change to the correct number depending on last name
+then enter your Password
+
+#### To run python script
+PYTHONPATH=../:. python python_script.py
