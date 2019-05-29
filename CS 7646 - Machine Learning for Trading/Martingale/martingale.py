@@ -21,8 +21,8 @@ GT honor code violation.
 -----do not edit anything above this line--- 			  		 			 	 	 		 		 	  		   	  			  	
 
 Student Name: Josh Adams (replace with your name)
-GT User ID: jadams334 (replace with your User ID)
-GT ID: 903475599 (replace with your GT ID)
+GT User ID: GT_USERNAME (replace with your User ID)
+GT ID: 111111111 (replace with your GT ID)
 """
 
 import numpy as np
@@ -31,11 +31,11 @@ import matplotlib.pyplot as plt
 
 
 def author():
-	return 'jadams334'  # replace tb34 with your Georgia Tech username.
+	return 'GT_USERNAME'  # replace tb34 with your Georgia Tech username.
 
 
 def gtid():
-	return 903475599  # replace with your GT ID number
+	return 111111111  # replace with your GT ID number
 
 
 def get_spin_result(win_prob):
