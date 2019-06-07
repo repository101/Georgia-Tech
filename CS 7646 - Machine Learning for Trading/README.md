@@ -21,7 +21,8 @@ Password: gt Password
 Port: 22
 
 #### SSH using Powershell
-ssh -X gtUsername@buffetX.cc.gatech.edu
+ssh -X gtUsername@buffetXX.cc.gatech.edu
+// REMOVE LATER   ssh -X jadams334@buffet01.cc.gatech.edu
 The 'x' after buffet needs to change to the correct number depending on last name
 then enter your Password
 
