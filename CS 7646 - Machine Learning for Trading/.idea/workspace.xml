@@ -26,8 +26,8 @@
         <entry file="file://$PROJECT_DIR$/Assess Learners/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="119">
-                <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <first_editor>
+                <caret lean-forward="true" />
               </first_editor>
               <second_editor />
             </state>
@@ -334,7 +334,7 @@
       <workItem from="1559752580698" duration="5334000" />
       <workItem from="1559828072559" duration="597000" />
       <workItem from="1559847323709" duration="1729000" />
-      <workItem from="1559920037889" duration="5452000" />
+      <workItem from="1559920037889" duration="5703000" />
     </task>
     <servers />
   </component>
@@ -371,7 +371,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67615000" />
+    <option name="totallyTimeSpent" value="67866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -744,8 +744,8 @@
     <entry file="file://$PROJECT_DIR$/Assess Learners/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="119">
-            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <first_editor>
+            <caret lean-forward="true" />
           </first_editor>
           <second_editor />
         </state>

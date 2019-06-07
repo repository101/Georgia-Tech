@@ -1,6 +1,6 @@
-![CS_7646]()
 
-![ML4T Logo](/CS7646_ML4T.jpg)
+![ML4T Logo](/CS7646_ML4T.png)
+
 
 ## Project 3 - Assess Learners
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Microsoft/BosqueLanguage/blob/master/LICENSE.txt)
