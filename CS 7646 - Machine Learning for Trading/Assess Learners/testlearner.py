@@ -27,355 +27,322 @@ GT honor code violation.
 # GT ID: 903475599 (replace with your GT ID)
 
 import time
-import sys
 import math
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import LinRegLearner as lrl
 import DTLearner as dt
 import RTLearner as rt
 import BagLearner as bl
-import InsaneLearner as it
 
 plt.style.use("ggplot")     # Adding a style to the plots, makes it look much nicer
 np.random.seed(903475599)       # Setting the seed for random to be Student ID, like in previous projects
+compare_size = 25
 
 
-def test():
-    if len(sys.argv) != 2:
-        print "Usage: python testlearner.py <filename>"
-        sys.exit(1)
-    inf = open(sys.argv[1])
-    data = np.array([map(float, s.strip().split(',')) for s in inf.readlines()])
+def results(evaluate):
+	df = pd.read_csv("./Data/Istanbul.csv", header=0)
+	X = df.drop(["date", "EM"], axis=1).values
+	Y = df["EM"].values
+	train_rows = int(0.6 * X.shape[0])
+	trainX = X[:train_rows, :]
+	trainY = Y[:train_rows]
+	testX = X[train_rows:, :]
+	testY = Y[train_rows:]
 
-    # compute how much of the data is training and testing
-    train_rows = int(0.6 * data.shape[0])
-    test_rows = data.shape[0] - train_rows
-
-    # separate out training and testing data
-    trainX = data[:train_rows, 0:-1]
-    trainY = data[:train_rows, -1]
-    testX = data[train_rows:, 0:-1]
-    testY = data[train_rows:, -1]
-
-    print testX.shape
-    print testY.shape
-
-    # create a learner and train it
-    # learner = lrl.LinRegLearner(verbose = True) # create a LinRegLearner
-    learner = dt.DTLearner(leaf_size=1, verbose=False)
-    # learner = rt.RTLearner(leaf_size=1, verbose=True)
-    # learner = bl.BagLearner(learner=rt.RTLearner, kwargs={"leaf_size": 1}, bags=15, boost=False, verbose=False)
-    # learner = bl.BagLearner(learner=lrl.LinRegLearner, kwargs={}, bags=15, boost=False, verbose=False)
-    # learner = it.InsaneLearner(verbose = False)
-    learner.addEvidence(trainX, trainY)  # train it
-    print learner.author()
-
-    # evaluate in sample
-    predY = learner.query(trainX)  # get the predictions
-    rmse = math.sqrt(((trainY - predY) ** 2).sum() / trainY.shape[0])
-    print
-    print "In sample results"
-    print "RMSE: ", rmse
-    c = np.corrcoef(predY, y=trainY)
-    print "corr: ", c[0, 1]
-
-    # evaluate out of sample
-    predY = learner.query(testX)  # get the predictions
-    rmse = math.sqrt(((testY - predY) ** 2).sum() / testY.shape[0])
-    print
-    print "Out of sample results"
-    print "RMSE: ", rmse
-    c = np.corrcoef(predY, y=testY)
-    print "corr: ", c[0, 1]
+	for i in evaluate:
+		if i == 1:
+			try:
+				GetPart_A(trainX, trainY, testX, testY)
+			except Exception as err1:
+				print "Failed attempting to GetPart_A"
+				print err1
+		if i == 2:
+			try:
+				GetPart_B(trainX, trainY, testX, testY)
+			except Exception as err2:
+				print "Failed attempting to GetPart_B"
+				print err2
+		if i == 3:
+			try:
+				GetPart_C(X, Y, trainX, trainY, testX, testY)
+			except Exception as err3:
+				print "Failed attempting to GetPart_C"
+				print err3
 
 
-def question_1():
-    df = pd.read_csv("./Data/Istanbul.csv", header=0)
-    X = df.drop(["date", "EM"], axis=1).values
-    Y = df["EM"].values
+def GetPart_A(trainX, trainY, testX, testY):
+	print "Part A - Starting"
+	RMSE_Training = []
+	RSME_Testing = []
+	leaf_sizes = np.arange(1, compare_size, dtype=np.uint32)
+	for leaf_size in leaf_sizes:
+		learner = dt.DTLearner(leaf_size=leaf_size, verbose=False)
+		learner.addEvidence(trainX, trainY)
+		pred_y_train = learner.query(trainX)
+		rsme_train = math.sqrt(((trainY - pred_y_train) ** 2).sum() / trainY.shape[0])
+		RMSE_Training.append(rsme_train)
+		pred_y_test = learner.query(testX)
+		rsme_test = math.sqrt(((testY - pred_y_test) ** 2).sum() / testY.shape[0])
+		RSME_Testing.append(rsme_test)
 
-    train_rows = int(0.6 * X.shape[0])
-    trainX = X[:train_rows, :]
-    trainY = Y[:train_rows]
-    testX = X[train_rows:, :]
-    testY = Y[train_rows:]
+	fig, ax = plt.subplots()
+	pd.DataFrame({
+		"Train RMSE": RMSE_Training,
+		"Test RMSE": RSME_Testing
+	}, index=leaf_sizes).plot(
+		ax=ax,
+		style="o-",
+		title="DTLearner-RMSE VS Leaf-Size"
+	)
+	plt.xticks(leaf_sizes, leaf_sizes)
+	plt.xlabel("Leaf size")
+	plt.ylabel("RMSE")
+	plt.legend(loc=4)
+	plt.tight_layout()
+	plt.savefig("Q1.png")
 
-    train_rmse_values = []
-    test_rmse_values = []
-    leaf_size_values = np.arange(1, 20+1, dtype=np.uint32)
-    for leaf_size in leaf_size_values:
-        learner = dt.DTLearner(leaf_size=leaf_size, verbose=False)
-        learner.addEvidence(trainX, trainY)
-        train_predY = learner.query(trainX)
-        train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
-        train_rmse_values.append(train_rmse)
-        test_predY = learner.query(testX)
-        test_rmse = math.sqrt(((testY - test_predY) ** 2).sum() / testY.shape[0])
-        test_rmse_values.append(test_rmse)
-
-    fig, ax = plt.subplots()
-    pd.DataFrame({
-        "Train RMSE": train_rmse_values,
-        "Test RMSE": test_rmse_values
-    }, index=leaf_size_values).plot(
-        ax=ax,
-        style="o-",
-        title="RMSE of DTLearner against leaf_size"
-    )
-    plt.xticks(leaf_size_values,leaf_size_values)
-    plt.xlabel("Leaf size")
-    plt.ylabel("RMSE")
-    plt.legend(loc=4)
-    plt.tight_layout()
-    plt.savefig("Q1.png")
+	print "Part A - Finished"
+	print ""
 
 
-def question_2a():
-    df = pd.read_csv("./Data/Istanbul.csv", header=0)
-    X = df.drop(["date", "EM"], axis=1).values
-    Y = df["EM"].values
-
-    train_rows = int(0.6 * X.shape[0])
-    trainX = X[:train_rows, :]
-    trainY = Y[:train_rows]
-    testX = X[train_rows:, :]
-    testY = Y[train_rows:]
-
-    train_rmse_values = []
-    test_rmse_values = []
-    leaf_size_values = np.arange(1, 20+1, dtype=np.uint32)
-    for leaf_size in leaf_size_values:
-        learner = bl.BagLearner(learner=dt.DTLearner, kwargs={"leaf_size": leaf_size}, bags=20, boost=False, verbose=False)
-        learner.addEvidence(trainX, trainY)
-        train_predY = learner.query(trainX)
-        train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
-        train_rmse_values.append(train_rmse)
-        test_predY = learner.query(testX)
-        test_rmse = math.sqrt(((testY - test_predY) ** 2).sum() / testY.shape[0])
-        test_rmse_values.append(test_rmse)
-
-    fig, ax = plt.subplots()
-    pd.DataFrame({
-        "Train RMSE": train_rmse_values,
-        "Test RMSE": test_rmse_values
-    }, index=leaf_size_values).plot(
-        ax=ax,
-        style="o-",
-        title="RMSE of BagLearner against leaf_size"
-    )
-    plt.xticks(leaf_size_values,leaf_size_values)
-    plt.xlabel("Leaf size")
-    plt.ylabel("RMSE")
-    plt.legend(loc=4)
-    plt.tight_layout()
-    plt.savefig("Q2a.png")
+def GetPart_B(trainX, trainY, testX, testY):
+	print "Part B - Starting"
+	try:
+		Question_2_Part_1(trainX, trainY, testX, testY)
+	except Exception as err2_a:
+		print "Failed on Question 2 - Part A"
+		print err2_a
+	try:
+		Question_2_Part_2(trainX, trainY, testX, testY)
+	except Exception as err2_b:
+		print "Failed on Question 2 - Part B"
+		print err2_b
+	print "Part B - Finished"
+	print ""
 
 
-def question_2b():
-    df = pd.read_csv("./Data/Istanbul.csv", header=0)
-    X = df.drop(["date", "EM"], axis=1).values
-    Y = df["EM"].values
+def GetPart_C(tempX, tempY, trainX, trainY, testX, testY):
+	print "Part C - Starting"
+	try:
+		Question_3_Part_1(trainX, trainY, testX, testY)
+	except Exception as err3_a:
+		print "Failed on Question 3 - Part A"
+		print err3_a
 
-    train_rows = int(0.6 * X.shape[0])
-    trainX = X[:train_rows, :]
-    trainY = Y[:train_rows]
-    testX = X[train_rows:, :]
-    testY = Y[train_rows:]
-
-    train_rmse_values = []
-    test_rmse_values = []
-    leaf_size_values = np.arange(5, 20+1, dtype=np.uint32)
-    bag_sizes = np.arange(10, 50, 10, dtype=np.uint32)
-    for bag_size in bag_sizes:
-        for leaf_size in leaf_size_values:
-            learner = bl.BagLearner(learner=dt.DTLearner, kwargs={"leaf_size": leaf_size}, bags=bag_size, boost=False, verbose=False)
-            learner.addEvidence(trainX, trainY)
-            train_predY = learner.query(trainX)
-            train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
-            train_rmse_values.append(train_rmse)
-            test_predY = learner.query(testX)
-            test_rmse = math.sqrt(((testY - test_predY) ** 2).sum() / testY.shape[0])
-            test_rmse_values.append(test_rmse)
-
-    heatmap = np.asarray(test_rmse_values).reshape((bag_sizes.shape[0], leaf_size_values.shape[0]))
-
-    fig, ax = plt.subplots(figsize=(10, 3))
-    ax.grid(False)
-    im = plt.imshow(heatmap, cmap="hot")
-    cbar = ax.figure.colorbar(im, ax=ax)
-    cbar.ax.set_ylabel("test error", rotation=-90, va="bottom")
-    ax.set_xticks(np.arange(len(leaf_size_values)))
-    ax.set_xticklabels(leaf_size_values)
-    ax.set_yticks(np.arange(len(bag_sizes)))
-    ax.set_yticklabels(bag_sizes)
-    for i in range(leaf_size_values.shape[0]):
-        for j in range(bag_sizes.shape[0]):
-            ax.text(i, j, "{:.0f}e-4".format(heatmap[j, i] * 1e4), ha="center", va="center", color="w")
-    plt.title("Test error against number of bag and leaf size")
-    fig.tight_layout()
-    plt.savefig("Q2b.png")
+	try:
+		Question_3_Part_2(tempX, tempY)
+	except Exception as err3_b:
+		print "Failed on Question 3 - Part B"
+		print err3_b
+	try:
+		Question_3_Part_3(tempX, tempY)
+	except Exception as err3_c:
+		print "Failed on Question 3 - Part C"
+		print err3_c
+	print "Part C - Finished"
+	print ""
 
 
-def question_3a():
-    df = pd.read_csv("./Data/Istanbul.csv", header=0)
-    X = df.drop(["date", "EM"], axis=1).values
-    Y = df["EM"].values
+def Question_2_Part_1(trainX, trainY, testX, testY):
+	print "     B Part 1 - Starting"
+	RSME_Training = []
+	RSME_Testing = []
+	leaf_sizes = np.arange(1, compare_size, dtype=np.uint32)
+	for leaf_size in leaf_sizes:
+		learner = bl.BagLearner(learner=dt.DTLearner, kwargs={"leaf_size": leaf_size}, bags=20, boost=False, verbose=False)
+		learner.addEvidence(trainX, trainY)
+		train_predY = learner.query(trainX)
+		train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
+		RSME_Training.append(train_rmse)
+		test_predY = learner.query(testX)
+		test_rmse = math.sqrt(((testY - test_predY) ** 2).sum() / testY.shape[0])
+		RSME_Testing.append(test_rmse)
 
-    train_rows = int(0.6 * X.shape[0])
-    trainX = X[:train_rows, :]
-    trainY = Y[:train_rows]
-    testX = X[train_rows:, :]
-    testY = Y[train_rows:]
-
-    # RTLearner
-    # Compare to question one, in terms of accuracy and sensitivity to overfitting
-    # hypothesis: much less sensitive to overfitting because of randomness
-    # test RMSE do not decrease much comapred to DTLearner
-    train_rmse_values = []
-    test_rmse_values = []
-    leaf_size_values = np.arange(1, 20 + 1, dtype=np.uint32)
-    for leaf_size in leaf_size_values:
-        learner = rt.RTLearner(leaf_size=leaf_size)
-        learner.addEvidence(trainX, trainY)
-        train_predY = learner.query(trainX)
-        train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
-        train_rmse_values.append(train_rmse)
-        test_predY = learner.query(testX)
-        test_rmse = math.sqrt(((testY - test_predY) ** 2).sum() / testY.shape[0])
-        test_rmse_values.append(test_rmse)
-
-    fig, ax = plt.subplots()
-    pd.DataFrame({
-        "Train RMSE": train_rmse_values,
-        "Test RMSE": test_rmse_values
-    }, index=leaf_size_values).plot(
-        ax=ax,
-        style="o-",
-        title="RMSE of RTLearner against leaf_size"
-    )
-    plt.xticks(leaf_size_values, leaf_size_values)
-    plt.xlabel("Leaf size")
-    plt.ylabel("RMSE")
-    plt.legend(loc=4)
-    plt.tight_layout()
-    plt.savefig("Q3a.png")
+	fig, ax = plt.subplots()
+	pd.DataFrame({
+		"Train RMSE": RSME_Training,
+		"Test RMSE": RSME_Testing
+	}, index=leaf_sizes).plot(
+		ax=ax,
+		style="o-",
+		title="BagLearner-RMSE VS Leaf-Size"
+	)
+	plt.xticks(leaf_sizes, leaf_sizes)
+	plt.xlabel("Leaf size")
+	plt.ylabel("RMSE")
+	plt.legend(loc=4)
+	plt.tight_layout()
+	plt.savefig("Q2a.png")
+	print "     B Part 1 - Finished"
 
 
-def question_3b():
-    df = pd.read_csv("./Data/Istanbul.csv", header=0)
-    X = df.drop(["date", "EM"], axis=1).values
-    Y = df["EM"].values
+def Question_2_Part_2(trainX, trainY, testX, testY):
+	print "     B Part 2 - Starting"
+	train_rmse_values = []
+	test_rmse_values = []
+	leaf_size_values = np.arange(5, compare_size, dtype=np.uint32)
+	bag_sizes = np.arange(10, 50, 10, dtype=np.uint32)
+	for bag_size in bag_sizes:
+		for leaf_size in leaf_size_values:
+			learner = bl.BagLearner(learner=dt.DTLearner, kwargs={"leaf_size": leaf_size}, bags=bag_size, boost=False, verbose=False)
+			learner.addEvidence(trainX, trainY)
+			train_predY = learner.query(trainX)
+			train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
+			train_rmse_values.append(train_rmse)
+			test_predY = learner.query(testX)
+			test_rmse = math.sqrt(((testY - test_predY) ** 2).sum() / testY.shape[0])
+			test_rmse_values.append(test_rmse)
 
-    # Time comparison
-    time_values_dt = []
-    time_values_rt = []
-    size_values = np.arange(1, X.shape[0], 30, dtype=np.uint64)
-    for size_value in size_values:
-        trainX = X[:size_value, :]
-        trainY = Y[:size_value]
-        # Measure DTLearner
-        dt_learner = dt.DTLearner(leaf_size=1)
-        start = time.time()
-        dt_learner.addEvidence(trainX, trainY)
-        end = time.time()
-        time_values_dt.append(end-start)
-        # Measure RTLearner
-        start = time.time()
-        rt_learner = rt.RTLearner(leaf_size=1)
-        rt_learner.addEvidence(trainX, trainY)
-        end = time.time()
-        time_values_rt.append(end-start)
+	heatmap = np.asarray(test_rmse_values).reshape((bag_sizes.shape[0], leaf_size_values.shape[0]))
 
-    fig, ax = plt.subplots()
-    pd.DataFrame({
-        "DTLearner training time": time_values_dt,
-        "RTLearner training time": time_values_rt
-    }, index=size_values).plot(
-        ax=ax,
-        style="o-",
-        title="Training time comparison on istanbul data"
-    )
-    plt.xlabel("Size of training set")
-    plt.ylabel("Time (seconds)")
-    plt.legend(loc=2)
-    plt.tight_layout()
-    plt.savefig("Q3b.png")
+	fig, ax = plt.subplots(figsize=(10, 3))
+	ax.grid(False)
+	im = plt.imshow(heatmap, cmap="winter")
+	cbar = ax.figure.colorbar(im, ax=ax)
+	cbar.ax.set_ylabel("test error", rotation=-90, va="bottom")
+	ax.set_xticks(np.arange(len(leaf_size_values)))
+	ax.set_xticklabels(leaf_size_values)
+	ax.set_yticks(np.arange(len(bag_sizes)))
+	ax.set_yticklabels(bag_sizes)
+	for i in range(leaf_size_values.shape[0]):
+		for j in range(bag_sizes.shape[0]):
+			ax.text(i, j, "{:.0f}e-4".format(heatmap[j, i] * 1e4), ha="center", va="center", color="w")
+	plt.title("Test Error VS Bag Count & Leaf-Size")
+	fig.tight_layout()
+	plt.savefig("Q2b.png")
+	print "     B Part 2 - Finished"
 
 
-def question_3c():
-    df = pd.read_csv("./Data/Istanbul.csv", header=0)
-    X = df.drop(["date", "EM"], axis=1).values
-    Y = df["EM"].values
+def Question_3_Part_1(trainX, trainY, testX, testY):
+	print "     C Part 1 - Starting"
+	RSME_Training = []
+	RSME_Testing = []
+	Leaf_sizes = np.arange(1, compare_size, dtype=np.uint32)
+	for leaf_size in Leaf_sizes:
+		learner = rt.RTLearner(leaf_size=leaf_size)
+		learner.addEvidence(trainX, trainY)
+		train_predY = learner.query(trainX)
+		train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
+		RSME_Training.append(train_rmse)
+		test_predY = learner.query(testX)
+		test_rmse = math.sqrt(((testY - test_predY) ** 2).sum() / testY.shape[0])
+		RSME_Testing.append(test_rmse)
 
-    # Space comparison by leaf
-    space_values_dt = []
-    space_values_rt = []
-    leaf_size_values = np.arange(1, 20 + 1, dtype=np.uint32)
-    for leaf_size in leaf_size_values:
-        # Measure DTLearner
-        dt_learner = dt.DTLearner(leaf_size=leaf_size)
-        dt_learner.addEvidence(X, Y)
-        space_values_dt.append(dt_learner.tree.shape[0])
-        # Measure RTLearner
-        rt_learner = rt.RTLearner(leaf_size=leaf_size)
-        rt_learner.addEvidence(X, Y)
-        space_values_rt.append(rt_learner.tree.shape[0])
-
-    fig, ax = plt.subplots()
-    pd.DataFrame({
-        "DTLearner size": space_values_dt,
-        "RTLearner size": space_values_rt
-    }, index=leaf_size_values).plot(
-        ax=ax,
-        style="o-",
-        title="Tree size comparison on istanbul data"
-    )
-    plt.xticks(leaf_size_values, leaf_size_values)
-    plt.xlabel("Leaf size")
-    plt.ylabel("Size of tree (# of nodes and leaves)")
-    plt.legend(loc=1)
-    plt.tight_layout()
-    plt.savefig("Q3c1.png")
-
-    # Space comparison by training size
-    space_values_dt = []
-    space_values_rt = []
-    size_values = np.arange(1, X.shape[0], 30, dtype=np.uint64)
-    for size_value in size_values:
-        trainX = X[:size_value, :]
-        trainY = Y[:size_value]
-        # Measure DTLearner
-        dt_learner = dt.DTLearner(leaf_size=1)
-        dt_learner.addEvidence(trainX, trainY)
-        space_values_dt.append(dt_learner.tree.shape[0])
-        # Measure RTLearner
-        rt_learner = rt.RTLearner(leaf_size=1)
-        rt_learner.addEvidence(trainX, trainY)
-        space_values_rt.append(rt_learner.tree.shape[0])
-
-    fig, ax = plt.subplots()
-    pd.DataFrame({
-        "DTLearner size": space_values_dt,
-        "RTLearner size": space_values_rt
-    }, index=size_values).plot(
-        ax=ax,
-        style="o-",
-        title="Tree size comparison on istanbul data"
-    )
-    plt.xlabel("Size of training set")
-    plt.ylabel("Size of tree (# of nodes and leaves)")
-    plt.legend(loc=1)
-    plt.tight_layout()
-    plt.savefig("Q3c2.png")
+	fig, ax = plt.subplots()
+	pd.DataFrame({
+		"Train RMSE": RSME_Training,
+		"Test RMSE": RSME_Testing
+	}, index=Leaf_sizes).plot(
+		ax=ax,
+		style="o-",
+		title="RMSE of RTLearner against leaf_size"
+	)
+	plt.xticks(Leaf_sizes, Leaf_sizes)
+	plt.xlabel("Leaf size")
+	plt.ylabel("RMSE")
+	plt.legend(loc=4)
+	plt.tight_layout()
+	plt.savefig("Q3a.png")
+	print "     C Part 1 - Finished"
 
 
-if __name__=="__main__":
-    #test()
-    print "Q1..."; question_1(); print "done."
-    print "Q2a..."; question_2a(); print "done."
-    print "Q2b..."; question_2b(); print "done." # heatmap
-    print "Q3a..."; question_3a(); print "done." # RMSE
-    print "Q3b..."; question_3b(); print "done." # Training times
-    print "Q3c..."; question_3c(); print "done." # Size of trees
+def Question_3_Part_2(X, Y):
+	print "     C Part 2 - Starting"
+	# Time comparison
+	DecisionTree_Times = []
+	RandomDecisionTree_Times = []
+	size_values = np.arange(1, X.shape[0], 30, dtype=np.uint64)
+	for size_value in size_values:
+		trainX = X[:size_value, :]
+		trainY = Y[:size_value]
+		dt_learner = dt.DTLearner(leaf_size=1)
+		start = time.time()
+		dt_learner.addEvidence(trainX, trainY)
+		end = time.time()
+		DecisionTree_Times.append(end-start)
+		start = time.time()
+		rt_learner = rt.RTLearner(leaf_size=1)
+		rt_learner.addEvidence(trainX, trainY)
+		end = time.time()
+		RandomDecisionTree_Times.append(end-start)
+
+	fig, ax = plt.subplots()
+	pd.DataFrame({
+		"DTLearner training time": DecisionTree_Times,
+		"RTLearner training time": RandomDecisionTree_Times
+	}, index=size_values).plot(
+		ax=ax,
+		style="o-",
+		title="Training Time Comparison"
+	)
+	plt.xlabel("Size of training set")
+	plt.ylabel("Time (seconds)")
+	plt.legend(loc=2)
+	plt.tight_layout()
+	plt.savefig("Q3b.png")
+	print "     C Part 2 - Finished"
+
+
+def Question_3_Part_3(X, Y):
+	print "     C Part 3 - Starting"
+	DecisionTree_Size = []
+	RandomDecisionTree_Size = []
+	leaf_size_values = np.arange(1, compare_size, dtype=np.uint32)
+	for leaf_size in leaf_size_values:
+		dt_learner = dt.DTLearner(leaf_size=leaf_size)
+		dt_learner.addEvidence(X, Y)
+		DecisionTree_Size.append(dt_learner.tree.shape[0])
+		rt_learner = rt.RTLearner(leaf_size=leaf_size)
+		rt_learner.addEvidence(X, Y)
+		RandomDecisionTree_Size.append(rt_learner.tree.shape[0])
+
+	fig, ax = plt.subplots()
+	pd.DataFrame({
+		"DTLearner size": DecisionTree_Size,
+		"RTLearner size": RandomDecisionTree_Size
+	}, index=leaf_size_values).plot(
+		ax=ax,
+		style="o-",
+		title="Tree Size co"
+	)
+	plt.xticks(leaf_size_values, leaf_size_values)
+	plt.xlabel("Leaf size")
+	plt.ylabel("Size of tree")
+	plt.legend(loc=1)
+	plt.tight_layout()
+	plt.savefig("Q3c1.png")
+
+	DecisionTree_Size = []
+	RandomDecisionTree_Size = []
+	size_values = np.arange(1, X.shape[0], 30, dtype=np.uint64)
+	for size_value in size_values:
+		trainX = X[:size_value, :]
+		trainY = Y[:size_value]
+		dt_learner = dt.DTLearner(leaf_size=1)
+		dt_learner.addEvidence(trainX, trainY)
+		DecisionTree_Size.append(dt_learner.tree.shape[0])
+		rt_learner = rt.RTLearner(leaf_size=1)
+		rt_learner.addEvidence(trainX, trainY)
+		RandomDecisionTree_Size.append(rt_learner.tree.shape[0])
+
+	fig, ax = plt.subplots()
+	pd.DataFrame({
+		"DTLearner size": DecisionTree_Size,
+		"RTLearner size": RandomDecisionTree_Size
+	}, index=size_values).plot(
+		ax=ax,
+		style="o-",
+		title="Tree Size Comparison"
+	)
+	plt.xlabel("Size of Training Set")
+	plt.ylabel("Size of tree")
+	plt.legend(loc=1)
+	plt.tight_layout()
+	plt.savefig("Q3c2.png")
+	print "     C Part 3 - Finished"
+
+
+if __name__ == "__main__":
+	questions = [1, 2, 3]
+	results(questions)
