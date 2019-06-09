@@ -1,5 +1,5 @@
 """
-A simple wrapper for decision tree learner.  (c) 2015 Tucker Balch
+A simple wrapper for decision tree.  (c) 2015 Tucker Balch
 
 Copyright 2018, Georgia Institute of Technology (Georgia Tech)
 Atlanta, Georgia 30332

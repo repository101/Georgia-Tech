@@ -1,5 +1,5 @@
 """ 			  		 			 	 	 		 		 	  		   	  			  	
-Test a learner.  (c) 2015 Tucker Balch
+A simple wrapper for linear regression.  (c) 2015 Tucker Balch
 
 Copyright 2018, Georgia Institute of Technology (Georgia Tech)
 Atlanta, Georgia 30332
@@ -75,9 +75,9 @@ def GetPart_A(trainX, trainY, testX, testY):
 	print "Part A - Starting"
 	RMSE_Training = []
 	RSME_Testing = []
-	leaf_sizes = np.arange(1, compare_size, dtype=np.uint32)
-	for leaf_size in leaf_sizes:
-		learner = dt.DTLearner(leaf_size=leaf_size, verbose=False)
+	Leaf_Sizes = np.arange(1, compare_size, dtype=np.uint32)
+	for size in Leaf_Sizes:
+		learner = dt.DTLearner(leaf_size=size, verbose=False)
 		learner.addEvidence(trainX, trainY)
 		pred_y_train = learner.query(trainX)
 		rsme_train = math.sqrt(((trainY - pred_y_train) ** 2).sum() / trainY.shape[0])
@@ -90,17 +90,17 @@ def GetPart_A(trainX, trainY, testX, testY):
 	pd.DataFrame({
 		"Train RMSE": RMSE_Training,
 		"Test RMSE": RSME_Testing
-	}, index=leaf_sizes).plot(
+	}, index=Leaf_Sizes).plot(
 		ax=ax,
 		style="o-",
 		title="DTLearner-RMSE VS Leaf-Size"
 	)
-	plt.xticks(leaf_sizes, leaf_sizes)
+	plt.xticks(Leaf_Sizes, Leaf_Sizes)
 	plt.xlabel("Leaf size")
 	plt.ylabel("RMSE")
 	plt.legend(loc=4)
 	plt.tight_layout()
-	plt.savefig("Q1.png")
+	plt.savefig("Part1.png")
 
 	print "Part A - Finished"
 	print ""
@@ -148,9 +148,9 @@ def Question_2_Part_1(trainX, trainY, testX, testY):
 	print "     B Part 1 - Starting"
 	RSME_Training = []
 	RSME_Testing = []
-	leaf_sizes = np.arange(1, compare_size, dtype=np.uint32)
-	for leaf_size in leaf_sizes:
-		learner = bl.BagLearner(learner=dt.DTLearner, kwargs={"leaf_size": leaf_size}, bags=20, boost=False, verbose=False)
+	Leaf_Sizes = np.arange(1, compare_size, dtype=np.uint32)
+	for size in Leaf_Sizes:
+		learner = bl.BagLearner(learner=dt.DTLearner, kwargs={"leaf_size": size}, bags=20, boost=False, verbose=False)
 		learner.addEvidence(trainX, trainY)
 		train_predY = learner.query(trainX)
 		train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
@@ -163,17 +163,17 @@ def Question_2_Part_1(trainX, trainY, testX, testY):
 	pd.DataFrame({
 		"Train RMSE": RSME_Training,
 		"Test RMSE": RSME_Testing
-	}, index=leaf_sizes).plot(
+	}, index=Leaf_Sizes).plot(
 		ax=ax,
 		style="o-",
 		title="BagLearner-RMSE VS Leaf-Size"
 	)
-	plt.xticks(leaf_sizes, leaf_sizes)
+	plt.xticks(Leaf_Sizes, Leaf_Sizes)
 	plt.xlabel("Leaf size")
 	plt.ylabel("RMSE")
 	plt.legend(loc=4)
 	plt.tight_layout()
-	plt.savefig("Q2a.png")
+	plt.savefig("PartB-1.png")
 	print "     B Part 1 - Finished"
 
 
@@ -181,11 +181,11 @@ def Question_2_Part_2(trainX, trainY, testX, testY):
 	print "     B Part 2 - Starting"
 	train_rmse_values = []
 	test_rmse_values = []
-	leaf_size_values = np.arange(5, compare_size, dtype=np.uint32)
-	bag_sizes = np.arange(10, 50, 10, dtype=np.uint32)
-	for bag_size in bag_sizes:
-		for leaf_size in leaf_size_values:
-			learner = bl.BagLearner(learner=dt.DTLearner, kwargs={"leaf_size": leaf_size}, bags=bag_size, boost=False, verbose=False)
+	Leaf_Sizes = np.arange(5, compare_size, dtype=np.uint32)
+	Bag_Sizes = np.arange(10, 50, 10, dtype=np.uint32)
+	for size_of_bag in Bag_Sizes:
+		for size_of_leaf in Leaf_Sizes:
+			learner = bl.BagLearner(learner=dt.DTLearner, kwargs={"leaf_size": size_of_leaf}, bags=size_of_bag, boost=False, verbose=False)
 			learner.addEvidence(trainX, trainY)
 			train_predY = learner.query(trainX)
 			train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
@@ -194,23 +194,23 @@ def Question_2_Part_2(trainX, trainY, testX, testY):
 			test_rmse = math.sqrt(((testY - test_predY) ** 2).sum() / testY.shape[0])
 			test_rmse_values.append(test_rmse)
 
-	heatmap = np.asarray(test_rmse_values).reshape((bag_sizes.shape[0], leaf_size_values.shape[0]))
+	heat_map = np.asarray(test_rmse_values).reshape((Bag_Sizes.shape[0], Leaf_Sizes.shape[0]))
 
-	fig, ax = plt.subplots(figsize=(10, 3))
+	fig, ax = plt.subplots(figsize=(15, 4))
 	ax.grid(False)
-	im = plt.imshow(heatmap, cmap="winter")
-	cbar = ax.figure.colorbar(im, ax=ax)
-	cbar.ax.set_ylabel("test error", rotation=-90, va="bottom")
-	ax.set_xticks(np.arange(len(leaf_size_values)))
-	ax.set_xticklabels(leaf_size_values)
-	ax.set_yticks(np.arange(len(bag_sizes)))
-	ax.set_yticklabels(bag_sizes)
-	for i in range(leaf_size_values.shape[0]):
-		for j in range(bag_sizes.shape[0]):
-			ax.text(i, j, "{:.0f}e-4".format(heatmap[j, i] * 1e4), ha="center", va="center", color="w")
+	image = plt.imshow(heat_map, cmap="winter")
+	color_bar = ax.figure.colorbar(image, ax=ax)
+	color_bar.ax.set_ylabel("test error", rotation=-90, va="bottom")
+	ax.set_xticks(np.arange(len(Leaf_Sizes)))
+	ax.set_xticklabels(Leaf_Sizes)
+	ax.set_yticks(np.arange(len(Bag_Sizes)))
+	ax.set_yticklabels(Bag_Sizes)
+	for i in range(Leaf_Sizes.shape[0]):
+		for j in range(Bag_Sizes.shape[0]):
+			ax.text(i, j, "{:.0f}e-4".format(heat_map[j, i] * 1e4), ha="center", va="center", color="w")
 	plt.title("Test Error VS Bag Count & Leaf-Size")
 	fig.tight_layout()
-	plt.savefig("Q2b.png")
+	plt.savefig("PartB-2.png")
 	print "     B Part 2 - Finished"
 
 
@@ -218,9 +218,9 @@ def Question_3_Part_1(trainX, trainY, testX, testY):
 	print "     C Part 1 - Starting"
 	RSME_Training = []
 	RSME_Testing = []
-	Leaf_sizes = np.arange(1, compare_size, dtype=np.uint32)
-	for leaf_size in Leaf_sizes:
-		learner = rt.RTLearner(leaf_size=leaf_size)
+	Leaf_Sizes = np.arange(1, compare_size, dtype=np.uint32)
+	for size in Leaf_Sizes:
+		learner = rt.RTLearner(leaf_size=size)
 		learner.addEvidence(trainX, trainY)
 		train_predY = learner.query(trainX)
 		train_rmse = math.sqrt(((trainY - train_predY) ** 2).sum() / trainY.shape[0])
@@ -233,17 +233,17 @@ def Question_3_Part_1(trainX, trainY, testX, testY):
 	pd.DataFrame({
 		"Train RMSE": RSME_Training,
 		"Test RMSE": RSME_Testing
-	}, index=Leaf_sizes).plot(
+	}, index=Leaf_Sizes).plot(
 		ax=ax,
 		style="o-",
 		title="RMSE of RTLearner against leaf_size"
 	)
-	plt.xticks(Leaf_sizes, Leaf_sizes)
+	plt.xticks(Leaf_Sizes, Leaf_Sizes)
 	plt.xlabel("Leaf size")
 	plt.ylabel("RMSE")
 	plt.legend(loc=4)
 	plt.tight_layout()
-	plt.savefig("Q3a.png")
+	plt.savefig("PartC-1.png")
 	print "     C Part 1 - Finished"
 
 
@@ -252,18 +252,18 @@ def Question_3_Part_2(X, Y):
 	# Time comparison
 	DecisionTree_Times = []
 	RandomDecisionTree_Times = []
-	size_values = np.arange(1, X.shape[0], 30, dtype=np.uint64)
-	for size_value in size_values:
+	Sizes = np.arange(1, X.shape[0], 30, dtype=np.uint64)
+	for size_value in Sizes:
 		trainX = X[:size_value, :]
 		trainY = Y[:size_value]
-		dt_learner = dt.DTLearner(leaf_size=1)
+		decision_tree = dt.DTLearner(leaf_size=1)
 		start = time.time()
-		dt_learner.addEvidence(trainX, trainY)
+		decision_tree.addEvidence(trainX, trainY)
 		end = time.time()
 		DecisionTree_Times.append(end-start)
 		start = time.time()
-		rt_learner = rt.RTLearner(leaf_size=1)
-		rt_learner.addEvidence(trainX, trainY)
+		random_tree = rt.RTLearner(leaf_size=1)
+		random_tree.addEvidence(trainX, trainY)
 		end = time.time()
 		RandomDecisionTree_Times.append(end-start)
 
@@ -271,7 +271,7 @@ def Question_3_Part_2(X, Y):
 	pd.DataFrame({
 		"DTLearner training time": DecisionTree_Times,
 		"RTLearner training time": RandomDecisionTree_Times
-	}, index=size_values).plot(
+	}, index=Sizes).plot(
 		ax=ax,
 		style="o-",
 		title="Training Time Comparison"
@@ -280,7 +280,7 @@ def Question_3_Part_2(X, Y):
 	plt.ylabel("Time (seconds)")
 	plt.legend(loc=2)
 	plt.tight_layout()
-	plt.savefig("Q3b.png")
+	plt.savefig("PartC-2.png")
 	print "     C Part 2 - Finished"
 
 
@@ -288,49 +288,49 @@ def Question_3_Part_3(X, Y):
 	print "     C Part 3 - Starting"
 	DecisionTree_Size = []
 	RandomDecisionTree_Size = []
-	leaf_size_values = np.arange(1, compare_size, dtype=np.uint32)
-	for leaf_size in leaf_size_values:
-		dt_learner = dt.DTLearner(leaf_size=leaf_size)
-		dt_learner.addEvidence(X, Y)
-		DecisionTree_Size.append(dt_learner.tree.shape[0])
-		rt_learner = rt.RTLearner(leaf_size=leaf_size)
-		rt_learner.addEvidence(X, Y)
-		RandomDecisionTree_Size.append(rt_learner.tree.shape[0])
+	Leaf_Sizes = np.arange(1, compare_size, dtype=np.uint32)
+	for leaf_size in Leaf_Sizes:
+		decision_tree = dt.DTLearner(leaf_size=leaf_size)
+		decision_tree.addEvidence(X, Y)
+		DecisionTree_Size.append(decision_tree.tree.shape[0])
+		random_tree = rt.RTLearner(leaf_size=leaf_size)
+		random_tree.addEvidence(X, Y)
+		RandomDecisionTree_Size.append(random_tree.tree.shape[0])
 
 	fig, ax = plt.subplots()
 	pd.DataFrame({
 		"DTLearner size": DecisionTree_Size,
 		"RTLearner size": RandomDecisionTree_Size
-	}, index=leaf_size_values).plot(
+	}, index=Leaf_Sizes).plot(
 		ax=ax,
 		style="o-",
-		title="Tree Size co"
+		title="Tree Size Comparison"
 	)
-	plt.xticks(leaf_size_values, leaf_size_values)
+	plt.xticks(Leaf_Sizes, Leaf_Sizes)
 	plt.xlabel("Leaf size")
 	plt.ylabel("Size of tree")
 	plt.legend(loc=1)
 	plt.tight_layout()
-	plt.savefig("Q3c1.png")
+	plt.savefig("PartC-3a.png")
 
 	DecisionTree_Size = []
 	RandomDecisionTree_Size = []
-	size_values = np.arange(1, X.shape[0], 30, dtype=np.uint64)
-	for size_value in size_values:
+	Sizes = np.arange(1, X.shape[0], 30, dtype=np.uint64)
+	for size_value in Sizes:
 		trainX = X[:size_value, :]
 		trainY = Y[:size_value]
-		dt_learner = dt.DTLearner(leaf_size=1)
-		dt_learner.addEvidence(trainX, trainY)
-		DecisionTree_Size.append(dt_learner.tree.shape[0])
-		rt_learner = rt.RTLearner(leaf_size=1)
-		rt_learner.addEvidence(trainX, trainY)
-		RandomDecisionTree_Size.append(rt_learner.tree.shape[0])
+		decision_tree = dt.DTLearner(leaf_size=1)
+		decision_tree.addEvidence(trainX, trainY)
+		DecisionTree_Size.append(decision_tree.tree.shape[0])
+		random_tree = rt.RTLearner(leaf_size=1)
+		random_tree.addEvidence(trainX, trainY)
+		RandomDecisionTree_Size.append(random_tree.tree.shape[0])
 
 	fig, ax = plt.subplots()
 	pd.DataFrame({
 		"DTLearner size": DecisionTree_Size,
 		"RTLearner size": RandomDecisionTree_Size
-	}, index=size_values).plot(
+	}, index=Sizes).plot(
 		ax=ax,
 		style="o-",
 		title="Tree Size Comparison"
@@ -339,10 +339,10 @@ def Question_3_Part_3(X, Y):
 	plt.ylabel("Size of tree")
 	plt.legend(loc=1)
 	plt.tight_layout()
-	plt.savefig("Q3c2.png")
+	plt.savefig("PartC-3b.png")
 	print "     C Part 3 - Finished"
 
 
 if __name__ == "__main__":
-	questions = [1, 2, 3]
+	questions = [2]
 	results(questions)
