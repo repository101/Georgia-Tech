@@ -56,45 +56,57 @@ def compare_os_rmse(learner1, learner2, X, Y):
  			  		 			 	 	 		 		 	  		   	  			  	
     return rmse1, rmse2 			  		 			 	 	 		 		 	  		   	  			  	
  			  		 			 	 	 		 		 	  		   	  			  	
-def test_code(): 			  		 			 	 	 		 		 	  		   	  			  	
+def test_code(seed):
  			  		 			 	 	 		 		 	  		   	  			  	
     # create two learners and get data 			  		 			 	 	 		 		 	  		   	  			  	
     lrlearner = lrl.LinRegLearner(verbose = False) 			  		 			 	 	 		 		 	  		   	  			  	
     dtlearner = dt.DTLearner(verbose = False, leaf_size = 1) 			  		 			 	 	 		 		 	  		   	  			  	
-    X, Y = best4LinReg() 			  		 			 	 	 		 		 	  		   	  			  	
+    X, Y = best4LinReg(seed=seed)
  			  		 			 	 	 		 		 	  		   	  			  	
     # compare the two learners 			  		 			 	 	 		 		 	  		   	  			  	
     rmseLR, rmseDT = compare_os_rmse(lrlearner, dtlearner, X, Y) 			  		 			 	 	 		 		 	  		   	  			  	
  			  		 			 	 	 		 		 	  		   	  			  	
-    # share results 			  		 			 	 	 		 		 	  		   	  			  	
-    print 			  		 			 	 	 		 		 	  		   	  			  	
-    print "best4LinReg() results" 			  		 			 	 	 		 		 	  		   	  			  	
-    print "RMSE LR    : ", rmseLR 			  		 			 	 	 		 		 	  		   	  			  	
-    print "RMSE DT    : ", rmseDT 			  		 			 	 	 		 		 	  		   	  			  	
-    if rmseLR < 0.9 * rmseDT: 			  		 			 	 	 		 		 	  		   	  			  	
-        print "LR < 0.9 DT:  pass" 			  		 			 	 	 		 		 	  		   	  			  	
-    else: 			  		 			 	 	 		 		 	  		   	  			  	
-        print "LR >= 0.9 DT:  fail" 			  		 			 	 	 		 		 	  		   	  			  	
-    print 			  		 			 	 	 		 		 	  		   	  			  	
+    # share results
+    print
+    print "best4LinReg() results"
+    print "RMSE LR    : ", rmseLR
+    print "RMSE DT    : ", rmseDT
+    if rmseLR < 0.9 * rmseDT:
+        linVal = "Pass"
+        print "LR < 0.9 DT:  pass"
+    else:
+        linVal = "Fail"
+        print "LR >= 0.9 DT:  fail"
+    print
  			  		 			 	 	 		 		 	  		   	  			  	
     # get data that is best for a random tree 			  		 			 	 	 		 		 	  		   	  			  	
     lrlearner = lrl.LinRegLearner(verbose = False) 			  		 			 	 	 		 		 	  		   	  			  	
     dtlearner = dt.DTLearner(verbose = False, leaf_size = 1) 			  		 			 	 	 		 		 	  		   	  			  	
-    X, Y = best4DT() 			  		 			 	 	 		 		 	  		   	  			  	
+    X, Y = best4DT(seed=seed)
  			  		 			 	 	 		 		 	  		   	  			  	
     # compare the two learners 			  		 			 	 	 		 		 	  		   	  			  	
     rmseLR, rmseDT = compare_os_rmse(lrlearner, dtlearner, X, Y) 			  		 			 	 	 		 		 	  		   	  			  	
  			  		 			 	 	 		 		 	  		   	  			  	
-    # share results 			  		 			 	 	 		 		 	  		   	  			  	
-    print 			  		 			 	 	 		 		 	  		   	  			  	
-    print "best4RT() results" 			  		 			 	 	 		 		 	  		   	  			  	
-    print "RMSE LR    : ", rmseLR 			  		 			 	 	 		 		 	  		   	  			  	
-    print "RMSE RT    : ", rmseDT 			  		 			 	 	 		 		 	  		   	  			  	
-    if rmseDT < 0.9 * rmseLR: 			  		 			 	 	 		 		 	  		   	  			  	
-        print "DT < 0.9 LR:  pass" 			  		 			 	 	 		 		 	  		   	  			  	
-    else: 			  		 			 	 	 		 		 	  		   	  			  	
-        print "DT >= 0.9 LR:  fail" 			  		 			 	 	 		 		 	  		   	  			  	
-    print 			  		 			 	 	 		 		 	  		   	  			  	
- 			  		 			 	 	 		 		 	  		   	  			  	
-if __name__=="__main__": 			  		 			 	 	 		 		 	  		   	  			  	
-    test_code() 			  		 			 	 	 		 		 	  		   	  			  	
+    # share results
+    print
+    print "best4RT() results"
+    print "RMSE LR    : ", rmseLR
+    print "RMSE RT    : ", rmseDT
+    if rmseDT < 0.9 * rmseLR:
+        dtVal = 'Pass'
+        print "DT < 0.9 LR:  pass"
+    else:
+        dtVal = "Fail"
+        print "DT >= 0.9 LR:  fail"
+    print
+
+    return dtVal, linVal
+
+
+if __name__ == "__main__":
+    linResults = []
+    dtResults = []
+    for i in range(100):
+        test_code(np.random.randint(1, 100))
+
+    print ""
