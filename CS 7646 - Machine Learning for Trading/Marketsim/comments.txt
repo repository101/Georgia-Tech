@@ -1,0 +1,61 @@
+<pre>--- Summary ---
+Tests passed: 0 out of 13
+
+--- Details ---
+Test #0: failed 
+Test case description: Orders 1
+Exception: Unknown Exception
+
+Test #1: failed 
+Test case description: Orders 2
+Exception: Unknown Exception
+
+Test #2: failed 
+Test case description: Orders 3
+Exception: Unknown Exception
+
+Test #3: failed 
+Test case description: Orders 4
+Exception: Unknown Exception
+
+Test #4: failed 
+Test case description: Orders 5
+Exception: Unknown Exception
+
+Test #5: failed 
+Test case description: Orders 6
+Exception: Unknown Exception
+
+Test #6: failed 
+Test case description: Orders 7
+Exception: Unknown Exception
+
+Test #7: failed 
+Test case description: Orders 8
+Exception: Unknown Exception
+
+Test #8: failed 
+Test case description: Orders 9
+Exception: Unknown Exception
+
+Test #9: failed 
+Test case description: Orders 11, commission
+Exception: Unknown Exception
+
+Test #10: failed 
+Test case description: Orders 12, impact
+Exception: Unknown Exception
+
+Test #11: failed 
+Test case description: Orders 10, impact and commission
+Exception: Unknown Exception
+
+Test #12: failed 
+Test case description: author() test
+IncorrectOutput: Test failed on one or more output criteria.
+  Inputs:
+None
+  Failures:
+   Exception occured when calling author() method: Unknown Exception
+
+</pre>

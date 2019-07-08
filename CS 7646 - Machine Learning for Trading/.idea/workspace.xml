@@ -2,8 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aab32f99-0a4c-4561-84a3-59ec0d62849a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CS 7646 - Machine Learning for Trading.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS 7646 - Machine Learning for Trading.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assess Learners/testlearner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assess Learners/testlearner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/0000_Introduction.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1/01-01_ReadingAndPlottingStockData.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1/01-02_WorkingWithMultipleStocks.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1/01-03_ThePowerOfNumpy.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1/01-04_StatisticalAnalysisOfTimeSeries.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1/01-05_Incomplete_Data.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1/01-06_HistogramsAndScatterPlots.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1/01-07_SharpeRatioAndOtherPortfolioStatistics.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1/01-08_OptimizersBuildingAParameterizedModel.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1/01-09_OptimizersHowToOptimizeAPortfolio.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1_Code/01-01_ReadingAndPlottingData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1_Code/01-02_WorkingWithMultipleStock.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1_Code/01-03_ThePowerOfNumpy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1_Code/01-04_StatisticalAnalysisOfTimeSeries.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1_Code/01-05_Incomplete_Data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1_Code/01-06_HistogramsAndScatterPlots.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1_Code/01-07_SharpeRatioAndOtherPortfolioStatistics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1_Code/01-08_OptimizersBuildingAParameterizedModel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse1_Code/01-09_OptimizersHowToOptimizeAPortfolio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-01_SoYouWantToBeAHedgeFundManager.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-02_MarketMechanics.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-03_WhatIsACompanyWorth.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-04_TheCapitalAssetsPricingModel(CAPM).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-05_HowHedgeFundsUseTheCAPM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-06_TechnicalAnalysisdocx.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-07_DealingWithData.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-08_EfficientMarketsHypothesis.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-09_TheFundamentalLawOfActivePortfolioManagement.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-10_PortfolioOptimizationAndTheEfficientFrontier.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-Live1_BuildingAMarketSimulator.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse2/02-YouTube_CramerVideo.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse3/03-01_HowMachineLearningIsUsedAtAHedgeFund.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse3/03-02_Regression.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse3/03-03_AssessingALearningAlgorithm.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse3/03-04_EnsembleLearnersBaggingAndBoosting.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse3/03-05_ReinforcementLearning.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse3/03-06_Q-Learning.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse3/03-07_DYNA.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse3/03-Live1_DecisionTrees.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/MiniCourse3/03-Live2_DecisionTrees.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Notes/ML4TNotes2016/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketsim/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Marketsim/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketsim/marketsim.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketsim/marketsim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketsim/orders/orders-short.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketsim/orders/orders.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketsim/orders/orders2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketsim/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketsim/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +68,21 @@
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$gen_data.coverage" NAME="gen_data Coverage Results" MODIFIED="1560446868237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Manual Strategy/ManualStrategy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="176" selection-start-line="176" selection-end-line="176" />
+              <folding>
+                <element signature="e#1007#1026#0" expanded="true" />
+                <element signature="e#2429#2474#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,7 +99,27 @@
       <find>size</find>
       <find>regress</find>
       <find>print</find>
+      <find>RMSE</find>
+      <find>price</find>
+      <find>returns</find>
+      <find>quick</find>
+      <find>onBalanceDataFrame</find>
+      <find>Crossover</find>
+      <find>crossover</find>
+      <find>'MACD CrossOver22'</find>
+      <find>print &quot;</find>
+      <find>print &quot; &quot;</find>
+      <find>print &quot;&quot;</find>
+      <find>show</find>
+      <find>plt</find>
+      <find>reset</find>
+      <find>plot</find>
     </findStrings>
+    <replaceStrings>
+      <replace>momentum_DataFrame</replace>
+      <replace>CrossOver</replace>
+      <replace>'MACD Signal'</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -61,7 +143,6 @@
         <option value="$PROJECT_DIR$/Assess Learners/BagLearner.py" />
         <option value="$PROJECT_DIR$/Assess Learners/InsaneLearner.py" />
         <option value="$PROJECT_DIR$/Assess Learners/RTLearner.py" />
-        <option value="$PROJECT_DIR$/Assess Learners/testlearner.py" />
         <option value="$PROJECT_DIR$/Defeat Learners/DTLearner.py" />
         <option value="$PROJECT_DIR$/Defeat Learners/testing.py" />
         <option value="$PROJECT_DIR$/Defeat Learners/testbest4.py" />
@@ -69,15 +150,21 @@
         <option value="$PROJECT_DIR$/Exam_Practice.py" />
         <option value="$PROJECT_DIR$/Marketsim/util.py" />
         <option value="$PROJECT_DIR$/Marketsim/Validation.py" />
+        <option value="$PROJECT_DIR$/Manual Strategy/test.py" />
+        <option value="$PROJECT_DIR$/Assess Learners/testlearner.py" />
         <option value="$PROJECT_DIR$/Marketsim/marketsim.py" />
+        <option value="$PROJECT_DIR$/Manual Strategy/indicators.py" />
+        <option value="$PROJECT_DIR$/Manual Strategy/marketsimcode.py" />
+        <option value="$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py" />
+        <option value="$PROJECT_DIR$/Manual Strategy/ManualStrategy.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-575" />
+    <option name="y" value="173" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="899" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -87,6 +174,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -97,24 +185,23 @@
             <path>
               <item name="CS 7646 - Machine Learning for Trading" type="b2602c69:ProjectViewProjectNode" />
               <item name="CS 7646 - Machine Learning for Trading" type="462c0819:PsiDirectoryNode" />
-              <item name="Marketsim" type="462c0819:PsiDirectoryNode" />
+              <item name="Manual Strategy" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Marketsim/Validation.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -128,8 +215,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.marketsim">
-    <configuration name="Validation" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.ManualStrategy">
+    <configuration name="ManualStrategy" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CS 7646 - Machine Learning for Trading" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -137,12 +224,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Marketsim" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manual Strategy" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Marketsim/Validation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manual Strategy/ManualStrategy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TheoreticallyOptimalStrategy" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="CS 7646 - Machine Learning for Trading" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manual Strategy" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,6 +282,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="grade_marketsim" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="CS 7646 - Machine Learning for Trading" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Marketsim" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Marketsim/grade_marketsim.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="indicators" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CS 7646 - Machine Learning for Trading" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Martingale" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manual Strategy/indicators.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="marketsim" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CS 7646 - Machine Learning for Trading" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,10 +348,65 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="marketsimcode" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="CS 7646 - Machine Learning for Trading" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manual Strategy" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manual Strategy/marketsimcode.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="util" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CS 7646 - Machine Learning for Trading" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Martingale" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Marketsim/util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Python.marketsimcode" />
+      <item itemvalue="Python.ManualStrategy" />
+      <item itemvalue="Python.TheoreticallyOptimalStrategy" />
       <item itemvalue="Python.marketsim" />
-      <item itemvalue="Python.Validation" />
+      <item itemvalue="Python.grade_marketsim" />
+      <item itemvalue="Python.indicators" />
+      <item itemvalue="Python.util" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.indicators" />
+        <item itemvalue="Python.util" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -286,13 +494,22 @@
       <workItem from="1561822115989" duration="6534000" />
       <workItem from="1561832936736" duration="11706000" />
       <workItem from="1561851816100" duration="296000" />
+      <workItem from="1562102602332" duration="272000" />
+      <workItem from="1562257974306" duration="934000" />
+      <workItem from="1562338685358" duration="25873000" />
+      <workItem from="1562372253138" duration="30732000" />
+      <workItem from="1562406117261" duration="5797000" />
+      <workItem from="1562426479366" duration="800000" />
+      <workItem from="1562440379704" duration="10682000" />
+      <workItem from="1562508835613" duration="21234000" />
+      <workItem from="1562534285026" duration="9598000" />
+      <workItem from="1562545669525" duration="18815000" />
+      <workItem from="1562568623080" duration="6952000" />
+      <workItem from="1562575652685" duration="133000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_optimization_py - 2019.05.31 at 18h 08m 13s.xml">
-      <configuration name="pytest in optimization.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_for_testbest4_test_code - 2019.06.14 at 20h 07m 58s.xml">
       <configuration name="pytest for testbest4.test_code" configurationId="tests" />
     </history-entry>
@@ -320,35 +537,39 @@
     <history-entry file="pytest_in_grade_marketsim_py - 2019.06.29 at 17h 23m 48s.xml">
       <configuration name="pytest in grade_marketsim.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_marketsimcode_py - 2019.07.06 at 02h 36m 04s.xml">
+      <configuration name="pytest in marketsimcode.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135024000" />
+    <option name="totallyTimeSpent" value="266846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11666667" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49947917" weight="0.32861805" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49791667" weight="0.32861805" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49010417" weight="0.41240478" />
+      <window_info anchor="bottom" x="-1919" y="551" width="958" height="488" id="Debug" order="3" sideWeight="0.4484375" weight="0.35799783" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50989586" side_tool="true" visible="true" weight="0.41240478" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5515625" side_tool="true" weight="0.36452666" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49947917" weight="0.21218716" />
       <window_info anchor="bottom" id="Inspection Results" order="13" visible="true" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.9314815" visible="true" weight="0.33020833" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" sideWeight="0.06851852" side_tool="true" visible="true" weight="0.33020833" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.9194777" visible="true" weight="0.34166667" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" sideWeight="0.080522306" side_tool="true" visible="true" weight="0.34166667" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" />
     </layout>
@@ -360,154 +581,59 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>106</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/Marketsim/util.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="555" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>100</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>99</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>54</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>91</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>78</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py</url>
-          <line>87</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/pandas/core/frame.py</url>
-          <line>5589</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale.py</url>
-          <line>128</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale.py</url>
-          <line>116</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>198</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>152</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>166</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>153</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>154</line>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>155</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>156</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>147</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>132</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>136</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Martingale/martingale_unedited.py</url>
-          <line>236</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Optimize Something/optimization.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Optimize Something/optimization.py</url>
-          <line>263</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Assess Learners/testlearner.py</url>
-          <line>216</line>
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Exam_Practice.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="140" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Exam_Practice.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="144" />
+          <url>file://$PROJECT_DIR$/Marketsim/util.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="556" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Marketsim/marketsim.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="190" />
+          <line>92</line>
+          <option name="timeStamp" value="557" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Marketsim/marketsim.py</url>
+          <line>91</line>
+          <option name="timeStamp" value="558" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
+          <line>171</line>
+          <option name="timeStamp" value="662" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Manual Strategy/ManualStrategy.py</url>
+          <line>175</line>
+          <option name="timeStamp" value="663" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Manual Strategy/ManualStrategy.py</url>
+          <line>169</line>
+          <option name="timeStamp" value="777" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="779" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
+          <line>165</line>
+          <option name="timeStamp" value="780" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="787" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
+          <line>140</line>
+          <option name="timeStamp" value="788" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -521,145 +647,34 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_martingale_py.coverage" NAME="pytest in martingale.py Coverage Results" MODIFIED="1558284772739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$RTLearner.coverage" NAME="RTLearner Coverage Results" MODIFIED="1559694892279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_for_testbest4_test_code.coverage" NAME="pytest for testbest4.test_code Coverage Results" MODIFIED="1560557277326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Defeat Learners" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_grade_marketsim_py.coverage" NAME="pytest in grade_marketsim.py Coverage Results" MODIFIED="1561843420955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Marketsim" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$TestingLearners.coverage" NAME="TestingLearners Coverage Results" MODIFIED="1559696182996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$grade_marketsim.coverage" NAME="grade_marketsim Coverage Results" MODIFIED="1562102879666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Marketsim" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_testbest4_py.coverage" NAME="pytest in testbest4.py Coverage Results" MODIFIED="1560557261613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Defeat Learners" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_for_marketsim_test_code.coverage" NAME="pytest for marketsim.test_code Coverage Results" MODIFIED="1561674160671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Marketsim" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$testbest4.coverage" NAME="testbest4 Coverage Results" MODIFIED="1560558600182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Defeat Learners" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$martingale.coverage" NAME="martingale Coverage Results" MODIFIED="1558302551996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$util.coverage" NAME="util Coverage Results" MODIFIED="1562399415850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$Exam_Practice.coverage" NAME="Exam_Practice Coverage Results" MODIFIED="1561239255656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_marketsimcode_py.coverage" NAME="pytest in marketsimcode.py Coverage Results" MODIFIED="1562394962450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Manual Strategy" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$optimization.coverage" NAME="optimization Coverage Results" MODIFIED="1559360148727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Optimize Something" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$marketsim.coverage" NAME="marketsim Coverage Results" MODIFIED="1561851705663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Marketsim" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$testlearner.coverage" NAME="testlearner Coverage Results" MODIFIED="1559695144677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_for_martingale_test_code.coverage" NAME="pytest for martingale.test_code Coverage Results" MODIFIED="1558284852423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$Validation.coverage" NAME="Validation Coverage Results" MODIFIED="1561851647353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Marketsim" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$gen_data.coverage" NAME="gen_data Coverage Results" MODIFIED="1560558152749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$ManualStrategy.coverage" NAME="ManualStrategy Coverage Results" MODIFIED="1562575692915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Manual Strategy" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$testing.coverage" NAME="testing Coverage Results" MODIFIED="1560377713204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$marketsimcode.coverage" NAME="marketsimcode Coverage Results" MODIFIED="1562566547991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Manual Strategy" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$indicators.coverage" NAME="indicators Coverage Results" MODIFIED="1562566984255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$martingale_unedited.coverage" NAME="martingale_unedited Coverage Results" MODIFIED="1559339948566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_optimization_py.coverage" NAME="pytest in optimization.py Coverage Results" MODIFIED="1559340490533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Optimize Something" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$LinRegLearner.coverage" NAME="LinRegLearner Coverage Results" MODIFIED="1559694885685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$RTLearner.coverage" NAME="RTLearner Coverage Results" MODIFIED="1559694892279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_for_testbest4_test_code.coverage" NAME="pytest for testbest4.test_code Coverage Results" MODIFIED="1560557277326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Defeat Learners" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$TheoreticallyOptimalStrategy.coverage" NAME="TheoreticallyOptimalStrategy Coverage Results" MODIFIED="1562570587669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Manual Strategy" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_grade_marketsim_py.coverage" NAME="pytest in grade_marketsim.py Coverage Results" MODIFIED="1562102797849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Marketsim" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$TestingLearners.coverage" NAME="TestingLearners Coverage Results" MODIFIED="1559696182996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$martingale.coverage" NAME="martingale Coverage Results" MODIFIED="1558302551996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$marketsim.coverage" NAME="marketsim Coverage Results" MODIFIED="1562393935472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Marketsim" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$Validation.coverage" NAME="Validation Coverage Results" MODIFIED="1561851647353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Marketsim" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$gen_data.coverage" NAME="gen_data Coverage Results" MODIFIED="1560558152749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project 1 - Martingale/martingale.py" />
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/numpy/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/pandas/core/reshape/concat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="262" selection-start-line="262" selection-end-line="262" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/scipy/special/__init__.py" />
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="696" selection-start-line="696" selection-end-line="696" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/figure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="1575" selection-start-line="1575" selection-end-line="1575" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Martingale/martingale_unedited.py" />
-    <entry file="file://$PROJECT_DIR$/Optimize Something/untitled" />
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/pandas/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/mathtext.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Optimize Something/grade_optimization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3384" />
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/pandas/plotting/_core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="778" selection-start-line="778" selection-end-line="778" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/scipy/optimize/linesearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Optimize Something/optimization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-          <folding>
-            <element signature="e#1887#1906#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="1146" selection-start-line="1146" selection-end-line="1146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa15196.35787/01-09_OptimizersHowToOptimizeAPortfolio.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa15196.36276/01-08_OptimizersBuildingAParameterizedModel.py" />
-    <entry file="file://$PROJECT_DIR$/Martingale/martingale.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2664">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assess Learners/TestingLearners.py" />
-    <entry file="file://$PROJECT_DIR$/Assess Learners/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="25" column="75" lean-forward="true" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assess Learners/grade_learners.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding>
-            <element signature="e#2178#2191#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assess Learners/grade_learners_OLD.py" />
     <entry file="file://$PROJECT_DIR$/Assess Learners/grade_learners_NEW.py" />
     <entry file="file://$PROJECT_DIR$/Assess Learners/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -668,20 +683,6 @@
             <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assess Learners/LinRegLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" lean-forward="true" selection-end-line="22" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assess Learners/DTLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-696">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -695,54 +696,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assess Learners/BagLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assess Learners/RTLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assess Learners/testlearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="200" column="47" selection-start-line="200" selection-start-column="47" selection-end-line="200" selection-end-column="47" />
-          <folding>
-            <element signature="e#6746#7661#0" />
-            <element signature="e#7694#8674#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Defeat Learners/DTLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/sklearn/datasets/samples_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9486">
           <caret line="569" column="14" selection-start-line="569" selection-start-column="14" selection-end-line="569" selection-end-column="14" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/numpy/core/numeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="530" selection-start-line="530" selection-end-line="530" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Defeat Learners/LinRegLearner.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Defeat Learners/util.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -751,34 +710,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Defeat Learners/testing.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa5632.48127/gen_data.py" />
-    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="353" selection-start-line="353" selection-end-line="353" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/numpy/lib/function_base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5043">
           <caret line="3025" selection-start-line="3025" selection-end-line="3025" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Defeat Learners/testbest4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-          <folding>
-            <element signature="e#1803#1861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Defeat Learners/gen_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="56" column="71" selection-start-line="56" selection-start-column="71" selection-end-line="56" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -789,42 +724,279 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util.py">
+    <entry file="file://$PROJECT_DIR$/util.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6360.971/marketsim.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa13388.18992/marketsim.py" />
+    <entry file="file://$PROJECT_DIR$/Marketsim/Validation.py" />
+    <entry file="file://$PROJECT_DIR$/Manual Strategy/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        <state relative-caret-position="72">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6360.971/marketsim.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa13388.18992/marketsim.py" />
+    <entry file="file://$PROJECT_DIR$/Defeat Learners/DTLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2353">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Defeat Learners/grade_best4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3312" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Defeat Learners/LinRegLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1047" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assess Learners/DTLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2496">
+          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assess Learners/LinRegLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1191">
+          <caret column="8" lean-forward="true" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assess Learners/RTLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2761">
+          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assess Learners/BagLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1609">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/pandas/core/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="441" selection-start-line="441" selection-end-line="441" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/_pylab_helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/textpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/backend_bases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="221" selection-start-line="221" selection-end-line="221" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/cbook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="1299" selection-start-line="1299" selection-end-line="1299" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/mathtext.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="3242" selection-start-line="3242" selection-end-line="3242" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/UserDict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/weakref.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/numpy/core/numeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="530" selection-start-line="530" selection-end-line="530" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/transforms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="835" selection-start-line="835" selection-end-line="835" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="321" selection-start-line="321" selection-end-line="321" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/backends/backend_agg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="479" selection-start-line="479" selection-end-line="479" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/tight_layout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="325" selection-start-line="325" selection-end-line="325" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm_matplotlib_backend/backend_interagg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/figure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="1752" selection-start-line="1752" selection-end-line="1752" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="2986" column="5" selection-start-line="2986" selection-start-column="5" selection-end-line="2986" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manual Strategy/marketsimcoe.py" />
     <entry file="file://$PROJECT_DIR$/Marketsim/grade_marketsim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="-1386">
+          <caret line="208" column="77" lean-forward="true" selection-start-line="208" selection-start-column="77" selection-end-line="208" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manual Strategy/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Defeat Learners/testbest4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+          <folding>
+            <element signature="e#1803#1861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Defeat Learners/gen_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1059">
+          <caret line="56" column="71" selection-start-line="56" selection-start-column="71" selection-end-line="56" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Marketsim/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="233">
+          <caret line="22" column="66" lean-forward="true" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Marketsim/Validation.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="208">
+          <caret line="1146" selection-start-line="1146" selection-end-line="1146" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Marketsim/marketsim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+        <state relative-caret-position="161">
+          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assess Learners/testlearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5448">
+          <caret line="234" selection-start-line="234" selection-end-line="237" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/ml4t/Lib/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="696" selection-start-line="696" selection-end-line="696" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="133" column="58" lean-forward="true" selection-start-line="133" selection-start-column="58" selection-end-line="133" selection-end-column="58" />
           <folding>
-            <element signature="e#1922#1941#0" expanded="true" />
+            <element signature="e#1021#1040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manual Strategy/marketsimcode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="261" column="61" lean-forward="true" selection-start-line="261" selection-start-column="61" selection-end-line="261" selection-end-column="61" />
+          <folding>
+            <element signature="e#1006#1025#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manual Strategy/indicators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="367" column="4" selection-start-line="367" selection-start-column="4" selection-end-line="367" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#1001#1" />
+            <element signature="e#1003#1022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manual Strategy/ManualStrategy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="176" selection-start-line="176" selection-end-line="176" />
+          <folding>
+            <element signature="e#1007#1026#0" expanded="true" />
+            <element signature="e#2429#2474#0" />
           </folding>
         </state>
       </provider>

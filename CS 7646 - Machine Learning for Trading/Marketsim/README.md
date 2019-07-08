@@ -1,5 +1,10 @@
-![CS_7646]()
+# Copyright 2018, Georgia Tech Research Corporation    
+# Atlanta, Georgia 30332-0415     
+# All Rights Reserved  
 
-## Project 5 - Marketsim
-[![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Microsoft/BosqueLanguage/blob/master/LICENSE.txt)
-[![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg)](#contribute)
+# ML4T_2019 Spring
+Course website: http://quantsoftware.gatech.edu/CS7646_Spring_2019
+
+Information on using the autograder on buffet0x servers: http://quantsoftware.gatech.edu/ML4T_Software_Setup
+
+

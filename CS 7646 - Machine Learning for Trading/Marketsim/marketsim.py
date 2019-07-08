@@ -48,7 +48,7 @@ def compute_portvals(orders_file="./orders/orders.csv", start_val=1000000, commi
 
 	# Price Data Frame
 	pricesDataFrame, spyDataFrame = get_Price_DataFrame(list(symbols), start_date, end_date)
-
+	pricesDataFrame_Shape = pricesDataFrame.shape
 	# Create new ordersDataFrame consisting of only days which SPY was traded.
 	ordersDataFrame = ordersDataFrame[ordersDataFrame.index.isin(spyDataFrame.index)]       # Remove trades that occur on non tradeable days
 	pricesDataFrame = pricesDataFrame[symbols]  # remove SPY
@@ -82,19 +82,22 @@ def get_Price_DataFrame(symbols, start_date, end_date):
 	if not isinstance(symbols, list):
 		symbols = list(symbols)
 	pricesDataFrame = get_data(symbols, pd.date_range(start_date, end_date), addSPY=True)
-	pricesDataFrame = pricesDataFrame.resample("D").fillna(method='ffill')
-	pricesDataFrame = pricesDataFrame.resample("D").fillna(method='bfill')
-	spyDataFrame = pricesDataFrame['$SPX']
+	# pricesDataFrame = pricesDataFrame.resample("D").fillna(method='ffill')
+	# pricesDataFrame = pricesDataFrame.resample("D").fillna(method='bfill')
+	spyDataFrame = pricesDataFrame['SPY']
 	return pricesDataFrame, spyDataFrame
 
 
 def get_Orders_DataFrame(orders_file):
 	ordersDataFrame = pd.read_csv(orders_file, delimiter=",", header=0, parse_dates=['Date']).sort_values(by='Date')
 	symbols = ordersDataFrame["Symbol"].unique()
+	symbols = list(symbols)
+	if '$SPX' not in symbols:
+		symbols += ['$SPX']
 	start_date = ordersDataFrame.iloc[0, 0]
 	end_date = ordersDataFrame.iloc[-1, 0]
 	ordersDataFrame.set_index('Date', inplace=True)
-	return ordersDataFrame, list(symbols), start_date, end_date
+	return ordersDataFrame, symbols, start_date, end_date
 
 
 def populate_TradeDataFrame(tradeDF, orderDF, pricesDf, symbols, commission, impact, start_val):
@@ -147,7 +150,7 @@ def test_code():
 	# note that during autograding his function will not be called.
 	# Define input parameters
 
-	of = "./orders/orders-02.csv"
+	of = "./orders/orders-11.csv"
 	sv = 1000000
 
 	# Process orders

@@ -160,14 +160,7 @@ def Question_2_Part_1(trainX, trainY, testX, testY):
 		RSME_Testing.append(test_rmse)
 
 	fig, ax = plt.subplots()
-	pd.DataFrame({
-		"Train RMSE": RSME_Training,
-		"Test RMSE": RSME_Testing
-	}, index=Leaf_Sizes).plot(
-		ax=ax,
-		style="o-",
-		title="BagLearner-RMSE VS Leaf-Size"
-	)
+	pd.DataFrame({"Train RMSE": RSME_Training, "Test RMSE": RSME_Testing}, index=Leaf_Sizes).plot(ax=ax, style="o-", title="BagLearner-RMSE VS Leaf-Size")
 	plt.xticks(Leaf_Sizes, Leaf_Sizes)
 	plt.xlabel("Leaf size")
 	plt.ylabel("RMSE")
