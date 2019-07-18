@@ -40,7 +40,7 @@ def author(self):
 	return 'jadams334'
 
 
-class ManualStrategy(TheoreticallyOptimalStrategy):
+class ManualStrategy():
 	
 	def testPolicy(self, symbol='JPM', sd=dt.datetime(2010, 1, 1), ed=dt.datetime(2010, 6, 1), sv=100000):
 		# get_port_val(symbol=symbol, startDate=sd, endDate=ed)
