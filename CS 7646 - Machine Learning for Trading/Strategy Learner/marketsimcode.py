@@ -30,6 +30,7 @@ import numpy as np
 import datetime as dt
 import os
 import sys
+import util
 import matplotlib.pyplot as plt
 from util import get_data, plot_data
 
@@ -685,16 +686,64 @@ def populate_TradeDataFrame(tradeDF, orderDF, pricesDf, symbols, commission, imp
 	return tradeDF
 
 
-def portValQuick(priceDF, commission=9.95, impact=0.005, startVal=100000, Theo=False, Bench=False):
+def compute_portvals_from_tester(orders_df, start_date, end_date, startval, market_impact=0.0, commission_cost=0.0):
+	"""Simulate the market for the given date range and orders file."""
+	symbols = []
+	orders = []
+	orders_df = orders_df.sort_index()
+	for date, order in orders_df.iterrows():
+		shares = order['Shares']
+		action = order['Order']
+		symbol = order['Symbol']
+		order = (date, symbol, shares)
+		orders.append(order)
+		symbols.append(symbol)
+	symbols = list(set(symbols))
+	dates = pd.date_range(start_date, end_date)
+	prices_all = util.get_data(symbols, dates)
+	prices = prices_all[symbols]
+	prices = prices.fillna(method='ffill').fillna(method='bfill')
+	prices['_CASH'] = 1.0
+	trades = pd.DataFrame(index=prices.index, columns=symbols)
+	trades = trades.fillna(0)
+	cash = pd.Series(index=prices.index)
+	cash = cash.fillna(0)
+	cash.ix[0] = startval
+	for date, symbol, shares in orders:
+		price = prices[symbol][date]
+		val = shares * price
+		# transaction cost model
+		val += commission_cost + (pd.np.abs(shares) * price * market_impact)
+		positions = prices.ix[date] * trades.sum()
+		totalcash = cash.sum()
+		if (date < prices.index.min()) or (date > prices.index.max()):
+			continue
+		trades[symbol][date] += shares
+		cash[date] -= val
+	trades['_CASH'] = cash
+	holdings = trades.cumsum()
+	df_portvals = (prices * holdings).sum(axis=1)
+	return df_portvals
+
+
+def portValQuick(priceDF, commission=9.95, impact=0.005, startVal=100000, Theo=False, Bench=False, start_date=None, end_date=None):
+	symbols = priceDF.columns.tolist()
+	if ("Adj Close" not in symbols):
+		if len(symbols) == 1:
+			temp = get_data(symbols, pd.date_range(start_date, end_date), addSPY=False)
+			priceDF["Adj Close"] = temp[symbols]
+			print ""
+		else:
+			tempDF = get_data(symbols, pd.date_range(start_date, end_date))
 	results = priceDF.copy()
 	results['Port Value'] = 0
 	results['Port Value'][0] = startVal
 	results["Impact Price"] = (1 + impact) * results['Adj Close']
 	results["Commission"] = commission
-	tempBuy = results[results['Orders'] > 0]
-	tempBuy["Value"] = (-(tempBuy["Impact Price"]) * tempBuy["Orders"]) + tempBuy['Port Value'] - tempBuy["Commission"]
-	tempSell = results[results['Orders'] < 0]
-	tempSell["Value"] = (-(tempSell["Impact Price"]) * tempSell["Orders"]) + tempSell['Port Value'] - tempSell["Commission"]
+	tempBuy = results[results[symbols[0]] > 0]
+	tempBuy["Value"] = (-(tempBuy["Impact Price"]) * tempBuy[symbols[0]]) + tempBuy['Port Value'] - tempBuy["Commission"]
+	tempSell = results[results[symbols[0]] < 0]
+	tempSell["Value"] = (-(tempSell["Impact Price"]) * tempSell[symbols[0]]) + tempSell['Port Value'] - tempSell["Commission"]
 	results['Port Value'] = 0
 	for index, row in tempBuy.iterrows():
 		portVal = row['Value']
@@ -727,6 +776,79 @@ def portValQuick(priceDF, commission=9.95, impact=0.005, startVal=100000, Theo=F
 	else:
 		return results['Port Value'].cumsum(), results
 
+
+def compute_portvals_1(df_trades, start_val=1000000, commission=9.95, impact=0.005):
+    """Improved version of marketsim, accepting trading Dataframes"""
+    start_date = df_trades.index.min()
+    end_date = df_trades.index.max()
+
+    # Fetch stocks prices
+
+    stocks = df_trades.columns.tolist()
+    stocks_dict = {}
+    for symbol in stocks:
+        stocks_dict[symbol] = get_data([symbol], pd.date_range(start_date, end_date), colname='Adj Close')
+        stocks_dict[symbol] = stocks_dict[symbol].resample("D").fillna(method="ffill")
+        stocks_dict[symbol] = stocks_dict[symbol].fillna(method="bfill")
+
+    # List the trading days
+    SPY = get_data(['SPY'], pd.date_range(start_date, end_date))
+    trading_days = pd.date_range(start_date, end_date, freq="D")
+    not_trading_days = []
+    for day in trading_days:
+        if day not in SPY.index:
+            not_trading_days.append(day)
+    trading_days = trading_days.drop(not_trading_days)
+
+    for day in df_trades.index:
+        if day not in trading_days:
+            raise Exception("One of the order day is missing in trading days")
+
+    # Initialization of portfolio DataFrame
+    portvals = pd.DataFrame(index=trading_days, columns=["portfolio_value"] + stocks)
+
+    # Compute portfolio value for each trading day in the period
+    current_value = start_val
+    previous_day = None
+    for today in trading_days:
+
+        # Copy previous trading day's portfolio state
+        if previous_day is not None:
+            portvals.loc[today, :] = portvals.loc[previous_day, :]
+            portvals.loc[today, "portfolio_value"] = 0
+        else:
+            portvals.loc[today, :] = 0
+
+        # Execute orders
+        if today in df_trades.index:
+            today_orders = df_trades.loc[[today]]
+            for symbol in today_orders.columns:
+                order = today_orders.iloc[0].loc[symbol] # assume one order per day per symbol
+                shares = abs(order)
+                stock_price = stocks_dict[symbol].loc[today, symbol]
+
+                if order > 0: # BUY
+                    stock_price = (1 + impact) * stock_price
+                    current_value -= stock_price * shares
+                    current_value -= commission
+                    portvals.loc[today, symbol] += shares
+                elif order < 0: # SELL
+                    stock_price = (1 - impact) * stock_price
+                    current_value += stock_price * shares
+                    current_value -= commission
+                    portvals.loc[today, symbol] -= shares
+
+        # Update portfolio value
+        for symbol in stocks:
+            stock_price = stocks_dict[symbol].loc[today, symbol]
+            portvals.loc[today, "portfolio_value"] += portvals.loc[today, symbol] * stock_price
+        portvals.loc[today, "portfolio_value"] += current_value
+
+        previous_day = today
+
+    # Remove empty lines
+    portvals = portvals.sort_index(ascending=True)
+    return portvals.iloc[:,0].to_frame()
 
 def test_code():
 	# this is a helper function you can use to test your code

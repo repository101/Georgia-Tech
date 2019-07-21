@@ -26,7 +26,9 @@ GT User ID: jadams334 (replace with your User ID)
 GT ID: 903475599 (replace with your GT ID)
 """ 			  		 			 	 	 		 		 	  		   	  			  	
 
-import numpy as np 			  		 			 	 	 		 		 	  		   	  			  	
+import numpy as np
+import os
+import sys
 import random as rand 			  		 			 	 	 		 		 	  		   	  			  	
 
 
@@ -63,18 +65,34 @@ class QLearner(object):
 		"""
 		# Action Tuple  ---  < S, A, S_Prime, R >
 		# Action Tuple  ---  < Current_State, Action_taken, New_State, Reward >
-		if self.perform_random_action_or_not():
-			# We get a random action
-			# Take that action
-			action = np.random.choice(self.actions)
+		try:
+			if self.perform_random_action_or_not():
+				# We get a random action
+				# Take that action
+				action = np.random.choice(self.actions)
+				return action
+			else:
+				try:
+					action = np.argmax(self.q_table[int(s)])
+				except Exception as err:
+					if self.verbose:
+						print "Error occurred when attempting to get ArgMax within perform random action or not in QLearner.py"
+						exc_type, exc_obj, exc_tb = sys.exc_info()
+						print exc_obj
+						print exc_tb.tb_lineno
+						print err
+			if self.verbose:
+				print "s =", s, "a =", action
+			self.s = s
+			self.a = action
 			return action
-		else:
-			action = np.argmax(self.q_table[s])
-		if self.verbose:
-			print "s =", s, "a =", action
-		self.s = s
-		self.a = action
-		return action
+		except Exception as err:
+			if self.verbose:
+				print "Error occurred when attempting to Query the Action within QLeaner.py"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
+				print err
 		
 	def query(self, s_prime, r):
 		"""
@@ -87,19 +105,51 @@ class QLearner(object):
 		# Action Tuple  ---  < Current_State, Action_taken, New_State, Reward >
 		# Update the rule
 		# https://classroom.udacity.com/courses/ud501/lessons/5247432317/concepts/53538285920923
-		self.update_q_table(s=self.s, a=self.a, s_prime=s_prime, r=r)
-		action = self.querysetstate(s_prime)
-		self.update_rar()
+		try:
+			self.update_q_table(s=self.s, a=self.a, s_prime=s_prime, r=r)
+		except Exception as err:
+			if self.verbose:
+				print "Error occurred when attempting to Update the Q-Table"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
+				print err
+		try:
+			action = self.querysetstate(s_prime)
+		except Exception as err:
+			if self.verbose:
+				print "Error occurred when attempting to Query Set State within QLearner.py"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
+				print err
+		try:
+			self.update_rar()
+		except Exception as err:
+			if self.verbose:
+				print "Error occurred when attempting to update Random Action Rate within QLearner.py"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
+				print err
 		if self.verbose:
 			print "s =", s_prime, "a =", action, "r =", r
 		return action
 		
 	def perform_random_action_or_not(self):
-		if self.verbose:
-			print "Current random action rate is {}".format(self.rar)
-			print "Chance of taking a random action is {}".format(self.rar)
-			print "Chance of not taking a random action is {}".format(1.0 - self.rar)
-		return np.random.uniform(0.0, 1.0) <= self.rar
+		try:
+			if self.verbose:
+				print "Current random action rate is {}".format(self.rar)
+				print "Chance of taking a random action is {}".format(self.rar)
+				print "Chance of not taking a random action is {}".format(1.0 - self.rar)
+			return np.random.uniform(0.0, 1.0) <= self.rar
+		except Exception as err:
+			if self.verbose:
+				print "Error occurred within Perform Random Action or Not, in QLeaner.py"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
+				print err
 	
 	def update_rar(self):
 		old_rar = self.rar
@@ -110,22 +160,31 @@ class QLearner(object):
 		return
 	
 	def update_q_table(self, s=0, a=0, s_prime=0, r=0):
+		s = int(s)
+		s_prime = int(s_prime)
 		Part_1 = (1 - self.alpha) * self.q_table[s, a]      # Correct
 		# Later_Rewards = Q[s_prime, argmax(Q[s_prime, a_prime)]
 		try:
 			try_later_rewards = "Succeeded"
 			later_rewards = self.q_table[int(s_prime), np.argmax(self.q_table[int(s_prime)])]     # Correct
-			print ""
 		except Exception as err:
-			print "Error attempting to get later rewards"
-			print err
-			try_later_rewards = "Failed"
+			if self.verbose:
+				print "Error attempting to get later rewards"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
+				print err
+				try_later_rewards = "Failed"
 		if try_later_rewards == "Failed":
 			try:
 				later_rewards = self.q_table[s_prime, np.argmax(self.q_table[s_prime])]  # Correct
 			except Exception as err:
-				print "Error attempting to get later rewards"
-				print err
+				if self.verbose:
+					print "Error attempting to get later rewards"
+					exc_type, exc_obj, exc_tb = sys.exc_info()
+					print exc_obj
+					print exc_tb.tb_lineno
+					print err
 				
 		# Improved_Estimate = ( r + self.gamma * later_rewards)
 		improved_estimate = (r + (self.gamma * later_rewards))      # Correct

@@ -58,6 +58,9 @@ class StrategyLearner(object):
 		self.learner = None
 		self.number_of_states = None
 		self.previous_dataframe = None
+		self.prev_count = 0
+		self.FullDataFrame = None
+		self.trades_dataframe = None
 	
 	def author(self):
 		return "jadams334"
@@ -65,8 +68,8 @@ class StrategyLearner(object):
 	def discretize(self, dataframe, indicator):
 		# Convert continuous indicators into integers
 		try:
-			discretized_indicator, indicator_bins = pd.qcut(dataframe, self.discretization_bins, retbins=True, labels=False)
-	
+			discretized_indicator, indicator_bins = pd.qcut(dataframe, self.discretization_bins, retbins=True,
+			                                                labels=False)
 			if indicator == 0:
 				# Simple Moving Average
 				self.SimpleMovingAverageBins = indicator_bins
@@ -92,7 +95,10 @@ class StrategyLearner(object):
 			return discretized_indicator, indicator_bins
 		except Exception as err:
 			if self.verbose:
-				print "Failed in discretize"
+				print "Error occurred when attempting to Discretize"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
 				print err
 	
 	def get_states(self, dataframe):
@@ -101,16 +107,27 @@ class StrategyLearner(object):
 			return states
 		except Exception as err:
 			if self.verbose:
-				print "Failed in get states"
+				print "Error occurred when attempting to get Statese"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
 				print err
 	
 	def get_reward(self, closePrice, add_impact=False):
 		# Reward is best as percentage change
-		reward = self.holdings * closePrice
-		if add_impact:
-			reward *= (1 - self.impact)
+		try:
+			reward = self.holdings * closePrice
+			if add_impact:
+				reward *= (1 - self.impact)
+				return reward
 			return reward
-		return reward
+		except Exception as err:
+			if self.verbose:
+				print "Error occurred when attempting to get Reward"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
+				print err
 	
 	def get_indicators(self, pricesDataFrame, fillNa=False, otherFill=False):
 		try:
@@ -235,7 +252,7 @@ class StrategyLearner(object):
 			                      rar=0.98, \
 			                      radr=0.999, \
 			                      dyna=0, \
-			                      verbose=False, actions=[0, 1, 2])
+			                      verbose=self.verbose, actions=[0, 1, 2])
 			#endregion
 			
 			
@@ -244,11 +261,12 @@ class StrategyLearner(object):
 			#region Get Indicators and Discretize
 			FullDataFrame, discretizedDataFrame, daily_returns = self.get_indicators(prices, fillNa=False, otherFill=True)
 			FullDataFrame["States"] = self.get_states(discretizedDataFrame[["Bollinger Band Percentage", "Relative Strength Index", "Daily Momentum"]])
+			self.FullDataFrame = FullDataFrame
 			#endregion
 			
 			#region Training
 			epoch = 0
-			tradeDataFrame = pd.DataFrame(data=np.zeros(shape=len(FullDataFrame)), index=FullDataFrame.index)
+			tradeDataFrame = pd.DataFrame(data=np.zeros(shape=len(FullDataFrame)), columns=[symbol], index=FullDataFrame.index)
 			while(epoch <= self.max_epochs) & (self.convergence == False):
 				# Holdings X daily_returns will give us our reward
 				holdings = self.holdings
@@ -262,10 +280,9 @@ class StrategyLearner(object):
 						#   2 = Long
 						# Apply impact
 						reward = self.get_reward((daily_returns.loc[index]), add_impact=True)
-					print ""
 					try:
+						test = row["States"]
 						action = self.learner.query(row["States"], reward)
-						print ""
 					except Exception as err:
 						if self.verbose:
 							print "Error occurred when attempting to query the action"
@@ -276,7 +293,6 @@ class StrategyLearner(object):
 					if action == 0:
 						# Do Nothing
 						tradeDataFrame.loc[index] = 0
-						print ""
 					elif action == 1:
 						# SHORT ~~ Sell
 						# Check holdings
@@ -312,18 +328,22 @@ class StrategyLearner(object):
 							print "Something happened while training and an invalid action was returned"
 					self.holdings = self.holdings + tradeDataFrame.loc[index][0]
 				# Compare results of self.previous_dataframe with new dataframe to see if we have converged
-				if (self.previous_dataframe is None):
+				if self.previous_dataframe is None:
 					pass
 				else:
 					# We compare the new dataframe to the previous dataframe
-					
-					print ""
+					test = self.previous_dataframe.equals(tradeDataFrame)
+					if self.previous_dataframe.equals(tradeDataFrame):
+						if self.prev_count >= 5:
+							self.convergence = True
+						self.prev_count += 1
 				# Set previous dataframe to the current because we will use that in the next comparison
 				self.previous_dataframe = tradeDataFrame
-			#endregion
+				self.trades_dataframe = tradeDataFrame
 			
 			#endregion
 			
+			#endregion
 			return
 		except Exception as AddEvidenceException:
 			if self.verbose:
@@ -363,6 +383,18 @@ class StrategyLearner(object):
 
 
 if __name__ == "__main__":
-	tester = StrategyLearner(verbose=True, impact=0.000)
-	tester.addEvidence(symbol='AAPL', sd=dt.datetime(2008, 1, 1), ed=dt.datetime(2009, 12, 31), sv=100000)
+	start_date = dt.datetime(2008, 1, 1)
+	end_date = dt.datetime(2009, 12, 31)
+	start_value = 100000
+	impact = 0.000
+	symbol = 'AAPL'
+	tester = StrategyLearner(verbose=True, impact=impact)
+	tester.addEvidence(symbol=symbol, sd=start_date, ed=end_date, sv=start_value)
+	port_vals = mktsim.compute_portvals_1(tester.trades_dataframe, start_val=start_value, impact=impact)
+	tester.trades_dataframe["Shares"] = tester.trades_dataframe[symbol]
+	tester.trades_dataframe["Order"] = np.zeros(shape=(len(tester.trades_dataframe)))
+	tester.trades_dataframe["Symbol"] = symbol
+	test_port_val = mktsim.compute_portvals_from_tester(tester.trades_dataframe, start_date=start_date, end_date=end_date,
+	                                                    startval=start_value, market_impact=0.00, commission_cost=0.00)
+	print ""
 	print "One does not simply think up a strategy"
