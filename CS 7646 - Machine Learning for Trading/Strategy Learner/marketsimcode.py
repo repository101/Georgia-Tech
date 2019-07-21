@@ -93,48 +93,82 @@ def Optimal_Strategy(priceDF):
 
 
 def get_cumulative_returns(port_val=None, CompleteDF=None, symbolToUse=None):
-	if symbolToUse is not None:
-		cumulative_return = (port_val[-1] / port_val[0]) - 1
-		return cumulative_return[symbolToUse]
-	else:
-		if CompleteDF is not None:
-			return (CompleteDF["Port Value"].iloc[-1] / CompleteDF["Port Value"].iloc[0]) - 1
+	try:
+		if symbolToUse is not None:
+			cumulative_return = (port_val[-1] / port_val[0]) - 1
+			return cumulative_return[symbolToUse]
 		else:
-			return (port_val[-1] / port_val[0]) - 1
+			if CompleteDF is not None:
+				return (CompleteDF["Port Value"].iloc[-1] / CompleteDF["Port Value"].iloc[0]) - 1
+			else:
+				return (port_val[-1] / port_val[0]) - 1
+	except Exception as err:
+		print "Error occurred when attempting to calculate the Cumulative Returns"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print err
 		
 
 def get_std_daily_returns(dailyReturnDataFrame=None, CompleteDF=None, symbolToUse=None):
-	if symbolToUse is not None:
-		dailyReturnDataFrame.ix[0, :] = 0
-		return dailyReturnDataFrame[symbolToUse].std()
-	else:
-		if CompleteDF is not None:
-			return CompleteDF["Daily Returns"].std()
+	try:
+		if symbolToUse is not None:
+			dailyReturnDataFrame.ix[0, :] = 0
+			return dailyReturnDataFrame[symbolToUse].std()
+		else:
+			if CompleteDF is not None:
+				return CompleteDF["Daily Returns"].std()
+	except Exception as err:
+		print "Error occurred when attempting to calculate the Standard Deviation of Daily Returns"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print err
 
 
 def get_daily_returns(priceDataFrame):
-	daily_rets = (priceDataFrame / priceDataFrame.shift(1)) - 1
-	daily_rets.fillna(0, inplace=True)
-	return daily_rets
-
+	try:
+		daily_rets = (priceDataFrame / priceDataFrame.shift(1)) - 1
+		daily_rets.fillna(0, inplace=True)
+		return daily_rets
+	except Exception as err:
+		print "Error occurred when attempting to calculate the Daily Returns"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print err
 
 def get_avg_daily_return(dailyReturnDataFrame=None, CompleteDF=None, symbolToUse=None):
-	if symbolToUse is not None:
-		dailyReturnDataFrame.ix[0, :] = 0
-		return dailyReturnDataFrame[symbolToUse].mean()
-	else:
-		if CompleteDF is not None:
-			return get_daily_returns(CompleteDF["Port Value"])
+	try:
+		if symbolToUse is not None:
+			dailyReturnDataFrame.ix[0, :] = 0
+			return dailyReturnDataFrame[symbolToUse].mean()
+		else:
+			if CompleteDF is not None:
+				return get_daily_returns(CompleteDF["Port Value"])
+	except Exception as err:
+		print "Error occurred when attempting to calculate the rolling mean"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print err
 
 
 def get_port_val(symbol='JPM', startDate=dt.datetime(2010, 1, 1), endDate=dt.datetime(2011, 12, 31)):
-	if isinstance(symbol, list):
-		pricesDF = get_Price_DataFrame(symbols=symbol, start_date=startDate, end_date=endDate, getSPY=False)
-	else:
-		pricesDF = get_Price_DataFrame(symbols=[symbol], start_date=startDate, end_date=endDate, getSPY=False)
-	pricesDF.dropna(axis='rows', how='all', inplace=True)
-	generate_order_DataFrame(pricesDF)
-	return pricesDF
+	try:
+		if isinstance(symbol, list):
+			pricesDF = get_Price_DataFrame(symbols=symbol, start_date=startDate, end_date=endDate, getSPY=False)
+		else:
+			pricesDF = get_Price_DataFrame(symbols=[symbol], start_date=startDate, end_date=endDate, getSPY=False)
+		pricesDF.dropna(axis='rows', how='all', inplace=True)
+		generate_order_DataFrame(pricesDF)
+		return pricesDF
+	except Exception as err:
+		print "Error occurred when attempting to calculate the port val"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print err
 
 
 def generate_order_DataFrame(pricesDataFrame):
@@ -234,14 +268,20 @@ def Relative_Strength_Index(PriceDataFrame, lookback=14):
 	
 	# Symbol Oversold:
 	#   RSI < 30
-	
-	price_diff = PriceDataFrame['Adj Close'].diff()
-	gain = price_diff.mask(price_diff < 0, 0)
-	loss = price_diff.mask(price_diff > 0, 0)
-	relative_strength = abs(gain.ewm(com=lookback - 1, min_periods=lookback).mean() / loss.ewm(com=lookback - 1, min_periods=lookback).mean())
-	relative_strength_index = 100.0 - (100.0 / (1 + relative_strength))
-	PriceDataFrame["Relative Strength Index"] = relative_strength_index
-	return relative_strength_index
+	try:
+		price_diff = PriceDataFrame['Adj Close'].diff()
+		gain = price_diff.mask(price_diff < 0, 0)
+		loss = price_diff.mask(price_diff > 0, 0)
+		relative_strength = abs(gain.ewm(com=lookback - 1, min_periods=lookback).mean() / loss.ewm(com=lookback - 1, min_periods=lookback).mean())
+		relative_strength_index = 100.0 - (100.0 / (1 + relative_strength))
+		PriceDataFrame["Relative Strength Index"] = relative_strength_index
+		return relative_strength_index
+	except Exception as err:
+		print "Error occurred when attempting to calculate the relative strength index"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print err
 
 
 def BollingerBand_Percentage(PricesDataFrame, UpperBand, LowerBand):
@@ -250,8 +290,15 @@ def BollingerBand_Percentage(PricesDataFrame, UpperBand, LowerBand):
 	
 	# Symbol Oversold:
 	#   BollingerBand_% < 0
-	PricesDataFrame['BollingerBandPercentage'] = (PricesDataFrame['Adj Close'] - LowerBand) / (UpperBand - LowerBand)
-	return (PricesDataFrame['Adj Close'] - LowerBand) / (UpperBand - LowerBand)
+	try:
+		PricesDataFrame['BollingerBandPercentage'] = (PricesDataFrame['Adj Close'] - LowerBand) / (UpperBand - LowerBand)
+		return (PricesDataFrame['Adj Close'] - LowerBand) / (UpperBand - LowerBand)
+	except Exception as err:
+		print "Error occurred when attempting to calculate the Bollinger Band Percentage"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print err
 
 
 def BollingerBand_Ratio(PricesDataFrame, simpleMovingAvg, standardDeviation):
@@ -260,8 +307,15 @@ def BollingerBand_Ratio(PricesDataFrame, simpleMovingAvg, standardDeviation):
 	
 	# Symbol Oversold:
 	#   BollingerBand_% < 0
-	PricesDataFrame['BollingerBandRatio'] = (PricesDataFrame['Adj Close'] - simpleMovingAvg) / (2 *  standardDeviation)
-	return (PricesDataFrame['Adj Close'] - simpleMovingAvg) / (2 *  standardDeviation)
+	try:
+		PricesDataFrame['BollingerBandRatio'] = (PricesDataFrame['Adj Close'] - simpleMovingAvg) / (2 * standardDeviation)
+		return (PricesDataFrame['Adj Close'] - simpleMovingAvg) / (2 * standardDeviation)
+	except Exception as BollingerBand_RatioException:
+		print "Error occurred when attempting to calculate the Bollinger Band Ratio"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print BollingerBand_RatioException
 
 
 def PriceSMA_Ratio(PricesDataFrame, SimpleMovingAverage):
@@ -270,25 +324,39 @@ def PriceSMA_Ratio(PricesDataFrame, SimpleMovingAverage):
 	
 	# Symbol Oversold:
 	#   Price/SMA_Ratio < 0.95
-	PricesDataFrame["SimpleMovingAverageRatio"] = PricesDataFrame['Adj Close'] / SimpleMovingAverage
-	return PricesDataFrame['Adj Close'] / SimpleMovingAverage
+	try:
+		PricesDataFrame["SimpleMovingAverageRatio"] = PricesDataFrame['Adj Close'] / SimpleMovingAverage
+		return PricesDataFrame['Adj Close'] / SimpleMovingAverage
+	except Exception as err:
+		print "Error occurred when attempting to calculate the Price Simple Moving Average Ratio"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print err
 
 
 def getMomentum(momentum_DataFrame):
 	# Normalized the data
-	momentum_DataFrame['Adj Close Normalized'] = momentum_DataFrame['Adj Close'] / momentum_DataFrame['Adj Close'].iloc[0]
-	FiveDayShift = momentum_DataFrame['Adj Close Normalized'].shift(-5)
-	TwentyDayShift = momentum_DataFrame['Adj Close Normalized'].shift(-10)
-	momentum_DataFrame["DailyMomentum"] = momentum_DataFrame['Adj Close'] / momentum_DataFrame['Adj Close'].shift(9) - 1
-	momentum_DataFrame["5DayMomentum"] = (momentum_DataFrame['Adj Close Normalized'] / FiveDayShift) - 0.2
-	momentum_DataFrame["20DayMomentum"] = (momentum_DataFrame['Adj Close Normalized'] / TwentyDayShift) - 0.25
-	momentum_DataFrame['Rolling Mean'] = getRollingMean(momentum_DataFrame, window=20)
-	momentum_DataFrame['12 EMA'] = pd.ewma(momentum_DataFrame['Adj Close'], span=12)
-	momentum_DataFrame['26 EMA'] = pd.ewma(momentum_DataFrame['Adj Close'], span=26)
-	momentum_DataFrame['MACD'] = momentum_DataFrame['12 EMA'] - momentum_DataFrame['26 EMA']
-	momentum_DataFrame['MACD Signal'] = pd.ewma(momentum_DataFrame['Adj Close'], span=9)
-	momentum_DataFrame['MACD CrossOver'] = momentum_DataFrame['MACD'] - momentum_DataFrame['MACD Signal']
-	return momentum_DataFrame['MACD CrossOver']
+	try:
+		momentum_DataFrame['Adj Close Normalized'] = momentum_DataFrame['Adj Close'] / momentum_DataFrame['Adj Close'].iloc[0]
+		FiveDayShift = momentum_DataFrame['Adj Close Normalized'].shift(-5)
+		TwentyDayShift = momentum_DataFrame['Adj Close Normalized'].shift(-10)
+		momentum_DataFrame["DailyMomentum"] = momentum_DataFrame['Adj Close'] / momentum_DataFrame['Adj Close'].shift(9) - 1
+		momentum_DataFrame["5DayMomentum"] = (momentum_DataFrame['Adj Close Normalized'] / FiveDayShift) - 0.2
+		momentum_DataFrame["20DayMomentum"] = (momentum_DataFrame['Adj Close Normalized'] / TwentyDayShift) - 0.25
+		momentum_DataFrame['Rolling Mean'] = getRollingMean(momentum_DataFrame, window=20)
+		momentum_DataFrame['12 EMA'] = pd.ewma(momentum_DataFrame['Adj Close'], span=12)
+		momentum_DataFrame['26 EMA'] = pd.ewma(momentum_DataFrame['Adj Close'], span=26)
+		momentum_DataFrame['MACD'] = momentum_DataFrame['12 EMA'] - momentum_DataFrame['26 EMA']
+		momentum_DataFrame['MACD Signal'] = pd.ewma(momentum_DataFrame['Adj Close'], span=9)
+		momentum_DataFrame['MACD CrossOver'] = momentum_DataFrame['MACD'] - momentum_DataFrame['MACD Signal']
+		return momentum_DataFrame['MACD CrossOver']
+	except Exception as err:
+		print "Error occurred when attempting to calculate the Momentum"
+		exc_type, exc_obj, exc_tb = sys.exc_info()
+		print exc_obj
+		print exc_tb.tb_lineno
+		print err
 
 
 def getRollingMean(Prices_DF, window):
@@ -297,7 +365,7 @@ def getRollingMean(Prices_DF, window):
 		Prices_DF["SimpleMovingAverage"] = pd.rolling_mean(Prices_DF['Adj Close'], window=window)
 		return rollingMean
 	except Exception as RollingMeanException:
-		print "Error occurred when attempting to calculate the rolling mean"
+		print "Error occurred when attempting to calculate the Rolling Mean"
 		exc_type, exc_obj, exc_tb = sys.exc_info()
 		print exc_obj
 		print exc_tb.tb_lineno
@@ -311,7 +379,7 @@ def getBollingerBands(rollingMean, rollingStandardDeviation):
 		lowerBand = rollingMean - rollingStandardDeviation * 2
 		return upperBand, lowerBand
 	except Exception as BollingerBandException:
-		print "Error occurred when attempting to calculate the Bollinger bands"
+		print "Error occurred when attempting to calculate the Bollinger Bands"
 		exc_type, exc_obj, exc_tb = sys.exc_info()
 		print exc_obj
 		print exc_tb.tb_lineno
@@ -324,7 +392,7 @@ def getRollingStandardDeviation(dataFrame, window):
 		dataFrame["RollingStandardDeviation"] = pd.rolling_std(dataFrame, window=window)
 		return rollingStandardDeviation
 	except Exception as RollingStandardDeviationException:
-		print "Error occurred when attempting to calculate the rolling standard deviation"
+		print "Error occurred when attempting to calculate the Rolling Standard Deviation"
 		exc_type, exc_obj, exc_tb = sys.exc_info()
 		print exc_obj
 		print exc_tb.tb_lineno

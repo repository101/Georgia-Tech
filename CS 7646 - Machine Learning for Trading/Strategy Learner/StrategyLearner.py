@@ -31,6 +31,9 @@ import pandas as pd
 import util as ut
 import numpy as np
 import random
+import os
+import sys
+
 import QLearner as ql
 import marketsimcode as mktsim
 
@@ -54,6 +57,7 @@ class StrategyLearner(object):
 		self.convergence = False
 		self.learner = None
 		self.number_of_states = None
+		self.previous_dataframe = None
 	
 	def author(self):
 		return "jadams334"
@@ -100,9 +104,13 @@ class StrategyLearner(object):
 				print "Failed in get states"
 				print err
 	
-	def get_reward(self):
+	def get_reward(self, closePrice, add_impact=False):
 		# Reward is best as percentage change
-		return
+		reward = self.holdings * closePrice
+		if add_impact:
+			reward *= (1 - self.impact)
+			return reward
+		return reward
 	
 	def get_indicators(self, pricesDataFrame, fillNa=False, otherFill=False):
 		try:
@@ -246,37 +254,85 @@ class StrategyLearner(object):
 				holdings = self.holdings
 				action = self.learner.querysetstate(FullDataFrame["States"][0])
 				for index, row in FullDataFrame.iterrows():
-					reward = self.holdings * (daily_returns.loc[index])
+					reward = self.get_reward((daily_returns.loc[index]))
 					if action in [1, 2]:
 						# ACTIONS
 						#   0 = Nothing
 						#   1 = Short
 						#   2 = Long
 						# Apply impact
-						reward = reward * (1 - self.impact)
-					temp = row["States"]
-					action = self.learner.query(row["States"], reward)
+						reward = self.get_reward((daily_returns.loc[index]), add_impact=True)
+					print ""
+					try:
+						action = self.learner.query(row["States"], reward)
+						print ""
+					except Exception as err:
+						if self.verbose:
+							print "Error occurred when attempting to query the action"
+							exc_type, exc_obj, exc_tb = sys.exc_info()
+							print exc_obj
+							print exc_tb.tb_lineno
+							print err
 					if action == 0:
+						# Do Nothing
+						tradeDataFrame.loc[index] = 0
 						print ""
 					elif action == 1:
-						print ""
+						# SHORT ~~ Sell
+						# Check holdings
+						if self.holdings == 0:
+							tradeDataFrame.loc[index] = -1000
+						elif self.holdings == 1000:
+							# TODO: Add ability to buy 1000 or 2000
+							tradeDataFrame.loc[index] = -2000
+						elif self.holdings == -1000:
+							# TODO: Add ability to sell 1000 or 2000
+							tradeDataFrame.loc[index] = 0
+						else:
+							if self.verbose:
+								print "Unexpected value of holdings occurred"
 					elif action == 2:
-						print ""
+						# LONG ~~ Buy
+						# Check holdings
+						if self.holdings == 0:
+							# Holdings are 0 we can buy 1000
+							tradeDataFrame.loc[index] = 1000
+						elif self.holdings == 1000:
+							# holdings are 1000 we can sell 1000 or 2000
+							# TODO: Add ability to sell 1000 or 2000
+							tradeDataFrame.loc[index] = 0
+						elif self.holdings == -1000:
+							# TODO: Add ability to buy 1000 or 2000
+							tradeDataFrame.loc[index] = 2000
+						else:
+							if self.verbose:
+								print "Unexpected value of holdings occurred"
 					else:
 						if self.verbose:
 							print "Something happened while training and an invalid action was returned"
+					self.holdings = self.holdings + tradeDataFrame.loc[index][0]
+				# Compare results of self.previous_dataframe with new dataframe to see if we have converged
+				if (self.previous_dataframe is None):
+					pass
+				else:
+					# We compare the new dataframe to the previous dataframe
+					
 					print ""
+				# Set previous dataframe to the current because we will use that in the next comparison
+				self.previous_dataframe = tradeDataFrame
 			#endregion
 			
 			#endregion
-			
-			
 			
 			return
-		except Exception as err:
+		except Exception as AddEvidenceException:
 			if self.verbose:
-				print "Failed during add evidence"
-				print err
+				print "Error occurred when attempting to Train the learner"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
+				print AddEvidenceException
+
 	
 	# this method should use the existing policy and test it against new data
 	def testPolicy(self, symbol="IBM", \
@@ -307,6 +363,6 @@ class StrategyLearner(object):
 
 
 if __name__ == "__main__":
-	tester = StrategyLearner(verbose=False, impact=0.000)
+	tester = StrategyLearner(verbose=True, impact=0.000)
 	tester.addEvidence(symbol='AAPL', sd=dt.datetime(2008, 1, 1), ed=dt.datetime(2009, 12, 31), sv=100000)
 	print "One does not simply think up a strategy"
