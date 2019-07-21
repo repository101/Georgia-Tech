@@ -4,7 +4,10 @@
     <list default="true" id="aab32f99-0a4c-4561-84a3-59ec0d62849a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Manual Strategy/ManualStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Manual Strategy/ManualStrategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Qlearning Robot/Project 7 - Qlearning Robot.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Qlearning Robot/Project 7 - Qlearning Robot.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strategy Learner/QLearner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy Learner/QLearner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strategy Learner/StrategyLearner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy Learner/StrategyLearner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strategy Learner/marketsimcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy Learner/marketsimcode.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,17 +28,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Strategy Learner/QLearner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1013">
-              <caret line="53" selection-start-line="53" selection-end-line="54" selection-end-column="26" />
+            <state relative-caret-position="-139">
+              <caret line="258" selection-start-line="258" selection-end-line="258" />
+              <folding>
+                <element signature="e#1723#1744#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,7 +53,6 @@
       <find>len</find>
       <find>size</find>
       <find>regress</find>
-      <find>print</find>
       <find>RMSE</find>
       <find>price</find>
       <find>returns</find>
@@ -72,6 +68,10 @@
       <find>plt</find>
       <find>reset</find>
       <find>plot</find>
+      <find>simple</find>
+      <find>moment</find>
+      <find>daily</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>momentum_DataFrame</replace>
@@ -113,13 +113,15 @@
         <option value="$PROJECT_DIR$/Marketsim/marketsim.py" />
         <option value="$PROJECT_DIR$/Manual Strategy/indicators.py" />
         <option value="$PROJECT_DIR$/Manual Strategy/marketsimcode.py" />
-        <option value="$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py" />
         <option value="$PROJECT_DIR$/Qlearning Robot/QLearner.py" />
         <option value="$PROJECT_DIR$/Strategy Learner/experiment2.py" />
         <option value="$PROJECT_DIR$/Strategy Learner/experiment1.py" />
-        <option value="$PROJECT_DIR$/Manual Strategy/ManualStrategy.py" />
         <option value="$PROJECT_DIR$/Strategy Learner/ManualStrategy.py" />
+        <option value="$PROJECT_DIR$/Manual Strategy/ManualStrategy.py" />
+        <option value="$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py" />
+        <option value="$PROJECT_DIR$/Strategy Learner/marketsimcode.py" />
         <option value="$PROJECT_DIR$/Strategy Learner/StrategyLearner.py" />
+        <option value="$PROJECT_DIR$/Strategy Learner/QLearner.py" />
       </list>
     </option>
   </component>
@@ -147,11 +149,6 @@
             <path>
               <item name="CS 7646 - Machine Learning for Trading" type="b2602c69:ProjectViewProjectNode" />
               <item name="CS 7646 - Machine Learning for Trading" type="462c0819:PsiDirectoryNode" />
-              <item name="Manual Strategy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS 7646 - Machine Learning for Trading" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS 7646 - Machine Learning for Trading" type="462c0819:PsiDirectoryNode" />
               <item name="Strategy Learner" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -165,11 +162,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Strategy Learner/grade_strategy_learner.py" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -183,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.StrategyLearner">
+  <component name="RunManager" selected="Python tests.pytest for testqlearner.test_code">
     <configuration name="ManualStrategy (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CS 7646 - Machine Learning for Trading" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -342,6 +345,9 @@
       <module name="CS 7646 - Machine Learning for Trading" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Strategy Learner" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -349,28 +355,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Strategy Learner/grade_strategy_learner.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="indicators" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CS 7646 - Machine Learning for Trading" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Martingale" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manual Strategy/indicators.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -445,6 +429,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for testqlearner.test_code" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="CS 7646 - Machine Learning for Trading" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Qlearning Robot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testqlearner.test_code&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in grade_robot_qlearning.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="CS 7646 - Machine Learning for Trading" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -486,19 +486,19 @@
       <item itemvalue="Python.marketsim" />
       <item itemvalue="Python.grade_marketsim" />
       <item itemvalue="Python.grade_strategy_learner" />
-      <item itemvalue="Python.indicators" />
       <item itemvalue="Python.ManualStrategy (1)" />
       <item itemvalue="Python.StrategyLearner" />
       <item itemvalue="Python tests.pytest in testqlearner.py" />
       <item itemvalue="Python tests.pytest in grade_robot_qlearning.py" />
+      <item itemvalue="Python tests.pytest for testqlearner.test_code" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for testqlearner.test_code" />
         <item itemvalue="Python.StrategyLearner" />
         <item itemvalue="Python.ManualStrategy (1)" />
         <item itemvalue="Python tests.pytest in grade_robot_qlearning.py" />
         <item itemvalue="Python tests.pytest in testqlearner.py" />
-        <item itemvalue="Python.indicators" />
       </list>
     </recent_temporary>
   </component>
@@ -607,6 +607,8 @@
       <workItem from="1563024553374" duration="157000" />
       <workItem from="1563320525526" duration="1775000" />
       <workItem from="1563408260824" duration="4915000" />
+      <workItem from="1563485950319" duration="12051000" />
+      <workItem from="1563729686699" duration="7490000" />
     </task>
     <servers />
   </component>
@@ -643,19 +645,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292584000" />
+    <option name="totallyTimeSpent" value="312125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18020834" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18020834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49791667" weight="0.32861805" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info anchor="bottom" x="-1919" y="551" width="958" height="488" id="Debug" order="3" sideWeight="0.4484375" visible="true" weight="0.36452666" />
+      <window_info active="true" anchor="bottom" x="-1919" y="551" width="958" height="488" id="Debug" order="3" sideWeight="0.4484375" visible="true" weight="0.49075082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -670,8 +671,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.90753424" visible="true" weight="0.21510416" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" sideWeight="0.09246575" side_tool="true" visible="true" weight="0.21510416" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.90384614" visible="true" weight="0.32864583" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" sideWeight="0.09615385" side_tool="true" visible="true" weight="0.32864583" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" />
     </layout>
@@ -704,37 +705,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
-          <line>171</line>
+          <line>173</line>
           <option name="timeStamp" value="662" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Manual Strategy/ManualStrategy.py</url>
-          <line>175</line>
+          <line>177</line>
           <option name="timeStamp" value="663" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Manual Strategy/ManualStrategy.py</url>
-          <line>169</line>
+          <line>171</line>
           <option name="timeStamp" value="777" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
-          <line>154</line>
+          <line>156</line>
           <option name="timeStamp" value="779" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
-          <line>165</line>
+          <line>167</line>
           <option name="timeStamp" value="780" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
-          <line>138</line>
+          <line>140</line>
           <option name="timeStamp" value="787" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py</url>
-          <line>140</line>
+          <line>142</line>
           <option name="timeStamp" value="788" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -744,23 +745,113 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="790" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
-          <line>94</line>
+          <line>311</line>
           <option name="timeStamp" value="791" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
-          <line>88</line>
-          <option name="timeStamp" value="792" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Strategy Learner/grade_strategy_learner.py</url>
           <line>301</line>
           <option name="timeStamp" value="793" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
+          <line>277</line>
+          <option name="timeStamp" value="853" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
+          <line>278</line>
+          <option name="timeStamp" value="854" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
+          <line>267</line>
+          <option name="timeStamp" value="870" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
+          <line>261</line>
+          <option name="timeStamp" value="891" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
+          <line>263</line>
+          <option name="timeStamp" value="892" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
+          <line>266</line>
+          <option name="timeStamp" value="893" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/QLearner.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="901" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/QLearner.py</url>
+          <line>130</line>
+          <option name="timeStamp" value="902" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/QLearner.py</url>
+          <line>114</line>
+          <option name="timeStamp" value="903" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/QLearner.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="905" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/QLearner.py</url>
+          <line>121</line>
+          <option name="timeStamp" value="907" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/QLearner.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="908" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/QLearner.py</url>
+          <line>122</line>
+          <option name="timeStamp" value="909" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/QLearner.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="912" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py</url>
+          <line>259</line>
+          <option name="timeStamp" value="913" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Qlearning Robot/testqlearner.py</url>
+          <line>217</line>
+          <option name="timeStamp" value="914" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Qlearning Robot/testqlearner.py</url>
+          <line>218</line>
+          <option name="timeStamp" value="915" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Qlearning Robot/testqlearner.py</url>
+          <line>219</line>
+          <option name="timeStamp" value="916" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Qlearning Robot/testqlearner.py</url>
+          <line>196</line>
+          <option name="timeStamp" value="917" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Qlearning Robot/testqlearner.py</url>
+          <line>197</line>
+          <option name="timeStamp" value="918" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -771,6 +862,11 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="SimpleMovingAverage" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_martingale_py.coverage" NAME="pytest in martingale.py Coverage Results" MODIFIED="1558284772739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
@@ -783,13 +879,14 @@
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_marketsimcode_py.coverage" NAME="pytest in marketsimcode.py Coverage Results" MODIFIED="1562394962450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Manual Strategy" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$optimization.coverage" NAME="optimization Coverage Results" MODIFIED="1559360148727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Optimize Something" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$grade_strategy_learner.coverage" NAME="grade_strategy_learner Coverage Results" MODIFIED="1563413936701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Strategy Learner" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$StrategyLearner.coverage" NAME="StrategyLearner Coverage Results" MODIFIED="1563414192716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$StrategyLearner.coverage" NAME="StrategyLearner Coverage Results" MODIFIED="1563737216978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$testlearner.coverage" NAME="testlearner Coverage Results" MODIFIED="1559695144677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_for_martingale_test_code.coverage" NAME="pytest for martingale.test_code Coverage Results" MODIFIED="1558284852423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$ManualStrategy.coverage" NAME="ManualStrategy Coverage Results" MODIFIED="1563410102882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Manual Strategy" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$testing.coverage" NAME="testing Coverage Results" MODIFIED="1560377713204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$marketsimcode.coverage" NAME="marketsimcode Coverage Results" MODIFIED="1562566547991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Manual Strategy" />
-    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$QLearner.coverage" NAME="QLearner Coverage Results" MODIFIED="1562899251241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qlearning Robot" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$QLearner.coverage" NAME="QLearner Coverage Results" MODIFIED="1563737126698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qlearning Robot" />
+    <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_for_testqlearner_test_code.coverage" NAME="pytest for testqlearner.test_code Coverage Results" MODIFIED="1563737496254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qlearning Robot" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$indicators.coverage" NAME="indicators Coverage Results" MODIFIED="1562566984255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$martingale_unedited.coverage" NAME="martingale_unedited Coverage Results" MODIFIED="1559339948566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Martingale" />
     <SUITE FILE_PATH="coverage/CS_7646___Machine_Learning_for_Trading$pytest_in_optimization_py.coverage" NAME="pytest in optimization.py Coverage Results" MODIFIED="1559340490533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Optimize Something" />
@@ -1013,13 +1110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="1146" selection-start-line="1146" selection-end-line="1146" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Marketsim/marketsim.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1048,24 +1138,6 @@
           <folding>
             <element signature="e#1006#1025#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manual Strategy/indicators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="367" column="4" selection-start-line="367" selection-start-column="4" selection-end-line="367" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#1001#1" />
-            <element signature="e#1003#1022#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Qlearning Robot/testqlearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="68" column="68" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -1099,20 +1171,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Qlearning Robot/QLearner.py">
+    <entry file="file://$PROJECT_DIR$/Strategy Learner/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="23" selection-start-line="23" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="-720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manual Strategy/indicators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2524">
+          <caret line="367" column="4" selection-start-line="367" selection-start-column="4" selection-end-line="367" selection-end-column="71" />
           <folding>
-            <element signature="e#1756#1814#0" expanded="true" />
+            <element signature="e#0#1001#1" />
+            <element signature="e#1003#1022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manual Strategy/ManualStrategy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="786">
+          <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="95" />
+          <folding>
+            <element signature="e#1007#1026#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manual Strategy/TheoreticallyOptimalStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="49" column="106" selection-start-line="49" selection-start-column="106" selection-end-line="49" selection-end-column="106" />
+        <state relative-caret-position="402">
+          <caret line="43" column="95" selection-start-line="43" selection-start-column="95" selection-end-line="43" selection-end-column="95" />
           <folding>
             <element signature="e#1021#1040#0" expanded="true" />
             <element signature="e#1583#6795#0" />
@@ -1120,58 +1208,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manual Strategy/ManualStrategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="169" selection-start-line="169" selection-end-line="169" />
-          <folding>
-            <element signature="e#1007#1026#0" expanded="true" />
-            <element signature="e#2429#2474#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Strategy Learner/ManualStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3049">
-          <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+        <state relative-caret-position="-595">
+          <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
           <folding>
             <element signature="e#1007#1026#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Strategy Learner/marketsimcode.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4968" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Strategy Learner/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720" />
+        <state relative-caret-position="135">
+          <caret line="1146" selection-start-line="1146" selection-end-line="1146" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Strategy Learner/grade_strategy_learner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        <state relative-caret-position="185">
+          <caret line="140" column="39" selection-start-line="140" selection-start-column="39" selection-end-line="140" selection-end-column="39" />
           <folding>
             <element signature="e#2560#2613#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Strategy Learner/marketsimcode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="284" selection-start-line="284" selection-end-line="284" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Strategy Learner/QLearner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1013">
-          <caret line="53" selection-start-line="53" selection-end-line="54" selection-end-column="26" />
+        <state relative-caret-position="135">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+          <folding>
+            <element signature="e#1756#1814#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Qlearning Robot/QLearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="e#1756#1814#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Qlearning Robot/testqlearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="132" column="4" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Strategy Learner/StrategyLearner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+        <state relative-caret-position="-139">
+          <caret line="258" selection-start-line="258" selection-end-line="258" />
+          <folding>
+            <element signature="e#1723#1744#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -42,6 +42,8 @@ def author(self):
 
 class ManualStrategy():
 	
+	# This needs to be modified to create the charts for the specified questions. E.G. - Part 3
+	
 	def testPolicy(self, symbol='JPM', sd=dt.datetime(2010, 1, 1), ed=dt.datetime(2010, 6, 1), sv=100000):
 		# get_port_val(symbol=symbol, startDate=sd, endDate=ed)
 		OrdersDataFrame, PricesDataFrame, Symbol = msc.Manual_Strategy(symbol=symbol, sd=sd, ed=ed, sv=sv,

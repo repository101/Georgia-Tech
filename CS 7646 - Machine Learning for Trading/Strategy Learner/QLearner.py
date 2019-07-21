@@ -32,10 +32,11 @@ import random as rand
 
 class QLearner(object): 			  		 			 	 	 		 		 	  		   	  			  	
 	
-	def __init__(self, num_states=100, num_actions=4, alpha=0.2, gamma=0.9, rar=0.5, radr=0.99, dyna=0, verbose=False):
+	def __init__(self, num_states=100, num_actions=4, alpha=0.2, gamma=0.9, rar=0.5, radr=0.99, dyna=0, verbose=False, actions = [0, 1, 2, 3]):
 		self.verbose = verbose
 		self.s = 0
 		self.a = 0
+		self.actions = actions
 		self.num_actions = num_actions  # Number of actions available
 		self.num_states = num_states    # Number of states to consider
 		self.alpha = alpha  # The learning rate
@@ -65,7 +66,7 @@ class QLearner(object):
 		if self.perform_random_action_or_not():
 			# We get a random action
 			# Take that action
-			action = np.random.choice([0, 1, 2, 3])
+			action = np.random.choice(self.actions)
 			return action
 		else:
 			action = np.argmax(self.q_table[s])
@@ -111,7 +112,21 @@ class QLearner(object):
 	def update_q_table(self, s=0, a=0, s_prime=0, r=0):
 		Part_1 = (1 - self.alpha) * self.q_table[s, a]      # Correct
 		# Later_Rewards = Q[s_prime, argmax(Q[s_prime, a_prime)]
-		later_rewards = self.q_table[s_prime, np.argmax(self.q_table[s_prime])]     # Correct
+		try:
+			try_later_rewards = "Succeeded"
+			later_rewards = self.q_table[int(s_prime), np.argmax(self.q_table[int(s_prime)])]     # Correct
+			print ""
+		except Exception as err:
+			print "Error attempting to get later rewards"
+			print err
+			try_later_rewards = "Failed"
+		if try_later_rewards == "Failed":
+			try:
+				later_rewards = self.q_table[s_prime, np.argmax(self.q_table[s_prime])]  # Correct
+			except Exception as err:
+				print "Error attempting to get later rewards"
+				print err
+				
 		# Improved_Estimate = ( r + self.gamma * later_rewards)
 		improved_estimate = (r + (self.gamma * later_rewards))      # Correct
 		result = Part_1 + (self.alpha * improved_estimate)

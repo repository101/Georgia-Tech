@@ -223,7 +223,7 @@ def generate_order_DataFrame(pricesDataFrame):
 	return orderDataFrame
 
 
-def Relative_Strength_Index(PriceDataFrame, symbols, lookback=14):
+def Relative_Strength_Index(PriceDataFrame, lookback=14):
 	# Ratio of
 	# On days the stock goes up, how much it goes up
 	#                       VS
@@ -238,7 +238,7 @@ def Relative_Strength_Index(PriceDataFrame, symbols, lookback=14):
 	price_diff = PriceDataFrame['Adj Close'].diff()
 	gain = price_diff.mask(price_diff < 0, 0)
 	loss = price_diff.mask(price_diff > 0, 0)
-	relative_strength = abs(gain.ewm(com=13, min_periods=14).mean() / loss.ewm(com=13, min_periods=14).mean())
+	relative_strength = abs(gain.ewm(com=lookback - 1, min_periods=lookback).mean() / loss.ewm(com=lookback - 1, min_periods=lookback).mean())
 	relative_strength_index = 100.0 - (100.0 / (1 + relative_strength))
 	PriceDataFrame["Relative Strength Index"] = relative_strength_index
 	return relative_strength_index
@@ -250,7 +250,18 @@ def BollingerBand_Percentage(PricesDataFrame, UpperBand, LowerBand):
 	
 	# Symbol Oversold:
 	#   BollingerBand_% < 0
+	PricesDataFrame['BollingerBandPercentage'] = (PricesDataFrame['Adj Close'] - LowerBand) / (UpperBand - LowerBand)
 	return (PricesDataFrame['Adj Close'] - LowerBand) / (UpperBand - LowerBand)
+
+
+def BollingerBand_Ratio(PricesDataFrame, simpleMovingAvg, standardDeviation):
+	# Symbol Overbought:
+	#   BollingerBand_% > 1
+	
+	# Symbol Oversold:
+	#   BollingerBand_% < 0
+	PricesDataFrame['BollingerBandRatio'] = (PricesDataFrame['Adj Close'] - simpleMovingAvg) / (2 *  standardDeviation)
+	return (PricesDataFrame['Adj Close'] - simpleMovingAvg) / (2 *  standardDeviation)
 
 
 def PriceSMA_Ratio(PricesDataFrame, SimpleMovingAverage):
@@ -259,12 +270,31 @@ def PriceSMA_Ratio(PricesDataFrame, SimpleMovingAverage):
 	
 	# Symbol Oversold:
 	#   Price/SMA_Ratio < 0.95
+	PricesDataFrame["SimpleMovingAverageRatio"] = PricesDataFrame['Adj Close'] / SimpleMovingAverage
 	return PricesDataFrame['Adj Close'] / SimpleMovingAverage
+
+
+def getMomentum(momentum_DataFrame):
+	# Normalized the data
+	momentum_DataFrame['Adj Close Normalized'] = momentum_DataFrame['Adj Close'] / momentum_DataFrame['Adj Close'].iloc[0]
+	FiveDayShift = momentum_DataFrame['Adj Close Normalized'].shift(-5)
+	TwentyDayShift = momentum_DataFrame['Adj Close Normalized'].shift(-10)
+	momentum_DataFrame["DailyMomentum"] = momentum_DataFrame['Adj Close'] / momentum_DataFrame['Adj Close'].shift(9) - 1
+	momentum_DataFrame["5DayMomentum"] = (momentum_DataFrame['Adj Close Normalized'] / FiveDayShift) - 0.2
+	momentum_DataFrame["20DayMomentum"] = (momentum_DataFrame['Adj Close Normalized'] / TwentyDayShift) - 0.25
+	momentum_DataFrame['Rolling Mean'] = getRollingMean(momentum_DataFrame, window=20)
+	momentum_DataFrame['12 EMA'] = pd.ewma(momentum_DataFrame['Adj Close'], span=12)
+	momentum_DataFrame['26 EMA'] = pd.ewma(momentum_DataFrame['Adj Close'], span=26)
+	momentum_DataFrame['MACD'] = momentum_DataFrame['12 EMA'] - momentum_DataFrame['26 EMA']
+	momentum_DataFrame['MACD Signal'] = pd.ewma(momentum_DataFrame['Adj Close'], span=9)
+	momentum_DataFrame['MACD CrossOver'] = momentum_DataFrame['MACD'] - momentum_DataFrame['MACD Signal']
+	return momentum_DataFrame['MACD CrossOver']
 
 
 def getRollingMean(Prices_DF, window):
 	try:
-		rollingMean = pd.rolling_mean(Prices_DF, window=window)
+		rollingMean = pd.rolling_mean(Prices_DF['Adj Close'], window=window)
+		Prices_DF["SimpleMovingAverage"] = pd.rolling_mean(Prices_DF['Adj Close'], window=window)
 		return rollingMean
 	except Exception as RollingMeanException:
 		print "Error occurred when attempting to calculate the rolling mean"
@@ -291,6 +321,7 @@ def getBollingerBands(rollingMean, rollingStandardDeviation):
 def getRollingStandardDeviation(dataFrame, window):
 	try:
 		rollingStandardDeviation = pd.rolling_std(dataFrame, window=window)
+		dataFrame["RollingStandardDeviation"] = pd.rolling_std(dataFrame, window=window)
 		return rollingStandardDeviation
 	except Exception as RollingStandardDeviationException:
 		print "Error occurred when attempting to calculate the rolling standard deviation"
@@ -321,7 +352,8 @@ def Manual_Strategy(symbol='JPM', sd=dt.datetime(2010, 1, 1), ed=dt.datetime(201
 	SimpleMovingAverage = getRollingMean(PricesDataFrame['Adj Close'], window=lookback)
 	RollingStandardDeviation = getRollingStandardDeviation(PricesDataFrame['Adj Close'], window=lookback)
 	UpperBand, LowerBand = getBollingerBands(SimpleMovingAverage, RollingStandardDeviation)
-	BollingerBandPercentage = BollingerBand_Percentage(PricesDataFrame, UpperBand, LowerBand)
+	BollingerBand_Percentage(PricesDataFrame, UpperBand, LowerBand)
+	BollingerBandPercentage = PricesDataFrame["BollingerBandPercentage"]
 	SimpleMovingAverageRatio = PriceSMA_Ratio(PricesDataFrame, SimpleMovingAverage)
 	RelativeStrengthIndex = Relative_Strength_Index(PricesDataFrame, symbols=symbol, lookback=14)
 	PricesDataFrame["Bollinger Band Percentage"] = BollingerBandPercentage

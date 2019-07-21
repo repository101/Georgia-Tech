@@ -41,6 +41,8 @@ def author():
 
 
 class TheoreticallyOptimalStrategy(object):
+	# This needs to be modified to create the charts for the specified questions. E.G. - Part 2
+	
 	def __init__(self):
 		pass
 	
