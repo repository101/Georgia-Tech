@@ -28,5 +28,57 @@ GT ID: 903475599 (replace with your GT ID)
 
 import datetime as dt
 import pandas as pd
-import util as ut
-import random 
+import matplotlib; matplotlib.use('Agg')
+import random
+import numpy as np
+import StrategyLearner as sl
+import ManualStrategy as manstrat
+import marketsimcode as mktsim
+from matplotlib import pyplot as plt
+from util import get_data
+
+
+
+
+def author():
+	return 'jadams334'
+
+
+def experiment1():
+	symbol = ["JPM"]
+	sv = 100000
+	sd = dt.datetime(2008, 1, 1)
+	ed = dt.datetime(2009, 12, 31)
+	impact = 0.005
+	
+	# Benchmark
+	benchmark_data = get_data(symbols=symbol, dates=pd.date_range(sd, ed))
+	benchmark_data["Shares"] = np.zeros(shape=(len(benchmark_data)))
+	benchmark_data["Shares"][0] = 1000
+	benchmark_data["Shares"][-1] = -1000
+	benchmark_data["Order"] = np.zeros(shape=(len(benchmark_data)))
+	benchmark_data["Symbol"] = np.zeros(shape=(len(benchmark_data)), dtype=object)
+	benchmark_data["Symbol"] = symbol[0]
+	benchmark_data.drop(["SPY"], axis=1, inplace=True)
+	benchmark_portVal = mktsim.compute_portvals_from_tester(benchmark_data, start_date=sd, end_date=ed,
+	                                                    startval=sv, market_impact=impact, commission_cost=0.00)
+	
+	# Manual Strategy
+	# manual_strategy = manstrat.ManualStrategy()
+	# manual_strategy_dataframe = manual_strategy.testPolicy(symbol=symbol, sd=sd, ed=ed, sv=sv, )
+	
+	# QLearner
+	learner = sl.StrategyLearner(verbose=False, impact=impact)
+	learner.addEvidence(symbol=symbol, sd=sd, ed=ed, sv=sv)
+	learner.testPolicy(symbol=symbol, sd=sd, ed=ed, sv=sv)
+	learner.test_policy__trades_dataframe["Shares"] = learner.test_policy__trades_dataframe[symbol]
+	learner.test_policy__trades_dataframe["Order"] = np.zeros(shape=(len(learner.test_policy__trades_dataframe)))
+	learner.test_policy__trades_dataframe["Symbol"] = symbol
+	port_val = mktsim.compute_portvals_from_tester(learner.test_policy__trades_dataframe, start_date=sd, end_date=ed,
+	                                                    startval=sv, market_impact=impact, commission_cost=0.00)
+	
+	return
+
+
+if __name__ == "__main__":
+	experiment1()

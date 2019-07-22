@@ -31,6 +31,7 @@ import pandas as pd
 import util as ut
 import numpy as np
 import random
+import matplotlib.pyplot as plt
 import os
 import sys
 
@@ -61,6 +62,7 @@ class StrategyLearner(object):
 		self.prev_count = 0
 		self.FullDataFrame = None
 		self.trades_dataframe = None
+		self.test_policy__trades_dataframe = None
 		self.labels = range(10)
 	
 	def author(self):
@@ -95,6 +97,11 @@ class StrategyLearner(object):
 					self.MomentumBins = indicator_bins
 				return discretized_indicator
 			else:
+				if indicator == 1:
+					# Simple Moving Average Ratio
+					discretized_indicator = pd.cut(dataframe, self.SimpleMovingAverageRatioBins, labels=False,
+					                               include_lowest=True)
+					return discretized_indicator
 				if indicator == 3:
 					# Relative Strength Index
 					discretized_indicator = pd.cut(dataframe, self.RelativeStrengthIndexBins, labels=False, include_lowest=True)
@@ -164,11 +171,10 @@ class StrategyLearner(object):
 			
 			#region Simple Moving Average Ratio
 			SimpleMovingAverageRatio = mktsim.PriceSMA_Ratio(resultDataFrame, SimpleMovingAverage)
-			if not testPolicy:
-				discretized_SimpleMovingAverageRatio = self.discretize(SimpleMovingAverageRatio, 1, testPolicy=testPolicy)
-				if fillNa:
-					discretized_SimpleMovingAverageRatio.fillna(10, inplace=True)
-				discretized_indicators_dataframe["Simple Moving Average Ratio"] = discretized_SimpleMovingAverageRatio
+			discretized_SimpleMovingAverageRatio = self.discretize(SimpleMovingAverageRatio, 1, testPolicy=testPolicy)
+			if fillNa:
+				discretized_SimpleMovingAverageRatio.fillna(10, inplace=True)
+			discretized_indicators_dataframe["Simple Moving Average Ratio"] = discretized_SimpleMovingAverageRatio
 			#endregion
 			
 			#region Rolling Standard Deviation
@@ -299,7 +305,10 @@ class StrategyLearner(object):
 			
 			#region Get Indicators and Discretize
 			FullDataFrame, discretizedDataFrame, daily_returns = self.get_indicators(prices, fillNa=False, otherFill=True)
-			FullDataFrame["States"] = self.get_states(discretizedDataFrame[["Bollinger Band Percentage", "Relative Strength Index", "Daily Momentum"]])
+			FullDataFrame["States"] = self.get_states(discretizedDataFrame[["Bollinger Band Percentage",
+			                                                                "Relative Strength Index",
+			                                                                "Daily Momentum",
+			                                                                "Simple Moving Average Ratio"]])
 			self.FullDataFrame = FullDataFrame
 			#endregion
 			
@@ -309,7 +318,7 @@ class StrategyLearner(object):
 			while(epoch <= self.max_epochs) & (self.convergence == False):
 				# Holdings X daily_returns will give us our reward
 				holdings = self.holdings
-				action = self.learner.querysetstate(FullDataFrame["States"][0])
+				action = self.learner.querysetstate(FullDataFrame["States"][0], random=True)
 				for index, row in FullDataFrame.iterrows():
 					reward = self.get_reward((daily_returns.loc[index]))
 					if action in [1, 2]:
@@ -401,7 +410,7 @@ class StrategyLearner(object):
 		try:
 			prices = self.get_data(sd=sd, ed=ed, symbol=symbol)
 			FullDataFrame, discretizedDataFrame, daily_returns = self.get_indicators(prices, fillNa=False, otherFill=True, testPolicy=True)
-			FullDataFrame["States"] = self.get_states(discretizedDataFrame[["Bollinger Band Percentage", "Relative Strength Index", "Daily Momentum"]])
+			FullDataFrame["States"] = self.get_states(discretizedDataFrame[["Bollinger Band Percentage", "Relative Strength Index", "Daily Momentum", "Simple Moving Average Ratio"]])
 			self.FullDataFrame = FullDataFrame
 			self.holdings = 0
 			testPolicyDataFrame = pd.DataFrame(data=np.zeros(shape=len(FullDataFrame)), columns=[symbol], index=FullDataFrame.index)
@@ -446,6 +455,7 @@ class StrategyLearner(object):
 						print "Something happened while training and an invalid action was returned"
 				self.holdings = self.holdings + testPolicyDataFrame.loc[index][0]
 			# Compare results of self.previous_dataframe with new dataframe to see if we have converged
+			self.test_policy__trades_dataframe = testPolicyDataFrame
 			return testPolicyDataFrame
 		except Exception as err:
 			print "Failed during test policy"
@@ -466,18 +476,26 @@ if __name__ == "__main__":
 	end_date = dt.datetime(2009, 12, 31)
 	start_value = 100000
 	impact = 0.000
-	symbol = 'AAPL'
+	symbol = 'UNH'
 	tester = StrategyLearner(verbose=False, impact=impact)
 	tester.addEvidence(symbol=symbol, sd=start_date, ed=end_date, sv=start_value)
 	port_vals = mktsim.compute_portvals_1(tester.trades_dataframe, start_val=start_value, impact=impact)
 	tester.trades_dataframe["Shares"] = tester.trades_dataframe[symbol]
 	tester.trades_dataframe["Order"] = np.zeros(shape=(len(tester.trades_dataframe)))
 	tester.trades_dataframe["Symbol"] = symbol
-	test_port_val = mktsim.compute_portvals_from_tester(tester.trades_dataframe, start_date=start_date, end_date=end_date,
+	port_val = mktsim.compute_portvals_from_tester(tester.trades_dataframe, start_date=start_date, end_date=end_date,
 	                                                    startval=start_value, market_impact=0.00, commission_cost=0.00)
 
 	testpolicyDataFrame = tester.testPolicy(symbol=symbol, sd=out_start_date, ed=out_end_date, sv=start_value)
 	test_policy = mktsim.compute_portvals_1(testpolicyDataFrame, start_val=start_value, impact=impact)
-	
+	newAx = plt.subplot()
+	port_vals.plot(ax=newAx, label="In-Sample")
+	test_policy.plot(ax=newAx, label="Out-Sample")
+	newAx.set_xlabel('Days')
+	newAx.set_ylabel('Port Val')
+	newAx.legend(loc='best')
+	newAx.legend(fancybox=True, shadow=True)
+	plt.tight_layout()
+	plt.show()
 	print ""
 	print "One does not simply think up a strategy"

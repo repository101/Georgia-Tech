@@ -114,10 +114,10 @@ class ManualStrategy():
 		ax.legend(loc='best')
 		ax.legend(fancybox=True, shadow=True)
 		plt.tight_layout()
-		# for lg in long:
-		# 	plt.axvline(x=lg, color="k", linestyle="--")
-		# for sh in short:
-		# 	plt.axvline(x=sh, color="b", linestyle="--")
+		for lg in long:
+			plt.axvline(x=lg, color="k", linestyle="--")
+		for sh in short:
+			plt.axvline(x=sh, color="b", linestyle="--")
 		fileName = '{} Benchmark Vs Manual Strategy Out Sample.png'.format(symbol[0])
 		try:
 			path = os.path.dirname(__file__)
