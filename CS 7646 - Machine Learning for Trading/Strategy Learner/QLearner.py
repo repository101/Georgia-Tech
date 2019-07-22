@@ -57,7 +57,7 @@ class QLearner(object):
 	def author(self):
 		return "jadams334"
 	
-	def querysetstate(self, s):
+	def querysetstate(self, s, random=True):
 		"""
 		@summary: Update the state without updating the Q-table
 		@param s: The new state
@@ -65,34 +65,21 @@ class QLearner(object):
 		"""
 		# Action Tuple  ---  < S, A, S_Prime, R >
 		# Action Tuple  ---  < Current_State, Action_taken, New_State, Reward >
-		try:
+		s = int(s)
+		action = np.argmax(self.q_table[s])
+		if random:
 			if self.perform_random_action_or_not():
 				# We get a random action
 				# Take that action
 				action = np.random.choice(self.actions)
 				return action
-			else:
-				try:
-					action = np.argmax(self.q_table[int(s)])
-				except Exception as err:
-					if self.verbose:
-						print "Error occurred when attempting to get ArgMax within perform random action or not in QLearner.py"
-						exc_type, exc_obj, exc_tb = sys.exc_info()
-						print exc_obj
-						print exc_tb.tb_lineno
-						print err
-			if self.verbose:
-				print "s =", s, "a =", action
-			self.s = s
-			self.a = action
-			return action
-		except Exception as err:
-			if self.verbose:
-				print "Error occurred when attempting to Query the Action within QLeaner.py"
-				exc_type, exc_obj, exc_tb = sys.exc_info()
-				print exc_obj
-				print exc_tb.tb_lineno
-				print err
+		else:
+			action = np.argmax(self.q_table[s])
+		if self.verbose:
+			print "s =", s, "a =", action
+		self.s = s
+		self.a = action
+		return action
 		
 	def query(self, s_prime, r):
 		"""

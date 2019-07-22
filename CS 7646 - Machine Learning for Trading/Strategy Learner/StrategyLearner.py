@@ -61,38 +61,53 @@ class StrategyLearner(object):
 		self.prev_count = 0
 		self.FullDataFrame = None
 		self.trades_dataframe = None
+		self.labels = range(10)
 	
 	def author(self):
 		return "jadams334"
 	
-	def discretize(self, dataframe, indicator):
+	def discretize(self, dataframe, indicator, testPolicy=False):
 		# Convert continuous indicators into integers
 		try:
-			discretized_indicator, indicator_bins = pd.qcut(dataframe, self.discretization_bins, retbins=True,
-			                                                labels=False)
-			if indicator == 0:
-				# Simple Moving Average
-				self.SimpleMovingAverageBins = indicator_bins
-			if indicator == 1:
-				# Simple Moving Average Ratio
-				self.SimpleMovingAverageRatioBins = indicator_bins
-			if indicator == 2:
-				# Rolling Standard Deviation
-				self.RollingStandardDeviationBins = indicator_bins
-			if indicator == 3:
-				# Relative Strength Index
-				self.RelativeStrengthIndexBins = indicator_bins
-			if indicator == 4:
-				# Bollinger Bands Percentage
-				self.BollingerBandPercentageBins = indicator_bins
-			if indicator == 5:
-				# MACD Crossover
-				self.MACD_CrossOverBins = indicator_bins
-			if indicator == 6:
-				# Momentum
-				self.MomentumBins = indicator_bins
-				
-			return discretized_indicator, indicator_bins
+			if testPolicy is False:
+				discretized_indicator, indicator_bins = pd.qcut(dataframe, self.discretization_bins, retbins=True,
+				                                                labels=self.labels)
+				if indicator == 0:
+					# Simple Moving Average
+					self.SimpleMovingAverageBins = indicator_bins
+				if indicator == 1:
+					# Simple Moving Average Ratio
+					self.SimpleMovingAverageRatioBins = indicator_bins
+				if indicator == 2:
+					# Rolling Standard Deviation
+					self.RollingStandardDeviationBins = indicator_bins
+				if indicator == 3:
+					# Relative Strength Index
+					self.RelativeStrengthIndexBins = indicator_bins
+				if indicator == 4:
+					# Bollinger Bands Percentage
+					self.BollingerBandPercentageBins = indicator_bins
+				if indicator == 5:
+					# MACD Crossover
+					self.MACD_CrossOverBins = indicator_bins
+				if indicator == 6:
+					# Momentum
+					self.MomentumBins = indicator_bins
+				return discretized_indicator
+			else:
+				if indicator == 3:
+					# Relative Strength Index
+					discretized_indicator = pd.cut(dataframe, self.RelativeStrengthIndexBins, labels=False, include_lowest=True)
+					return discretized_indicator
+				if indicator == 4:
+					# Bollinger Bands Percentage
+					discretized_indicator = pd.cut(dataframe, self.BollingerBandPercentageBins, labels=False, include_lowest=True)
+					return discretized_indicator
+				if indicator == 6:
+					# Momentum
+					discretized_indicator = pd.cut(dataframe, self.MomentumBins, labels=False,
+					                               include_lowest=True)
+					return discretized_indicator
 		except Exception as err:
 			if self.verbose:
 				print "Error occurred when attempting to Discretize"
@@ -129,40 +144,45 @@ class StrategyLearner(object):
 				print exc_tb.tb_lineno
 				print err
 	
-	def get_indicators(self, pricesDataFrame, fillNa=False, otherFill=False):
+	def get_indicators(self, pricesDataFrame, fillNa=False, otherFill=False, testPolicy=False):
 		try:
 			lookback=14
+			if testPolicy:
+				tempDF = pd.DataFrame()
 			discretized_indicators_dataframe = pd.DataFrame()
 			# Copying prices to result as to separate the dataframes and not taint data
 			resultDataFrame = pricesDataFrame.copy()
 	
 			#region Simple Moving Average
 			SimpleMovingAverage = mktsim.getRollingMean(resultDataFrame, window=lookback)
-			discretized_SimpleMovingAverage, discretized_SimpleMovingAverage_Bins = self.discretize(SimpleMovingAverage, 0)
-			if fillNa:
-				discretized_SimpleMovingAverage.fillna(10, inplace=True)
-			discretized_indicators_dataframe["Simple Moving Average"] = discretized_SimpleMovingAverage
+			if not testPolicy:
+				discretized_SimpleMovingAverage = self.discretize(SimpleMovingAverage, 0, testPolicy=testPolicy)
+				if fillNa:
+					discretized_SimpleMovingAverage.fillna(10, inplace=True)
+				discretized_indicators_dataframe["Simple Moving Average"] = discretized_SimpleMovingAverage
 			#endregion
 			
 			#region Simple Moving Average Ratio
 			SimpleMovingAverageRatio = mktsim.PriceSMA_Ratio(resultDataFrame, SimpleMovingAverage)
-			discretized_SimpleMovingAverageRatio, discretized_SimpleMovingAverageRatio_Bins = self.discretize(SimpleMovingAverageRatio, 1)
-			if fillNa:
-				discretized_SimpleMovingAverageRatio.fillna(10, inplace=True)
-			discretized_indicators_dataframe["Simple Moving Average Ratio"] = discretized_SimpleMovingAverageRatio
+			if not testPolicy:
+				discretized_SimpleMovingAverageRatio = self.discretize(SimpleMovingAverageRatio, 1, testPolicy=testPolicy)
+				if fillNa:
+					discretized_SimpleMovingAverageRatio.fillna(10, inplace=True)
+				discretized_indicators_dataframe["Simple Moving Average Ratio"] = discretized_SimpleMovingAverageRatio
 			#endregion
 			
 			#region Rolling Standard Deviation
 			RollingStandardDeviation = mktsim.getRollingStandardDeviation(resultDataFrame['Adj Close'], window=lookback)
-			discretized_RollingStandardDeviation, discretized_RollingStandardDeviation_Bins = self.discretize(RollingStandardDeviation, 2)
-			if fillNa:
-				discretized_RollingStandardDeviation.fillna(10, inplace=True)
-			discretized_indicators_dataframe["Rolling Standard Deviation"] = discretized_RollingStandardDeviation
+			if not testPolicy:
+				discretized_RollingStandardDeviation = self.discretize(RollingStandardDeviation, 2, testPolicy=testPolicy)
+				if fillNa:
+					discretized_RollingStandardDeviation.fillna(10, inplace=True)
+				discretized_indicators_dataframe["Rolling Standard Deviation"] = discretized_RollingStandardDeviation
 			#endregion
 			
 			#region Relative Strength Index
 			RelativeStrengthIndex = mktsim.Relative_Strength_Index(resultDataFrame)
-			discretized_RelativeStrengthIndex, discretized_RelativeStrengthIndex_Bins = self.discretize(RelativeStrengthIndex, 3)
+			discretized_RelativeStrengthIndex = self.discretize(RelativeStrengthIndex, 3, testPolicy=testPolicy)
 			if fillNa:
 				discretized_RelativeStrengthIndex.fillna(10, inplace=True)
 			discretized_indicators_dataframe["Relative Strength Index"] = discretized_RelativeStrengthIndex
@@ -171,24 +191,23 @@ class StrategyLearner(object):
 			#region BollingerBands Percentage
 			UpperBand, LowerBand = mktsim.getBollingerBands(SimpleMovingAverage, RollingStandardDeviation)
 			BollingerBandPercentage = mktsim.BollingerBand_Ratio(resultDataFrame, SimpleMovingAverage, RollingStandardDeviation)
-			discretized_BollingerBandPercentage, discretized_BollingerBandPercentage_Bins = self.discretize(BollingerBandPercentage, 4)
+			discretized_BollingerBandPercentage = self.discretize(BollingerBandPercentage, 4, testPolicy=testPolicy)
 			if fillNa:
 				discretized_BollingerBandPercentage.fillna(10, inplace=True)
-			self.BollingerBandPercentageBins = discretized_BollingerBandPercentage_Bins
 			discretized_indicators_dataframe["Bollinger Band Percentage"] = discretized_BollingerBandPercentage
 			#endregion
 			
 			#region MACD
 			MACD_CrossOver = mktsim.getMomentum(resultDataFrame)
-			discretized_MACD_CrossOver, discretized_MACD_CrossOver_Bins = self.discretize(MACD_CrossOver, 5)
-			if fillNa:
-				discretized_MACD_CrossOver.fillna(10.0, inplace=True)
-			discretized_indicators_dataframe["MACD CrossOver"] = discretized_MACD_CrossOver * 1.0
+			if not testPolicy:
+				discretized_MACD_CrossOver = self.discretize(abs(MACD_CrossOver), 5, testPolicy=testPolicy)
+				if fillNa:
+					discretized_MACD_CrossOver.fillna(10.0, inplace=True)
 			#endregion
 			
 			#region Momentum
 			Momentum = resultDataFrame['DailyMomentum']
-			discretized_Momentum_CrossOver, discretized_Momentum_Bins = self.discretize(Momentum, 6)
+			discretized_Momentum_CrossOver = self.discretize(Momentum, 6, testPolicy=testPolicy)
 			if fillNa:
 				discretized_Momentum_CrossOver.fillna(10.0, inplace=True)
 			discretized_indicators_dataframe["Daily Momentum"] = discretized_Momentum_CrossOver
@@ -198,14 +217,34 @@ class StrategyLearner(object):
 				discretized_indicators_dataframe.bfill(inplace=True)
 				
 			#region Daily Returns
-			daily_returns = mktsim.get_daily_returns(resultDataFrame['Adj Close'])
-			resultDataFrame["DailyReturns"] = daily_returns
-			#endregion
+			if not testPolicy:
+				daily_returns = mktsim.get_daily_returns(resultDataFrame['Adj Close'])
+				resultDataFrame["DailyReturns"] = daily_returns
+				#endregion
+				return resultDataFrame, discretized_indicators_dataframe, daily_returns
+			daily_returns = 0
 			return resultDataFrame, discretized_indicators_dataframe, daily_returns
 		except Exception as err:
 			if self.verbose:
 				print "Failed during get_indicators"
 				print err
+	
+	def get_data(self, sd, ed, symbol):
+		syms = [symbol]
+		dates = pd.date_range(sd, ed)
+		prices_all = ut.get_data(syms, dates)  # automatically adds SPY
+		prices = prices_all[syms]  # only portfolio symbols
+		prices_SPY = prices_all['SPY']  # only SPY, for comparison later
+		if self.verbose: print prices
+		
+		# example use with new colname
+		volume_all = ut.get_data(syms, dates,
+		                         colname="Volume")  # automatically adds SPY
+		volume = volume_all[syms]  # only portfolio symbols
+		volume_SPY = volume_all['SPY']  # only SPY, for comparison later
+		if self.verbose: print volume
+		prices.rename(columns={symbol: "Adj Close"}, inplace=True)
+		return prices
 	
 	# this method should create a QLearner, and train it for trading
 	def addEvidence(self, symbol="IBM", \
@@ -216,22 +255,22 @@ class StrategyLearner(object):
 			
 			# add your code to do learning here.
 	
-			
 			# example usage of the old backward compatible util function
-			syms = [symbol]
-			dates = pd.date_range(sd, ed)
-			prices_all = ut.get_data(syms, dates)  # automatically adds SPY
-			prices = prices_all[syms]  # only portfolio symbols
-			prices_SPY = prices_all['SPY']  # only SPY, for comparison later
-			if self.verbose: print prices
-			
-			# example use with new colname
-			volume_all = ut.get_data(syms, dates,
-			                         colname="Volume")  # automatically adds SPY
-			volume = volume_all[syms]  # only portfolio symbols
-			volume_SPY = volume_all['SPY']  # only SPY, for comparison later
-			if self.verbose: print volume
-			prices.rename(columns={symbol: "Adj Close"}, inplace=True)
+			prices = self.get_data(sd=sd, ed=ed, symbol=symbol)
+			# syms = [symbol]
+			# dates = pd.date_range(sd, ed)
+			# prices_all = ut.get_data(syms, dates)  # automatically adds SPY
+			# prices = prices_all[syms]  # only portfolio symbols
+			# prices_SPY = prices_all['SPY']  # only SPY, for comparison later
+			# if self.verbose: print prices
+			#
+			# # example use with new colname
+			# volume_all = ut.get_data(syms, dates,
+			#                          colname="Volume")  # automatically adds SPY
+			# volume = volume_all[syms]  # only portfolio symbols
+			# volume_SPY = volume_all['SPY']  # only SPY, for comparison later
+			# if self.verbose: print volume
+			# prices.rename(columns={symbol: "Adj Close"}, inplace=True)
 			
 			#region Create Q_Learner
 			try:
@@ -334,6 +373,7 @@ class StrategyLearner(object):
 					# We compare the new dataframe to the previous dataframe
 					test = self.previous_dataframe.equals(tradeDataFrame)
 					if self.previous_dataframe.equals(tradeDataFrame):
+						# self.convergence = True
 						if self.prev_count >= 5:
 							self.convergence = True
 						self.prev_count += 1
@@ -353,42 +393,81 @@ class StrategyLearner(object):
 				print exc_tb.tb_lineno
 				print AddEvidenceException
 
-	
 	# this method should use the existing policy and test it against new data
 	def testPolicy(self, symbol="IBM", \
 	               sd=dt.datetime(2009, 1, 1), \
 	               ed=dt.datetime(2010, 1, 1), \
 	               sv=10000):
 		try:
-			# here we build a fake set of trades
-			# your code should return the same sort of data
-			dates = pd.date_range(sd, ed)
-			prices_all = ut.get_data([symbol], dates)  # automatically adds SPY
-			trades = prices_all[[symbol, ]]  # only portfolio symbols
-			trades_SPY = prices_all['SPY']  # only SPY, for comparison later
-			trades.values[:, :] = 0  # set them all to nothing
-			trades.values[0, :] = 1000  # add a BUY at the start
-			trades.values[40, :] = -1000  # add a SELL
-			trades.values[41, :] = 1000  # add a BUY
-			trades.values[60, :] = -2000  # go short from long
-			trades.values[61, :] = 2000  # go long from short
-			trades.values[-1, :] = -1000  # exit on the last day
-			if self.verbose: print type(trades)  # it better be a DataFrame!
-			if self.verbose: print trades
-			if self.verbose: print prices_all
-			return trades
+			prices = self.get_data(sd=sd, ed=ed, symbol=symbol)
+			FullDataFrame, discretizedDataFrame, daily_returns = self.get_indicators(prices, fillNa=False, otherFill=True, testPolicy=True)
+			FullDataFrame["States"] = self.get_states(discretizedDataFrame[["Bollinger Band Percentage", "Relative Strength Index", "Daily Momentum"]])
+			self.FullDataFrame = FullDataFrame
+			self.holdings = 0
+			testPolicyDataFrame = pd.DataFrame(data=np.zeros(shape=len(FullDataFrame)), columns=[symbol], index=FullDataFrame.index)
+
+			for index, row in FullDataFrame.iterrows():
+				action = self.learner.querysetstate(row["States"], random=False)
+				if action == 0:
+					# Do Nothing
+					testPolicyDataFrame.loc[index] = 0
+				elif action == 1:
+					# SHORT ~~ Sell
+					# Check holdings
+					if self.holdings == 0:
+						testPolicyDataFrame.loc[index] = -1000
+					elif self.holdings == 1000:
+						# TODO: Add ability to buy 1000 or 2000
+						testPolicyDataFrame.loc[index] = -2000
+					elif self.holdings == -1000:
+						# TODO: Add ability to sell 1000 or 2000
+						testPolicyDataFrame.loc[index] = 0
+					else:
+						if self.verbose:
+							print "Unexpected value of holdings occurred"
+				elif action == 2:
+					# LONG ~~ Buy
+					# Check holdings
+					if self.holdings == 0:
+						# Holdings are 0 we can buy 1000
+						testPolicyDataFrame.loc[index] = 1000
+					elif self.holdings == 1000:
+						# holdings are 1000 we can sell 1000 or 2000
+						# TODO: Add ability to sell 1000 or 2000
+						testPolicyDataFrame.loc[index] = 0
+					elif self.holdings == -1000:
+						# TODO: Add ability to buy 1000 or 2000
+						testPolicyDataFrame.loc[index] = 2000
+					else:
+						if self.verbose:
+							print "Unexpected value of holdings occurred"
+				else:
+					if self.verbose:
+						print "Something happened while training and an invalid action was returned"
+				self.holdings = self.holdings + testPolicyDataFrame.loc[index][0]
+			# Compare results of self.previous_dataframe with new dataframe to see if we have converged
+			return testPolicyDataFrame
 		except Exception as err:
 			print "Failed during test policy"
 			print err
-
+			if self.verbose:
+				print "Error occurred when attempting to Test the Policy"
+				exc_type, exc_obj, exc_tb = sys.exc_info()
+				print exc_obj
+				print exc_tb.tb_lineno
+				print err
+				print ""
+				
 
 if __name__ == "__main__":
 	start_date = dt.datetime(2008, 1, 1)
+	out_start_date = dt.datetime(2010, 1, 1)
+	out_end_date = dt.datetime(2011, 12, 31)
 	end_date = dt.datetime(2009, 12, 31)
 	start_value = 100000
 	impact = 0.000
 	symbol = 'AAPL'
-	tester = StrategyLearner(verbose=True, impact=impact)
+	tester = StrategyLearner(verbose=False, impact=impact)
 	tester.addEvidence(symbol=symbol, sd=start_date, ed=end_date, sv=start_value)
 	port_vals = mktsim.compute_portvals_1(tester.trades_dataframe, start_val=start_value, impact=impact)
 	tester.trades_dataframe["Shares"] = tester.trades_dataframe[symbol]
@@ -396,5 +475,9 @@ if __name__ == "__main__":
 	tester.trades_dataframe["Symbol"] = symbol
 	test_port_val = mktsim.compute_portvals_from_tester(tester.trades_dataframe, start_date=start_date, end_date=end_date,
 	                                                    startval=start_value, market_impact=0.00, commission_cost=0.00)
+
+	testpolicyDataFrame = tester.testPolicy(symbol=symbol, sd=out_start_date, ed=out_end_date, sv=start_value)
+	test_policy = mktsim.compute_portvals_1(testpolicyDataFrame, start_val=start_value, impact=impact)
+	
 	print ""
 	print "One does not simply think up a strategy"

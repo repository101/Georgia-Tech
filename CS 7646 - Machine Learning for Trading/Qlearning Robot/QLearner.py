@@ -54,7 +54,7 @@ class QLearner(object):
 	def author(self):
 		return "jadams334"
 	
-	def querysetstate(self, s):
+	def querysetstate(self, s, random=True):
 		"""
 		@summary: Update the state without updating the Q-table
 		@param s: The new state
@@ -62,11 +62,12 @@ class QLearner(object):
 		"""
 		# Action Tuple  ---  < S, A, S_Prime, R >
 		# Action Tuple  ---  < Current_State, Action_taken, New_State, Reward >
-		if self.perform_random_action_or_not():
-			# We get a random action
-			# Take that action
-			action = np.random.choice([0, 1, 2, 3])
-			return action
+		if random:
+			if self.perform_random_action_or_not():
+				# We get a random action
+				# Take that action
+				action = np.random.choice([0, 1, 2, 3])
+				return action
 		else:
 			action = np.argmax(self.q_table[s])
 		if self.verbose:
