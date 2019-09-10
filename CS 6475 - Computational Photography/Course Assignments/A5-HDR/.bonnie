@@ -1,0 +1,9 @@
+{
+  "course_id": "cs6475",
+  "quizzes": {
+    "code": {
+      "quiz_id": "6_hdr_code",
+      "required_files": ["hdr.py"]
+    }
+  }
+}
