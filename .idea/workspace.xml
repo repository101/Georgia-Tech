@@ -2,7 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14b2ce2b-200b-4302-944f-6cce2ad2b5f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Georgia-Tech.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Georgia-Tech.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/19summer_assess_learners.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/BagLearner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/CS7646_ML4T.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/DTLearner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/Data/3_groups.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/Data/Istanbul.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/Data/ripple.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/Data/simple.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/Data/winequality-red.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/Data/winequality-white.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/Data/winequality.names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/How-to-learn-a-decision-tree.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/InsaneLearner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/LinRegLearner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/Part1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/PartB-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/PartB-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/PartC-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/PartC-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/PartC-3a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/PartC-3b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/Project 3 - Assess Learners.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/RTLearner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/grade_learners.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/grading/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/grading/grade_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/grading/gradebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/grading/grading.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/grading/helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/grading/merge_grades_tsq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/ml4tLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/report.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/testlearner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Assess Learners/util.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,29 +51,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale/martingale.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/A1-Epsilon_Photography/epsilon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="816">
+              <caret line="39" column="75" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/submit.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>FINAL</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/A1-Epsilon_Photography/Epsilon_Assignment_01.py" />
+        <option value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/A1-Epsilon_Photography/epsilon.py" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1441" />
-    <option name="y" value="325" />
-    <option name="width" value="1177" />
-    <option name="height" value="705" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -41,6 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -48,27 +107,16 @@
               <item name="Georgia-Tech" type="b2602c69:ProjectViewProjectNode" />
               <item name="Georgia-Tech" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Georgia-Tech" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Georgia-Tech" type="462c0819:PsiDirectoryNode" />
-              <item name="CS 7646 - Machine Learning for Trading" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Georgia-Tech" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Georgia-Tech" type="462c0819:PsiDirectoryNode" />
-              <item name="CS 7646 - Machine Learning for Trading" type="462c0819:PsiDirectoryNode" />
-              <item name="Project 1 - Martingale" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/app-1.6.6/resources/app/git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/test.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -85,21 +133,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+  <component name="RunManager" selected="Python.Epsilon_Assignment_01">
+    <configuration name="Epsilon_Assignment_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Georgia-Tech" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\cs6475\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/A1-Epsilon_Photography/Epsilon_Assignment_01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -108,6 +156,59 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\joshu\.conda\envs\CS6475\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.Epsilon_Assignment_01" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Epsilon_Assignment_01" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -120,50 +221,98 @@
       <option name="presentableId" value="Default" />
       <updated>1558104217931</updated>
       <workItem from="1558104219295" duration="344000" />
+      <workItem from="1567461949111" duration="105000" />
+      <workItem from="1567462195474" duration="881000" />
+      <workItem from="1567463582822" duration="218000" />
+      <workItem from="1567645362587" duration="1048000" />
+      <workItem from="1567646654007" duration="928000" />
+      <workItem from="1567648412945" duration="1721000" />
+      <workItem from="1567651814629" duration="14000" />
+      <workItem from="1567721344584" duration="17000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_for_test_TestInstall - 2019.09.02 at 18h 20m 36s.xml">
+      <configuration name="pytest for test.TestInstall" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344000" />
+    <option name="totallyTimeSpent" value="5276000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Python Console" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3297062" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" side_tool="true" visible="true" weight="0.32995737" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="11" visible="true" weight="0.32861805" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="4" side_tool="true" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Georgia_Tech$test.coverage" NAME="test Coverage Results" MODIFIED="1567464015112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$pytest_for_test_TestInstall.coverage" NAME="pytest for test.TestInstall Coverage Results" MODIFIED="1567463975327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$Epsilon_Assignment_01.coverage" NAME="Epsilon_Assignment_01 Coverage Results" MODIFIED="1567646333726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 6475 - Computational Photography/assignments" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale/martingale.py">
+    <entry file="file://$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale/martingale.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/_jb_pytest_runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/setup.py" />
+    <entry file="file://$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/A1-Epsilon_Photography/Epsilon_Assignment_01.py" />
+    <entry file="file://$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/A1-Epsilon_Photography/epsilon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="39" column="75" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS 6475 - Computational Photography/assignments/submit.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
