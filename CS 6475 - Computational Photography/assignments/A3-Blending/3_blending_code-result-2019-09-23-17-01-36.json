@@ -1,0 +1,60 @@
+{
+    "tests": [
+        {
+            "err_msg": "You should test that your code works on laplacian pyramids from images with both even or odd shape, and with an even or odd number of layers. (The number of layers will never exceed `log2(min(img.shape))` )",
+            "traceback": "AssertionError: Your blend function failed test case 0.  Your submission did not match the expected result within the comparison tolerance for the function.\n\nYou should test that your code works on laplacian pyramids from images with both even or odd shape, and with an even or odd number of layers. (The number of layers will never exceed `log2(min(img.shape))` )\n",
+            "output": {
+                "points_available": 10,
+                "points_awarded": 5
+            },
+            "description": "Grade for blend"
+        },
+        {
+            "err_msg": "You should test that your code works on inputs from images with both even or odd shape, and with an even or odd number of layers. (The number of layers will never exceed `log2(min(img.shape))` )",
+            "traceback": "AssertionError: Your collapse function failed test case 0.  Your submission did not match the expected result within the comparison tolerance for the function.\n\nYou should test that your code works on inputs from images with both even or odd shape, and with an even or odd number of layers. (The number of layers will never exceed `log2(min(img.shape))` )\n",
+            "output": {
+                "points_available": 10,
+                "points_awarded": 5
+            },
+            "description": "Grade for collapse"
+        },
+        {
+            "err_msg": "You should test that your code works on gaussian pyramids from images with both even or odd shape, and with an even or odd number of layers. (The number of layers will never exceed `log2(min(img.shape))` )",
+            "traceback": "AssertionError: Your laplPyramid function failed test case 0.  Your submission did not match the expected result within the comparison tolerance for the function.\n\nYou should test that your code works on gaussian pyramids from images with both even or odd shape, and with an even or odd number of layers. (The number of layers will never exceed `log2(min(img.shape))` )\n",
+            "output": {
+                "points_available": 10,
+                "points_awarded": 5
+            },
+            "description": "Grade for laplPyramid"
+        },
+        {
+            "err_msg": "You should test that your code works on input images with both even or odd shape with generating kernels using any parameter value between 0 < a <= 0.5, and that you are using the correct border condition.",
+            "traceback": "AssertionError: Your reduce_layer function failed test case 0.  Your submission did not match the expected result within the comparison tolerance for the function.\n\nYou should test that your code works on input images with both even or odd shape with generating kernels using any parameter value between 0 < a <= 0.5, and that you are using the correct border condition.\n",
+            "output": {
+                "points_available": 5,
+                "points_awarded": 3
+            },
+            "description": "Grade for reduce_layer"
+        },
+        {
+            "err_msg": null,
+            "traceback": "",
+            "output": {
+                "points_available": 5,
+                "points_awarded": 5
+            },
+            "description": "Grade for expand_layer"
+        },
+        {
+            "err_msg": null,
+            "traceback": "",
+            "output": {
+                "points_available": 10,
+                "points_awarded": 10
+            },
+            "description": "Grade for gaussPyramid"
+        }
+    ],
+    "total_points_awarded": 33,
+    "total_points_available": 50
+}

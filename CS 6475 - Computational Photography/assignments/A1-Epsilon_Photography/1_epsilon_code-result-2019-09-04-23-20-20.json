@@ -1,0 +1,15 @@
+{
+    "total_points_awarded": 1,
+    "tests": [
+        {
+            "err_msg": null,
+            "output": {
+                "points_available": 1,
+                "points_awarded": 1
+            },
+            "description": "Successful submission of epsilon.py",
+            "traceback": ""
+        }
+    ],
+    "total_points_available": 1
+}

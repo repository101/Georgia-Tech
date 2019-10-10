@@ -1,0 +1,9 @@
+{
+  "course_id": "cs6475",
+  "quizzes": {
+    "code": {
+      "quiz_id": "1_epsilon_code",
+      "required_files": ["epsilon.py"]
+    }
+  }
+}
