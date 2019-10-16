@@ -2,7 +2,7 @@
   "course_id": "cs6475",
   "quizzes": {
     "code": {
-      "quiz_id": "5_pano_code",
+      "quiz_id": "4_pano_code",
       "required_files": ["panorama.py"]
     }
   }
