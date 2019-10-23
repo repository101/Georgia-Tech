@@ -49,11 +49,11 @@ ANGLE BETWEEN TWO VECTORS
 """
 
 """
-translation = np.asarray([[1,    0,    Translate_x],
+translation = np.asarray([[1,    0,    Translate_x], 
 						  [0,    1,    Translate_y],
 						  [0,    0,        1]])
 
-scale = np.asarray([[Scale_x,   0,      0],
+scale = np.asarray([[Scale_x,   0,      0], 
 					[   0,   Scale_y,   0],
 					[   0,      0,      1]])
 					
@@ -482,15 +482,15 @@ def blendImagePair(image_1, image_2, num_matches):
 	"""
 	try:
 		# Found that too few matches distorts panorama
-		# Part of Blending by changing the channel histograms prior to merging
 		img1_b, img1_g, img1_r = cv2.split(image_1)
 		img2_b, img2_g, img2_r = cv2.split(image_2)
-		img2_b = matchHistogramRoutine(img2_b, img1_b)
-		img2_g = matchHistogramRoutine(img2_g, img1_g)
-		img2_r = matchHistogramRoutine(img2_r, img1_r)
-
-		image_2 = cv2.merge((img2_b.astype(np.uint8), img2_g.astype(np.uint8), img2_r.astype(np.uint8)))
-		
+		img2_b = matchHistogramRoutine(img1_b, img2_b)
+		img2_g = matchHistogramRoutine(img1_g, img2_g)
+		img2_r = matchHistogramRoutine(img1_r, img2_r)
+		test_result = cv2.merge((img2_b.astype(np.uint8), img2_g.astype(np.uint8), img2_r.astype(np.uint8)))
+		#
+		# getHistograms(image_1)
+		# getHistograms(image_2)
 		kp1, kp2, matches = findMatchesBetweenImages(image_1, image_2, num_matches)
 		displayAndSave(image_1, "image1")
 		displayAndSave(image_2, "image2")
@@ -507,7 +507,38 @@ def blendImagePair(image_1, image_2, num_matches):
 	except Exception as BlendImagePairException:
 		print("Exception while processing 'blendImagePair'. \n", BlendImagePairException)
 
-
+#
+# def getHistograms(image_hist):
+# 	img_copy= image_hist.copy()
+# 	if len(image_hist.shape) > 1:
+# 		b, g, r = cv2.split(image_hist)
+# 		b = cv2.equalizeHist(b)
+# 		g = cv2.equalizeHist(g)
+# 		r = cv2.equalizeHist(r)
+# 		image_hist = cv2.merge((b, g, r))
+# 	n=0
+# 	color = ('b', 'g', 'r')
+# 	for i, col in enumerate(color):
+# 		plt.figure(n)
+# 		histr = cv2.calcHist([image_hist], [i], None, [256], [0, 256])
+# 		histr_2 = cv2.calcHist([img_copy], [i], None, [256], [0, 256])
+# 		if i == 0:
+# 			title = "Blue Historgram"
+# 		if i ==1:
+# 			title = "Green Histogram"
+# 		if i == 2:
+# 			title = "Red Histogram"
+# 		plt.title(title)
+# 		plt.plot(histr, color=col, label="After Equalized")
+# 		plt.plot(histr_2, color='m', label="Before Equalized")
+# 		plt.legend()
+# 		plt.xlim([0, 256])
+# 		plt.savefig("{}.png".format(title))
+# 		n += 1
+# 	plt.show()
+#
+#
+#
 def blendRoutine(min_row_percent, max_row_percent, min_column_percent, max_column_percent, image_a, image_b, levels=4):
 	try:
 		# Generate Gaussian for Image A
@@ -714,74 +745,74 @@ def getPanorama(image_1, image_2, matches_to_find):
 		print("Exception occurred while executing 'getMask'.\n", GetPanoramaException)
 
 
-# def testMethod(img1, img2):
-# 	try:
-# 		color = ('b', 'g', 'r')
-# 		n = 0
-# 		img3 = cv2.cvtColor(img1, cv2.COLOR_BGR2HSV)
-# 		img4 = cv2.cvtColor(img2, cv2.COLOR_BGR2HSV)
-#
-# 		cl = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(51, 51))
-# 		b, g, r = cv2.split(img1)
-# 		b1, g1, r1 = cv2.split(img2)
-# 		b = cl.apply(b)
-# 		g = cl.apply(g)
-# 		r = cl.apply(r)
-# 		b1 = cl.apply(b1)
-# 		g1 = cl.apply(g1)
-# 		r1 = cl.apply(r1)
-#
-# 		new_img1 = cv2.merge((b, g, r))
-# 		new_img2 = cv2.merge((b1, g1, r1))
-# 		displayAndSave(new_img1, "New IMG1")
-# 		displayAndSave(new_img2, "New IMG2")
-#
-# 		b1, g1, r1 = cv2.split(img1)
-# 		b2, g2, r2 = cv2.split(img2)
-# 		h1, s1, v1 = cv2.split(img3)
-# 		h2, s2, v2 = cv2.split(img4)
-#
-# 		v1_avg = np.average(v1)
-# 		v2_avg = np.average(v2)
-# 		v_diff = np.absolute((v1_avg - v2_avg))
-#
-# 		h1_avg = np.average(h1)
-# 		h2_avg = np.average(h2)
-# 		h_diff = np.absolute((h1_avg - h2_avg))
-#
-# 		s1_avg = np.average(s1)
-# 		s2_avg = np.average(s2)
-# 		s_diff = np.absolute((s1_avg - s2_avg))
-#
-# 		displayAndSave(img3, "Image 1 HSV before equalise.jpg")
-# 		displayAndSave(img4, "Image 2 HSV before equalise.jpg")
-# 		s1 = cv2.equalizeHist(s1)
-# 		s2 = cv2.equalizeHist(s2)
-# 		img3 = cv2.merge((h1, s1, v1))
-# 		img4 = cv2.merge((h2, s2, v2))
-# 		img5 = cv2.cvtColor(img3, cv2.COLOR_HSV2BGR)
-# 		img6 = cv2.cvtColor(img4, cv2.COLOR_HSV2BGR)
-#
-# 		displayAndSave(img3, "Image 1 HSV after equalise.jpg")
-# 		displayAndSave(img4, "Image 2 HSV after equalise.jpg")
-# 		displayAndSave(img5, "Image 1 HSV2BGR after equalise.jpg")
-# 		displayAndSave(img6, "Image 2 HSV2BGR after equalise.jpg")
-#
-# 		b1 = cv2.equalizeHist(b1)
-# 		b2 = cv2.equalizeHist(b2)
-# 		g1 = cv2.equalizeHist(g1)
-# 		g2 = cv2.equalizeHist(g2)
-# 		r1 = cv2.equalizeHist(r1)
-# 		r2 = cv2.equalizeHist(r2)
-# 		img1 = cv2.merge((b1, g1, r1))
-# 		img2 = cv2.merge((b2, g2, r2))
-# 		displayAndSave(img1, "Image_1_Equalized.jpg")
-# 		displayAndSave(img2, "Image_2_Equalized.jpg")
-#
-# 		return new_img1, new_img2
-# 	except Exception as TestMethodException:
-# 		print("Exception occurred while executing 'testMethod'.\n", TestMethodException)
-#
+def testMethod(img1, img2):
+	try:
+		color = ('b', 'g', 'r')
+		n = 0
+		img3 = cv2.cvtColor(img1, cv2.COLOR_BGR2HSV)
+		img4 = cv2.cvtColor(img2, cv2.COLOR_BGR2HSV)
+		
+		cl = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(51, 51))
+		b, g, r = cv2.split(img1)
+		b1, g1, r1 = cv2.split(img2)
+		b = cl.apply(b)
+		g = cl.apply(g)
+		r = cl.apply(r)
+		b1 = cl.apply(b1)
+		g1 = cl.apply(g1)
+		r1 = cl.apply(r1)
+		
+		new_img1 = cv2.merge((b, g, r))
+		new_img2 = cv2.merge((b1, g1, r1))
+		displayAndSave(new_img1, "New IMG1")
+		displayAndSave(new_img2, "New IMG2")
+		
+		b1, g1, r1 = cv2.split(img1)
+		b2, g2, r2 = cv2.split(img2)
+		h1, s1, v1 = cv2.split(img3)
+		h2, s2, v2 = cv2.split(img4)
+		
+		v1_avg = np.average(v1)
+		v2_avg = np.average(v2)
+		v_diff = np.absolute((v1_avg - v2_avg))
+		
+		h1_avg = np.average(h1)
+		h2_avg = np.average(h2)
+		h_diff = np.absolute((h1_avg - h2_avg))
+		
+		s1_avg = np.average(s1)
+		s2_avg = np.average(s2)
+		s_diff = np.absolute((s1_avg - s2_avg))
+		
+		displayAndSave(img3, "Image 1 HSV before equalise.jpg")
+		displayAndSave(img4, "Image 2 HSV before equalise.jpg")
+		s1 = cv2.equalizeHist(s1)
+		s2 = cv2.equalizeHist(s2)
+		img3 = cv2.merge((h1, s1, v1))
+		img4 = cv2.merge((h2, s2, v2))
+		img5 = cv2.cvtColor(img3, cv2.COLOR_HSV2BGR)
+		img6 = cv2.cvtColor(img4, cv2.COLOR_HSV2BGR)
+		
+		displayAndSave(img3, "Image 1 HSV after equalise.jpg")
+		displayAndSave(img4, "Image 2 HSV after equalise.jpg")
+		displayAndSave(img5, "Image 1 HSV2BGR after equalise.jpg")
+		displayAndSave(img6, "Image 2 HSV2BGR after equalise.jpg")
+		
+		b1 = cv2.equalizeHist(b1)
+		b2 = cv2.equalizeHist(b2)
+		g1 = cv2.equalizeHist(g1)
+		g2 = cv2.equalizeHist(g2)
+		r1 = cv2.equalizeHist(r1)
+		r2 = cv2.equalizeHist(r2)
+		img1 = cv2.merge((b1, g1, r1))
+		img2 = cv2.merge((b2, g2, r2))
+		displayAndSave(img1, "Image_1_Equalized.jpg")
+		displayAndSave(img2, "Image_2_Equalized.jpg")
+		
+		return new_img1, new_img2
+	except Exception as TestMethodException:
+		print("Exception occurred while executing 'testMethod'.\n", TestMethodException)
+
 
 def matchHistogramRoutine(histo_1_img, histo_2_img):
 	try:
@@ -806,18 +837,11 @@ if __name__ == "__main__":
 	img1 = cv2.imread("1.jpg", cv2.IMREAD_COLOR)
 	img2 = cv2.imread("2.jpg", cv2.IMREAD_COLOR)
 	img3 = cv2.imread("3.jpg", cv2.IMREAD_COLOR)
-	
+
 	images = [img1, img2, img3]
 	result = images[0]
-
-	for i in range(len(images) - 1):
-		b_r, g_r, r_r = cv2.split(result)
-		b, g, r = cv2.split(images[i+1])
-		b = matchHistogramRoutine(b, b_r)
-		g = matchHistogramRoutine(g, g_r)
-		r = matchHistogramRoutine(r, r_r)
-		new_image = cv2.merge((b, g, r))
-		result = blendImagePair(result, new_image, num_matches=200)
+	for i in range(len(images)-1):
+		result = blendImagePair(result, images[i+1], num_matches=200)
 		displayAndSave(result, "Results_{}.jpg".format(i))
-	
+
 	print()

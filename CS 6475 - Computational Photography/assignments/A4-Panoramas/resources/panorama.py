@@ -485,10 +485,10 @@ def blendImagePair(image_1, image_2, num_matches):
 		# Part of Blending by changing the channel histograms prior to merging
 		img1_b, img1_g, img1_r = cv2.split(image_1)
 		img2_b, img2_g, img2_r = cv2.split(image_2)
-		img2_b = matchHistogramRoutine(img2_b, img1_b)
-		img2_g = matchHistogramRoutine(img2_g, img1_g)
-		img2_r = matchHistogramRoutine(img2_r, img1_r)
-
+		img2_b = matchHistogramRoutine(img1_b, img2_b)
+		img2_g = matchHistogramRoutine(img1_g, img2_g)
+		img2_r = matchHistogramRoutine(img1_r, img2_r)
+		
 		image_2 = cv2.merge((img2_b.astype(np.uint8), img2_g.astype(np.uint8), img2_r.astype(np.uint8)))
 		
 		kp1, kp2, matches = findMatchesBetweenImages(image_1, image_2, num_matches)
@@ -809,15 +809,9 @@ if __name__ == "__main__":
 	
 	images = [img1, img2, img3]
 	result = images[0]
-
+	test = matchHistogramRoutine(img2, img1)
 	for i in range(len(images) - 1):
-		b_r, g_r, r_r = cv2.split(result)
-		b, g, r = cv2.split(images[i+1])
-		b = matchHistogramRoutine(b, b_r)
-		g = matchHistogramRoutine(g, g_r)
-		r = matchHistogramRoutine(r, r_r)
-		new_image = cv2.merge((b, g, r))
-		result = blendImagePair(result, new_image, num_matches=200)
+		result = blendImagePair(result, images[i+1], num_matches=200)
 		displayAndSave(result, "Results_{}.jpg".format(i))
 	
 	print()
