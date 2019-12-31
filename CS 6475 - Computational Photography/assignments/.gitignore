@@ -1,0 +1,9 @@
+jwt
+*.zip
+*.rar
+*.jpg
+*.jpeg
+*.png
+*.bonnie
+__pycache__/
+omscs.egg-info/
