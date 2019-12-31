@@ -4,7 +4,7 @@ This repository contains all projects for Computational Photography. Due dates &
 
 ## Assignments
 
-- [Epsilon Photography](/A1-Epsilon_Photography)
+- [Epsilon Photography](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206475%20-%20Computational%20Photography/assignments/A1-Epsilon_Photography)
 
 The goal of this assignment is to experiment with *Epsilon Photography*, which is a technique for capturing multiple images of a scene -- each with a slight (i.e., "epsilon") variation of the camera parameters -- then fusing them to produce a novel image. Perhaps the most cited paper on the subject is ["Computational Photography: Epsilon to Coded Photography"](http://web.media.mit.edu/~raskar/Talks/ETCVparis08/raskarCompPhotoEpsilonCodedETVC08paper.pdf) (Raskar; 2009).
 This assignment will also introduce and demonstrate the workflow for assignments using Canvas and Bonnie. Please follow the instructions carefully and ask questions on Piazza if you have any doubts!
