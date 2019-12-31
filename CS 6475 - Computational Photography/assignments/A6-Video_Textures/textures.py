@@ -46,7 +46,23 @@ def videoVolume(images):
         A 4D numpy array. This array should have dimensions
         (num_frames, rows, cols, 3).
     """
-    raise NotImplementedError
+    try:
+        result = np.asarray(images)
+        if result.dtype != np.uint8:
+            result = result.astype(np.uint8)
+        if result.shape[3] != 3:
+            # TODO BUG here need to fix for max_val and values
+            #   better to find instance where there are two of the same and use those in the middle
+            #   and the remaining as the first index in shape
+            frames, rows, cols, channels = result.shape
+            values = sorted([frames, rows, cols, channels])
+            min_val = values[0]
+            del values[0]
+            max_val = values.pop()
+            result = result.reshape(shape=(max_val, values[0], values[1], min_val))
+        return result
+    except Exception as videoVolumeException:
+        print("Exception while executing 'videoVolume' function.\n", videoVolumeException)
 
 
 def computeSimilarityMetric(video_volume):
@@ -86,7 +102,19 @@ def computeSimilarityMetric(video_volume):
         score between the start frame at i and the end frame at j of the
         video_volume.  This matrix is symmetrical with a diagonal of zeros.
     """
-    raise NotImplementedError
+    try:
+        if video_volume.dtype != np.float64:
+            video_volume = video_volume.astype(np.float64)
+        rssd_array = np.zeros(shape=(video_volume.shape[0], video_volume.shape[0]), dtype=np.float64)
+        for i in range(video_volume.shape[0]):
+            for j in range(video_volume.shape[0]):
+                rssd_array[i][j] = np.sum((video_volume[i] - video_volume[j]) ** 2) ** 0.5
+        # Divide by Average
+        average = np.average(rssd_array)
+        result = rssd_array / average
+        return result
+    except Exception as computeSimilarityMetricException:
+        print("Exception while executing 'computeSimilarityMetric' function. \n", computeSimilarityMetricException)
 
 
 def transitionDifference(similarity):
@@ -115,7 +143,15 @@ def transitionDifference(similarity):
         the input, but be 4 rows and columns smaller, corresponding to only
         the frames that have valid dynamics.
     """
-    raise NotImplementedError
+    try:
+        if similarity.dtype != np.float64:
+            similarity = similarity.astype(np.float64)
+        diagonal_array = np.diag(binomialFilter5())
+        diff = scipy.signal.convolve2d(similarity, diagonal_array, boundary='symm', mode='valid')
+        # diff = cv2.filter2D(similarity, -1, np.diag(binomialFilter5()), borderType=)
+        return diff
+    except Exception as transitionDifferenceException:
+        print("Exception while executing 'transitionDifference' function. \n", transitionDifferenceException)
 
 
 def findBiggestLoop(transition_diff, alpha):
@@ -153,7 +189,83 @@ def findBiggestLoop(transition_diff, alpha):
         The pair of (start, end) indices of the longest loop after correcting
         for the rows and columns lost due to the binomial filter.
     """
-    raise NotImplementedError
+    try:
+        # lost 2 from rows and 2 from columns, we need to add that back then returning index
+        if transition_diff.dtype != np.float64:
+            transition_diff = transition_diff.astype(np.float64)
+        alpha = np.float64(alpha)
+        score_matrix = np.zeros(shape=transition_diff.shape)
+        max_score = 0
+        max_score_X = 0
+        max_score_Y = 0
+        for i in range(transition_diff.shape[0]):
+            for j in range(transition_diff.shape[1]):
+                score = alpha * (j - i) - transition_diff[j, i]
+                score_matrix[i][j] = score
+                if score > max_score:
+                    max_score = score
+                    max_score_X = i
+                    max_score_Y = j
+        return max_score_X + 2, max_score_Y + 2
+    except Exception as findBiggestLoopException:
+        print("Exception while executing 'findBiggestLoop' function. \n", findBiggestLoopException)
+
+
+def findBiggestLoopModified(transition_diff, alpha):
+    """Find the longest and smoothest loop for the given difference matrix.
+
+    For each cell (i, j) in the transition differences matrix, find the
+    maximum score according to the following metric:
+
+        score = alpha * (j - i) - transition_diff[j, i]
+
+    The pair i, j correspond to the start and end indices of the longest loop.
+
+    **************************************************************************
+      NOTE: Remember to correct the indices from the transition difference
+        matrix to account for the rows and columns dropped from the edges
+                    when the binomial filter was applied.
+    **************************************************************************
+
+    Parameters
+    ----------
+    transition_diff : np.ndarray
+        A square 2d numpy array where each cell contains the cost of
+        transitioning from frame i to frame j in the input video as returned
+        by the transitionDifference function.
+
+    alpha : float
+        A parameter for how heavily you should weigh the size of the loop
+        relative to the transition cost of the loop. Larger alphas favor
+        longer loops, but may have rough transitions. Smaller alphas give
+        shorter loops, down to no loop at all in the limit.
+
+    Returns
+    -------
+    int, int
+        The pair of (start, end) indices of the longest loop after correcting
+        for the rows and columns lost due to the binomial filter.
+    """
+    try:
+        # lost 2 from rows and 2 from columns, we need to add that back then returning index
+        if transition_diff.dtype != np.float64:
+            transition_diff = transition_diff.astype(np.float64)
+        alpha = np.float64(alpha)
+        score_matrix = np.zeros(shape=transition_diff.shape)
+        max_score = 0
+        max_score_X = 0
+        max_score_Y = 0
+        for i in range(transition_diff.shape[0]):
+            for j in range(transition_diff.shape[1]):
+                score = alpha * (j - i) - transition_diff[j, i]
+                score_matrix[i][j] = score
+                if score > max_score:
+                    max_score = score
+                    max_score_X = i
+                    max_score_Y = j
+        return max_score_X + 2, max_score_Y + 2, score_matrix, score_matrix.max()
+    except Exception as findBiggestLoopException:
+        print("Exception while executing 'findBiggestLoop' function. \n", findBiggestLoopException)
 
 
 def synthesizeLoop(video_volume, start, end):
@@ -177,7 +289,16 @@ def synthesizeLoop(video_volume, start, end):
         A list of arrays of size (height, width, 3) and dtype np.uint8,
         similar to the original input to the videoVolume function.
     """
-    raise NotImplementedError
+    try:
+        # end + 1 because we want to include that ending index, if just used end we would include up to end
+        # result = list(video_volume[start: end + 1])
+        # pt2 = video_volume[start: end + 1, :]
+        # the .tolist() numpy provides does not return a list, according to Bonnie(the autograder)
+        # Update to the above, .tolist() converts the array into a list. Bonnie is wanting a list of Arrays
+        # result = video_volume[start: end + 1, :].tolist()
+        return list(video_volume[start: end + 1, :])
+    except Exception as synthesizeLoopException:
+        print("Exception while executing 'synthesizeLoop' function. \n", synthesizeLoopException)
 
 
 def binomialFilter5():

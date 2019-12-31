@@ -4,6 +4,8 @@ import sys
 
 import numpy as np
 import cv2
+import scipy as sp
+import scipy.signal
 
 from glob import glob
 
@@ -25,6 +27,15 @@ def runTexture(img_list, alpha):
     ssd_diff = textures.computeSimilarityMetric(video_volume)
     transition_diff = textures.transitionDifference(ssd_diff)
     idxs = textures.findBiggestLoop(transition_diff, alpha)
+    # results = []
+    # score_ct = 0
+    # prev_score = 0
+    # for alp in np.arange(0.001, 1.0, 0.001):
+    #     id_X, id_y, score_mat, max_score = textures.findBiggestLoopModified(transition_diff, np.round(alp, decimals=3))
+    #     prev_score = max_score
+    #     results.append([np.round(alp, 3), id_X, id_y, max_score])
+    # results = np.asarray(results)
+    # max_score = results[:, 3].max()
     print("Loop bounds: {}".format(idxs))
 
     diff3 = np.zeros(transition_diff.shape, float)
@@ -87,7 +98,8 @@ if __name__ == "__main__":
               "alpha.  Example usage:\n\n    python main.py 0.5\n")
         exit(1)
 
-    video_dir = "candle"
+    video_dir = "Above_And_Beyond/Resized_0.1"
+    # video_dir = "candle"
     image_dir = os.path.join("videos", "source", video_dir)
     out_dir = os.path.join("videos", "out")
 
@@ -107,7 +119,10 @@ if __name__ == "__main__":
 
     print("Computing video texture with alpha = {}".format(alpha))
     diff1, diff2, diff3, out_list = runTexture(images, alpha)
+    
+    new_diff1 = diff1.copy()
 
+    
     cv2.imwrite(os.path.join(out_dir, '{}_diff1.png'.format(video_dir)), diff1)
     cv2.imwrite(os.path.join(out_dir, '{}_diff2.png'.format(video_dir)), diff2)
     cv2.imwrite(os.path.join(out_dir, '{}_diff3.png'.format(video_dir)), diff3)

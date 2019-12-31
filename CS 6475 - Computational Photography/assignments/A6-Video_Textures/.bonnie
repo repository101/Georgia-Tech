@@ -2,7 +2,7 @@
   "course_id": "cs6475",
   "quizzes": {
     "code": {
-      "quiz_id": "7_videotextures_code",
+      "quiz_id": "6_videotextures_code",
       "required_files": ["textures.py"]
     }
   }

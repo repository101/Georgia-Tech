@@ -1,0 +1,12 @@
+{
+    "width": 640, 
+    "camera": "v2 nikon corporation nikon d60 640 428 perspective 0.75", 
+    "projection_type": "perspective", 
+    "orientation": 1, 
+    "focal_ratio": 0.75, 
+    "make": "NIKON CORPORATION", 
+    "gps": {}, 
+    "model": "NIKON D60", 
+    "capture_time": 1459002370.02, 
+    "height": 428
+}
