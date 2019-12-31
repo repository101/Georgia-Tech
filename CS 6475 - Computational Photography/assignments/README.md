@@ -37,16 +37,16 @@ In this assignment we will be applying our computational photography magic to vi
 
 ## Projects
 
-- [Research Replication Project](/MT-Research_Project)
+- [Research Replication Project](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206475%20-%20Computational%20Photography/assignments/MT-Research_Project)
 
 The goal of this project is to independently replicate the results of a previously published computational photography paper.
 
 
-- [Final Project](/Final_Project)
+- [Final Project](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206475%20-%20Computational%20Photography/assignments/Final_Project)
 
 The goal of this project is to scope and complete a project on a topic in computational photography of your own choosing. 
 
 
-- [Portfolio](/Portfolio)
+- [Portfolio](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206475%20-%20Computational%20Photography/assignments/Portfolio)
 
 The final portfolio showcases your work over the course of the semester to demonstrate what you learned and the results you achieved.
