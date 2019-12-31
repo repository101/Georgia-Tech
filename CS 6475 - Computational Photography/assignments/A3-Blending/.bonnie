@@ -1,9 +1,0 @@
-{
-  "course_id": "cs6475",
-  "quizzes": {
-    "code": {
-      "quiz_id": "3_blending_code",
-      "required_files": ["blending.py"]
-    }
-  }
-}
