@@ -1,6 +1,7 @@
 import errno
 import os
 import sys
+import shutil
 
 import numpy as np
 import cv2
@@ -98,7 +99,7 @@ if __name__ == "__main__":
               "alpha.  Example usage:\n\n    python main.py 0.5\n")
         exit(1)
 
-    video_dir = "Above_And_Beyond/Resized_0.1"
+    video_dir = "HighGuy"
     # video_dir = "candle"
     image_dir = os.path.join("videos", "source", video_dir)
     out_dir = os.path.join("videos", "out")
@@ -108,8 +109,14 @@ if __name__ == "__main__":
         not_empty = not all([os.path.isdir(x) for x in
                              glob(os.path.join(_out_dir, "*.*"))])
         if not_empty:
-            raise RuntimeError("Output directory is not empty - aborting.")
-        os.makedirs(_out_dir)
+            shutil.rmtree(_out_dir)
+            try:
+                os.makedirs(_out_dir)
+            except Exception as err:
+                print(err)
+                raise RuntimeError("Output directory is not empty - aborting.")
+        if not os.path.exists(_out_dir):
+            os.makedirs(_out_dir)
     except OSError as exception:
         if exception.errno != errno.EEXIST:
             raise

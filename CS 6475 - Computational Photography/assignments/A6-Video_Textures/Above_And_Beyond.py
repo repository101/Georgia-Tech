@@ -5,6 +5,9 @@ import numpy as np
 from glob import glob
 import cv2
 
+GETFRAMES = False
+ATWORK = True
+
 
 def readImages(image_dir):
     """This function reads in input images from a image directory
@@ -36,7 +39,7 @@ def readImages(image_dir):
 def generateGif(files, alpha):
     for i in np.arange(0.01, 0.05, 0.01):
         i = np.round(i, 2)
-        with imageio.get_writer("C:/Users/joshu/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/TEST_Alpha_{}_Duration_{}sec.gif".format(alpha, i), mode="I", duration=i) as writer:
+        with imageio.get_writer("C:/Users/{}/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/TEST_Alpha_{}_Duration_{}sec.gif".format(user, alpha, i), mode="I", duration=i) as writer:
             for filename in files:
                 image = imageio.imread(filename)
                 writer.append_data(image)
@@ -86,20 +89,24 @@ def addCircles(image):
     return
 
 
-
 if __name__ == "__main__":
-    directory = "C:/Users/joshu/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/source/Above_And_Beyond"
-    output_directory_to_turn_to_gif = "C:/Users/joshu/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/out/Above_And_Beyond/Resized_0.1/"
-    # output_directory_to_turn_to_gif = "C:/Users/joshu/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/out/candle/"
-    video_frame_directory = "C:/Users/joshu/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/Video_Frames"
-    video_path = "C:/Users/joshu/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/AB_Video_1.mp4"
+    user = "joshu"
+    if ATWORK:
+        user = "Josh.Adams"
+
+    directory = "C:/Users/{}/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/source/HighGuy".format(user)
+    output_directory_to_turn_to_gif = "C:/Users/{}/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/out/HighGuy/".format(user)
+    # output_directory_to_turn_to_gif = "C:/Users/{}/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/out/candle/".format(user)
+    # video_frame_directory = "C:/Users/{}/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/HighGuy_Frames".format(user)
+    # video_path = "C:/Users/{}/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/HighGuy.mov".format(user)
+    # if GETFRAMES:
+    #     getFramesFromVideo(pathToVideo=video_path, saveDirectory=directory)
     filenames = readImages(directory)
     output_files = readImages(output_directory_to_turn_to_gif)
     images = []
     alpha = 0.054
     generateGif(output_files, alpha=alpha)
-    # getFramesFromVideo(pathToVideo=video_path, saveDirectory=directory)
     # resizeFrames(filenames, 0.10, saveDirectory=directory)
-    # img = "C:/Users/joshu/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/resources/Above_And_Beyond"
+    # img = "C:/Users/{}/OneDrive - Georgia Institute of Technology/Georgia-Tech/CS 6475 - Computational Photography/assignments/A6-Video_Textures/resources/Above_And_Beyond".format(user)
     # addCircles(img)
     print()
