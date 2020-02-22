@@ -1,4 +1,4 @@
-![Georgia Tech Logo](https://github.com/Jadams29/Georgia-Tech/blob/master/gt-logo.png)
+![CS 7641 - Machine Learning](/ml.png)
 ## **Georgia Tech Masters of Computer Science**
 
 
