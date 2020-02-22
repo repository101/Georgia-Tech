@@ -1,6 +1,19 @@
 
 *.xml
+*.iml
+*.mp4
+*.zip
 *.bonnie
+*.pth
+*.ps
+*.pyc
+*.png
+*.txt
+*.csv
+*.json
+*.drawio
+*.docx
+
 CS 7646 - Machine Learning for Trading/Assess Learners/REPORT_DO_NOT_USE.pdf
 CS 7646 - Machine Learning for Trading/Assess Learners/Working_Minimal_Changes/REPORT_DO_NOT_USE.pdf
 CS 6475 - Computational Photography/assignments-master/
@@ -14,10 +27,7 @@ CS 6475 - Computational Photography/assignments/A2-Camera_Obscura/assignment2/re
 CS 6475 - Computational Photography/assignments/A2-Camera_Obscura/Report.pptx
 CS 6475 - Computational Photography/assignments/A3-Blending/report.pptx
 CS 6475 - Computational Photography/assignments/MT-Research_Project/Report.pdf
-*.pth
-*.txt
 CS 6475 - Computational Photography/venv/
-*.docx
 CS 6475 - Computational Photography/Notebooks/1-image_processing/
 CS 6475 - Computational Photography/Notebooks/2-frequency_spectra/
 CS 6475 - Computational Photography/Notebooks/3-features_keypoints/
@@ -31,8 +41,6 @@ CS 6475 - Computational Photography/Quiz/
 CS 6475 - Computational Photography/Quiz 2/
 CS 6475 - Computational Photography/Quiz 3/
 CS 6475 - Computational Photography/assignments/A4-Panoramas/report.pdf
-*.json
-*.drawio
 CS 6475 - Computational Photography/assignments/A2-Camera_Obscura/assignment2/assignment2/report.pdf
 CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz 2.pdf
 CS 6475 - Computational Photography/assignments/A6-Video_Textures/ignore/report.pdf
