@@ -13,23 +13,6 @@
 * [Project 8 - Strategy Learner](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Strategy%20Learner)
 
 
-
-#### FileZilla
-Host: buffetX.cc.gatech.edu
-Username: gt Username
-Password: gt Password
-Port: 22
-
-#### SSH using Powershell
-ssh -X gtUsername@buffetXX.cc.gatech.edu
-// REMOVE LATER   ssh -X jadams334@buffet01.cc.gatech.edu
-The 'x' after buffet needs to change to the correct number depending on last name
-then enter your Password
-
-#### To run python script
-PYTHONPATH=../:. python python_script.py
-
-
 ![Georgia Tech Logo](https://github.com/Jadams29/Georgia-Tech/blob/master/gt-logo.png)
 ## **Georgia Tech Masters of Computer Science**
 
