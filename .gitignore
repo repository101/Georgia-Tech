@@ -1,5 +1,6 @@
 
 *.xml
+*.xlsx
 *.iml
 *.mp4
 *.zip
@@ -9,6 +10,7 @@
 *.pyc
 *.png
 *.txt
+*.tsv
 *.csv
 *.json
 *.drawio
@@ -64,3 +66,4 @@ CS 7641 - Machine Learning/Assignments/Problem_Set 1/Jadams334_ProblemSet1.pdf
 CS 7641 - Machine Learning/Assignments/Randomized Optimization/jadams334-analysis.pdf
 CS 7641 - Machine Learning/Assignments/Supervised Learning/jadams334-analysis.pdf
 CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/jadams334-analysis.pdf
+CS 7641 - Machine Learning/Assignments/Supervised Learning/sub-sample-mnist-test-data.xlsx
