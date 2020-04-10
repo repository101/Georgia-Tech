@@ -12,6 +12,8 @@
 *.txt
 *.tsv
 *.csv
+*.mkv
+*.pptx
 *.json
 *.drawio
 *.docx
