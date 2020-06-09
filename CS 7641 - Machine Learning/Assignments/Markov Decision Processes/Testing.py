@@ -1,80 +1,39 @@
-import gym
-import cv2
+import pandas as pd
 import numpy as np
-
-env = gym.make("MsPacman-v0")
-# env = gym.make("FrozenLake-v0")
-env.reset()
-
-print(env.action_space)
-
-done = False
-
-def value_iteration(env, gamma=1.0):
-    # initialize value table with zeros
-    value_table = np.zeros(env.observation_space.n)
-
-    # set number of iterations and threshold
-    no_of_iterations = 100000
-    threshold = 1e-20
-
-    for i in range(no_of_iterations):
-
-        # On each iteration, copy the value table to the updated_value_table
-        updated_value_table = np.copy(value_table)
-
-        # Now we calculate Q Value for each actions in the state
-        # and update the value of a state with maximum Q value
-
-        for state in range(env.observation_space.n):
-            Q_value = []
-            for action in range(env.action_space.n):
-                next_states_rewards = []
-                for next_sr in env.P[state][action]:
-                    trans_prob, next_state, reward_prob, _ = next_sr
-                    next_states_rewards.append((trans_prob * (reward_prob + gamma * updated_value_table[next_state])))
-
-                Q_value.append(np.sum(next_states_rewards))
-
-            value_table[state] = max(Q_value)
-
-            # we will check whether we have reached the convergence i.e whether the difference
-        # between our value table and updated value table is very small. But how do we know it is very
-        # small? We set some threshold and then we will see if the difference is less
-        # than our threshold, if it is less, we break the loop and return the value function as optimal
-        # value function
-
-        if (np.sum(np.fabs(updated_value_table - value_table)) <= threshold):
-            print('Value-iteration converged at iteration# %d.' % (i + 1))
-            break
-
-    return value_table
-
-def extract_policy(value_table, gamma=1.0):
-    # initialize the policy with zeros
-    policy = np.zeros(env.observation_space.n)
-
-    for state in range(env.observation_space.n):
-
-        # initialize the Q table for a state
-        Q_table = np.zeros(env.action_space)
-
-        # compute Q value for all ations in the state
-        for action in range(env.action_space.n):
-            for next_sr in env.P[state][action]:
-                trans_prob, next_state, reward_prob, _ = next_sr
-                Q_table[action] += (trans_prob * (reward_prob + gamma * value_table[next_state]))
-
-        # select the action which has maximum Q value as an optimal action of the state
-        policy[state] = np.argmax(Q_table)
-
-    return policy
-
-optimal_value_function = value_iteration(env=env,gamma=1.0)
-
-optimal_policy = extract_policy(optimal_value_function, gamma=1.0)
-
-# while not done:
-#     new_state, reward, done, _ = env.step()
+import matplotlib.pyplot as plt
 
 
+def sigmoid(z):
+    return 1.0 / (1.0 + np.exp(-z))
+
+if __name__ == "__main__":
+    X = np.asarray([[0.5403, -0.4161],
+                    [-0.9900, -0.6536],
+                    [0.2837, 0.9602]])
+
+    y = np.asarray([[4], [2], [3]])
+    Theta1 = np.asarray([[0.1, 0.3, 0.5],
+                         [0.2, 0.4, 0.6]])
+    Theta2 = np.asarray([[0.7, 1.1, 1.5],
+                         [0.8, 1.2, 1.6],
+                         [0.9, 1.3, 1.7],
+                         [1.0, 1.4, 1.8]])
+    m = 3
+    eye_matrix = np.eye(4)
+    y_matrix = np.asarray([[0, 0, 0, 1],
+                           [0, 1, 0, 0],
+                           [0, 0, 1, 0]])
+    temp = np.ones(shape=(3, 1))
+    A_1 = np.hstack((temp, X))
+
+    Z_2 = A_1.dot(Theta1.transpose())
+    A_2 = sigmoid(Z_2)
+    A_2_with_bias = np.hstack((np.ones(shape=(A_2.shape[0], 1)), A_2))
+
+    Z_3 = A_2_with_bias.dot(Theta2.transpose())
+    A_3 = sigmoid(Z_3)
+    unregularized_cost_part1 = -y_matrix.transpose().dot(np.log(A_3))
+    unregularized_cost_part2 = (1-y_matrix.transpose()).dot(np.log(1-A_3))
+    unregularized_cost_temp = (eye_matrix * (unregularized_cost_part1 - unregularized_cost_part2))
+    unregularized_cost = (1/m) * np.sum(np.sum(unregularized_cost_temp))
+    print("Hey")
