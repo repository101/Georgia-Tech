@@ -58,6 +58,7 @@ The final portfolio showcases your work over the course of the semester to demon
 
 ![Georgia Tech Logo](https://github.com/Jadams29/Georgia-Tech/blob/master/gt-logo.png =250x250)
 ## **Georgia Tech Masters of Computer Science**
+<img src="https://github.com/Jadams29/Georgia-Tech/blob/master/gt-logo.png" width="48">
 
 
 ## Courses
