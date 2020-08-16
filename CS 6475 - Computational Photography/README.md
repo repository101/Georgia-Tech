@@ -1,6 +1,6 @@
 # CS 6475 - Computational Photography
 
-<img src="https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs6475.png" align="center" width="800" height="600">
+<img src="https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs6475.png" align="center" width="900" height="500">
 
 [Image Source](https://i.pcmag.com/imagery/articles/061CyMCZV6G2sXUmreKHvXS-1.fit_scale.size_850x478.v1581020108.jpg)
 
