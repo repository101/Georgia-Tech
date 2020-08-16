@@ -1,6 +1,8 @@
-![CS_6515](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs6515.png)
-[Image Source](https://www.adweek.com/wp-content/uploads/2018/07/marketer-algorithm-content-2018.png)
 ## CS 6515 - Introduction to Graduate Algorithms
+
+<img src="https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs6515.png" align="center" width="900" height="500">
+
+[Image Source](https://www.adweek.com/wp-content/uploads/2018/07/marketer-algorithm-content-2018.png)
 
 
 ### Assignments

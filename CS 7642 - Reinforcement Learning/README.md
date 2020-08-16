@@ -1,6 +1,8 @@
-![CS_7642](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7642.png)
-[Image Source](https://www.kdnuggets.com/images/mathworks-reinforcement-learning-fig1-543.jpg)
 ## CS 7642 - Reinforcement Learning
+
+<img src="https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7642.png" align="center" width="900" height="500">
+
+[Image Source](https://www.kdnuggets.com/images/mathworks-reinforcement-learning-fig1-543.jpg)
 
 
 ### Assignments

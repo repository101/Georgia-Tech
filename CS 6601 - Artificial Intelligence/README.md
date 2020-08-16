@@ -1,6 +1,9 @@
-![CS_6601](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs6601.png)
-[Image Source](https://s27389.pcdn.co/wp-content/uploads/2018/04/AdobeStock_116726629-1024x680.jpeg)
 ## CS 6601 - Artificial Intelligence
+
+<img src="https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs6601.png" align="center" width="900" height="500">
+
+[Image Source](https://s27389.pcdn.co/wp-content/uploads/2018/04/AdobeStock_116726629-1024x680.jpeg)
+
 
 
 ### Assignments

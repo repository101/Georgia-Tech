@@ -1,5 +1,6 @@
-![CSE_6242](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7642.png)
 ## CSE 6242 - Data and Visual Analytics
+
+<img src="https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7642.png" align="center" width="900" height="500">
 
 
 ### Assignments

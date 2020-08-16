@@ -1,6 +1,8 @@
-![CS_7638](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7638.png)
-[Image Source](https://www.analyticsinsight.net/wp-content/uploads/2020/07/Artificial-Intelligence-Trends-1024x545.jpeg)
 ## CS 7638 - Artificial Intelligence for Robotics
+
+<img src="https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7638.png" align="center" width="900" height="500">
+
+[Image Source](https://www.analyticsinsight.net/wp-content/uploads/2020/07/Artificial-Intelligence-Trends-1024x545.jpeg)
 
 
 ### Assignments
