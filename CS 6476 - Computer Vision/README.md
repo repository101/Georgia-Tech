@@ -1,5 +1,5 @@
-![CS_7642]()
-## CS 7642 - Reinforcement Learning
+![CS_6476]()
+## CS 6476 - Computer Vision
 
 
 ### Assignments
