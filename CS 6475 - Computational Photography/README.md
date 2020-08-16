@@ -71,6 +71,7 @@ The final portfolio showcases your work over the course of the semester to demon
 - [ ] [CSE 6250 - Big Data Healthcare](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206250%20-%20Big%20Data%20Healthcare)
 
 <img src="https://github.com/Jadams29/Georgia-Tech/blob/master/gt-logo.png" width="75">
+
 [![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Microsoft/BosqueLanguage/blob/master/LICENSE.txt)
 [![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg)](#contribute)
 
