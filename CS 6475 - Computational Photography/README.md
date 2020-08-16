@@ -2,9 +2,7 @@
 [Image Source](https://i.pcmag.com/imagery/articles/061CyMCZV6G2sXUmreKHvXS-1.fit_scale.size_850x478.v1581020108.jpg)
 ## CS 6475 - Computational Photography
 
-# Computational Photography Assignments
-
-This repository contains all projects for Computational Photography. Due dates & course policies can be found in the course syllabus. 
+<br />
 
 ## Assignments
 
