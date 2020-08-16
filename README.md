@@ -1,9 +1,10 @@
 ![Georgia Tech Logo](https://github.com/Jadams29/Georgia-Tech/blob/master/gt-logo.png)
 ## **Georgia Tech Masters of Computer Science**
 
+<br />
 
 ## Projects
-
+ - Project 1 ( placeholder )
 
 <br />
 
