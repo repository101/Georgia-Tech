@@ -58,7 +58,7 @@ The final portfolio showcases your work over the course of the semester to demon
 <img src="https://github.com/Jadams29/Georgia-Tech/blob/master/gt-logo.png" width="75">
 
 
-## Courses
+## Courses <img src="https://github.com/Jadams29/Georgia-Tech/blob/master/gt-logo.png" width="75">
 - [X] [CS 6475 - Computational Photography](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206475%20-%20Computational%20Photography)
 - [ ] [CS 6476 - Computer Vision](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206476%20-%20Computer%20Vision)
 - [ ] [CS 6515 - Intro to Graduate Algorithms](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206515%20-%20Intro%20to%20Graduate%20Algorithms)
