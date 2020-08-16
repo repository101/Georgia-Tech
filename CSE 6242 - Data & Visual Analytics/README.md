@@ -1,4 +1,4 @@
-![CSE_6242](cse6242-logo_resized.png)
+![CSE_6242](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7642.png)
 ## CSE 6242 - Data and Visual Analytics
 
 

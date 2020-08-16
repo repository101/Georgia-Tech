@@ -1,4 +1,5 @@
-![CS 7641 - Machine Learning](/ml.png)
+![CS 7641 - Machine Learning](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7641.png)
+[Image Source](https://www.ie.edu/exponential-learning/blog/wp-content/uploads/2018/01/MachineLearninginMarketing-1621x1000.jpg)
 ## CS 7641 - Machine Learning
 
 ### Assignments

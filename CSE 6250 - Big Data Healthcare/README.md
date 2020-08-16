@@ -1,4 +1,5 @@
-![CSE_6250]()
+![CSE_6250](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cse6252.png)
+[Image Source](https://www.legalreader.com/wp-content/uploads/2020/01/big-data-in-healthcare-1024x597.jpg)
 ## CSE 6250 - Big Data Healthcare
 
 

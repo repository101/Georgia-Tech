@@ -1,4 +1,5 @@
-![CS_6475]()
+![CS_6475](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs6475.png)
+[Image Source](https://i.pcmag.com/imagery/articles/061CyMCZV6G2sXUmreKHvXS-1.fit_scale.size_850x478.v1581020108.jpg)
 ## CS 6475 - Computational Photography
 
 # Computational Photography Assignments

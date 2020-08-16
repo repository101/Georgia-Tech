@@ -1,4 +1,5 @@
-![CS_6476]()
+![CS_6476](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs6476.png)
+[Image Source](https://i.imgur.com/V6uxcpY.jpg)
 ## CS 6476 - Computer Vision
 
 

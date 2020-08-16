@@ -1,4 +1,5 @@
-![CS_7646]()
+![CS_7646](https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7646.png)
+[Image Source](https://scitechdaily.com/images/AI-Stock-Market-Concept-777x518.jpg)
 ## CS 7646 - Machine Learning for Trading
 
 ### Assignments
