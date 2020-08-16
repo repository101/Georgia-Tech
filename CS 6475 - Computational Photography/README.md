@@ -54,6 +54,8 @@ The goal of this project is to scope and complete a project on a topic in comput
 
 The final portfolio showcases your work over the course of the semester to demonstrate what you learned and the results you achieved.
 
+
+
 ## Courses <img src="https://github.com/Jadams29/Georgia-Tech/blob/master/gt-logo.png" align="right" width="100">
 - [X] [CS 6475 - Computational Photography](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206475%20-%20Computational%20Photography)
 - [ ] [CS 6476 - Computer Vision](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206476%20-%20Computer%20Vision)
