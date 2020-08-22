@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/CS 7646 - Machine Learning for Trading" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CS 7646 - Machine Learning for Trading/data" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CS 7641 - Machine Learning" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
