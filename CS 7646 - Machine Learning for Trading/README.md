@@ -12,11 +12,11 @@
 * [Project 1 - Martingale](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Project%201%20-%20Martingale)
 * [Project 2 - Optimize Something](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Project%202%20-%20Optimize%20Something)
 * [Project 3 - Assess Learners](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Project%203%20-%20Assess%20Learners)
-* [Project 4 - Defeat Learners](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Defeat%20Learners)
-* [Project 5 - Marketsim](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Marketsim)
-* [Project 6 - Manual Strategy](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Manual%20Strategy)
+* [Project 4 - Defeat Learners](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Project%204%20-%20Defeat%20Learners)
+* [Project 5 - Marketsim](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Project%205%20-%20Marketsim)
+* [Project 6 - Manual Strategy](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Project%206%20-%20Indicator%20Evaluation)
 * [Project 7 - Qlearning Robot](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Qlearning%20Robot)
-* [Project 8 - Strategy Learner](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Strategy%20Learner)
+* [Project 8 - Strategy Learner](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading/Project%208%20-%20Strategy%20Evaluation)
 
 
 <br />
