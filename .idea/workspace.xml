@@ -3,10 +3,146 @@
   <component name="ChangeListManager">
     <list default="true" id="81a7d096-110a-4dd3-8e88-d4c9180f7120" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/Georgia-Tech.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Georgia-Tech.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale/Martingale.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale/martingale.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/00-00 Introduction/1 - Introduction.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/00-00 Introduction/2 - Three parts to the course.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/00-00 Introduction/3 - Textbooks.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/00-00 Introduction/4 - Prerequisites.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/01 - Introduction.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/02 - Data in CSV files.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/03 - Which fields should be in a CSV file.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/04 - Which fields should be in a CSV file.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/05 - Real stock data.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/06 - Pandas dataframe.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/07 - Example CSV file.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/08 - Read CSV.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/09 - Select rows.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/10 - Compute max closing price.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/11 - Compute mean volume.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/12 - Compute mean volume.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/13 - Plotting stock price data.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/14 - Plot High prices for IBM.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/15 - Plot High prices for IBM.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/16 - Plot two columns.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/01 - Working with multiple stocks.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/02 - Pandas dataframe recap.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/03 - Problems to solve.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/04 - NYSE trading days.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/05 - NYSE trading days.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/06 - Building a dataframe.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/07 - Joining dataframes.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/08 - Create an empty data frame.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/09 - Join SPY data.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/10 - Types of join.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/11 - Types of join.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/12 - Read in more stocks.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/13 - Utility functions for reading data.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/14 - Utility functions for reading data.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/15 - Obtaining a slice of data.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/16 - More slicing.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/17 - Problems with plotting.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/18 - How to plot on equal footing.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/19 - How to plot on equal footing.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/20 - Plotting multiple stocks.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/21 - Slice and plot two stocks.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/22 - Slice and plot two stocks.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/23 - Normalizing.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/01 - What is NumPy.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/02 - Relationship to Pandas.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/03 - Notes on Notation.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/04 - Quiz Replace a slice.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/05 - Quiz Replace a slice.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/06 - Creating NumPy arrays.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/07 - Arrays with initial values.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/08 - Specify the datatype.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/09 - Specify the datatype.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/10 - Generating random numbers.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/11 - Array attributes.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/12 - Operations on ndarrays.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/13 - Locate maximum value.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/14 - Locate maximum value.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/15 - Timing python operations.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/16 - How fast is NumPy.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/17 - Accessing array elements.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/18 - Modifying array elements.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/19 - Indexing an array with another array.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/20 - Boolean or mask index arrays.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/21 - Arithmetic operations.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/22 - Learning more NumPy.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/01 - Are you ready.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/02 - Global statistics.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/03 - Compute global statistics.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/04 - Rolling statistics.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/05 - Which statistic to use.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/06 - Which statistic to use.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/07 - Bollinger Bands.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/08 - Computing rolling statistics.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/09 - Calculate Bollinger Bands.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/10 - Calculate Bollinger Bands.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/11 - Daily returns.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/12 - Compute daily returns.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/13 - Compute daily returns.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/14 - Cumulative returns.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/1 - Introduction.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/2 - Pristine data.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/3 - Why data goes missing.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/4 - Why this is bad - what can we do.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/5 - Pandas fillna quiz.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/6 - Pandas fillna solution.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/7 - Using fillna.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/8 - Fill missing values quiz.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/9 - Fill missing values solution.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/01 - Histograms and scatterplots.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/02 - A closer look at daily returns.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/03 - What would it look like.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/04 - What would it look like.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/05 - Histogram of daily returns.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/06 - How to plot a histogram.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/07 - Computing histogram statistics.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/08 - Compare two histograms.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/09 - Compare two histograms.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/10 - Plot two histograms together.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/11 - Scatterplots.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/12 - Fitting a line to data points.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/13 - Slope does not equal correlation.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/14 - Correlation vs slope.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/15 - Correlation vs slope.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/16 - Scatterplots in python.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/17 - Real world use of kurtosis.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/01 - Overview.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/02 - Daily portfolio values.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/03 - Portfolio statistics.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/04 - Which portfolio is better.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/05 - Which portfolio is better.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/06 - Sharpe ratio.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/07 - Form of the Sharpe ratio.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/08 - Form of the Sharpe ratio.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/09 - Computing Sharpe ratio.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/10 - But wait, theres more.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/11 - What is the Sharpe ratio.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-01_ReadingAndPlottingData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-01_ReadingAndPlottingDatap3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-02_WorkingWithMultipleStock (1).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-02_WorkingWithMultipleStock.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-02_WorkingWithMultipleStockp3 (1).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-02_WorkingWithMultipleStockp3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-03_ThePowerOfNumpy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-03_ThePowerOfNumpyp3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-04_StatisticalAnalysisOfTimeSeries.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-04_StatisticalAnalysisOfTimeSeriesp3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-05_Incomplete_Data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-05_Incomplete_Datap3 (1).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-05_Incomplete_Datap3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-06_HistogramsAndScatterPlots.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-06_HistogramsAndScatterPlotsp3 (1).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-06_HistogramsAndScatterPlotsp3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-07_SharpeRatioAndOtherPortfolioStatistics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-07_SharpeRatioAndOtherPortfolioStatisticsp3 (1).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-07_SharpeRatioAndOtherPortfolioStatisticsp3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-08_OptimizersBuildingAParameterizedModel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-08_OptimizersBuildingAParameterizedModelp3.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +151,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/util.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="JupyterTrust" id="18c4be1f-5fce-4477-b6b6-a9afa396aebb" />
   <component name="ProjectId" id="1gFFLA1bEVlH4u0GYLnvJ4cElOK" />
@@ -25,22 +164,30 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale/martingale.py" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+  <component name="RunManager" selected="Python.martingale">
+    <configuration name="01-01_ReadingAndPlottingData" type="PythonConfigurationType" factoryName="Python">
       <module name="Georgia-Tech" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/01-01_ReadingAndPlottingDatap3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -49,6 +196,77 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="01-06_HistogramsAndScatterPlotsp3" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/01-06_HistogramsAndScatterPlotsp3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale/martingale.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="martingale" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale/martingale.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.martingale" />
+      <item itemvalue="Python.01-01_ReadingAndPlottingData" />
+      <item itemvalue="Python.01-06_HistogramsAndScatterPlotsp3" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -59,10 +277,93 @@
       <option name="presentableId" value="Default" />
       <updated>1597702374942</updated>
       <workItem from="1597702376051" duration="1509000" />
+      <workItem from="1597784328531" duration="2334000" />
+      <workItem from="1597850939653" duration="1003000" />
+      <workItem from="1597853146672" duration="5767000" />
+      <workItem from="1597862524275" duration="18998000" />
+      <workItem from="1597947929779" duration="3889000" />
+      <workItem from="1597957540629" duration="295000" />
+      <workItem from="1597958621004" duration="9078000" />
+      <workItem from="1597970311007" duration="644000" />
+      <workItem from="1598123025812" duration="2755000" />
+      <workItem from="1598126443919" duration="2905000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" width="1092" height="786" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598126824137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="786" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598126824137" />
+    <state width="1443" height="466" key="DebuggerActiveHint" timestamp="1597883523595">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1443" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597883523595" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598126822685">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598126822685" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1598130370074">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598130370074" />
+    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1598130370074">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
+    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598130370074" />
+    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1598130370074">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788835" />
+    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598130370074" />
+    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1598130370074">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
+    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598130370074" />
+    <state width="1877" height="227" key="GridCell.Tab.1.bottom" timestamp="1598130372728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
+    <state width="1877" height="227" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598130372728" />
+    <state width="1877" height="227" key="GridCell.Tab.1.center" timestamp="1598130372728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
+    <state width="1877" height="227" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598130372728" />
+    <state width="1877" height="227" key="GridCell.Tab.1.left" timestamp="1598130372728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
+    <state width="1877" height="227" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598130372728" />
+    <state width="1877" height="227" key="GridCell.Tab.1.right" timestamp="1598130372728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
+    <state width="1877" height="227" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598130372728" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1597857067764">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597857067764" />
+    <state x="-1827" y="111" width="1736" height="888" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597955257339">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1827" y="111" width="1736" height="888" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597955257339" />
+    <state x="-1143" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598124537820">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1143" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598124537820" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Georgia_Tech$01_01_ReadingAndPlottingDatap3.coverage" NAME="01-01_ReadingAndPlottingDatap3 Coverage Results" MODIFIED="1597852825899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$01_06_HistogramsAndScatterPlotsp3.coverage" NAME="01-06_HistogramsAndScatterPlotsp3 Coverage Results" MODIFIED="1597856502804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$01_01_ReadingAndPlottingData.coverage" NAME="01-01_ReadingAndPlottingData Coverage Results" MODIFIED="1597858624335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$01_01_ReadingAndPlottingDatap3__1_.coverage" NAME="01-01_ReadingAndPlottingDatap3 (1) Coverage Results" MODIFIED="1597853099395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$martingale.coverage" NAME="martingale Coverage Results" MODIFIED="1598130369889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale" />
   </component>
 </project>
