@@ -1,149 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81a7d096-110a-4dd3-8e88-d4c9180f7120" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Georgia-Tech.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Georgia-Tech.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale/Martingale.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale/martingale.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/00-00 Introduction/1 - Introduction.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/00-00 Introduction/2 - Three parts to the course.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/00-00 Introduction/3 - Textbooks.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/00-00 Introduction/4 - Prerequisites.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/01 - Introduction.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/02 - Data in CSV files.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/03 - Which fields should be in a CSV file.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/04 - Which fields should be in a CSV file.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/05 - Real stock data.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/06 - Pandas dataframe.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/07 - Example CSV file.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/08 - Read CSV.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/09 - Select rows.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/10 - Compute max closing price.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/11 - Compute mean volume.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/12 - Compute mean volume.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/13 - Plotting stock price data.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/14 - Plot High prices for IBM.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/15 - Plot High prices for IBM.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-01 Reading and plotting stock data/16 - Plot two columns.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/01 - Working with multiple stocks.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/02 - Pandas dataframe recap.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/03 - Problems to solve.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/04 - NYSE trading days.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/05 - NYSE trading days.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/06 - Building a dataframe.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/07 - Joining dataframes.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/08 - Create an empty data frame.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/09 - Join SPY data.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/10 - Types of join.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/11 - Types of join.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/12 - Read in more stocks.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/13 - Utility functions for reading data.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/14 - Utility functions for reading data.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/15 - Obtaining a slice of data.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/16 - More slicing.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/17 - Problems with plotting.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/18 - How to plot on equal footing.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/19 - How to plot on equal footing.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/20 - Plotting multiple stocks.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/21 - Slice and plot two stocks.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/22 - Slice and plot two stocks.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-02 Working with multiple stocks/23 - Normalizing.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/01 - What is NumPy.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/02 - Relationship to Pandas.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/03 - Notes on Notation.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/04 - Quiz Replace a slice.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/05 - Quiz Replace a slice.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/06 - Creating NumPy arrays.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/07 - Arrays with initial values.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/08 - Specify the datatype.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/09 - Specify the datatype.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/10 - Generating random numbers.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/11 - Array attributes.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/12 - Operations on ndarrays.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/13 - Locate maximum value.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/14 - Locate maximum value.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/15 - Timing python operations.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/16 - How fast is NumPy.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/17 - Accessing array elements.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/18 - Modifying array elements.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/19 - Indexing an array with another array.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/20 - Boolean or mask index arrays.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/21 - Arithmetic operations.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-03 The power of NumPy/22 - Learning more NumPy.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/01 - Are you ready.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/02 - Global statistics.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/03 - Compute global statistics.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/04 - Rolling statistics.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/05 - Which statistic to use.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/06 - Which statistic to use.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/07 - Bollinger Bands.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/08 - Computing rolling statistics.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/09 - Calculate Bollinger Bands.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/10 - Calculate Bollinger Bands.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/11 - Daily returns.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/12 - Compute daily returns.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/13 - Compute daily returns.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-04 Statistical analysis of time series/14 - Cumulative returns.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/1 - Introduction.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/2 - Pristine data.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/3 - Why data goes missing.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/4 - Why this is bad - what can we do.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/5 - Pandas fillna quiz.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/6 - Pandas fillna solution.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/7 - Using fillna.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/8 - Fill missing values quiz.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-05 Incomplete data/9 - Fill missing values solution.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/01 - Histograms and scatterplots.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/02 - A closer look at daily returns.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/03 - What would it look like.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/04 - What would it look like.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/05 - Histogram of daily returns.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/06 - How to plot a histogram.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/07 - Computing histogram statistics.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/08 - Compare two histograms.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/09 - Compare two histograms.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/10 - Plot two histograms together.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/11 - Scatterplots.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/12 - Fitting a line to data points.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/13 - Slope does not equal correlation.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/14 - Correlation vs slope.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/15 - Correlation vs slope.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/16 - Scatterplots in python.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-06 Histograms and scatter plots/17 - Real world use of kurtosis.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/01 - Overview.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/02 - Daily portfolio values.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/03 - Portfolio statistics.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/04 - Which portfolio is better.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/05 - Which portfolio is better.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/06 - Sharpe ratio.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/07 - Form of the Sharpe ratio.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/08 - Form of the Sharpe ratio.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/09 - Computing Sharpe ratio.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/10 - But wait, theres more.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Video Subtitles/01-07 Sharpe ratio and other portfolio statistics/11 - What is the Sharpe ratio.srt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-01_ReadingAndPlottingData.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-01_ReadingAndPlottingDatap3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-02_WorkingWithMultipleStock (1).py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-02_WorkingWithMultipleStock.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-02_WorkingWithMultipleStockp3 (1).py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-02_WorkingWithMultipleStockp3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-03_ThePowerOfNumpy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-03_ThePowerOfNumpyp3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-04_StatisticalAnalysisOfTimeSeries.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-04_StatisticalAnalysisOfTimeSeriesp3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-05_Incomplete_Data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-05_Incomplete_Datap3 (1).py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-05_Incomplete_Datap3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-06_HistogramsAndScatterPlots.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-06_HistogramsAndScatterPlotsp3 (1).py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-06_HistogramsAndScatterPlotsp3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-07_SharpeRatioAndOtherPortfolioStatistics.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-07_SharpeRatioAndOtherPortfolioStatisticsp3 (1).py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-07_SharpeRatioAndOtherPortfolioStatisticsp3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-08_OptimizersBuildingAParameterizedModel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/ml4t_code_snippets/01-08_OptimizersBuildingAParameterizedModelp3.py" beforeDir="false" />
-    </list>
+    <list default="true" id="81a7d096-110a-4dd3-8e88-d4c9180f7120" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,7 +144,7 @@
       <workItem from="1597958621004" duration="9078000" />
       <workItem from="1597970311007" duration="644000" />
       <workItem from="1598123025812" duration="2755000" />
-      <workItem from="1598126443919" duration="2905000" />
+      <workItem from="1598126443919" duration="3724000" />
     </task>
     <servers />
   </component>
