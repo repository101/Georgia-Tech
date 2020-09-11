@@ -4,16 +4,187 @@
     <list default="true" id="81a7d096-110a-4dd3-8e88-d4c9180f7120" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/Georgia-Tech.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Georgia-Tech.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/3.13 Policy Iteration - Frozen Lake Problem-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/FrozenLake_Policy_Iteration-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/FrozenLake_Value_Iteration-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/Markov_Decision-Copy1-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/Markov_Decision-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/Testing-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/FrozenLake_Policy_Iteration.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/FrozenLake_Value_Iteration.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Markov Decision Processes Assignment.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Markov_Decision.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Markov_Decision.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Markov_Decision_Process.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Policy Iteration - Frozen Lake Problem.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Testing.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Testing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/TestingMDP.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Value Iteration - Frozen Lake Problem.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Markov Decision Processes/images/rl/breakout.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/4_Peaks_Problem-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/8_Queens-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/EightQueens-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/EightQueens_Default_Parameters-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/EightQueens_Tuned_Parameters-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Four_Peaks-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/KnapSack-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Knapsack_Default_Parameters-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Knapsack_Tuned_Parameters-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/NeuralNetwork-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/NeuralNetwork_BackPropVsRO-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Neural_Network-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/PrincipalComponentAnalysis-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Random_Hill_Climb_Test_Run-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Simulated_Annealing_Test_Run-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/SixPeaks_Default_Parameters-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/SixPeaks_Tuned_Parameters-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/TravelingSalesPerson-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/TravelingSalesman-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Traveling_Salesman-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Tuning_Parameters-Simulated Annealing-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Tuning_Parameters-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Tuning_Parameters_Genetic_Algorithm-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Tuning_Parameters_MIMIC-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Tuning_Parameters_Random_Hill_Climb-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Tuning_Parameters_Simulated_Annealing-Copy1-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/Tuning_Parameters_Simulated_Annealing-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/assignment2-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/.ipynb_checkpoints/tutorial_examples-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/EightQueens_Default_Parameters.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/EightQueens_Tuned_Parameters.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Knapsack_Default_Parameters.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Knapsack_Tuned_Parameters.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/LoadData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Neural_Network.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Neural_Network.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/PrincipalComponentAnalysis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Random_Hill_Climb_Test_Run.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Randomized_Optimization.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Simulated_Annealing_Test_Run.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/SixPeaks_Default_Parameters.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/SixPeaks_Tuned_Parameters.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Tuning_Parameters_Genetic_Algorithm.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Tuning_Parameters_MIMIC.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Tuning_Parameters_Random_Hill_Climb.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/Tuning_Parameters_Simulated_Annealing.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/mimic-tutorial.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Randomized Optimization/tutorial_examples.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Neural_Network_Chart-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning_Boosted_DT_Notebook-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning_DecisionTree_Notebook-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning_Final_Notebook-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning_KNN_Notebook-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning_NeuralNetwork_Notebook-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning_Notebook-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning_Notebook_Base-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning_SVM_Notebook-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Supervised_Learning_Updated_Notebook-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/.ipynb_checkpoints/t-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Boosting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Boosting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Decision_Tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Extract_Images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Generate_Report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/GraphViz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/K_NearestNeighbors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/LoadData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/NeuralNetwork.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/ProcessTOCSV.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_Boosted_DT_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_Boosted_DT_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_DecisionTree_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_DecisionTree_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_KNN_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_KNN_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_NeuralNetwork_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_NeuralNetwork_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_Notebook_Base.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_SVM_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Supervised_Learning_Testing_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/SupportVectorMachine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Training_Set_Compare.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Decision_Tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Decision_Tree_Classification_Document.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Extract_Images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Generate_Report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/GraphViz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/K_NearestNeighbors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/LoadData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/MNIST_01-23~0952 PM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/MNIST_01-23~0952 PM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/NeuralNetwork.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/NeuralNetwork_Results.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/ProcessTOCSV.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised.ows" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_Boosted_DT_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_Boosted_DT_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_DecisionTree_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_DecisionTree_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_KNN_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_KNN_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_NeuralNetwork_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_NeuralNetwork_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_Notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_Notebook_Base.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Supervised_Learning_SVM_Notebook.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/SupportVectorMachine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/Training_Set_Compare.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/dataViz.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/dataViz2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Supervised Learning/pandasScript.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/Clustering_Classification-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/ExpectationMaximization-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/IndependentComponentAnalysis-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/KMeansClustering-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/Part_Five-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/Part_Four-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/Part_One-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/Part_Three-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/Part_Two-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/PrincipalComponentAnalysis-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/RandomizedProjections-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Assignment.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Container/LoadData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Container/Part_Five.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Container/Part_Four.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Container/Part_One.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Container/Part_Three.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Container/Part_Two.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Part_Five.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Part_Four.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Part_One.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Part_Three.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Part_Two.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/Unsupervised_Learning_And_Dimensionality_Reduction.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/grading/grading.py" beforeDir="false" afterPath="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/grading/grading.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something/optimization_tests.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/util.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="JupyterTrust" id="18c4be1f-5fce-4477-b6b6-a9afa396aebb" />
@@ -25,16 +196,25 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something/optimization.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something/optimization_BEST.py" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
   </component>
-  <component name="RunManager" selected="Python.martingale">
+  <component name="PyCoverageOptionsProvider">
+    <option name="myUseBundledCoveragePy" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\joshu\OneDrive - Georgia Institute of Technology\Georgia-Tech\CS 7646 - Machine Learning for Trading\Project 2 - Optimize Something" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.optimization">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Georgia-Tech" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -49,6 +229,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale/martingale.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="grade_optimization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something/grade_optimization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -79,7 +281,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="optimization" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="optimization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Georgia-Tech" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -101,10 +303,106 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="optimization_BEST" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something/optimization_BEST.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="simple_script" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/simple_script.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_optimization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something/test_optimization.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in grade_optimization.py" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="Georgia-Tech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\ml4t\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something/grade_optimization.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.martingale" />
+      <item itemvalue="Python.simple_script" />
+      <item itemvalue="Python.optimization_BEST" />
       <item itemvalue="Python.optimization" />
+      <item itemvalue="Python.test_optimization" />
+      <item itemvalue="Python.grade_optimization" />
+      <item itemvalue="Python tests.pytest in grade_optimization.py" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.optimization" />
+        <item itemvalue="Python.grade_optimization" />
+        <item itemvalue="Python.test_optimization" />
+        <item itemvalue="Python.simple_script" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -125,6 +423,17 @@
       <workItem from="1597970311007" duration="644000" />
       <workItem from="1598123025812" duration="2755000" />
       <workItem from="1598126443919" duration="5083000" />
+      <workItem from="1598202021195" duration="3093000" />
+      <workItem from="1598214643143" duration="769000" />
+      <workItem from="1598216101186" duration="339000" />
+      <workItem from="1598216450068" duration="102000" />
+      <workItem from="1598216559996" duration="10274000" />
+      <workItem from="1598282739760" duration="19947000" />
+      <workItem from="1598363640533" duration="5009000" />
+      <workItem from="1598377229493" duration="6523000" />
+      <workItem from="1598384596626" duration="3813000" />
+      <workItem from="1598454014026" duration="579000" />
+      <workItem from="1598454637263" duration="2039000" />
     </task>
     <servers />
   </component>
@@ -132,76 +441,143 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" width="1092" height="810" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598134569256">
+    <state x="759" y="144" key="#Python" timestamp="1598219890278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" width="1092" height="810" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598134569256" />
-    <state width="1443" height="466" key="DebuggerActiveHint" timestamp="1597883523595">
+    <state x="759" y="144" key="#Python/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598219890278" />
+    <state x="414" y="134" width="1092" height="906" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598386238190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1443" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597883523595" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598134559243">
+    <state x="414" y="134" width="1092" height="906" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598386238190" />
+    <state x="838" y="191" width="475" height="658" key="#xdebugger.XInspectDialog" timestamp="1598292386713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598134559243" />
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1598137856203">
+    <state x="838" y="191" width="475" height="658" key="#xdebugger.XInspectDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598292386713" />
+    <state width="1443" height="466" key="DebuggerActiveHint" timestamp="1598286897399">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1443" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598286897399" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598384974373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598384974373" />
+    <state width="1877" height="322" key="GridCell.Tab.0.bottom" timestamp="1598454593127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598137856203" />
-    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1598137856203">
+    <state width="1877" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598454593127" />
+    <state width="1877" height="322" key="GridCell.Tab.0.center" timestamp="1598454593127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
-    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598137856203" />
-    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1598137856203">
+    <state width="1877" height="322" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598454593127" />
+    <state width="1877" height="322" key="GridCell.Tab.0.left" timestamp="1598454593127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788835" />
-    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598137856203" />
-    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1598137856203">
+    <state width="1877" height="322" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598454593127" />
+    <state width="1877" height="322" key="GridCell.Tab.0.right" timestamp="1598454593127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
-    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598137856203" />
-    <state width="1877" height="227" key="GridCell.Tab.1.bottom" timestamp="1598137856203">
+    <state width="1877" height="322" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598454593127" />
+    <state width="1877" height="322" key="GridCell.Tab.1.bottom" timestamp="1598454593128">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
-    <state width="1877" height="227" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598137856203" />
-    <state width="1877" height="227" key="GridCell.Tab.1.center" timestamp="1598137856203">
+    <state width="1877" height="322" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598454593128" />
+    <state width="1877" height="322" key="GridCell.Tab.1.center" timestamp="1598454593128">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
-    <state width="1877" height="227" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598137856203" />
-    <state width="1877" height="227" key="GridCell.Tab.1.left" timestamp="1598137856203">
+    <state width="1877" height="322" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598454593128" />
+    <state width="1877" height="322" key="GridCell.Tab.1.left" timestamp="1598454593128">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
-    <state width="1877" height="227" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598137856203" />
-    <state width="1877" height="227" key="GridCell.Tab.1.right" timestamp="1598137856203">
+    <state width="1877" height="322" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598454593128" />
+    <state width="1877" height="322" key="GridCell.Tab.1.right" timestamp="1598454593128">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598125788836" />
-    <state width="1877" height="227" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598137856203" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1597857067764">
+    <state width="1877" height="322" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598454593128" />
+    <state x="270" y="223" width="1346" height="710" key="SettingsEditor" timestamp="1598366644753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597857067764" />
-    <state x="-1827" y="111" width="1736" height="888" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597955257339">
+    <state x="270" y="223" width="1346" height="710" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598366644753" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1598384562482">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598384562482" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1598302719538">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598302719538" />
+    <state x="-1827" y="111" width="1736" height="888" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598387837002">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1827" y="111" width="1736" height="888" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597955257339" />
+    <state x="-1827" y="111" width="1736" height="888" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598387837002" />
     <state x="-1143" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598124537820">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1143" y="209" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598124537820" />
+    <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598377777474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598377777474" />
+    <state x="-1723" y="0" width="1021" height="672" maximized="true" key="dock-window-1" timestamp="1598384976239">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1723" y="0" width="1021" height="672" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598384976239" />
+    <state x="668" y="95" width="583" height="849" key="find.popup" timestamp="1598217117589">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="95" width="583" height="849" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598217117589" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598285931410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598285931410" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/simple_script.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale/martingale.py</url>
+          <line>304</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale/martingale.py</url>
+          <line>302</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Georgia_Tech$optimization_BEST.coverage" NAME="optimization_BEST Coverage Results" MODIFIED="1598386140829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$test_optimization.coverage" NAME="test_optimization Coverage Results" MODIFIED="1598222856288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something" />
     <SUITE FILE_PATH="coverage/Georgia_Tech$01_01_ReadingAndPlottingDatap3.coverage" NAME="01-01_ReadingAndPlottingDatap3 Coverage Results" MODIFIED="1597852825899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$simple_script.coverage" NAME="simple_script Coverage Results" MODIFIED="1598217461937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading" />
     <SUITE FILE_PATH="coverage/Georgia_Tech$01_06_HistogramsAndScatterPlotsp3.coverage" NAME="01-06_HistogramsAndScatterPlotsp3 Coverage Results" MODIFIED="1597856502804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$optimization.coverage" NAME="optimization Coverage Results" MODIFIED="1598454577055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something" />
     <SUITE FILE_PATH="coverage/Georgia_Tech$01_01_ReadingAndPlottingData.coverage" NAME="01-01_ReadingAndPlottingData Coverage Results" MODIFIED="1597858624335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading" />
     <SUITE FILE_PATH="coverage/Georgia_Tech$01_01_ReadingAndPlottingDatap3__1_.coverage" NAME="01-01_ReadingAndPlottingDatap3 (1) Coverage Results" MODIFIED="1597853099395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Martingale" />
-    <SUITE FILE_PATH="coverage/Georgia_Tech$martingale.coverage" NAME="martingale Coverage Results" MODIFIED="1598134739600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$pytest_in_grade_optimization_py.coverage" NAME="pytest in grade_optimization.py Coverage Results" MODIFIED="1598364458985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$pytest_in_test_optimization_py.coverage" NAME="pytest in test_optimization.py Coverage Results" MODIFIED="1598219533185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$martingale.coverage" NAME="martingale Coverage Results" MODIFIED="1598367244917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS 7646 - Machine Learning for Trading/Project 1 - Martingale" />
+    <SUITE FILE_PATH="coverage/Georgia_Tech$pytest_for_test_optimization_test_analysis.coverage" NAME="pytest for test_optimization.test_analysis Coverage Results" MODIFIED="1598222486025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

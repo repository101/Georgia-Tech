@@ -1,0 +1,37 @@
+<pre>--- Summary ---
+Tests passed: 0 out of 8
+
+--- Details ---
+Test #0: failed 
+Test case description: Wiki example 1
+
+
+Test #1: failed 
+Test case description: Wiki example 2
+
+
+Test #2: failed 
+Test case description: Wiki example 3: Six month range
+
+
+Test #3: failed 
+Test case description: Normalization check
+
+
+Test #4: failed 
+Test case description: One month range
+
+
+Test #5: failed 
+Test case description: Low Sharpe ratio
+
+
+Test #6: failed 
+Test case description: All your eggs in one basket
+
+
+Test #7: failed 
+Test case description: Two year range
+
+
+</pre>
