@@ -25,10 +25,13 @@ Student Name: Josh Adams (replace with your name)
 GT User ID: jadams334 (replace with your User ID)  		  	   		     		  		  		    	 		 		   		 		  
 GT ID: 903475599 (replace with your GT ID)  		  	   		     		  		  		    	 		 		   		 		  
 """  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
-import math  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
-import numpy as np  		  	   		     		  		  		    	 		 		   		 		  
+
+import numpy as np
+
+# MIN_COLUMNS = 2
+# MAX_COLUMNS = 10
+# MIN_ROWS = 10
+# MAX_ROWS = 1000
   		  	   		     		  		  		    	 		 		   		 		  
   		  	   		     		  		  		    	 		 		   		 		  
 # this function should return a dataset (X and Y) that will work  		  	   		     		  		  		    	 		 		   		 		  
@@ -44,13 +47,9 @@ def best_4_lin_reg(seed=1489683273):
     :return: Returns data that performs significantly better with LinRegLearner than DTLearner.  		  	   		     		  		  		    	 		 		   		 		  
     :rtype: numpy.ndarray  		  	   		     		  		  		    	 		 		   		 		  
     """  		  	   		     		  		  		    	 		 		   		 		  
-    np.random.seed(seed)  		  	   		     		  		  		    	 		 		   		 		  
-    x = np.zeros((100, 2))  		  	   		     		  		  		    	 		 		   		 		  
-    y = np.random.random(size=(100,)) * 200 - 100  		  	   		     		  		  		    	 		 		   		 		  
-    # Here's is an example of creating a Y from randomly generated  		  	   		     		  		  		    	 		 		   		 		  
-    # X with multiple columns  		  	   		     		  		  		    	 		 		   		 		  
-    # y = x[:,0] + np.sin(x[:,1]) + x[:,2]**2 + x[:,3]**3  		  	   		     		  		  		    	 		 		   		 		  
-    return x, y  		  	   		     		  		  		    	 		 		   		 		  
+    np.random.seed(seed)
+    X = np.random.rand(np.random.randint(10, 1000 + 1), np.random.randint(2, 10 + 1))
+    return X, np.sum(X, axis=1)
   		  	   		     		  		  		    	 		 		   		 		  
   		  	   		     		  		  		    	 		 		   		 		  
 def best_4_dt(seed=1489683273):  		  	   		     		  		  		    	 		 		   		 		  
@@ -64,10 +63,14 @@ def best_4_dt(seed=1489683273):
     :return: Returns data that performs significantly better with DTLearner than LinRegLearner.  		  	   		     		  		  		    	 		 		   		 		  
     :rtype: numpy.ndarray  		  	   		     		  		  		    	 		 		   		 		  
     """  		  	   		     		  		  		    	 		 		   		 		  
-    np.random.seed(seed)  		  	   		     		  		  		    	 		 		   		 		  
-    x = np.zeros((100, 2))  		  	   		     		  		  		    	 		 		   		 		  
-    y = np.random.random(size=(100,)) * 200 - 100  		  	   		     		  		  		    	 		 		   		 		  
-    return x, y  		  	   		     		  		  		    	 		 		   		 		  
+    np.random.seed(seed)
+    n_rows = np.random.randint(2, 1000 + 1)
+    n_cols = np.random.randint(2, 10 + 1)
+    y = np.full(shape=(n_rows, ), fill_value=9.0)
+    X = np.random.rand(n_rows, n_cols)
+    rand_col = np.random.randint(0, n_cols)
+    y[np.where(X[:, rand_col] < 0.5)] = 1
+    return X, y
   		  	   		     		  		  		    	 		 		   		 		  
   		  	   		     		  		  		    	 		 		   		 		  
 def author():  		  	   		     		  		  		    	 		 		   		 		  

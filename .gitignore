@@ -97,6 +97,7 @@ CS 7646 - Machine Learning for Trading/Project 1 - Martingale/report.pdf
 CS 7646 - Machine Learning for Trading/Project 1 - Martingale/*.png
 CS 7646 - Machine Learning for Trading/Project 1 - Martingale/martingale.py
 CS 7641 - Machine Learning/Assignments/**/*.txt
+CS 7641 - Machine Learning/Assignments/**/.ipynb_checkpoints/*.*
 CS 6475 - Computational Photography/**/*.txt
 CS 7646 - Machine Learning for Trading/data/**/*.txt
 CS 7646 - Machine Learning for Trading/ML4TNotes2016/README.txt
@@ -108,3 +109,12 @@ CS 7646 - Machine Learning for Trading/Project 3 - Assess Learners/*
 CS 7646 - Machine Learning for Trading/Project 7 - Q-Learning Robot/Reinforcement Learning 2nd - Richard Sutton and Andrew Barto.pdf
 Problem_Set_1_soln.pdf
 Problem_Set_2_soln.pdf
+CS 7646 - Machine Learning for Trading/Stupid WSL Command.txt
+*.pkl
+CS 7641 - Machine Learning/Assignments/Problem_Set 1/jadams334-ProblemSet1.pdf
+*.feather
+CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Boosting-DESKTOP-OGANPK4.ipynb
+CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/DecisionTree-DESKTOP-OGANPK4.ipynb
+CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/NeuralNetwork-DESKTOP-OGANPK4.ipynb
+CS 7641 - Machine Learning/Assignments/Supervised Learning/test_df.feather
+*.feather

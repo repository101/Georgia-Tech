@@ -106,7 +106,10 @@ class DTLearner(object):
             return np.vstack((root, left_tree, right_tree))
 
     def add_evidence(self, data_x, data_y):
-        data = np.hstack((data_x, data_y.reshape(-1, 1)))
+        if data_y.shape == data_x.shape:
+            data = np.hstack((data_x, data_y))
+        else:
+            data = np.hstack((data_x, data_y.reshape(-1, 1)))
         self.tree = self.build_tree(data)
         return
 

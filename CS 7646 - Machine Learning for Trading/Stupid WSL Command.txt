@@ -14,3 +14,13 @@ sudo chmod -R 777 /home/josh/'CS 7646 - Machine Learning for Trading'/
 sudo cp -r /mnt/c/users/joshu/'Anaconda3-2020.07-Linux-x86_64.sh' /home/josh/
 
 PYTHONPATH=../:. python testlearner.py Data/Istanbul.csv
+
+sudo rm -rf 'CS 7646 - Machine Learning for Trading'/
+sudo cp -rf /mnt/c/users/joshu/'OneDrive - Georgia Institute of Technology'/'Georgia-Tech'/'CS 7646 - Machine Learning for Trading'/ /home/josh/'CS 7646 - Machine Learning for Trading'/
+sudo chmod -R 777 /home/josh/'CS 7646 - Machine Learning for Trading'/
+cd /home/josh/'CS 7646 - Machine Learning for Trading'/'Project 4 - Defeat Learners'/
+PYTHONPATH=../:. python
+
+sudo cp -rf /mnt/c/users/joshu/Downloads/assignment_2 /home/josh/assignment_2/
+sudo chmod -R 777 /home/josh/assignment_2/
+cd /home/josh/assignment_2/

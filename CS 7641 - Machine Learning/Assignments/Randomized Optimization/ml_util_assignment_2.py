@@ -16,7 +16,7 @@ from joblib import delayed, Parallel, parallel_backend
 from sklearn.datasets import fetch_openml
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support, precision_score, recall_score
 from sklearn.model_selection import GridSearchCV, learning_curve, train_test_split, validation_curve
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, OneHotEncoder
 
 plt.style.use("ggplot")
 mpl.rcParams['figure.figsize'] = [8, 6]
@@ -93,18 +93,28 @@ def setup(names=('MNIST',), train_set_size=10000, test_set_size=10000):
         print(exc_type, fname, exc_tb.tb_lineno)
 
 
-def split_data(X, y, scale=False, normalize=True):
+def split_data(X, y, scale=False, normalize=False, minMax=False, oneHot=False):
     try:
-        if scale and not normalize:
+        if scale and not normalize and not minMax and not oneHot:
             X = StandardScaler().fit_transform(X)
-        if normalize and not scale:
+        if normalize and not scale and not minMax and not oneHot:
             X /= max(X.max())
-        
-        train_X, test_X, train_y, test_y = train_test_split(X, y.to_numpy(), test_size=0.20, random_state=42)
+        if minMax and not scale and not normalize:
+            X = MinMaxScaler().fit_transform(X)
+            if oneHot:
+                y = OneHotEncoder().fit_transform(y.to_numpy().reshape(-1, 1)).todense()
+        if oneHot:
+            train_X, test_X, train_y, test_y = train_test_split(X, y, test_size=0.20, random_state=42)
+        else:
+            train_X, test_X, train_y, test_y = train_test_split(X, y.to_numpy(), test_size=0.20, random_state=42)
         test_X, valid_X = np.split(test_X.astype(np.float32), 2)
         test_y, valid_y = np.split(test_y.astype(np.uint8), 2)
-        return pd.DataFrame(train_X), pd.Series(train_y), pd.DataFrame(valid_X), \
-               pd.Series(valid_y), pd.DataFrame(test_X), pd.Series(test_y)
+        if oneHot:
+            return pd.DataFrame(train_X), pd.DataFrame(train_y), pd.DataFrame(valid_X), \
+                   pd.DataFrame(valid_y), pd.DataFrame(test_X), pd.DataFrame(test_y)
+        else:
+            return pd.DataFrame(train_X), pd.Series(train_y), pd.DataFrame(valid_X), \
+                   pd.Series(valid_y), pd.DataFrame(test_X), pd.Series(test_y)
     except Exception as e:
         print(f"Exception in split_data:\n", e)
         exc_type, exc_obj, exc_tb = sys.exc_info()

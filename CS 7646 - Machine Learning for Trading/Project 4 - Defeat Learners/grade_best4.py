@@ -74,8 +74,8 @@ best4_test_cases = [
     Best4TestCase(  		  	   		     		  		  		    	 		 		   		 		  
         description="Test Case 1: Best4LinReg",  		  	   		     		  		  		    	 		 		   		 		  
         group="best4lr",  		  	   		     		  		  		    	 		 		   		 		  
-        max_tests=15,  		  	   		     		  		  		    	 		 		   		 		  
-        needed_wins=10,  		  	   		     		  		  		    	 		 		   		 		  
+        max_tests=1000,  		  	   		     		  		  		    	 		 		   		 		  
+        needed_wins=1000,  		  	   		     		  		  		    	 		 		   		 		  
         row_limits=(10, 1000),  		  	   		     		  		  		    	 		 		   		 		  
         col_limits=(2, 10),  		  	   		     		  		  		    	 		 		   		 		  
         seed=1489683274,  		  	   		     		  		  		    	 		 		   		 		  
@@ -83,8 +83,8 @@ best4_test_cases = [
     Best4TestCase(  		  	   		     		  		  		    	 		 		   		 		  
         description="Test Case 2: Best4DT",  		  	   		     		  		  		    	 		 		   		 		  
         group="best4dt",  		  	   		     		  		  		    	 		 		   		 		  
-        max_tests=15,  		  	   		     		  		  		    	 		 		   		 		  
-        needed_wins=10,  		  	   		     		  		  		    	 		 		   		 		  
+        max_tests=1000,  		  	   		     		  		  		    	 		 		   		 		  
+        needed_wins=1000,  		  	   		     		  		  		    	 		 		   		 		  
         row_limits=(10, 1000),  		  	   		     		  		  		    	 		 		   		 		  
         col_limits=(2, 10),  		  	   		     		  		  		    	 		 		   		 		  
         seed=1489683274,  		  	   		     		  		  		    	 		 		   		 		  
@@ -152,10 +152,9 @@ def test_learners(
                     .format(e)  		  	   		     		  		  		    	 		 		   		 		  
                 )  		  	   		     		  		  		    	 		 		   		 		  
                 points_earned = -10  		  	   		     		  		  		    	 		 		   		 		  
-        else:  		  	   		     		  		  		    	 		 		   		 		  
+        else:
             if group == "best4dt":  		  	   		     		  		  		    	 		 		   		 		  
-                from gen_data import best_4_dt  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
+                from gen_data import best_4_dt
                 data_x, data_y = run_with_timeout(  		  	   		     		  		  		    	 		 		   		 		  
                     best_4_dt, seconds_per_test_case, (), {"seed": seed}  		  	   		     		  		  		    	 		 		   		 		  
                 )  		  	   		     		  		  		    	 		 		   		 		  
@@ -166,10 +165,11 @@ def test_learners(
                     best_4_dt, seconds_per_test_case, (), {"seed": seed + 1}  		  	   		     		  		  		    	 		 		   		 		  
                 )  		  	   		     		  		  		    	 		 		   		 		  
                 better_learner = DTLearner  		  	   		     		  		  		    	 		 		   		 		  
-                worse_learner = LinRegLearner  		  	   		     		  		  		    	 		 		   		 		  
+                worse_learner = LinRegLearner
+                
             elif group == "best4lr":  		  	   		     		  		  		    	 		 		   		 		  
-                from gen_data import best_4_lin_reg  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
+                from gen_data import best_4_lin_reg
+
                 data_x, data_y = run_with_timeout(  		  	   		     		  		  		    	 		 		   		 		  
                     best_4_lin_reg, seconds_per_test_case, (), {"seed": seed}  		  	   		     		  		  		    	 		 		   		 		  
                 )  		  	   		     		  		  		    	 		 		   		 		  
@@ -180,11 +180,11 @@ def test_learners(
                     best_4_lin_reg, seconds_per_test_case, (), {"seed": seed + 1}  		  	   		     		  		  		    	 		 		   		 		  
                 )  		  	   		     		  		  		    	 		 		   		 		  
                 better_learner = LinRegLearner  		  	   		     		  		  		    	 		 		   		 		  
-                worse_learner = DTLearner  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
+                worse_learner = DTLearner
             num_samples = data_x.shape[0]  		  	   		     		  		  		    	 		 		   		 		  
             cutoff = int(num_samples * 0.6)  		  	   		     		  		  		    	 		 		   		 		  
-            worse_better_err = []  		  	   		     		  		  		    	 		 		   		 		  
+            worse_better_err = []
+            start_time = time.time()
             for run in range(max_tests):  		  	   		     		  		  		    	 		 		   		 		  
                 permutation = np.random.permutation(num_samples)  		  	   		     		  		  		    	 		 		   		 		  
                 train_x, train_y = (  		  	   		     		  		  		    	 		 		   		 		  
@@ -208,14 +208,21 @@ def test_learners(
                 key=functools.cmp_to_key(  		  	   		     		  		  		    	 		 		   		 		  
                     lambda a, b: int((b[0] - b[1]) - (a[0] - a[1]))  		  	   		     		  		  		    	 		 		   		 		  
                 )  		  	   		     		  		  		    	 		 		   		 		  
-            )  		  	   		     		  		  		    	 		 		   		 		  
+            )
+            end_time = time.time()
+            elapsed = end_time - start_time
+            if group == "best4lr":
+                print(f"Linear Regression Elapsed Time: {elapsed}")
+            else:
+                print(f"Decision Tree Elapsed Time: {elapsed}")
             better_wins_count = 0  		  	   		     		  		  		    	 		 		   		 		  
             for worse_err, better_err in worse_better_err:  		  	   		     		  		  		    	 		 		   		 		  
                 if better_err < 0.9 * worse_err:  		  	   		     		  		  		    	 		 		   		 		  
                     better_wins_count = better_wins_count + 1  		  	   		     		  		  		    	 		 		   		 		  
                     points_earned += 5.0  		  	   		     		  		  		    	 		 		   		 		  
                 if better_wins_count >= needed_wins:  		  	   		     		  		  		    	 		 		   		 		  
-                    break  		  	   		     		  		  		    	 		 		   		 		  
+                    break
+            print(f"Total Correct: {max_tests}/{better_wins_count}")
             incorrect = False  		  	   		     		  		  		    	 		 		   		 		  
             if (data_x.shape[0] < row_limits[0]) or (  		  	   		     		  		  		    	 		 		   		 		  
                 data_x.shape[0] > row_limits[1]  		  	   		     		  		  		    	 		 		   		 		  
