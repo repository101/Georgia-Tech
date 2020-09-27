@@ -93,20 +93,15 @@ CS 7641 - Machine Learning/PDFs/Problem_Set_1.pdf
 CS 7641 - Machine Learning/PDFs/Problem_Set_2.pdf
 CS 7641 - Machine Learning/PDFs/Problem_Set_1_soln.pdf
 CS 7641 - Machine Learning/PDFs/Problem_Set_2_soln.pdf
-CS 7646 - Machine Learning for Trading/Project 1 - Martingale/report.pdf
-CS 7646 - Machine Learning for Trading/Project 1 - Martingale/*.png
-CS 7646 - Machine Learning for Trading/Project 1 - Martingale/martingale.py
 CS 7646 - Machine Learning for Trading/Project 5 - Marketsim/*.*
 CS 7641 - Machine Learning/Assignments/**/*.txt
 CS 7641 - Machine Learning/Assignments/**/.ipynb_checkpoints/*.*
 CS 6475 - Computational Photography/**/*.txt
 CS 7646 - Machine Learning for Trading/data/**/*.txt
 CS 7646 - Machine Learning for Trading/ML4TNotes2016/README.txt
-CS 7646 - Machine Learning for Trading/Project 2 - Optimize Something/optimization.py
 .idea/workspace.xml
 CS 7641 - Machine Learning/Assignments/OLD/*
 *.rar
-CS 7646 - Machine Learning for Trading/Project 3 - Assess Learners/*
 CS 7646 - Machine Learning for Trading/Project 7 - Q-Learning Robot/Reinforcement Learning 2nd - Richard Sutton and Andrew Barto.pdf
 Problem_Set_1_soln.pdf
 Problem_Set_2_soln.pdf
@@ -126,3 +121,6 @@ CS 7646 - Machine Learning for Trading/Project 6 - Indicator Evaluation/*.*
 CS 7646 - Machine Learning for Trading/Project 7 - Q-Learning Robot/*.*
 CS 7646 - Machine Learning for Trading/Project 8 - Strategy Evaluation/*.*
 
+CS 7646 - Machine Learning for Trading/Project 3 - Assess Learners/Stupid WSL Command.txt
+CS 7646 - Machine Learning for Trading/Project 3 - Assess Learners/CheckList.pdf
+CS 7646 - Machine Learning for Trading/Project 3 - Assess Learners/.ipynb_checkpoints/Untitled-checkpoint.ipynb
