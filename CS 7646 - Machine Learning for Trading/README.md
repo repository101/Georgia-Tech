@@ -1,8 +1,10 @@
-# Copyright 2020, Georgia Tech Research Corporation    
-# Atlanta, Georgia 30332-0415     
-# All Rights Reserved  
+## CS 7646 - Machine Learning for Trading
 
-# ML4T_2020
+<img src="https://github.com/Jadams29/Georgia-Tech/blob/master/misc/cs7646.png" align="center" width="900" height="500">
+
+[Image Source](https://scitechdaily.com/ai-system-using-neural-networks-with-deep-learning-beats-stock-market-in-simulation/)
+
+
 Course website: http://lucylabs.gatech.edu/ml4t/
 
 Information on using the autograder on buffet0x servers: http://lucylabs.gatech.edu/ml4t/ml4t-software-setup/
