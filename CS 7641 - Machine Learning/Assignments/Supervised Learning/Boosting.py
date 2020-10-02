@@ -13,7 +13,7 @@ import numpy as np
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 
-import ml_util_assignment_2 as utl
+import ro_ml_util as utl
 
 save_directory = "figures/Boosting"
 model_name = "Boosting"

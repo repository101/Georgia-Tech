@@ -15,7 +15,7 @@ from sklearn.model_selection import cross_val_predict
 from sklearn.svm import SVC
 from sklearn.metrics import precision_recall_curve
 
-import ml_util_assignment_2 as utl
+import ro_ml_util as utl
 
 save_directory = "figures/SVM"
 model_name = "SVM"

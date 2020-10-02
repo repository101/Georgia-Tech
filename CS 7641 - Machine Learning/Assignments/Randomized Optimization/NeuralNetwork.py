@@ -1,22 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Initialize and Setup
+
 # In[1]:
 
 
 import os
 import time
 
-import mlrose_hiive
 import numpy as np
-from mlrose_hiive.neural.activation import relu
-from mlrose_hiive.runners import NNGSRunner
-from sklearn.metrics import accuracy_score
+from sklearn.neural_network import MLPClassifier
 
-import ml_util_assignment_2 as utl
+import ro_ml_util as utl
 
 save_directory = "figures/NeuralNetwork"
-model_name = "NeuralNetwork"
+model_name = "Neural Network"
 
 folders = ["figures/NeuralNetwork/Complexity_Analysis",
            "figures/NeuralNetwork/Grid_Search_Results",
@@ -25,17 +24,17 @@ folders = ["figures/NeuralNetwork/Complexity_Analysis",
            "figures/NeuralNetwork/Metrics"]
 
 directories = {
-	"Save Directory": "figures/NeuralNetwork",
-	"Initial Complexity Analysis": "figures/NeuralNetwork/Initial Complexity Analysis",
-	"Grid Search Results": "figures/NeuralNetwork/Grid Search Results",
-	"Learning Curves": "figures/NeuralNetwork/Learning Curves",
-	"Final Complexity Analysis": "figures/NeuralNetwork/Final Complexity Analysis"
+    "Save Directory": "figures/NeuralNetwork",
+    "Initial Complexity Analysis": "figures/NeuralNetwork/Initial Complexity Analysis",
+    "Grid Search Results": "figures/NeuralNetwork/Grid Search Results",
+    "Learning Curves": "figures/NeuralNetwork/Learning Curves",
+    "Final Complexity Analysis": "figures/NeuralNetwork/Final Complexity Analysis"
 }
 
 Random_Number = 42
-TESTING = True
+n_jobs = 6
+TESTING = False
 cv = 5
-n_jobs = -1
 np.random.seed(42)
 # get_ipython().system('pip install pyarrow')
 
@@ -43,14 +42,12 @@ np.random.seed(42)
 # In[2]:
 
 
-gathered_data = utl.setup(["MNIST"])
-# gathered_data_fashion = utl.setup(["Fashion-MNIST"])
-train_X, train_y, valid_X, valid_y, test_X, test_y = utl.split_data(gathered_data["MNIST"]["X"],
-                                                                    gathered_data["MNIST"]["y"], minMax=True,
-                                                                    oneHot=True)
-# fashion_train_X, fashion_train_y, fashion_valid_X, fashion_valid_y, fashion_test_X, fashion_test_y = utl.split_data(
-#     gathered_data_fashion["Fashion-MNIST"]["X"], 
-#     gathered_data_fashion["Fashion-MNIST"]["y"], minMax=True)
+gathered_data_fashion = utl.setup(["Fashion-MNIST"])
+
+fashion_train_X, fashion_train_y, fashion_valid_X, fashion_valid_y, fashion_test_X, fashion_test_y = utl.split_data(
+    gathered_data_fashion["Fashion-MNIST"]["X"],
+    gathered_data_fashion["Fashion-MNIST"]["y"],
+    normalize=True)
 
 
 # In[3]:
@@ -60,189 +57,123 @@ CHECK_FOLDER = os.path.isdir(save_directory)
 
 # If folder doesn't exist, then create it.
 if not CHECK_FOLDER:
-	os.makedirs(save_directory)
-	print("created folder : ", save_directory)
+    os.makedirs(save_directory)
+    print("created folder : ", save_directory)
 else:
-	print(save_directory, "folder already exists.")
+    print(save_directory, "folder already exists.")
 
 for f in folders:
-	if not os.path.isdir(f):
-		os.makedirs(f)
-		print("created folder : ", f)
-	else:
-		print(f, "folder already exists.")
+    if not os.path.isdir(f):
+        os.makedirs(f)
+        print("created folder : ", f)
+    else:
+        print(f, "folder already exists.")
 
-# # Supervised Learning Neural Network Parameters
 
 # In[4]:
 
 
-hidden_layer_sizes = [[100]]  # was (100,) in previous but mlrose needs a list
-
-random_state = 42
-
-val = 3000
-pred_val = 3000
-
-activation = 'relu'
-
-max_iterations = 5000
-
-# In[ ]:
+mnist_names = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
+fashion_names = ["T-shirt/top", "Trouser", "Pullover", "Dress", "Coat", "Sandal", "Shirt", "Sneaker", "Bag",
+                 "Ankle boot"]
 
 
-# type(train_y)
-#
-#
-# # In[ ]:
-#
-#
-# train_X.iloc[:val, :].shape
+# In[5]:
 
 
-# In[13]:
+# Hidden Layer Sizes (100), suggests there is an input layer connected to a hidden layer with 100 nodes. (100,100) suggests
+#    that there is an input layer connected to a hidden layer with 100 nodes, which is then connected to another hidden
+#    layer with 100 nodes
 
-for rate in 10. * np.arange(1, 8, 1):
-	for iterations in 10. ** np.arange(3, 4, 1):
-		temp_nn = mlrose_hiive.NeuralNetwork(hidden_nodes=[100], activation='relu', algorithm='random_hill_climb',
-		                                     max_iters=iterations, bias=True, is_classifier=True, learning_rate=rate,
-		                                     early_stopping=True, clip_max=1000, max_attempts=100, restarts=3,
-		                                     random_state=42, schedule=mlrose_hiive.GeomDecay(init_temp=100))
-		print(f"Learning Rate: {rate}\n\tIterations: {iterations}")
-		start_time = time.time()
-		temp_nn.fit(train_X.iloc[:val, :], train_y.iloc[:val, :])
-		end_time = time.time()
-		elapsed_time = end_time - start_time
-		print(f"\t\tElapsed Time: {elapsed_time}s")
-		y_pred = temp_nn.predict(train_X.iloc[:val, :])
-		y_train_acc = accuracy_score(np.argmax(train_y.iloc[:val, :].to_numpy(), axis=1), np.argmax(y_pred, axis=1))
-		print(f"\t\tTraining Accuracy: {y_train_acc}")
-		print(y_train_acc)
+# Solver ~ 'adam': stochastic gradient based optimizer (works well on larger datasets)
+#          'lbfgs': works well on smaller datasets
+#          'sgd': stochastic gradient descent
 
-grid_search_parameters = ({
-	'max_iters': [200],
-	'learning_rate': 10. ** np.arange(-5, 2, 1),  # nn params
-})
-
-nn_rhc_gs = NNGSRunner(x_train=train_X.iloc[:val, :].to_numpy(),
-                       y_train=train_y.iloc[:val, :].to_numpy(),
-                       x_test=test_X.iloc[:val, :].to_numpy(),
-                       y_test=test_y.iloc[:val, :].to_numpy(),
-                       experiment_name='nn_rhc_test',
-                       activation=[relu],
-                       algorithm=mlrose_hiive.algorithms.rhc.random_hill_climb,
-                       grid_search_scorer_method=accuracy_score,
-                       grid_search_parameters=grid_search_parameters,
-                       iteration_list=[10, 50, 100, 500, 1000, 2000],
-                       is_classifier=[True],
-                       hidden_layer_sizes=hidden_layer_sizes,
-                       bias=True,
-                       early_stopping=True,
-                       clip_max=100,
-                       restarts=[1],
-                       max_attempts=10,
-                       generate_curves=True,
-                       n_jobs=6,
-                       cv=5,
-                       seed=random_state,
-                       output_directory=f"{os.getcwd()}/results/")
-rhc_res = nn_rhc_gs.run()
-print()
-a = rhc_res[3].best_estimator_
-
-y_pred = a.predict(train_X.iloc[:val, :])
-y_train_acc = accuracy_score(np.argmax(train_y.iloc[:val, :].to_numpy(), axis=1), np.argmax(y_pred, axis=1))
-print(y_train_acc)
-print()
-# In[14]:
+# Warmstart allows to train multiple times on same dataset using results from previous training session
 
 
-rhc_res
+if TESTING:
+    val = 600
+    pred_val = 600
+    train_sizes = np.linspace(0.05, 1.0, 5)
+else:
+    val = 1000
+    pred_val = 1000
+    train_sizes = np.linspace(0.05, 1.0, 5)
 
-# # Randomized Hill Climb Optimization
+import mlrose_hiive as mlrose_hiive
+from mlrose_hiive.algorithms.decay import ArithDecay, ExpDecay, GeomDecay
 
-# In[ ]:
-#
-#
-# nn_model_random_hill = mlr_h.NeuralNetwork(hidden_nodes = hidden_layer_sizes, activation = activation,
-#                                             algorithm = 'random_hill_climb', max_iters = max_iterations,
-#                                             bias = True, is_classifier = True, learning_rate = 10.0,
-#                                             early_stopping = True, clip_max = 5, max_attempts = 1000,
-#                                             random_state = random_state, curve=True)
-#
-#
-# # In[ ]:
-#
-#
-# nn_model_random_hill.fit(fashion_train_X.iloc[:val, :], fashion_train_y.iloc[:val])
-#
-#
-# # In[ ]:
-#
-#
-# y_pred = nn_model_random_hill.predict(fashion_train_X.iloc[:val, :])
-# y_train_acc = accuracy_score(np.argmax(fashion_train_y.iloc[:val,:].to_numpy(), axis=1), np.argmax(y_pred, axis=1))
-# print(y_train_acc)
-#
-#
-# # In[ ]:
-#
-#
-# np.argmax(y_pred, axis=1)
-#
-#
-# # In[ ]:
-#
-#
-# np.argmax(fashion_train_y.iloc[:val,:].to_numpy(), axis=1)
-#
-#
-# # In[ ]:
-#
-#
-# print(nn_model_random_hill.node_list)
-#
-#
-# # In[ ]:
-#
-#
-# fig, ax = plt.subplots()
-# ax.plot(np.arange(0,max_iterations),nn_model_random_hill.fitness_curve)
-#
-#
-# # In[ ]:
-#
-#
-# fig, ax = plt.subplots()
-# ax.plot(np.arange(0,max_iterations),nn_model_random_hill.fitness_curve)
-#
-#
-# # In[ ]:
-#
-#
-# fig, ax = plt.subplots()
-# ax.plot(np.arange(0,max_iterations),nn_model_random_hill.fitness_curve)
-#
-#
-# # In[ ]:
-#
-#
-# fig, ax = plt.subplots()
-# ax.plot(np.arange(0,1000),nn_model_random_hill.fitness_curve)
-#
-#
-# # # Simulated Annealing Optimization
-#
-# # In[ ]:
-#
-#
-#
-#
-#
-# # # Genetic Algortihm Optimization
-#
-# # In[ ]:
-#
-#
-#
-#
+
+# # Final Learning Curve
+
+# In[6]:
+gathered_data_fashion = utl.setup(["Fashion-MNIST"])
+
+fashion_train_X, fashion_train_y, fashion_valid_X, fashion_valid_y, fashion_test_X, fashion_test_y = utl.split_data(
+    gathered_data_fashion["Fashion-MNIST"]["X"],
+    gathered_data_fashion["Fashion-MNIST"]["y"], oneHot=True, minMax=True)
+val = 1000
+pred_val = 1000
+train_sizes = np.linspace(0.05, 1.0, 10)
+a = np.argmax(fashion_train_y.iloc[:val, :], axis=1)
+temp_nn = mlrose_hiive.NeuralNetwork(hidden_nodes=[100], activation='relu', pop_size=200,
+                                     mutation_prob=0.1, schedule=GeomDecay(), learning_rate=10,
+                                     max_iters=1000, algorithm='random_hill_climb', bias=True,
+                                     is_classifier=True, early_stopping=True, clip_max=1e+5,
+                                     max_attempts=10, restarts=0, random_state=45, curve=True)
+utl.plot_learning_curve(estimator=temp_nn, title="Randomized Hill Climb", test_X=fashion_test_X.iloc[:val, :],
+                        test_y=fashion_test_y.iloc[:val, :], train_X=fashion_train_X.iloc[:val, :],
+                        train_y=np.argmax(fashion_train_y.iloc[:val, :], axis=1),
+                        cv=5, f_name="IDK",
+                        train_sizes=[], folder='NeuralNetwork', save_individual=True, TESTING=True,
+                        backend='loky', n_jobs=6, extra_name="Final_Learning_Curve", confusion=True)
+
+
+
+start_time = time.time()
+results = []
+for i in range(1, 2, 1):
+    print(f"Working on learning curve: {i}")
+    res = {"plt": None,
+           "nn_results": None,
+           "cv_results": None}
+
+    temp_train_X = fashion_train_X.iloc[:val, :]
+    temp_train_y = fashion_train_y.iloc[:val]
+    title = f"{model_name} Fashion MNIST\n Learning Curve"
+    f_name = f"{model_name}_Fashion_MNIST"
+    optimized_nn = MLPClassifier(hidden_layer_sizes=(40, ), solver='adam', max_iter=400, alpha=1.0)
+    
+    res['nn_results'], res['cv_results'] = utl.plot_learning_curve(estimator=optimized_nn, title=title,
+                                                                   test_X=fashion_test_X,
+                                                                   test_y=fashion_test_y,
+                                                                   train_X=temp_train_X, train_y=temp_train_y, cv=cv,
+                                                                   f_name=f_name, train_sizes=train_sizes,
+                                                                   folder='NeuralNetwork',
+                                                                   save_individual=True, TESTING=True, backend='loky',
+                                                                   n_jobs=n_jobs,
+                                                                   extra_name="Final_Learning_Curve", confusion=True,
+                                                                   confusion_name="Fashion_MNIST")
+    results.append(res)
+
+end_time = time.time()
+elapsed_time = end_time - start_time
+print(f"Run Time: {elapsed_time}s")
+
+
+# # Final Confusion Matrix on Test set "(O_o)"
+
+# In[9]:
+
+
+optimized_nn = MLPClassifier(hidden_layer_sizes=(40, ) , solver='adam', max_iter=400, alpha=1.0)
+optimized_nn.fit(fashion_train_X.iloc[:10000, :], fashion_train_y.iloc[:10000])
+
+
+# In[10]:
+
+
+utl.plt_confusion_matrix(optimized_nn, fashion_test_X, fashion_test_y, directory=save_directory, fmt="d",
+                          plot_width=12, plot_height=6, folder="NeuralNetwork")
+

@@ -15,7 +15,7 @@ import matplotlib.gridspec as gridspec
 import matplotlib.pyplot as plt
 from sklearn.neighbors import KNeighborsClassifier
 
-import ml_util_assignment_2 as utl
+import ro_ml_util as utl
 
 plt.style.use("ggplot")
 mpl.rcParams['figure.figsize'] = [8, 6]
