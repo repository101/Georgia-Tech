@@ -121,9 +121,8 @@ temp_nn = mlrose_hiive.NeuralNetwork(hidden_nodes=[100], activation='relu', pop_
                                      mutation_prob=0.1, schedule=GeomDecay(), learning_rate=10,
                                      max_iters=1000, algorithm='random_hill_climb', bias=True,
                                      is_classifier=True, early_stopping=True, clip_max=1e+5,
-                                     max_attempts=10, restarts=0, random_state=45, curve=True)
-utl.plot_learning_curve(estimator=temp_nn, title="Randomized Hill Climb", test_X=fashion_test_X.iloc[:val, :],
-                        test_y=fashion_test_y.iloc[:val, :], train_X=fashion_train_X.iloc[:val, :],
+                                     max_attempts=10, restarts=0, random_state=42, curve=True)
+utl.plot_learning_curve(estimator=temp_nn, title="Randomized Hill Climb", train_X=fashion_train_X.iloc[:val, :],
                         train_y=np.argmax(fashion_train_y.iloc[:val, :], axis=1),
                         cv=5, f_name="IDK",
                         train_sizes=[], folder='NeuralNetwork', save_individual=True, TESTING=True,
@@ -146,8 +145,6 @@ for i in range(1, 2, 1):
     optimized_nn = MLPClassifier(hidden_layer_sizes=(40, ), solver='adam', max_iter=400, alpha=1.0)
     
     res['nn_results'], res['cv_results'] = utl.plot_learning_curve(estimator=optimized_nn, title=title,
-                                                                   test_X=fashion_test_X,
-                                                                   test_y=fashion_test_y,
                                                                    train_X=temp_train_X, train_y=temp_train_y, cv=cv,
                                                                    f_name=f_name, train_sizes=train_sizes,
                                                                    folder='NeuralNetwork',
