@@ -15,6 +15,9 @@
 *.json
 *.drawio
 *.docx
+*.rar
+*.feather
+*.pkl
 */jadams334-analysis.pdf
 *jadams334-analysis
 
@@ -47,7 +50,6 @@ CS 6475 - Computational Photography/assignments/A4-Panoramas/report.pdf
 CS 6475 - Computational Photography/assignments/A2-Camera_Obscura/assignment2/assignment2/report.pdf
 CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz 2.pdf
 CS 6475 - Computational Photography/assignments/A6-Video_Textures/ignore/report.pdf
-ignore/
 CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz3_IFAILED....pdf
 CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz_2_Question_1.JPG
 CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz_2_Question_2.JPG
@@ -93,7 +95,6 @@ CS 7641 - Machine Learning/PDFs/Problem_Set_1.pdf
 CS 7641 - Machine Learning/PDFs/Problem_Set_2.pdf
 CS 7641 - Machine Learning/PDFs/Problem_Set_1_soln.pdf
 CS 7641 - Machine Learning/PDFs/Problem_Set_2_soln.pdf
-CS 7646 - Machine Learning for Trading/Project 5 - Marketsim/*.*
 CS 7641 - Machine Learning/Assignments/**/*.txt
 CS 7641 - Machine Learning/Assignments/**/.ipynb_checkpoints/*.*
 CS 6475 - Computational Photography/**/*.txt
@@ -101,26 +102,13 @@ CS 7646 - Machine Learning for Trading/data/**/*.txt
 CS 7646 - Machine Learning for Trading/ML4TNotes2016/README.txt
 .idea/workspace.xml
 CS 7641 - Machine Learning/Assignments/OLD/*
-*.rar
+
 CS 7646 - Machine Learning for Trading/Project 7 - Q-Learning Robot/Reinforcement Learning 2nd - Richard Sutton and Andrew Barto.pdf
 Problem_Set_1_soln.pdf
 Problem_Set_2_soln.pdf
 CS 7646 - Machine Learning for Trading/Stupid WSL Command.txt
-*.pkl
+
 CS 7641 - Machine Learning/Assignments/Problem_Set 1/jadams334-ProblemSet1.pdf
-*.feather
-CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/Boosting-DESKTOP-OGANPK4.ipynb
-CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/DecisionTree-DESKTOP-OGANPK4.ipynb
-CS 7641 - Machine Learning/Assignments/Supervised Learning/Container/NeuralNetwork-DESKTOP-OGANPK4.ipynb
-CS 7641 - Machine Learning/Assignments/Supervised Learning/test_df.feather
-*.feather
 
-CS 7646 - Machine Learning for Trading/Project 4 - Defeat Learners/*.*
-CS 7646 - Machine Learning for Trading/Project 5 - Marketsim/*.*
-CS 7646 - Machine Learning for Trading/Project 6 - Indicator Evaluation/*.*
-CS 7646 - Machine Learning for Trading/Project 7 - Q-Learning Robot/*.*
+
 CS 7646 - Machine Learning for Trading/Project 8 - Strategy Evaluation/*.*
-
-CS 7646 - Machine Learning for Trading/Project 3 - Assess Learners/Stupid WSL Command.txt
-CS 7646 - Machine Learning for Trading/Project 3 - Assess Learners/CheckList.pdf
-CS 7646 - Machine Learning for Trading/Project 3 - Assess Learners/.ipynb_checkpoints/Untitled-checkpoint.ipynb

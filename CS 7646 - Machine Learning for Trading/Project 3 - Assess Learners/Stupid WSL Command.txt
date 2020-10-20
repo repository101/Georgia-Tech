@@ -1,0 +1,8 @@
+1) Open WSL and CD to C base directory
+
+or type /mnt/c into wsl
+
+sudo cp -r /mnt/c/users/joshu/'OneDrive - Georgia Institute of Technology'/'Georgia-Tech'/'CS 7646 - Machine Learning for Trading'/ /home/josh/'CS 7646 - Machine Learning for Trading'/
+
+
+sudo cp -r /mnt/c/users/joshu/'Anaconda3-2020.07-Linux-x86_64.sh' /home/josh/
