@@ -53,8 +53,17 @@ class QLearner(object):
     :param verbose: If “verbose” is True, your code can print out information for debugging.  		  	   		     		  		  		    	 		 		   		 		  
     :type verbose: bool  		  	   		     		  		  		    	 		 		   		 		  
     """  		  	   		     		  		  		    	 		 		   		 		  
-    def __init__(self, num_states=100, num_actions=4, alpha=0.2,
-                 gamma=0.9, rar=0.5, radr=0.99, dyna=0, verbose=False):
+    def __init__(  		  	   		     		  		  		    	 		 		   		 		  
+        self,  		  	   		     		  		  		    	 		 		   		 		  
+        num_states=100,  		  	   		     		  		  		    	 		 		   		 		  
+        num_actions=4,  		  	   		     		  		  		    	 		 		   		 		  
+        alpha=0.2,  		  	   		     		  		  		    	 		 		   		 		  
+        gamma=0.9,  		  	   		     		  		  		    	 		 		   		 		  
+        rar=0.5,  		  	   		     		  		  		    	 		 		   		 		  
+        radr=0.99,  		  	   		     		  		  		    	 		 		   		 		  
+        dyna=0,  		  	   		     		  		  		    	 		 		   		 		  
+        verbose=False,  		  	   		     		  		  		    	 		 		   		 		  
+    ):  		  	   		     		  		  		    	 		 		   		 		  
         """  		  	   		     		  		  		    	 		 		   		 		  
         Constructor method  		  	   		     		  		  		    	 		 		   		 		  
         """  		  	   		     		  		  		    	 		 		   		 		  
@@ -62,14 +71,14 @@ class QLearner(object):
         self.num_actions = num_actions  		  	   		     		  		  		    	 		 		   		 		  
         self.s = 0  		  	   		     		  		  		    	 		 		   		 		  
         self.a = 0
+        self.table = np.zeros(shape=(num_states, num_actions))
+        self.alpha = alpha
+        self.gamma = gamma
+        self.rar = rar
+        self.radr = radr
+        self.dyna = dyna
 
-    def author(self):
-        """
-        :return: The GT username of the student
-        :rtype: str
-        """
-        return "jadams334"  # Change this to your user ID
-
+  		  	   		     		  		  		    	 		 		   		 		  
     def querysetstate(self, s):  		  	   		     		  		  		    	 		 		   		 		  
         """  		  	   		     		  		  		    	 		 		   		 		  
         Update the state without updating the Q-table  		  	   		     		  		  		    	 		 		   		 		  

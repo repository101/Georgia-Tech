@@ -1,2 +1,62 @@
-Must contain description of what each file does
-Must contain explicit instructions on how to properly run your code
+#     #                                                                    ##################################                                                                             #     #
+#     #                                                                    #                                #                                                                             #     #
+#     #                                                                    #          Josh Adams            #                                                                             #     #
+#     #                                                                    #      Supervised Learning       #                                                                             #     #
+#     #                                                                    #        CS 7646 - ML4T          #                                                                             #     #
+#     #                                                                    #         Georgia Tech           #                                                                             #     #
+#     #                                                                    #                                #                                                                             #     #
+#     #                                                                    ##################################                                                                             #     #
+#     #                                                                                                                                                                                   #     #
+#################################################################################################################################################################################################
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#################################################################################################################################################################################################
+#     #                                                                                                                                                                                   #     # 
+#     #        If the file is very messy, open in notepad++                                                                                                                               #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #        How To Run:                                                                                                                                                                #     #
+#     #                                                                                                                                                                                   #     #
+#     #                 PYTHONPATH=../:. python testproject.py                                                                                                                            #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #      Files:                                                                                                                                                                       #     #
+#     #            - indicators.py     - This file contains the functions to calculate the various indicators                                                                             #     #
+#     #            - marketsimcode.py  - This file contains functions to chart the indicators for the assignment                                                                          #     #
+#     #            - Theoretically     - This file contains the testPolicy method which finds the theoretically optimal strategy                                                          #     #
+#     #            - testproject.py    - This file just runs all aspects for assignment                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#################################################################################################################################################################################################
+#     #                                                                                                                                                                                   #     #
+#     #                                                                                                                                                                                   #     #
+#################################################################################################################################################################################################
+
+    
+
+References:
+
+Numpy
+Pandas
+Matplotlib
+
+
