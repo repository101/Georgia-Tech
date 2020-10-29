@@ -1,4 +1,4 @@
-""""""  		  	   		     		  		  		    	 		 		   		 		  
+""""""
 """  		  	   		     		  		  		    	 		 		   		 		  
 Template for implementing QLearner  (c) 2015 Tucker Balch  		  	   		     		  		  		    	 		 		   		 		  
   		  	   		     		  		  		    	 		 		   		 		  
@@ -21,21 +21,21 @@ students of CS 7646 is prohibited and subject to being investigated as a
 GT honor code violation.  		  	   		     		  		  		    	 		 		   		 		  
   		  	   		     		  		  		    	 		 		   		 		  
 -----do not edit anything above this line---  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
+
 Student Name: Josh Adams (replace with your name)  		  	   		     		  		  		    	 		 		   		 		  
 GT User ID: jadams334 (replace with your User ID)  		  	   		     		  		  		    	 		 		   		 		  
 GT ID: 903475599 (replace with your GT ID)  		  	   		     		  		  		    	 		 		   		 		  
-"""  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
-import random as rand  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
-import numpy as np  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
-class QLearner(object):  		  	   		     		  		  		    	 		 		   		 		  
+"""
+
+import random as rand
+
+import numpy as np
+
+
+class QLearner(object):
     """  		  	   		     		  		  		    	 		 		   		 		  
-    This is a Q learner object.  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
+    This is a Q learner object.
+
     :param num_states: The number of states to consider.  		  	   		     		  		  		    	 		 		   		 		  
     :type num_states: int  		  	   		     		  		  		    	 		 		   		 		  
     :param num_actions: The number of actions available..  		  	   		     		  		  		    	 		 		   		 		  
@@ -52,64 +52,105 @@ class QLearner(object):
     :type dyna: int  		  	   		     		  		  		    	 		 		   		 		  
     :param verbose: If “verbose” is True, your code can print out information for debugging.  		  	   		     		  		  		    	 		 		   		 		  
     :type verbose: bool  		  	   		     		  		  		    	 		 		   		 		  
-    """  		  	   		     		  		  		    	 		 		   		 		  
-    def __init__(  		  	   		     		  		  		    	 		 		   		 		  
-        self,  		  	   		     		  		  		    	 		 		   		 		  
-        num_states=100,  		  	   		     		  		  		    	 		 		   		 		  
-        num_actions=4,  		  	   		     		  		  		    	 		 		   		 		  
-        alpha=0.2,  		  	   		     		  		  		    	 		 		   		 		  
-        gamma=0.9,  		  	   		     		  		  		    	 		 		   		 		  
-        rar=0.5,  		  	   		     		  		  		    	 		 		   		 		  
-        radr=0.99,  		  	   		     		  		  		    	 		 		   		 		  
-        dyna=0,  		  	   		     		  		  		    	 		 		   		 		  
-        verbose=False,  		  	   		     		  		  		    	 		 		   		 		  
-    ):  		  	   		     		  		  		    	 		 		   		 		  
+    """
+
+    def __init__(
+            self,
+            num_states=100,
+            num_actions=4,
+            alpha=0.2,
+            gamma=0.9,
+            rar=0.5,
+            radr=0.99,
+            dyna=0,
+            verbose=False,
+    ):
         """  		  	   		     		  		  		    	 		 		   		 		  
         Constructor method  		  	   		     		  		  		    	 		 		   		 		  
-        """  		  	   		     		  		  		    	 		 		   		 		  
-        self.verbose = verbose  		  	   		     		  		  		    	 		 		   		 		  
-        self.num_actions = num_actions  		  	   		     		  		  		    	 		 		   		 		  
-        self.s = 0  		  	   		     		  		  		    	 		 		   		 		  
+        """
+        self.verbose = verbose
+        self.num_actions = num_actions
+        self.s = 0
         self.a = 0
-        self.table = np.zeros(shape=(num_states, num_actions))
+        self.Q_table = np.zeros(shape=(num_states, num_actions))
         self.alpha = alpha
         self.gamma = gamma
         self.rar = rar
         self.radr = radr
         self.dyna = dyna
 
-  		  	   		     		  		  		    	 		 		   		 		  
-    def querysetstate(self, s):  		  	   		     		  		  		    	 		 		   		 		  
+    def author(self):
+        return 'jadams334'  # replace tb34 with your Georgia Tech username.
+
+    def querysetstate(self, s):
         """  		  	   		     		  		  		    	 		 		   		 		  
-        Update the state without updating the Q-table  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
+        Update the state without updating the Q-table
+
         :param s: The new state  		  	   		     		  		  		    	 		 		   		 		  
         :type s: int  		  	   		     		  		  		    	 		 		   		 		  
         :return: The selected action  		  	   		     		  		  		    	 		 		   		 		  
         :rtype: int  		  	   		     		  		  		    	 		 		   		 		  
+        """
+        self.s = s
+        action = self.get_action(s)
+        if self.verbose:
+            print(f"s = {s}, a = {action}")
+        # We do not need to update the random action rate per instructions in video
+        return action
+
+    def query(self, s_prime, r):
         """  		  	   		     		  		  		    	 		 		   		 		  
-        self.s = s  		  	   		     		  		  		    	 		 		   		 		  
-        action = rand.randint(0, self.num_actions - 1)  		  	   		     		  		  		    	 		 		   		 		  
-        if self.verbose:  		  	   		     		  		  		    	 		 		   		 		  
-            print(f"s = {s}, a = {action}")  		  	   		     		  		  		    	 		 		   		 		  
-        return action  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
-    def query(self, s_prime, r):  		  	   		     		  		  		    	 		 		   		 		  
-        """  		  	   		     		  		  		    	 		 		   		 		  
-        Update the Q table and return an action  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
+        Update the Q table and return an action
+
         :param s_prime: The new state  		  	   		     		  		  		    	 		 		   		 		  
         :type s_prime: int  		  	   		     		  		  		    	 		 		   		 		  
         :param r: The immediate reward  		  	   		     		  		  		    	 		 		   		 		  
         :type r: float  		  	   		     		  		  		    	 		 		   		 		  
         :return: The selected action  		  	   		     		  		  		    	 		 		   		 		  
         :rtype: int  		  	   		     		  		  		    	 		 		   		 		  
-        """  		  	   		     		  		  		    	 		 		   		 		  
-        action = rand.randint(0, self.num_actions - 1)  		  	   		     		  		  		    	 		 		   		 		  
-        if self.verbose:  		  	   		     		  		  		    	 		 		   		 		  
-            print(f"s = {s_prime}, a = {action}, r={r}")  		  	   		     		  		  		    	 		 		   		 		  
-        return action  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
-  		  	   		     		  		  		    	 		 		   		 		  
-if __name__ == "__main__":  		  	   		     		  		  		    	 		 		   		 		  
-    print("Remember Q from Star Trek? Well, this isn't him")  		  	   		     		  		  		    	 		 		   		 		  
+        """
+
+        # Update Q Table
+        # self.update_table(current_s=self.s, current_a=self.a, s_prime=s_prime, reward=r)
+        # (1-alpha)Q[s,a] + alpha*ImprovedEstimate
+        # (1-alpha)Q[s,a] + alpha(reward + gamma & Q[s', argmax(Q[s', a')]
+        self.Q_table[self.s, self.a] = (1 - self.alpha) * self.Q_table[self.s, self.a] + \
+                                       (self.alpha *
+                                        (r +
+                                         (self.gamma * self.Q_table[s_prime, np.argmax(self.Q_table[s_prime])])))
+        self.s = s_prime
+        self.a = self.get_action(s_prime)
+        action = self.a
+
+        # Update RAR
+        self.rar *= self.radr
+
+        if self.verbose:
+            print(f"s = {s_prime}, a = {action}, r={r}")
+        return action
+
+    def update_table(self, current_s, current_a, s_prime, reward):
+        # (1-alpha)Q[s,a] + alpha*ImprovedEstimate
+        # (1-alpha)Q[s,a] + alpha(reward + gamma & Q[s', argmax(Q[s', a')]
+        self.Q_table[current_s, current_a] = (1 - self.alpha) * self.Q_table[current_s, current_a] + \
+                                             (self.alpha * (reward +
+                                                            (self.gamma * self.Q_table[s_prime,
+                                                                                       np.argmax(
+                                                                                           self.Q_table[s_prime])])))
+        return
+
+    def get_action(self, s):
+        # Check if to use random action
+        # Not sure why but I get much better scores when I set the rand.random() to a variable
+        #  versus just doing rand.random() > self.rar
+        random_value = rand.random()
+        if random_value > self.rar:
+            # Do not choose random action
+            return np.argmax(self.Q_table[s])
+        else:
+            # Choose random action
+            return rand.randint(0, self.num_actions - 1)
+
+
+if __name__ == "__main__":
+    print("Remember Q from Star Trek? Well, this isn't him")
