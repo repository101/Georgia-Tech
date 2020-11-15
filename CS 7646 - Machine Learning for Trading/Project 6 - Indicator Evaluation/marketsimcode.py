@@ -85,6 +85,7 @@ def get_holdings(trades_df, start_val):
 
 def get_prices(symbols, start_date, end_date):
     temp_prices = get_data(symbols, pd.date_range(start_date, end_date))
+    temp_prices["Cash"] = np.ones(shape=(temp_prices.shape[0]))
     temp_prices.fillna(method='ffill', inplace=True)
     temp_prices.fillna(method='bfill', inplace=True)
     return temp_prices

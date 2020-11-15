@@ -91,33 +91,8 @@ def find_optimal(stock_DF, symbol):
         temp_DF["Position"] = 0
         temp_DF.loc[temp_DF["Diff"] > 0, "Order"] = "BUY"
         temp_DF.loc[temp_DF["Diff"] < 0, "Order"] = "SELL"
-        skip = 0
         for i in range(temp_DF.shape[0]):
-            # if skip != 0:
-            #     skip -= 1
-            #     continue
-            # if skip < 0:
-            #     skip = 0
             if temp_DF.iloc[i]["Order"] == "SELL":
-                # Check total holdings
-                # if temp_DF.iloc[i + 1]["Order"] == "SELL" \
-                #         and temp_DF.iloc[i + 2]["Order"] == "SELL":
-                #     amount1 = determine_buy_sell_amount(total_holdings, "SELL")
-                #     total_holdings -= amount1
-                #     amount2 = determine_buy_sell_amount(total_holdings, "BUY")
-                #     total_holdings += amount2
-                #     amount3 = determine_buy_sell_amount(total_holdings, "SELL")
-                #     total_holdings -= amount3
-                #     result1 = {"Date": temp_DF.iloc[i]["Date"], "Symbol": symbol,
-                #                "Order": temp_DF.iloc[i]["Order"], "Shares": amount1}
-                #     result2 = {"Date": temp_DF.iloc[i]["Date"], "Symbol": symbol,
-                #                "Order": "BUY", "Shares": amount2}
-                #     result3 = {"Date": temp_DF.iloc[i]["Date"], "Symbol": symbol,
-                #                "Order": temp_DF.iloc[i]["Order"], "Shares": amount3}
-                #     order_df = order_df.append(result1, ignore_index=True)
-                #     order_df = order_df.append(result2, ignore_index=True)
-                #     order_df = order_df.append(result3, ignore_index=True)
-                #     skip = 2
                 if check_holdings(total_holdings):
                     amount = determine_buy_sell_amount(total_holdings, "SELL")
                     result = {"Date": temp_DF.iloc[i]["Date"], "Symbol": symbol,
@@ -128,26 +103,6 @@ def find_optimal(stock_DF, symbol):
                 else:
                     continue
             elif temp_DF.iloc[i]["Order"] == "BUY":
-                # Check total holdings
-                # if temp_DF.iloc[i + 1]["Order"] == "BUY" \
-                #         and temp_DF.iloc[i + 2]["Order"] == "BUY":
-                #
-                #     amount1 = determine_buy_sell_amount(total_holdings, "BUY")
-                #     total_holdings += amount1
-                #     amount2 = determine_buy_sell_amount(total_holdings, "SELL")
-                #     total_holdings -= amount2
-                #     amount3 = determine_buy_sell_amount(total_holdings, "BUY")
-                #     total_holdings += amount3
-                #     result1 = {"Date": temp_DF.iloc[i]["Date"], "Symbol": symbol,
-                #                "Order": temp_DF.iloc[i]["Order"], "Shares": amount1}
-                #     result2 = {"Date": temp_DF.iloc[i]["Date"], "Symbol": symbol,
-                #                "Order": "SELL", "Shares": amount2}
-                #     result3 = {"Date": temp_DF.iloc[i]["Date"], "Symbol": symbol,
-                #                "Order": temp_DF.iloc[i]["Order"], "Shares": amount3}
-                #     order_df = order_df.append(result1, ignore_index=True)
-                #     order_df = order_df.append(result2, ignore_index=True)
-                #     order_df = order_df.append(result3, ignore_index=True)
-                #     skip = 2
                 if check_holdings(total_holdings):
                     amount = determine_buy_sell_amount(total_holdings, "BUY")
                     result = {"Date": temp_DF.iloc[i]["Date"], "Symbol": symbol,

@@ -143,9 +143,13 @@ def compute_portvals(orders_file="./orders/orders.csv", start_val=1000000, commi
 	
 	# STEPS
 	#   - Read Orders files. Get start_date, end_date, and symbols
-	orders_DF = pd.read_csv(orders_file, index_col=["Date"], parse_dates=True, na_values=['nan'], header=0,
-	                        usecols=["Date", "Symbol", "Order", "Shares"])
-	orders_DF.sort_index(inplace=True)
+	if isinstance(orders_file, str):
+		orders_DF = pd.read_csv(orders_file, index_col=["Date"], parse_dates=True, na_values=['nan'], header=0,
+		                        usecols=["Date", "Symbol", "Order", "Shares"])
+		orders_DF.sort_index(inplace=True)
+	else:
+		orders_DF = orders_file
+
 	dates = orders_DF.index.values
 	dates_start = dates[0]
 	dates_end = dates[-1]

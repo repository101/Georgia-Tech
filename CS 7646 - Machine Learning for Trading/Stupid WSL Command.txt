@@ -18,7 +18,7 @@ PYTHONPATH=../:. python testlearner.py Data/Istanbul.csv
 sudo rm -rf 'CS 7646 - Machine Learning for Trading'/
 sudo cp -rf /mnt/c/users/joshu/'OneDrive - Georgia Institute of Technology'/'Georgia-Tech'/'CS 7646 - Machine Learning for Trading'/ /home/josh/'CS 7646 - Machine Learning for Trading'/
 sudo chmod -R 777 /home/josh/'CS 7646 - Machine Learning for Trading'/
-cd /home/josh/'CS 7646 - Machine Learning for Trading'/'Project 7 - Q-Learning Robot'
+cd /home/josh/'CS 7646 - Machine Learning for Trading'/'Project 8 - Strategy Evaluation'
 PYTHONPATH=../:. python
 
 sudo cp -rf /mnt/c/users/joshu/Downloads/assignment_2 /home/josh/assignment_2/
