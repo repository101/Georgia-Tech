@@ -7,6 +7,7 @@ import pandas as pd
 
 import BagLearner as bl
 import RTLearner as rl
+import DTLearner as dl
 import indicators as ind
 import marketsimcode as mkt
 import util as ut
@@ -49,7 +50,7 @@ class StrategyLearner(object):
     # constructor
     def __init__(self, verbose=False, impact=0.005, commission=0.0, symbol="JPM", sd=dt.datetime(2008, 1, 1),
                  ed=dt.datetime(2009, 12, 31), sv=100000, obv=6, rsi=2, bbp=3, macd=10, vortex=7,
-                 n_day_return=1, n_leaf=5, bags=100):
+                 n_day_return=1, n_leaf=5):
         """
         Constructor method
         """
@@ -62,7 +63,7 @@ class StrategyLearner(object):
         self.commission = commission
         self.learner = None
         self.max_holdings = 1000
-        self.bags = bags
+        self.bags = 100
         self.n_leaf = n_leaf
         if self.n_leaf < 5:
             self.n_leaf = 5
@@ -74,8 +75,8 @@ class StrategyLearner(object):
         self.window = 10
         self.adj_close = None
         self.current_holdings = 0
-        self.y_buy = 0.001
-        self.y_sell = -0.001
+        self.y_buy = 0.0
+        self.y_sell = 0.0
         self.n_day_return = n_day_return
         self.indicator_columns = ["RSI",
                                   "BBP",

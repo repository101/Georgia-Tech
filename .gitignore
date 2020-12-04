@@ -22,6 +22,7 @@
 *jadams334-analysis
 
 CS 7646 - Machine Learning for Trading/OLD/
+CS 6475 - Computational Photography/**/*.txt
 CS 6475 - Computational Photography/assignments-master/
 CS 6475 - Computational Photography/lab_exercises-master/
 CS 6475 - Computational Photography/Slides/
@@ -63,49 +64,28 @@ CS 6475 - Computational Photography/assignments/Final_Project/Data/
 CS 6475 - Computational Photography/assignments/Final_Project/Quiz3_IFAILED....pdf
 CS 6475 - Computational Photography/assignments/Final_Project/Quiz3.pdf
 CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/HighGuy.mov
+CS 7641 - Machine Learning/Assignments/OLD/*
 CS 7641 - Machine Learning/Assignments/Problem_Set 1/Jadams334_ProblemSet1.pdf
 CS 7641 - Machine Learning/Assignments/Randomized Optimization/jadams334-analysis.pdf
 CS 7641 - Machine Learning/Assignments/Supervised Learning/jadams334-analysis.pdf
 CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/jadams334-analysis.pdf
 CS 7641 - Machine Learning/Assignments/Supervised Learning/sub-sample-mnist-test-data.xlsx
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/3.12 Value Iteration - Frozen Lake Problem-checkpoint.ipynb
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/Testing-checkpoint.ipynb
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/Untitled-checkpoint.ipynb
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/1_dqn_tutorial.py
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/3.12 Value Iteration - Frozen Lake Problem.py
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/Testing-checkpoint.ipynb
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/Untitled-checkpoint.ipynb
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/Testing-checkpoint.ipynb
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/3.12 Value Iteration - Frozen Lake Problem.ipynb
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Chapter 09_RL.py
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/DDQN.py
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/3.13 Policy Iteration - Frozen Lake Problem.ipynb
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/MDP_OpenAIGym_Examples.pdf
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/OpenAIGym_LearnDataScience_1.pdf
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/OpenAIGym_TowardsDataScience_2.pdf
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/OpenAIGym_TowardsDataScience_1.pdf
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/Testing.py
+CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/*.*
 CS 7641 - Machine Learning/RLbook2018.pdf
-CS 7641 - Machine Learning/Assignments/Markov Decision Processes/jadams334-analysis.pdf
 CS 7641 - Machine Learning/**/*.png
 CS 7641 - Machine Learning/Problem_Set_1_soln.pdf
 CS 7641 - Machine Learning/Problem_Set_2_soln.pdf
 CS 7641 - Machine Learning/PDFs/svm-burges.pdf
-CS 7641 - Machine Learning/PDFs/Problem_Set_1.pdf
-CS 7641 - Machine Learning/PDFs/Problem_Set_2.pdf
 CS 7641 - Machine Learning/PDFs/Problem_Set_1_soln.pdf
 CS 7641 - Machine Learning/PDFs/Problem_Set_2_soln.pdf
 CS 7641 - Machine Learning/Assignments/**/*.txt
 CS 7641 - Machine Learning/Assignments/**/.ipynb_checkpoints/*.*
-CS 6475 - Computational Photography/**/*.txt
+CS 7646 - Machine Learning for Trading/**/*.png
+CS 7646 - Machine Learning for Trading/**/.ipynb_checkpoints/*.*
 CS 7646 - Machine Learning for Trading/data/**/*.txt
 CS 7646 - Machine Learning for Trading/ML4TNotes2016/README.txt
-.idea/workspace.xml
-CS 7641 - Machine Learning/Assignments/OLD/*
+CS 7646 - Machine Learning for Trading/Stupid WSL Command.txt
 CS 7646 - Machine Learning for Trading/Project 7 - Q-Learning Robot/Reinforcement Learning 2nd - Richard Sutton and Andrew Barto.pdf
+.idea/workspace.xml
 Problem_Set_1_soln.pdf
 Problem_Set_2_soln.pdf
-CS 7646 - Machine Learning for Trading/Stupid WSL Command.txt
-CS 7641 - Machine Learning/Assignments/Problem_Set 1/jadams334-ProblemSet1.pdf
-CS 7646 - Machine Learning for Trading/Project 8 - Strategy Evaluation/*
-CS 7646 - Machine Learning for Trading/Project 8 - Strategy Evaluation/*.*
