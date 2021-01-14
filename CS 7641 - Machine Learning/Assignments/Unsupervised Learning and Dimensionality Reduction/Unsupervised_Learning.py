@@ -249,6 +249,7 @@ def run_dimensionality_reduction(mnist, fashion_mnist, run_check=None, scaled=Fa
     try:
         folder = "/DimensionalityReduction/"
         utl.check_folder(folder)
+        extra = "NotScaled"
         if run_check is not None:
             if run_check["Run PCA"]:
                 run_pca(dataset=mnist, folder=folder, dataset_name=f"MNIST_{extra}")
@@ -347,8 +348,8 @@ def run_part_1():
 
 
 if __name__ == "__main__":
-    cluster_run = {"Run K-Means Clustering": True, "Run Expectation Maximization": False}
-    dimension_run = {"Run PCA": False, "Run ICA": False, "Run Randomized Projections": False,
+    cluster_run = {"Run K-Means Clustering": False, "Run Expectation Maximization": False}
+    dimension_run = {"Run PCA": True, "Run ICA": False, "Run Randomized Projections": False,
                      "Run TSNE": False}
     scale_data = True
     if TESTING:
@@ -357,6 +358,6 @@ if __name__ == "__main__":
         run_dimensionality_reduction(mnist_data, None, run_check=dimension_run, scaled=scale_data)
     else:
         mnist_data, fashion_mnist_data = start(scale_data)
-        run_clustering(mnist_data, fashion_mnist_data, run_check=cluster_run, scaled=scale_data)
+        # run_clustering(mnist_data, fashion_mnist_data, run_check=cluster_run, scaled=scale_data)
         run_dimensionality_reduction(mnist_data, fashion_mnist_data, run_check=dimension_run, scaled=scale_data)
     print()

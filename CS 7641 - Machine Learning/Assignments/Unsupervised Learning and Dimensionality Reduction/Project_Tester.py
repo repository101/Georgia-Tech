@@ -218,7 +218,7 @@ if __name__ == "__main__":
 	                        original_data_y=fashion_mnist["train_y"].iloc[:lim],
 	                        results=ica_results_fashion, is_ica=True, is_fashion=True, font_size=14, n_clusters=15)
 
-	PCA
+	# PCA
 	temp_pca_mnist_results = PCA(whiten=True, svd_solver="full").fit(mnist["train_X"].iloc[:lim, :])
 	mnist_component_df = pd.DataFrame(temp_pca_mnist_results.components_)
 	mnist_pixel_importance = mnist_component_df.idxmax(axis=1)
