@@ -13,6 +13,7 @@
 - [ ] [CS 6476 - Computer Vision](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206476%20-%20Computer%20Vision)
 - [ ] [CS 6515 - Intro to Graduate Algorithms](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206515%20-%20Intro%20to%20Graduate%20Algorithms)
 - [ ] [CS 6601 - Artificial Intelligence](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%206601%20-%20Artificial%20Intelligence)
+- [ ] [CS 6637 - Knowledge-Based AI](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207637%20-%20Knowledge-Based%20AI)
 - [ ] [CS 7638 - Artificial Intelligence for Robotics](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207638%20-%20Artificial%20Intelligence%20for%20Robotics)
 - [X] [CS 7641 - Machine Learning](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207641%20-%20Machine%20Learning)
 - [ ] [CS 7642 - Reinforcement Learning](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207642%20-%20Reinforcement%20Learning)
