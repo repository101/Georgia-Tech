@@ -101,3 +101,10 @@ CS 7637 - Knowledge-Based AI/Papers/*.*
 CS 6476 - Computer Vision/Course Work/**/*.png
 CS 6476 - Computer Vision/**/**/**/*.jpg
 CS 7637 - Knowledge-Based AI/Course Work/Mini-Project 3/Screenshot 2021-03-12 140911.png
+CS 7637 - Knowledge-Based AI/Course Work/RPM Final Project - Josh Adams.pdf
+CS 7637 - Knowledge-Based AI/Course Work/Homework 3/Homework 3 - Jadams334.pdf
+CS 7637 - Knowledge-Based AI/Course Work/Final Project/RPM Final Project - Josh Adams.pdf
+*.npy
+*.h5
+*.ipynb
+*.hd5
