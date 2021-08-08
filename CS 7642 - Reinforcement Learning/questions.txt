@@ -1,0 +1,65 @@
+Project 1
+11:35
+·        What is eligibility trace?
+11:35
+·        What is convergence criterion? What effect does it have on TD algorithm?
+11:35
+·        Is the TD algorithm used in the paper the same as the TD taught in class (video lectures)?
+11:36
+·        What is “Pt” and what is “nabla_w Pt” in the paper?
+11:36
+·        What is the value of “nabla_w Pt” in the paper, if xt=[0,0,1,0,0] under the context of random walk example?
+11:36
+HW3
+11:36
+·        In assignment document, it says sarsa is a ‘control algorithm?’ What is ‘control’ task. Is TD a ‘control’ algorithm? Why or why not?
+11:36
+·        Why is sarsa on policy? What if we make it off policy like q learning by following a random policy to generate data?
+11:36
+·        What is sarsa and it’s input/output. What do you mean by on policy and model free?
+11:36
+·        Does Sarsa look like policy iteration at some angle? Can you tell us which part of sarsa is policy evaluation and evaluation which part is policy improvement?
+11:37
+HW4
+11:37
+·        What if I made q learning on policy by following the policy from the current Q table? Will I still get optimal policy?
+11:37
+·        Why can you find an optimal policy despite finding sub-optimal Q-values?
+11:37
+·        Is it possible that Q learning doesn’t converge in some other weird environments? Is it possible that the point it converges to is not optimal?
+11:38
+·        Does Q learning look like policy iteration? If so what’s the policy improvement step and what’s the policy evaluation step?
+11:38
+·        What’s the advantage of an off policy algorithm?
+11:39
+Project 2
+11:39
+·        Observe that the biggest difference between P2’s problem Lunarlander and HW4’s problem Taxi-V3 is that there are infinitely many states in LunarLander. What are some good methods to handle this case? What are their pros and cons?
+11:39
+·        We learnt about reward shaping in class. Could it be useful for solving P2 (LunarLander)? If so, why and how?
+11:39
+·        Let’s say you want to use function approximator like we learnt in class. What function are you approximating? What’s the input of that function and what’s the output of that function?
+11:39
+·        Let’s say you want to use Q learning with some function approximator, recall that we learnt a convergence theorem and we used that to conclude that Q learning converges, can we apply that theorem to prove that your Q learning with some function approximator converges, so that divergence will mean you have a bug in your code? Why or why not?
+11:40
+HW5
+11:40
+·        What is KWIK framework? What’s the strengths of this framework and its algorithms?
+11:40
+·        What’s the worst case number of “i don’t know”s in your algorithm for HW5 ?
+11:40
+·        What if instead of giving “fight_occurred”, you are given “did peacemaker came and did instigator came”, can you create an KWIK algorithm that outputs fewer “i don’t knows” than HW5?
+11:40
+·        KWIK is a learning framework like PAC(probably approximately correct) learning, why do we even need a learning framework like PAC or KWIK?
+11:40
+HW6
+11:40
+·        Let’s say we are doing a repeated version of rock paper scissors and we want to maximize the usual average payoff. What’s the minimax profile that we learnt in game theory reloaded, of this new rock paper and scissors game?
+11:40
+·        Then what’s the feasible and “preferrable region” of this new rock paper and scissors game?
+11:40
+·        What Does folk theorem/two player plot tells us? What are all the nash equilibrium in this new version of rockpaperscissors?
+11:41
+·        What's the subgame perfect equilibrium of this game given by computational folk theorem? How do we find it in poly time claimed by computational folk theorem?
+11:41
+·        About folk theorem, why does it help us to solve prisoner’s dilemma? i.e so that people will not always defect on each other?
