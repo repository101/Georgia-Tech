@@ -24,6 +24,10 @@
 *.mp4
 */jadams334-analysis.pdf
 *jadams334-analysis
+.ipynb_checkpoints/
+.idea/
+__pycache__/
+7642Summer2021jadams334/
 
 CS 7646 - Machine Learning for Trading/OLD/
 CS 6475 - Computational Photography/**/*.txt

@@ -1,6 +1,5 @@
 ![ViewCount](https://views.whatilearened.today/views/github/Jadams29/Georgia-Tech.svg?cache=remove)
 ![GitHub top language](https://img.shields.io/github/languages/top/Jadams29/Georgia-Tech?style=flat)
-![GitHub language count](https://img.shields.io/github/languages/count/Jadams29/Georgia-Tech?style=flat)
 
 ![Georgia Tech Logo](./gt-logo.png)
 ## **Georgia Tech Masters of Computer Science**
