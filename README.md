@@ -23,6 +23,11 @@
   - [x] [CS 7646 - Machine Learning for Trading](https://github.com/Jadams29/Georgia-Tech/tree/master/CS%207646%20-%20Machine%20Learning%20for%20Trading)
   - [x] [CSE 6242 - Data & Visual Analytics](https://github.com/Jadams29/Georgia-Tech/tree/master/CSE%206242%20-%20Data%20%26%20Visual%20Analytics)
 
+
+
+
+![Course Check List](./CourseCheckList.md)
+
 - ### Resources
 
   - [NumPy](https://numpy.org/doc/stable/reference/index.html)
