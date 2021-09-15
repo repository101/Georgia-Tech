@@ -26,7 +26,7 @@
 
 
 
-![Course Check List](./CourseCheckList.md)
+[Course Check List](./CourseCheckList.md)
 
 - ### Resources
 

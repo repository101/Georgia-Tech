@@ -1,0 +1,111 @@
+
+*.xml
+*.xlsx
+*.iml
+*.mp4
+*.zip
+*.bonnie
+*.pth
+*.ps
+*.pyc
+*.tsv
+*.csv
+*.mkv
+*.pptx
+*.json
+*.drawio
+*.docx
+*.rar
+*.feather
+*.pkl
+*.png
+*.jpg
+*.avi
+*.mp4
+*/jadams334-analysis.pdf
+*jadams334-analysis
+
+CS 7646 - Machine Learning for Trading/OLD/
+CS 6475 - Computational Photography/**/*.txt
+CS 6475 - Computational Photography/assignments-master/
+CS 6475 - Computational Photography/lab_exercises-master/
+CS 6475 - Computational Photography/Slides/
+CS 6475 - Computational Photography/Papers/
+CS 6475 - Computational Photography/Books/
+CS 6475 - Computational Photography/assignments/A3-Blending/report.pdf
+CS 6475 - Computational Photography/assignments/A1-Epsilon_Photography/report.pdf
+CS 6475 - Computational Photography/assignments/A2-Camera_Obscura/assignment2/report.pdf
+CS 6475 - Computational Photography/assignments/A2-Camera_Obscura/Report.pptx
+CS 6475 - Computational Photography/assignments/A3-Blending/report.pptx
+CS 6475 - Computational Photography/assignments/MT-Research_Project/Report.pdf
+CS 6475 - Computational Photography/venv/
+CS 6475 - Computational Photography/Notebooks/1-image_processing/
+CS 6475 - Computational Photography/Notebooks/2-frequency_spectra/
+CS 6475 - Computational Photography/Notebooks/3-features_keypoints/
+CS 6475 - Computational Photography/Quiz 2/Quiz 2.pdf
+CS 6475 - Computational Photography/Quiz 2/Quiz_2_Question_1.JPG
+CS 6475 - Computational Photography/Quiz 2/Quiz_2_Question_2.JPG
+CS 6475 - Computational Photography/Quiz 2/Quiz_2_Question_3.JPG
+CS 6475 - Computational Photography/Quiz 2/Quiz_2_Question_5.JPG
+CS 6475 - Computational Photography/Quiz 2/Quiz_2_Question_4.JPG
+CS 6475 - Computational Photography/Quiz/
+CS 6475 - Computational Photography/Quiz 2/
+CS 6475 - Computational Photography/Quiz 3/
+CS 6475 - Computational Photography/assignments/A4-Panoramas/report.pdf
+CS 6475 - Computational Photography/assignments/A2-Camera_Obscura/assignment2/assignment2/report.pdf
+CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz 2.pdf
+CS 6475 - Computational Photography/assignments/A6-Video_Textures/ignore/report.pdf
+CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz3_IFAILED....pdf
+CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz_2_Question_1.JPG
+CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz_2_Question_2.JPG
+CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz_2_Question_3.JPG
+CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz_2_Question_4.JPG
+CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz_2_Question_5.JPG
+CS 6475 - Computational Photography/Quiz/Quiz 3/Quiz3_IFAILED....pdf
+CS 6475 - Computational Photography/Quiz/Quiz 2/Quiz3_IFAILED....pdf
+CS 6475 - Computational Photography/Quiz/Quiz 3/Quiz3.pdf
+CS 6475 - Computational Photography/assignments/Final_Project/Data/
+CS 6475 - Computational Photography/assignments/Final_Project/Quiz3_IFAILED....pdf
+CS 6475 - Computational Photography/assignments/Final_Project/Quiz3.pdf
+CS 6475 - Computational Photography/assignments/A6-Video_Textures/videos/HighGuy.mov
+CS 7641 - Machine Learning/Assignments/OLD/*
+CS 7641 - Machine Learning/Assignments/Problem_Set 1/Jadams334_ProblemSet1.pdf
+CS 7641 - Machine Learning/Assignments/Randomized Optimization/jadams334-analysis.pdf
+CS 7641 - Machine Learning/Assignments/Supervised Learning/jadams334-analysis.pdf
+CS 7641 - Machine Learning/Assignments/Unsupervised Learning and Dimensionality Reduction/jadams334-analysis.pdf
+CS 7641 - Machine Learning/Assignments/Supervised Learning/sub-sample-mnist-test-data.xlsx
+CS 7641 - Machine Learning/Assignments/Markov Decision Processes/.ipynb_checkpoints/*.*
+CS 7641 - Machine Learning/Assignments/Problem_Set 2/jadams334-ProblemSet2.pdf
+CS 7641 - Machine Learning/Assignments/Problem_Set 1/jadams334-ProblemSet1.pdf
+CS 7641 - Machine Learning/RLbook2018.pdf
+CS 7641 - Machine Learning/**/*.png
+CS 7641 - Machine Learning/Problem_Set_1_soln.pdf
+CS 7641 - Machine Learning/Problem_Set_2_soln.pdf
+CS 7641 - Machine Learning/PDFs/svm-burges.pdf
+CS 7641 - Machine Learning/PDFs/Problem_Set_1_soln.pdf
+CS 7641 - Machine Learning/PDFs/Problem_Set_2_soln.pdf
+CS 7641 - Machine Learning/Assignments/**/*.txt
+CS 7641 - Machine Learning/Assignments/**/.ipynb_checkpoints/*.*
+CS 7646 - Machine Learning for Trading/**/*.png
+CS 7646 - Machine Learning for Trading/**/.ipynb_checkpoints/*.*
+CS 7646 - Machine Learning for Trading/data/**/*.txt
+CS 7646 - Machine Learning for Trading/ML4TNotes2016/README.txt
+CS 7646 - Machine Learning for Trading/Stupid WSL Command.txt
+CS 7646 - Machine Learning for Trading/Project 7 - Q-Learning Robot/Reinforcement Learning 2nd - Richard Sutton and Andrew Barto.pdf
+.idea/workspace.xml
+Problem_Set_1_soln.pdf
+Problem_Set_2_soln.pdf
+CS 7637 - Knowledge-Based AI/Course Readings/*.*
+CS 6476 - Computer Vision/Course Readings/*.*
+CS 7637 - Knowledge-Based AI/Papers/*.*
+CS 6476 - Computer Vision/Course Work/**/*.png
+CS 6476 - Computer Vision/**/**/**/*.jpg
+CS 7637 - Knowledge-Based AI/Course Work/Mini-Project 3/Screenshot 2021-03-12 140911.png
+CS 7637 - Knowledge-Based AI/Course Work/RPM Final Project - Josh Adams.pdf
+CS 7637 - Knowledge-Based AI/Course Work/Homework 3/Homework 3 - Jadams334.pdf
+CS 7637 - Knowledge-Based AI/Course Work/Final Project/RPM Final Project - Josh Adams.pdf
+*.npy
+*.h5
+*.ipynb
+*.hd5
+CS 7637 - Knowledge-Based AI/RPM-Project-Code/
